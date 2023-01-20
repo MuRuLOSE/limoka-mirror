@@ -74,7 +74,7 @@ class AutoCommentMod(loader.Module):
         logger.debug(f"commented on {message.id} in {chat}")
 
     async def commentcmd(self, message):
-        """Toggle Module"""
+        """Toggle Module <on/off>"""
 
         self.config["status"] = not self.config["status"]
         status = self.strings("enabled") if self.config["status"] else self.strings("disabled")
