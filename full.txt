@@ -12,3 +12,6 @@ NoStickers
 Pinsaver
 Raspi
 TelethonChatManager
+CryptoSteal
+AutoComment
+Carbon
