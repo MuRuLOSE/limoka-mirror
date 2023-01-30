@@ -16,3 +16,4 @@ CryptoSteal
 AutoComment
 Carbon
 Reposaver
+Gitinfo
