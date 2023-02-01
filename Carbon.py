@@ -108,7 +108,7 @@ class CarbonMod(loader.Module):
                 )
             ).content
         )
-        doc.name = "carbonized.jpg"
+        doc.name = "darkmodules.jpg"
 
         await self._client.send_message(
             utils.get_chat_id(message),
