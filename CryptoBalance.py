@@ -5,6 +5,7 @@
 # 🌐 https://www.gnu.org/licenses/agpl-3.0.html
 
 # meta developer: @penggrin
+# meta banner: https://raw.githubusercontent.com/darkmodules/assets/master/CryptoBalance.png
 # old worker: @toxicuse
 # scope: hikka_only
 
