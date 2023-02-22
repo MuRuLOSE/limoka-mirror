@@ -5,6 +5,7 @@
 # 🌐 https://www.gnu.org/licenses/agpl-3.0.html
 
 # meta developer: @dziru
+# meta banner: https://raw.githubusercontent.com/darkmodules/assets/master/Reposaver.png
 # scope: hikka_only
 # version: 1.0
 
