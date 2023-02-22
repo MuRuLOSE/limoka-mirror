@@ -111,7 +111,7 @@ class DietPiMod(loader.Module):
 
     @loader.command(ru_doc="Получить немного информации о твоей Diet Pi машине")
     async def dinfocmd(self, message):
-        """Get some information about ur Diet Pi machine"""
+        """Get some information about your Diet Pi machine"""
         temp = (subprocess.check_output(['sudo', '-n', 'vcgencmd', 'measure_temp']).decode("utf-8")).split("=")[1]
         voltage = (subprocess.check_output(['sudo', '-n', 'vcgencmd', 'measure_volts']).decode("utf-8")).split("=")[1]
         uptime = (subprocess.check_output(['uptime', '-p']).decode("utf-8")).split("up ")[1]
@@ -136,7 +136,7 @@ class DietPiMod(loader.Module):
 
     @loader.command(ru_doc="Получить немного информации о процессоре твоей Diet Pi машины")
     async def dcpucmd(self, message):
-        """Get some information about cpu of ur Diet Pi machine"""
+        """Get some information about cpu of your Diet Pi machine"""
         info = self.reformat(subprocess.check_output(["sudo", "bash", "/boot/dietpi/dietpi-cpuinfo"]).decode("utf-8"))
         await utils.answer(message, info)
 
