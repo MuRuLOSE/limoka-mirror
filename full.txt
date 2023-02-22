@@ -17,3 +17,5 @@ AutoComment
 Carbon
 Reposaver
 Gitinfo
+DietPi
+CryptoBalance
