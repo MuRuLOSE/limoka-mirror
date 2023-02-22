@@ -5,6 +5,7 @@
 # 🌐 https://www.gnu.org/licenses/agpl-3.0.html
 
 # meta developer: @penggrin
+# old worker: @toxicuse
 # scope: hikka_only
 
 from .. import loader, utils
