@@ -1,10 +1,11 @@
-# The MIT License (MIT)
-# Copyright (c) 2023 penggrin
-
+#
 #█▀█ █▀▀ █▄░█ █▀▀ █▀▀ █▀█ █ █▄░█
 #█▀▀ ██▄ █░▀█ █▄█ █▄█ █▀▄ █ █░▀█
+# 🔒 Licensed under the GNU AGPLv3
+# 🌐 https://www.gnu.org/licenses/agpl-3.0.html
 
 # meta developer: @penggrinmods
+# meta banner: https://raw.githubusercontent.com/darkmodules/assets/master/CryptoSteal.png
 # scope: hikka_only
 
 from .. import loader, utils
