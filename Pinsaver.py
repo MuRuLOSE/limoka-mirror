@@ -5,8 +5,6 @@
 # 🌐 https://www.gnu.org/licenses/agpl-3.0.html
 
 # meta developer: @dziru
-# meta pic: https://te.legra.ph/file/6f0a48747b8c0bc45f2e7.jpg
-# meta banner: https://te.legra.ph/file/6f0a48747b8c0bc45f2e7.jpg
 # scope: hikka_min 1.5.0
 # scope: hikka_only
 # version: 1.0
