@@ -5,7 +5,7 @@
 # 🌐 https://www.gnu.org/licenses/agpl-3.0.html
 
 # meta developer: @dziru
-# scope: hikka_min 1.5.0
+# meta banner: https://raw.githubusercontent.com/darkmodules/assets/master/Pinsaver.png
 # scope: hikka_only
 # version: 1.0
 
