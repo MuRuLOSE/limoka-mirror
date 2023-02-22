@@ -5,6 +5,7 @@
 # 🌐 https://www.gnu.org/licenses/agpl-3.0.html
 
 # meta developer: @penggrin
+# meta banner: https://te.legra.ph/file/f12f7c20861bbacde7fdf.jpg
 # requires: psutil distro
 # scope: hikka_only
 
