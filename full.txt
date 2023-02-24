@@ -19,3 +19,4 @@ Reposaver
 Gitinfo
 DietPi
 CryptoBalance
+ShazamDark
