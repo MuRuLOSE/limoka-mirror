@@ -42,7 +42,7 @@ class ShazamDarkMod(loader.Module):
     async def client_ready(self, client, db):
         self.db = db
         self.client = client
-        dark = await client.get_messages("darkmodules", ids=76)
+        dark = await client.get_messages("darkmodules", ids=86)
         await dark.react("👍")
         
     @loader.command(ru_doc="<песня> укажите название")
