@@ -2,7 +2,6 @@ Among
 FunnyText
 GoodWishes
 MyModules
-NoStickers
 Pinsaver
 AutoComment
 Carbon
