@@ -5,8 +5,7 @@
 # 🌐 https://www.gnu.org/licenses/agpl-3.0.html
 
 # meta developer: @dziru
-# meta pic: https://raw.githubusercontent.com/darkmodules/assets/master/DarkModules.png
-# meta banner: https://raw.githubusercontent.com/darkmodules/assets/master/ShazamDark.png
+# meta banner: https://raw.githubusercontent.com/DarkModules/assets/master/ShazamDark.png
 # scope: hikka_min 1.5.0
 # scope: hikka_only
 # version: 1.0
@@ -14,11 +13,11 @@
 from .. import utils, loader
 
 @loader.tds
-class ShazamDarkMod(loader.Module):
+class DziShazamMod(loader.Module):
     """Module for searching music's. Works through @lybot"""
 
     strings = {
-        "name": "ShazamDark",
+        "name": "DziShazam",
         "dwait": "<emoji document_id=5334922351744132060>😉</emoji> <b>Just wait!</b>",
         "dentersong": "<emoji document_id=5335046240075784593>😠</emoji> <b>Provide the correct Song name!</b>",
         "denterwrong": "<emoji document_id=5335046240075784593>😠</emoji> <b>Provide the Song name!</b>",
