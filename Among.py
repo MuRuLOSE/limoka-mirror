@@ -5,7 +5,7 @@
 # 🌐 https://www.gnu.org/licenses/agpl-3.0.html
 
 # meta developer: @dziru
-# meta pic: https://raw.githubusercontent.com/DziruModules/assets/master/DziModules.jpg
+# meta pic: https://raw.githubusercontent.com/DziruModules/assets/master/DziruModules.jpg
 # meta banner: https://raw.githubusercontent.com/DziruModules/assets/master/Among.png
 # scope: hikka_min 1.5.0
 # scope: hikka_only
