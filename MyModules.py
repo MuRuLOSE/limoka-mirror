@@ -5,7 +5,8 @@
 # 🌐 https://www.gnu.org/licenses/agpl-3.0.html
 
 # meta developer: @dziru
-# meta banner: https://raw.githubusercontent.com/darkmodules/assets/master/MyModules.png
+# meta pic: https://raw.githubusercontent.com/DziruModules/assets/master/DziruModules.jpg
+# meta banner: https://raw.githubusercontent.com/DziruModules/assets/master/MyModules.png
 # scope: hikka_only
 
 from .. import loader, utils
