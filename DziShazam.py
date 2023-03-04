@@ -39,12 +39,6 @@ class DziShazamMod(loader.Module):
         "dsaved": "<emoji document_id=5346032779303854340>😎</emoji> <b>Muvaffaqiyatli yuborildi!</b>",
         }
         
-    async def client_ready(self, client, db):
-        self.db = db
-        self.client = client
-        dark = await client.get_messages("dzirumodules", ids=6)
-        await dark.react("👍")
-        
     @loader.command(ru_doc="<песня> укажите название")
     async def mcdcmd(self, message):
         """<song> enter name"""
