@@ -8,6 +8,7 @@
 # meta pic: https://raw.githubusercontent.com/DziruModules/assets/master/DziruModules.jpg
 # meta banner: https://raw.githubusercontent.com/DziruModules/assets/master/CryptoBalance.png
 # scope: hikka_only
+# coded by: @toxicuse && @dziru && @penggrin
 
 from .. import loader, utils
 import logging
