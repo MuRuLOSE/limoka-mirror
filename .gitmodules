@@ -1,0 +1,21 @@
+[submodule "vsecoder/hikka_modules"]
+	path = vsecoder/hikka_modules
+	url = https://github.com/vsecoder/hikka_modules
+[submodule "DziruModules/hikkamods"]
+	path = DziruModules/hikkamods
+	url = https://github.com/DziruModules/hikkamods
+[submodule "kamolgks/Hikkamods"]
+	path = kamolgks/Hikkamods
+	url = https://github.com/kamolgks/Hikkamods
+[submodule "Sad0ff/modules-ftg"]
+	path = Sad0ff/modules-ftg
+	url = https://github.com/Sad0ff/modules-ftg
+[submodule "KeyZenD/modules"]
+	path = KeyZenD/modules
+	url = https://github.com/KeyZenD/modules
+[submodule "trololo65/Modules"]
+	path = trololo65/Modules
+	url = https://github.com/trololo65/Modules
+[submodule "Ijidishurka/modules"]
+	path = Ijidishurka/modules
+	url = https://github.com/Ijidishurka/modules
