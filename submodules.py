@@ -47,27 +47,31 @@ repos = [
     "https://github.com/fajox1/famods",
 ]
 
-# for repo_url in repos:
-#     repo_path = repo_url.replace("https://github.com/", "")
-#     owner, repo_name = repo_path.split("/")
-#     local_path = f"{owner}/{repo_name}"
-#     if not os.path.exists(owner):
-#         os.makedirs(owner)
-#         try:
-#             subprocess.run(["git", "clone", repo_url, local_path], check=True)
-#         except subprocess.CalledProcessError:
-#             pass
-#         print(f"Добавлен submodule: {repo_url} -> {local_path}")
-
-
 for repo_url in repos:
     repo_path = repo_url.replace("https://github.com/", "")
     owner, repo_name = repo_path.split("/")
     local_path = f"{owner}/{repo_name}"
-    print(f"Удаление submodule: {repo_url} -> {local_path}")
-    if os.path.exists(local_path):
-        try:
-            shutil.rmtree(os.path.join(owner, repo_name, ".git"))
-        except Exception as e:
-            print(f"Ошибка при удалении submodule: {e} -> {local_path}")
 
+    # Создаем каталог для владельца, если его нет
+    if not os.path.exists(owner):
+        os.makedirs(owner)
+
+    try:
+        # Используем git subtree для добавления репозитория
+        subprocess.run(
+            [
+                "git",
+                "subtree",
+                "add",
+                "--prefix",
+                local_path,
+                repo_url,
+                "main",
+                "--squash",
+            ],
+            check=True,
+        )
+
+        print(f"Добавлен subtree: {repo_url} -> {local_path}")
+    except subprocess.CalledProcessError:
+        pass
