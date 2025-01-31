@@ -40,3 +40,48 @@
 [submodule "AmoreForever/amoremods"]
 	path = AmoreForever/amoremods
 	url = https://github.com/AmoreForever/amoremods
+[submodule "SekaiYoneya/modules"]
+	path = SekaiYoneya/modules
+	url = https://github.com/SekaiYoneya/modules
+[submodule "sqlmerr/hikka_mods"]
+	path = sqlmerr/hikka_mods
+	url = https://github.com/sqlmerr/hikka_mods
+[submodule "KorenbZla/HikkaModules"]
+	path = KorenbZla/HikkaModules
+	url = https://github.com/KorenbZla/HikkaModules
+[submodule "C0dwiz/H.Modules"]
+	path = C0dwiz/H.Modules
+	url = https://github.com/C0dwiz/H.Modules
+[submodule "coddrago/modules"]
+	path = coddrago/modules
+	url = https://github.com/coddrago/modules
+[submodule "1jpshiro/hikka-modules"]
+	path = 1jpshiro/hikka-modules
+	url = https://github.com/1jpshiro/hikka-modules
+[submodule "MoriSummerz/ftg-mods"]
+	path = MoriSummerz/ftg-mods
+	url = https://github.com/MoriSummerz/ftg-mods
+[submodule "anon97945/hikka-mods"]
+	path = anon97945/hikka-mods
+	url = https://github.com/anon97945/hikka-mods
+[submodule "dekkusudev/mm-hikka-mods"]
+	path = dekkusudev/mm-hikka-mods
+	url = https://github.com/dekkusudev/mm-hikka-mods
+[submodule "idiotcoders/idiotmodules"]
+	path = idiotcoders/idiotmodules
+	url = https://github.com/idiotcoders/idiotmodules
+[submodule "CakesTwix/Hikka-Modules"]
+	path = CakesTwix/Hikka-Modules
+	url = https://github.com/CakesTwix/Hikka-Modules
+[submodule "Codwizer/ReModules"]
+	path = Codwizer/ReModules
+	url = https://github.com/Codwizer/ReModules
+[submodule "GD-alt/mm-hikka-mods"]
+	path = GD-alt/mm-hikka-mods
+	url = https://github.com/GD-alt/mm-hikka-mods
+[submodule "hikariatama/ftg"]
+	path = hikariatama/ftg
+	url = https://github.com/hikariatama/ftg
+[submodule "fajox1/famods"]
+	path = fajox1/famods
+	url = https://github.com/fajox1/famods
