@@ -68,6 +68,6 @@ for root, _, files in os.walk(base_dir):
                 print(f"Ошибка при парсинге файла {file_path}: {e}")
 
 with open("modules.json", "w", encoding="utf-8") as json_file:
-    json.dump(modules_data, json_file, ensure_ascii=False, indent=4)
+    json.dump(modules_data, json_file, ensure_ascii=False, indent=2)
 
 print("Файл modules.json создан!")
