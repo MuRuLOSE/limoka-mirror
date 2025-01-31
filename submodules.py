@@ -47,17 +47,17 @@ repos = [
     "https://github.com/fajox1/famods",
 ]
 
-for repo_url in repos:
-    repo_path = repo_url.replace("https://github.com/", "")
-    owner, repo_name = repo_path.split("/")
-    local_path = f"{owner}/{repo_name}"
-    if not os.path.exists(owner):
-        os.makedirs(owner)
-        try:
-            subprocess.run(["git", "clone", repo_url, local_path], check=True)
-        except subprocess.CalledProcessError:
-            pass
-        print(f"Добавлен submodule: {repo_url} -> {local_path}")
+# for repo_url in repos:
+#     repo_path = repo_url.replace("https://github.com/", "")
+#     owner, repo_name = repo_path.split("/")
+#     local_path = f"{owner}/{repo_name}"
+#     if not os.path.exists(owner):
+#         os.makedirs(owner)
+#         try:
+#             subprocess.run(["git", "clone", repo_url, local_path], check=True)
+#         except subprocess.CalledProcessError:
+#             pass
+#         print(f"Добавлен submodule: {repo_url} -> {local_path}")
 
 
 for repo_url in repos:
