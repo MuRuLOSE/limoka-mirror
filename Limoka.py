@@ -1,3 +1,5 @@
+# meta developer: @limokanews
+
 from whoosh.index import create_in
 from whoosh.fields import TEXT, ID, Schema
 from whoosh.qparser import QueryParser, OrGroup
@@ -87,95 +89,102 @@ class LimokaAPI:
 
 @loader.tds
 class Limoka(loader.Module):
-    """Search modules!"""
+    """Hikka modules are now in one place with easy searching! (DEV DEBUG)"""
 
     strings = {
         "name": "Limoka",
-        "wait": "Just wait" "\n<i>{fact}</i>",
-        "found": "<emoji document_id=5188311512791393083>🔎</emoji> Found the module <b>{name}</b> by query: <b>{query}</b>"
-        "\n<b>ℹ️ Description:</b> {description}"
-        "\n<b><emoji document_id=5190458330719461749>🧑‍💻</emoji> Developer:</b> {username}"  
-        "\n\n{commands}"
-        "\n<code>.dlm https://git.vsecoder.dev/root/limoka/-/raw/main/{module_path}</code>",
+        "wait": (
+            "Just wait"
+            "\n<emoji document_id=5404630946563515782>🔍</emoji> A search is underway among {count} modules for the query: <code>{query}</code>"
+            "\n"
+            "\n<i>{fact}</i>"
+        ),
+        "found": (
+            "<emoji document_id=5188311512791393083>🔎</emoji> Found the module <b>{name}</b> by query: <b>{query}</b>"
+            "\n"
+            "\n<b>ℹ️ Description:</b> {description}"
+            "\n<b><emoji document_id=5190458330719461749>🧑‍💻</emoji> Developer:</b> {username}"
+            "\n\n{commands}"
+            "\n<code>{prefix}dlm https://git.vsecoder.dev/root/limoka/-/raw/main/{module_path}</code>"
+        ),
         "command_template": "{emoji} <code>{prefix}{command}</code> - {description}\n",
         "emojis": {
-            1: "<emoji document_id=5449498872176983423>1️⃣</emoji>",
-            2: "<emoji document_id=5447575603001705541>2️⃣</emoji>",
-            3: "<emoji document_id=5447344971847844130>3️⃣</emoji>",
-            4: "<emoji document_id=5449783211896879221>4️⃣</emoji>",
-            5: "<emoji document_id=5449556257235024153>5️⃣</emoji>",
-            6: "<emoji document_id=5449643483725837995>6️⃣</emoji>",
-            7: "<emoji document_id=5447255791146910115>7️⃣</emoji>",
-            8: "<emoji document_id=5449394534536462346>8️⃣</emoji>",
-            9: "<emoji document_id=5447140424030371281>9️⃣</emoji>",
+            1: "<emoji document_id=5416037945909987712>1️⃣</emoji>",
+            2: "<emoji document_id=5413855071731470617>2️⃣</emoji>",
+            3: "<emoji document_id=5416068826724850291>3️⃣</emoji>",
+            4: "<emoji document_id=5415843998071803071>4️⃣</emoji>",
+            5: "<emoji document_id=5415684843763686989>5️⃣</emoji>",
+            6: "<emoji document_id=5415975458430796879>6️⃣</emoji>",
+            7: "<emoji document_id=5415769763857060166>7️⃣</emoji>",
+            8: "<emoji document_id=5416006506749383505>8️⃣</emoji>",
+            9: "<emoji document_id=5415963015910544694>9️⃣</emoji>",
         },
-        "404": "<emoji document_id=5210952531676504517>❌</emoji> <b>Not found</b>",
+        "404": "<emoji document_id=5210952531676504517>❌</emoji> <b>Not found by query: <i>{query}</i></b>",
         "noargs": "<emoji document_id=5210952531676504517>❌</emoji> <b>No args</b>",
-        "?": "Request too short / not found",
+        "?": "<emoji document_id=5951895176908640647>🔎</emoji> Request too short / not found",
         "no_info": "No information",
+        "facts": [
+            "<emoji document_id=5472193350520021357>🛡</emoji> The limoka catalog is carefully moderated!",
+            "<emoji document_id=5940434198413184876>🚀</emoji> Limoka performance allows you to search for modules quickly!",
+        ],
     }
 
     strings_ru = {
-        "wait": "Подождите" "\n<i>{fact}</i>",
-        "found": "<emoji document_id=5188311512791393083>🔎</emoji> Найден модуль <b>{name}</b> по запросу: <b>{query}</b>"
-        "\n<b>ℹ️ Описание:</b> {description}"
-        "\n<b><emoji document_id=5190458330719461749>🧑‍💻</emoji> Разработчик:</b> {username}"
-        "\n\n{commands}"
-        "\n\n<code>.dlm https://git.vsecoder.dev/root/limoka/-/raw/main/{module_path}</code>",
+        "wait": (
+            "Подождите"
+            "\n<emoji document_id=5404630946563515782>🔍</emoji> Идёт поиск среди {count} модулей по запросу: <code>{query}</code>"
+            "\n"
+            "\n<i>{fact}</i>"
+        ),
+        "found": (
+            "<emoji document_id=5413334818047940135>🔍</emoji> Найден модуль <b>{name}</b> по запросу: <b>{query}</b>"
+            "\n"
+            "\n<b><emoji document_id=5418376169055602355>ℹ️</emoji> Описание:</b> {description}"
+            "\n<b><emoji document_id=5418299289141004396>🧑‍💻</emoji> Разработчик:</b> {username}"
+            "\n"
+            "\n{commands}"
+            "\n"
+            "\n<emoji document_id=5411143117711624172>🪄</emoji> <code>{prefix}dlm https://git.vsecoder.dev/root/limoka/-/raw/main/{module_path}</code>"
+        ),
         "command_template": "{emoji} <code>{prefix}{command}</code> - {description}\n",
-        "emojis": {
-            1: "<emoji document_id=5449498872176983423>1️⃣</emoji>",
-            2: "<emoji document_id=5447575603001705541>2️⃣</emoji>",
-            3: "<emoji document_id=5447344971847844130>3️⃣</emoji>",
-            4: "<emoji document_id=5449783211896879221>4️⃣</emoji>",
-            5: "<emoji document_id=5449556257235024153>5️⃣</emoji>",
-            6: "<emoji document_id=5449643483725837995>6️⃣</emoji>",
-            7: "<emoji document_id=5447255791146910115>7️⃣</emoji>",
-            8: "<emoji document_id=5449394534536462346>8️⃣</emoji>",
-            9: "<emoji document_id=5447140424030371281>9️⃣</emoji>",
-        },
-        "404": "<emoji document_id=5210952531676504517>❌</emoji> <b>Не найдено</b>",
+        "404": "<emoji document_id=5210952531676504517>❌</emoji> <b>Не найдено по запросу: <i>{query}</i></b>",
         "noargs": "<emoji document_id=5210952531676504517>❌</emoji> <b>Нет аргументов</b>",
-        "?": "Запрос слишком короткий / не найден",
+        "?": "<emoji document_id=5951895176908640647>🔎</emoji> Запрос слишком короткий / не найден",
         "no_info": "Нет информации",
+        "facts": [
+            "<emoji document_id=5472193350520021357>🛡</emoji> Каталог лимоки тщательно модерируется!",
+            "<emoji document_id=5940434198413184876>🚀</emoji> Производительность лимоки позволяет вам искать модули с невероятной скоростью",
+        ],
     }
 
     async def client_ready(self, client, db):
-        self._prefix = self.get_prefix()
+        self.client = client
+        self.db = db
 
     def __init__(self):
         self.api = LimokaAPI()
-        self.facts = [
-            "The limoka catalog is carefully moderated!",
-            "Limoka performance allows you to search for modules quickly!",
-        ]
-
-    async def buttons_download(self, module_path, text, message: Message):
-        markup = [
-            {
-                "text": "⬇️ Download",
-                "callback": self._inline_download,
-                "args": [module_path],
-            }
-        ]
-
-        return await self.inline.form(
-            text,
-            message,
-            reply_markup=markup,
-        )
 
     @loader.command()
     async def limoka(self, message: Message):
         """[query] - Search module"""
         args = utils.get_args_raw(message)
 
-        await utils.answer(
-            message, self.strings["wait"].format(fact=random.choice(self.facts))
-        )
+        if len(args) <= 1:
+            return await utils.answer(message, self.strings["?"])
 
         if not args:
             return await utils.answer(message, self.strings["noargs"])
+
+        modules = await self.api.get_all_modules()
+
+        await utils.answer(
+            message,
+            self.strings["wait"].format(
+                count=len(modules),
+                fact=random.choice(self.strings["facts"]),
+                query=args,
+            ),
+        )
 
         modules = await self.api.get_all_modules()
 
@@ -211,71 +220,84 @@ class Limoka(loader.Module):
 
         module_path = result
 
-        if module_path == 0:
-            await utils.answer(message, self.strings["404"])
+        if module_path is None or module_path == 0:
+            return await utils.answer(message, self.strings["404"].format(query=args))
 
-        else:
-            module_info = modules[module_path]
+        module_info = modules[module_path]
 
-            dev_username = module_info["meta"]["developer"] if "developer" in module_info["meta"] else "Unknown"
+        dev_username = module_info["meta"].get("developer", "Unknown")
 
-            name = module_info["name"]
-            description = module_info["description"]
+        commands = []
+        command_count = 0
+        end_count_cmds = False
+        for func in module_info["commands"]:
+            if end_count_cmds:
+                break
+            for command, description in func.items():
+                if command_count == 9:
+                    commands.append("...")
+                    end_count_cmds = True
+                    break
+                command_count += 1
+                emoji = self.strings["emojis"].get(command_count, "")
+                commands.append(
+                    self.strings["command_template"].format(
+                        prefix=self.get_prefix(),
+                        command=html.escape(command.replace("cmd", "")),
+                        emoji=emoji,
+                        description=(
+                            html.escape(description)
+                            if description
+                            else self.strings["no_info"]
+                        ),
+                    )
+                )
 
-            commands = []
+        name = module_info["name"]
+        description = (
+            html.escape(module_info["description"])
+            if module_info["description"]
+            else self.strings["no_info"]
+        )
+        banner = module_info["meta"]["banner"]
 
-            command_count = 0
-            for func in module_info["commands"]:
-                for command, description in func.items():
-                    command_count += 1
-                    if command_count < 9:
-                        commands.append(
-                            self.strings["command_template"].format(
-                                prefix=self._prefix,
-                                command=html.escape(command),
-                                emoji=self.strings["emojis"][command_count],
-                                description=(
-                                    html.escape(description)
-                                    if description
-                                    else self.strings["no_info"]
-                                ),
-                            )
-                        )
-                    else:
-                        commands.append("...")
+        if description:
+            translated_desc = await self._client.translate(
+                message.peer_id,
+                message,
+                to_lang=self._db.get("hikka.translations", "lang", "en")[0:2],
+                raw_text=description,
+                entities=message.entities,
+            )
 
+        try:
+            await utils.answer_file(
+                message,
+                banner,
+                self.strings["found"].format(
+                    query=args,
+                    name=name if name else self.strings["no_info"],
+                    description=(
+                        translated_desc if description else self.strings["no_info"]
+                    ),
+                    username=dev_username,
+                    commands="".join(commands),
+                    prefix=self.get_prefix(),
+                    module_path=module_path,
+                ),
+            )
+        except Exception:
             await utils.answer(
                 message,
                 self.strings["found"].format(
                     query=args,
                     name=name if name else self.strings["no_info"],
                     description=(
-                        html.escape(description)
-                        if description
-                        else self.strings["no_info"]
+                        translated_desc if description else self.strings["no_info"]
                     ),
                     username=dev_username,
                     commands="".join(commands),
-                    prefix=self._prefix,
+                    prefix=self.get_prefix(),
                     module_path=module_path,
                 ),
             )
-
-    async def _load_module(self, module_path):
-        loader_m = self.lookup("loader")
-        module_code = await self.api.get_module_raw(module_path)
-        await loader_m.download_and_install(module_code, None)
-
-        if getattr(loader_m, "fully_loaded", False):
-            loader_m.update_modules_in_db()
-
-    async def _inline_download(self, call: InlineCall, module_path: str):
-        await self._load_module(module_path)
-
-        modules = await self.api.get_all_modules()
-        info = modules[module_path]
-        markup = [{"text": "❌ Close", "action": "close"}]
-        await call.edit(
-            f"✔️ Module {info['name']} installed successfully\n\n<code>.help {info['name']}</code>",
-            reply_markup=markup,
-        )
