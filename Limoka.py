@@ -9,7 +9,6 @@ import aiohttp
 import random
 import logging
 import os
-import re
 import html
 import json
 
@@ -34,25 +33,21 @@ class Search:
         ix = create_in("limoka_search", self.schema)
         writer = ix.writer()
 
-        # Добавляем документы в индекс
         for module_content in content:
             writer.add_document(
-                title=module_content["id"],  # Используем путь как title
-                path=module_content["id"],  # Путь — это уникальный идентификатор
-                content=module_content["content"],  # Содержимое для поиска
+                title=module_content["id"],
+                path=module_content["id"],
+                content=module_content["content"],
             )
         writer.commit()
 
         with ix.searcher() as searcher:
-            # Парсер для поиска
             parser = QueryParser("content", ix.schema, group=OrGroup)
             query = parser.parse(self.query)
 
-            # Альтернативные запросы (поиск с учетом ошибок и подстановок)
             fuzzy_query = FuzzyTerm("content", self.query, maxdist=1, prefixlength=2)
             wildcard_query = Wildcard("content", f"*{self.query}*")
 
-            # Выполнение поиска
             results = searcher.search(query)
 
             if not results:
@@ -60,10 +55,9 @@ class Search:
             if not results:
                 results = searcher.search(wildcard_query)
 
-            # Возвращаем путь модуля (ключ) или 0, если не найдено
             if results:
                 best_match = results[0]
-                return best_match["path"]  # Возвращаем путь (ключ) модуля
+                return best_match["path"]
             else:
                 return 0
 
@@ -87,7 +81,7 @@ class LimokaAPI:
 
 @loader.tds
 class Limoka(loader.Module):
-    """Hikka modules are now in one place with easy searching! (DEV DEBUG)"""
+    """Hikka modules are now in one place with easy searching!"""
 
     strings = {
         "name": "Limoka",
@@ -210,7 +204,7 @@ class Limoka(loader.Module):
                     contents.append({"id": module_path, "content": command})
                     contents.append({"id": module_path, "content": description})
 
-        searcher = Search(args)
+        searcher = Search(args.lower())
         try:
             result = searcher.search_module(contents)
         except IndexError:
