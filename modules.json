@@ -1,5 +1,18 @@
 {
-  "C0dwiz/H.Modules/AccountData.py": {
+  "Limoka.py": {
+    "name": "Limoka",
+    "description": "Search modules!",
+    "meta": {
+      "pic": null,
+      "banner": null
+    },
+    "commands": [
+      {
+        "limoka": "[query] - Search module"
+      }
+    ]
+  },
+  "C0dwiz\\H.Modules\\AccountData.py": {
     "name": "AccountData",
     "description": "Find out the approximate date of registration of the telegram account",
     "meta": {
@@ -13,7 +26,7 @@
       }
     ]
   },
-  "C0dwiz/H.Modules/AniLibria.py": {
+  "C0dwiz\\H.Modules\\AniLibria.py": {
     "name": "AniLibriaMod",
     "description": "Searches and gives random agtme on the AniLibria database.",
     "meta": {
@@ -30,7 +43,7 @@
       }
     ]
   },
-  "C0dwiz/H.Modules/animals.py": {
+  "C0dwiz\\H.Modules\\animals.py": {
     "name": "animals",
     "description": "Random cats and dogs",
     "meta": {
@@ -53,7 +66,7 @@
       }
     ]
   },
-  "C0dwiz/H.Modules/AnimeQuotes.py": {
+  "C0dwiz\\H.Modules\\AnimeQuotes.py": {
     "name": "AnimeQuotesMod",
     "description": "A module for sending random quotes from anime",
     "meta": {
@@ -67,7 +80,7 @@
       }
     ]
   },
-  "C0dwiz/H.Modules/Article.py": {
+  "C0dwiz\\H.Modules\\Article.py": {
     "name": "ArticleMod",
     "description": "Displays your article Criminal Code of the Russian Federation",
     "meta": {
@@ -81,7 +94,7 @@
       }
     ]
   },
-  "C0dwiz/H.Modules/ASCIIArt.py": {
+  "C0dwiz\\H.Modules\\ASCIIArt.py": {
     "name": "ASCIIArtMod",
     "description": "Converting images to ASCII art",
     "meta": {
@@ -95,7 +108,7 @@
       }
     ]
   },
-  "C0dwiz/H.Modules/AutofarmCookies.py": {
+  "C0dwiz\\H.Modules\\AutofarmCookies.py": {
     "name": "AutofarmCookiesMod",
     "description": "Autofarm in the bot @cookies_game_bot",
     "meta": {
@@ -121,7 +134,7 @@
       }
     ]
   },
-  "C0dwiz/H.Modules/BirthdayTime.py": {
+  "C0dwiz\\H.Modules\\BirthdayTime.py": {
     "name": "DaysToMyBirthday",
     "description": "Counting down to your birthday",
     "meta": {
@@ -138,7 +151,7 @@
       }
     ]
   },
-  "C0dwiz/H.Modules/CheckSpamBan.py": {
+  "C0dwiz\\H.Modules\\CheckSpamBan.py": {
     "name": "SpamBanCheckMod",
     "description": "Check spam ban for your account.",
     "meta": {
@@ -152,7 +165,7 @@
       }
     ]
   },
-  "C0dwiz/H.Modules/CryptoCurrency.py": {
+  "C0dwiz\\H.Modules\\CryptoCurrency.py": {
     "name": "CryptoCurrencyMod",
     "description": "Module for displaying current cryptocurrency exchange rates.",
     "meta": {
@@ -166,7 +179,7 @@
       }
     ]
   },
-  "C0dwiz/H.Modules/EnvsSH.py": {
+  "C0dwiz\\H.Modules\\EnvsSH.py": {
     "name": "EnvsMod",
     "description": "Module for reuploading files to envs.sh",
     "meta": {
@@ -180,7 +193,7 @@
       }
     ]
   },
-  "C0dwiz/H.Modules/face.py": {
+  "C0dwiz\\H.Modules\\face.py": {
     "name": "face",
     "description": "random face",
     "meta": {
@@ -194,7 +207,7 @@
       }
     ]
   },
-  "C0dwiz/H.Modules/FakeActions.py": {
+  "C0dwiz\\H.Modules\\FakeActions.py": {
     "name": "FakeActionsMod",
     "description": "Module for simulating various actions in chat",
     "meta": {
@@ -220,7 +233,7 @@
       }
     ]
   },
-  "C0dwiz/H.Modules/FakeWallet.py": {
+  "C0dwiz\\H.Modules\\FakeWallet.py": {
     "name": "FakeWallet",
     "description": "Fun joke - fake crypto wallet. You can change cryptocurrency values ​​using .cfg FakeWallet.",
     "meta": {
@@ -237,7 +250,7 @@
       }
     ]
   },
-  "C0dwiz/H.Modules/GigaChat.py": {
+  "C0dwiz\\H.Modules\\GigaChat.py": {
     "name": "GigaChatMod",
     "description": "Module for using GigaChat",
     "meta": {
@@ -254,7 +267,7 @@
       }
     ]
   },
-  "C0dwiz/H.Modules/globalrestrict.py": {
+  "C0dwiz\\H.Modules\\globalrestrict.py": {
     "name": "GlobalRestrict",
     "description": "Global mutation or ban",
     "meta": {
@@ -277,7 +290,7 @@
       }
     ]
   },
-  "C0dwiz/H.Modules/hikkahost.py": {
+  "C0dwiz\\H.Modules\\hikkahost.py": {
     "name": "HikkahostMod",
     "description": "Hikkahost manager.",
     "meta": {
@@ -297,7 +310,7 @@
       }
     ]
   },
-  "C0dwiz/H.Modules/InlineButton.py": {
+  "C0dwiz\\H.Modules\\InlineButton.py": {
     "name": "InlineButtonMod",
     "description": "Create inline button",
     "meta": {
@@ -311,7 +324,7 @@
       }
     ]
   },
-  "C0dwiz/H.Modules/InlineCoin.py": {
+  "C0dwiz\\H.Modules\\InlineCoin.py": {
     "name": "CoinSexMod",
     "description": "Mini game heads or tails",
     "meta": {
@@ -325,7 +338,7 @@
       }
     ]
   },
-  "C0dwiz/H.Modules/InlineHelper.py": {
+  "C0dwiz\\H.Modules\\InlineHelper.py": {
     "name": "InlineHelperMod",
     "description": "Basic management of the UB in case only the inline works",
     "meta": {
@@ -351,7 +364,7 @@
       }
     ]
   },
-  "C0dwiz/H.Modules/jacques.py": {
+  "C0dwiz\\H.Modules\\jacques.py": {
     "name": "JacquesMod",
     "description": "Жаконизатор",
     "meta": {
@@ -365,7 +378,7 @@
       }
     ]
   },
-  "C0dwiz/H.Modules/KBSwapper.py": {
+  "C0dwiz\\H.Modules\\KBSwapper.py": {
     "name": "KBSwapperMod",
     "description": "KBSwapper is a module for changing the keyboard layout",
     "meta": {
@@ -379,7 +392,7 @@
       }
     ]
   },
-  "C0dwiz/H.Modules/Memes.py": {
+  "C0dwiz\\H.Modules\\Memes.py": {
     "name": "MemesMod",
     "description": "Random memes",
     "meta": {
@@ -393,7 +406,7 @@
       }
     ]
   },
-  "C0dwiz/H.Modules/Music.py": {
+  "C0dwiz\\H.Modules\\Music.py": {
     "name": "MusicMod",
     "description": "Поиск музыки через музыкальных ботов.",
     "meta": {
@@ -407,7 +420,7 @@
       }
     ]
   },
-  "C0dwiz/H.Modules/novoice.py": {
+  "C0dwiz\\H.Modules\\novoice.py": {
     "name": "NoVoiceMod",
     "description": "A module for prohibiting the sending of voice and video messages",
     "meta": {
@@ -427,7 +440,7 @@
       }
     ]
   },
-  "C0dwiz/H.Modules/nsfwart.py": {
+  "C0dwiz\\H.Modules\\nsfwart.py": {
     "name": "NSFWArtMod",
     "description": "Sends cute anime nsfw-art",
     "meta": {
@@ -441,7 +454,7 @@
       }
     ]
   },
-  "C0dwiz/H.Modules/PastebinAPI.py": {
+  "C0dwiz\\H.Modules\\PastebinAPI.py": {
     "name": "PastebinAPIMod",
     "description": "PastebinAPI",
     "meta": {
@@ -455,7 +468,7 @@
       }
     ]
   },
-  "C0dwiz/H.Modules/profile.py": {
+  "C0dwiz\\H.Modules\\profile.py": {
     "name": "ProfileEditorMod",
     "description": "This module can change your Telegram profile.",
     "meta": {
@@ -475,7 +488,7 @@
       }
     ]
   },
-  "C0dwiz/H.Modules/ReplaceVowels.py": {
+  "C0dwiz\\H.Modules\\ReplaceVowels.py": {
     "name": "VowelReplacer",
     "description": "Replaces vowel letters with ё",
     "meta": {
@@ -489,7 +502,7 @@
       }
     ]
   },
-  "C0dwiz/H.Modules/SafetyMod.py": {
+  "C0dwiz\\H.Modules\\SafetyMod.py": {
     "name": "SafetyMod",
     "description": "generate random password",
     "meta": {
@@ -503,7 +516,7 @@
       }
     ]
   },
-  "C0dwiz/H.Modules/search.py": {
+  "C0dwiz\\H.Modules\\search.py": {
     "name": "Search",
     "description": "Поисковик",
     "meta": {
@@ -544,7 +557,7 @@
       }
     ]
   },
-  "C0dwiz/H.Modules/shortener.py": {
+  "C0dwiz\\H.Modules\\shortener.py": {
     "name": "Shortener",
     "description": "Module for working with the api bit.ly",
     "meta": {
@@ -561,7 +574,7 @@
       }
     ]
   },
-  "C0dwiz/H.Modules/SMAcrhiver.py": {
+  "C0dwiz\\H.Modules\\SMAcrhiver.py": {
     "name": "SMArchiver",
     "description": "unloads all messages from Favorites",
     "meta": {
@@ -575,7 +588,7 @@
       }
     ]
   },
-  "C0dwiz/H.Modules/TelegramStatusCodes.py": {
+  "C0dwiz\\H.Modules\\TelegramStatusCodes.py": {
     "name": "TelegramStatusCodes",
     "description": "Dictionary of telegram status codes",
     "meta": {
@@ -592,7 +605,7 @@
       }
     ]
   },
-  "C0dwiz/H.Modules/Text2File.py": {
+  "C0dwiz\\H.Modules\\Text2File.py": {
     "name": "Text2File",
     "description": "Module for convertation your text to file",
     "meta": {
@@ -606,7 +619,7 @@
       }
     ]
   },
-  "C0dwiz/H.Modules/Text_Sticker.py": {
+  "C0dwiz\\H.Modules\\Text_Sticker.py": {
     "name": "TextinstickerMod",
     "description": "Text to sticker",
     "meta": {
@@ -620,7 +633,7 @@
       }
     ]
   },
-  "C0dwiz/H.Modules/TikTokDownloader.py": {
+  "C0dwiz\\H.Modules\\TikTokDownloader.py": {
     "name": "TikTokDownloader",
     "description": "TikTok Downloader module",
     "meta": {
@@ -634,7 +647,7 @@
       }
     ]
   },
-  "C0dwiz/H.Modules/Video2GIF.py": {
+  "C0dwiz\\H.Modules\\Video2GIF.py": {
     "name": "Video2GIFModule",
     "description": "Converts video to GIF",
     "meta": {
@@ -648,7 +661,7 @@
       }
     ]
   },
-  "C0dwiz/H.Modules/VirusTotal.py": {
+  "C0dwiz\\H.Modules\\VirusTotal.py": {
     "name": "VirusTotalMod",
     "description": "Checks files for viruses using VirusTotal",
     "meta": {
@@ -662,7 +675,7 @@
       }
     ]
   },
-  "C0dwiz/H.Modules/VoiceDL.py": {
+  "C0dwiz\\H.Modules\\VoiceDL.py": {
     "name": "VoiceDL",
     "description": "Voice Downloader module",
     "meta": {
@@ -676,7 +689,7 @@
       }
     ]
   },
-  "coddrago/modules/ascii_face.py": {
+  "coddrago\\modules\\ascii_face.py": {
     "name": "Ascii_face",
     "description": "Random Ascii Face from utils",
     "meta": {
@@ -690,7 +703,7 @@
       }
     ]
   },
-  "coddrago/modules/clickon.py": {
+  "coddrago\\modules\\clickon.py": {
     "name": "AutoClickerMod",
     "description": "Модуль для автоматического нажатия на инлайн кнопки.",
     "meta": {
@@ -707,7 +720,7 @@
       }
     ]
   },
-  "coddrago/modules/compliments.py": {
+  "coddrago\\modules\\compliments.py": {
     "name": "Compliments",
     "description": "Compliments for your partner",
     "meta": {
@@ -721,7 +734,7 @@
       }
     ]
   },
-  "coddrago/modules/dice.py": {
+  "coddrago\\modules\\dice.py": {
     "name": "RandomNumbersMod",
     "description": "Развлекательный модуль",
     "meta": {
@@ -735,7 +748,7 @@
       }
     ]
   },
-  "coddrago/modules/DoxTool.py": {
+  "coddrago\\modules\\DoxTool.py": {
     "name": "dox",
     "description": "Maybe... doxing tool?",
     "meta": {
@@ -755,7 +768,7 @@
       }
     ]
   },
-  "coddrago/modules/emojidown.py": {
+  "coddrago\\modules\\emojidown.py": {
     "name": "EmojiDownloadMod",
     "description": "Download emoji from reply",
     "meta": {
@@ -769,7 +782,7 @@
       }
     ]
   },
-  "coddrago/modules/figlet.py": {
+  "coddrago\\modules\\figlet.py": {
     "name": "Figlet",
     "description": "Tool for work with figlet",
     "meta": {
@@ -786,7 +799,7 @@
       }
     ]
   },
-  "coddrago/modules/hentai.py": {
+  "coddrago\\modules\\hentai.py": {
     "name": "Hentai",
     "description": "Send to you random hentai media!",
     "meta": {
@@ -812,7 +825,7 @@
       }
     ]
   },
-  "coddrago/modules/id.py": {
+  "coddrago\\modules\\id.py": {
     "name": "ID",
     "description": "ID of all!",
     "meta": {
@@ -832,7 +845,7 @@
       }
     ]
   },
-  "coddrago/modules/loli.py": {
+  "coddrago\\modules\\loli.py": {
     "name": "lolihentai",
     "description": "Your the best friend in loli hentai",
     "meta": {
@@ -849,7 +862,7 @@
       }
     ]
   },
-  "coddrago/modules/modlist.py": {
+  "coddrago\\modules\\modlist.py": {
     "name": "ModulesList",
     "description": "Модуль для быстрого доступа к каналам с модулями",
     "meta": {
@@ -869,7 +882,7 @@
       }
     ]
   },
-  "coddrago/modules/module.py": {
+  "coddrago\\modules\\module.py": {
     "name": "penishost",
     "description": null,
     "meta": {
@@ -878,7 +891,7 @@
     },
     "commands": []
   },
-  "coddrago/modules/pinterest.py": {
+  "coddrago\\modules\\pinterest.py": {
     "name": "PinterestDownloader",
     "description": "Gives a link to download a file from Pinterest",
     "meta": {
@@ -892,7 +905,7 @@
       }
     ]
   },
-  "coddrago/modules/pmban.py": {
+  "coddrago\\modules\\pmban.py": {
     "name": "PMBan",
     "description": "Ban in pm for time",
     "meta": {
@@ -909,7 +922,7 @@
       }
     ]
   },
-  "coddrago/modules/promoclaimer.py": {
+  "coddrago\\modules\\promoclaimer.py": {
     "name": "PromoClaimerMod",
     "description": "Automatically claim https://t.me/StableWaifuBot promo from any chat",
     "meta": {
@@ -923,7 +936,7 @@
       }
     ]
   },
-  "coddrago/modules/randomizer.py": {
+  "coddrago\\modules\\randomizer.py": {
     "name": "Randomizer",
     "description": "Random - it's life!",
     "meta": {
@@ -946,7 +959,7 @@
       }
     ]
   },
-  "coddrago/modules/speedtest.py": {
+  "coddrago\\modules\\speedtest.py": {
     "name": "SpeedTestMod",
     "description": "Module to run speedtest using speedtest library",
     "meta": {
@@ -960,7 +973,7 @@
       }
     ]
   },
-  "coddrago/modules/SwitchToHeroku.py": {
+  "coddrago\\modules\\SwitchToHeroku.py": {
     "name": "SwitchToHeroku",
     "description": "Auto switching from Hikka to Heroku",
     "meta": {
@@ -973,7 +986,7 @@
       }
     ]
   },
-  "coddrago/modules/whoyou.py": {
+  "coddrago\\modules\\whoyou.py": {
     "name": "WhoYouMod",
     "description": "Who you? Who i'm? Who all in this world?",
     "meta": {
@@ -987,7 +1000,7 @@
       }
     ]
   },
-  "Codwizer/ReModules/AccountData.py": {
+  "Codwizer\\ReModules\\AccountData.py": {
     "name": "AccountData",
     "description": "Find out the approximate date of registration of the telegram account",
     "meta": {
@@ -1000,7 +1013,7 @@
       }
     ]
   },
-  "Codwizer/ReModules/AniLibria.py": {
+  "Codwizer\\ReModules\\AniLibria.py": {
     "name": "AniLibriaMod",
     "description": "Searches and gives random agtme on the AniLibria database.",
     "meta": {
@@ -1014,7 +1027,7 @@
       }
     ]
   },
-  "Codwizer/ReModules/animals.py": {
+  "Codwizer\\ReModules\\animals.py": {
     "name": "animals",
     "description": "Random cats and dogs",
     "meta": {
@@ -1037,7 +1050,7 @@
       }
     ]
   },
-  "Codwizer/ReModules/Article.py": {
+  "Codwizer\\ReModules\\Article.py": {
     "name": "ArticleMod",
     "description": "Displays your article Criminal Code of the Russian Federation",
     "meta": {
@@ -1051,7 +1064,7 @@
       }
     ]
   },
-  "Codwizer/ReModules/AutofarmCookies.py": {
+  "Codwizer\\ReModules\\AutofarmCookies.py": {
     "name": "AutofarmCookiesMod",
     "description": "Autofarm in the bot @cookies_game_bot",
     "meta": {
@@ -1077,7 +1090,7 @@
       }
     ]
   },
-  "Codwizer/ReModules/BirthdayTime.py": {
+  "Codwizer\\ReModules\\BirthdayTime.py": {
     "name": "DaysToMyBirthday",
     "description": "Counting down to your birthday",
     "meta": {
@@ -1094,7 +1107,7 @@
       }
     ]
   },
-  "Codwizer/ReModules/CheckSpamBan.py": {
+  "Codwizer\\ReModules\\CheckSpamBan.py": {
     "name": "SpamBanCheckMod",
     "description": "Check spam ban for your account.",
     "meta": {
@@ -1108,7 +1121,7 @@
       }
     ]
   },
-  "Codwizer/ReModules/face.py": {
+  "Codwizer\\ReModules\\face.py": {
     "name": "face",
     "description": "random face",
     "meta": {
@@ -1122,7 +1135,7 @@
       }
     ]
   },
-  "Codwizer/ReModules/FakeWallet.py": {
+  "Codwizer\\ReModules\\FakeWallet.py": {
     "name": "FakeWallet",
     "description": "Fun joke - fake crypto wallet. You can change cryptocurrency values ​​using .cfg FakeWallet.",
     "meta": {
@@ -1139,7 +1152,7 @@
       }
     ]
   },
-  "Codwizer/ReModules/globalrestrict.py": {
+  "Codwizer\\ReModules\\globalrestrict.py": {
     "name": "GlobalRestrict",
     "description": "Global mutation or ban",
     "meta": {
@@ -1162,7 +1175,7 @@
       }
     ]
   },
-  "Codwizer/ReModules/hikkahost.py": {
+  "Codwizer\\ReModules\\hikkahost.py": {
     "name": "HikkahostMod",
     "description": "Hikkahost manager.",
     "meta": {
@@ -1182,7 +1195,7 @@
       }
     ]
   },
-  "Codwizer/ReModules/InlineButton.py": {
+  "Codwizer\\ReModules\\InlineButton.py": {
     "name": "InlineButtonMod",
     "description": "Create inline button",
     "meta": {
@@ -1192,7 +1205,7 @@
     },
     "commands": []
   },
-  "Codwizer/ReModules/InlineCoin.py": {
+  "Codwizer\\ReModules\\InlineCoin.py": {
     "name": "CoinSexMod",
     "description": "Mini game heads or tails",
     "meta": {
@@ -1202,7 +1215,7 @@
     },
     "commands": []
   },
-  "Codwizer/ReModules/InlineHelper.py": {
+  "Codwizer\\ReModules\\InlineHelper.py": {
     "name": "InlineHelperMod",
     "description": "Basic management of the UB in case only the inline works",
     "meta": {
@@ -1212,7 +1225,7 @@
     },
     "commands": []
   },
-  "Codwizer/ReModules/jacques.py": {
+  "Codwizer\\ReModules\\jacques.py": {
     "name": "JacquesMod",
     "description": "Жаконизатор",
     "meta": {
@@ -1226,7 +1239,7 @@
       }
     ]
   },
-  "Codwizer/ReModules/Kittens.py": {
+  "Codwizer\\ReModules\\Kittens.py": {
     "name": "Kittens",
     "description": "Module for search cutie kitties from @catslovemeow",
     "meta": {
@@ -1240,7 +1253,7 @@
       }
     ]
   },
-  "Codwizer/ReModules/Memes.py": {
+  "Codwizer\\ReModules\\Memes.py": {
     "name": "MemesMod",
     "description": "Random memes",
     "meta": {
@@ -1254,7 +1267,7 @@
       }
     ]
   },
-  "Codwizer/ReModules/Music.py": {
+  "Codwizer\\ReModules\\Music.py": {
     "name": "MusicMod",
     "description": "Поиск музыки через музыкальных ботов.",
     "meta": {
@@ -1271,7 +1284,7 @@
       }
     ]
   },
-  "Codwizer/ReModules/numbersapi.py": {
+  "Codwizer\\ReModules\\numbersapi.py": {
     "name": "NumbersAPI",
     "description": "Many interesting facts about numbers. idea @FurryMods",
     "meta": {
@@ -1285,7 +1298,7 @@
       }
     ]
   },
-  "Codwizer/ReModules/PastebinAPI.py": {
+  "Codwizer\\ReModules\\PastebinAPI.py": {
     "name": "PastebinAPIMod",
     "description": "PastebinAPI",
     "meta": {
@@ -1299,7 +1312,7 @@
       }
     ]
   },
-  "Codwizer/ReModules/profile.py": {
+  "Codwizer\\ReModules\\profile.py": {
     "name": "ProfileEditorMod",
     "description": "This module can change your Telegram profile.",
     "meta": {
@@ -1319,7 +1332,7 @@
       }
     ]
   },
-  "Codwizer/ReModules/SafetyMod.py": {
+  "Codwizer\\ReModules\\SafetyMod.py": {
     "name": "SafetyMod",
     "description": "generate random password",
     "meta": {
@@ -1333,7 +1346,7 @@
       }
     ]
   },
-  "Codwizer/ReModules/search.py": {
+  "Codwizer\\ReModules\\search.py": {
     "name": "Search",
     "description": "Поисковик",
     "meta": {
@@ -1374,7 +1387,7 @@
       }
     ]
   },
-  "Codwizer/ReModules/shortener.py": {
+  "Codwizer\\ReModules\\shortener.py": {
     "name": "Shortener",
     "description": "Module for working with the api bit.ly",
     "meta": {
@@ -1391,7 +1404,7 @@
       }
     ]
   },
-  "Codwizer/ReModules/TelegramStatusCodes.py": {
+  "Codwizer\\ReModules\\TelegramStatusCodes.py": {
     "name": "TelegramStatusCodes",
     "description": "Dictionary of telegram status codes",
     "meta": {
@@ -1408,7 +1421,7 @@
       }
     ]
   },
-  "Codwizer/ReModules/Text2File.py": {
+  "Codwizer\\ReModules\\Text2File.py": {
     "name": "Text2File",
     "description": "Module for convertation your text to file",
     "meta": {
@@ -1422,7 +1435,7 @@
       }
     ]
   },
-  "Codwizer/ReModules/Text_Sticker.py": {
+  "Codwizer\\ReModules\\Text_Sticker.py": {
     "name": "TextinstickerMod",
     "description": "Text to sticker",
     "meta": {
@@ -1436,7 +1449,7 @@
       }
     ]
   },
-  "Codwizer/ReModules/VirusTotal.py": {
+  "Codwizer\\ReModules\\VirusTotal.py": {
     "name": "VirusTotalMod",
     "description": "Checks files for viruses using VirusTotal",
     "meta": {
@@ -1450,7 +1463,7 @@
       }
     ]
   },
-  "dekkusudev/mm-hikka-mods/AGA.py": {
+  "dekkusudev\\mm-hikka-mods\\AGA.py": {
     "name": "AbsolutGrossartigAntwortMod",
     "description": "Tired of people asking you questions? Let this module answer them for you!\nP.S. Author is not responsible for all your problems after using it.",
     "meta": {
@@ -1464,7 +1477,7 @@
       }
     ]
   },
-  "dekkusudev/mm-hikka-mods/asap.py": {
+  "dekkusudev\\mm-hikka-mods\\asap.py": {
     "name": "ASAPMod",
     "description": "Advanced Sending Automatisation Program",
     "meta": {
@@ -1505,7 +1518,7 @@
       }
     ]
   },
-  "dekkusudev/mm-hikka-mods/CoVis.py": {
+  "dekkusudev\\mm-hikka-mods\\CoVis.py": {
     "name": "CoVisMod",
     "description": "Visualise colors by those formules.",
     "meta": {
@@ -1533,7 +1546,7 @@
       }
     ]
   },
-  "dekkusudev/mm-hikka-mods/Dicedestroyer.py": {
+  "dekkusudev\\mm-hikka-mods\\Dicedestroyer.py": {
     "name": "DicedestroyerMod",
     "description": "Keeps your chat clean from dices, darts and so on.",
     "meta": {
@@ -1547,7 +1560,7 @@
       }
     ]
   },
-  "dekkusudev/mm-hikka-mods/Entziferrer.py": {
+  "dekkusudev\\mm-hikka-mods\\Entziferrer.py": {
     "name": "EntziffererMod",
     "description": "Decoding QR codes.",
     "meta": {
@@ -1561,7 +1574,7 @@
       }
     ]
   },
-  "dekkusudev/mm-hikka-mods/GLyrics.py": {
+  "dekkusudev\\mm-hikka-mods\\GLyrics.py": {
     "name": "GLyricsMod",
     "description": "Get lyrics from Genius",
     "meta": {
@@ -1575,7 +1588,7 @@
       }
     ]
   },
-  "dekkusudev/mm-hikka-mods/GoogleTrans.py": {
+  "dekkusudev\\mm-hikka-mods\\GoogleTrans.py": {
     "name": "GoogleTranslateMod",
     "description": "Guaranteed to be the most advanced and feature-rich message translation module based on Google Translate,\nwith many useful features.",
     "meta": {
@@ -1619,7 +1632,7 @@
       }
     ]
   },
-  "dekkusudev/mm-hikka-mods/GoogleTransRR.py": {
+  "dekkusudev\\mm-hikka-mods\\GoogleTransRR.py": {
     "name": "GoogleTranslateMod",
     "description": "Guaranteed to be the most advanced and feature-rich message translation module based on Google Translate,\nwith many useful features.",
     "meta": {
@@ -1663,7 +1676,7 @@
       }
     ]
   },
-  "dekkusudev/mm-hikka-mods/Grapes.py": {
+  "dekkusudev\\mm-hikka-mods\\Grapes.py": {
     "name": "GrapesMod",
     "description": "Searching for random pic for your query. Original version/idea: Fl1yd.",
     "meta": {
@@ -1680,7 +1693,7 @@
       }
     ]
   },
-  "dekkusudev/mm-hikka-mods/Holidays.py": {
+  "dekkusudev\\mm-hikka-mods\\Holidays.py": {
     "name": "HolidaysMod",
     "description": "Holidays today.",
     "meta": {
@@ -1694,7 +1707,7 @@
       }
     ]
   },
-  "dekkusudev/mm-hikka-mods/LiMERPMod.py": {
+  "dekkusudev\\mm-hikka-mods\\LiMERPMod.py": {
     "name": "RPMod",
     "description": "A little upgraded mod of module of @trololo_1.",
     "meta": {
@@ -1744,7 +1757,7 @@
       }
     ]
   },
-  "dekkusudev/mm-hikka-mods/MHelp.py": {
+  "dekkusudev\\mm-hikka-mods\\MHelp.py": {
     "name": "MHelpMod",
     "description": "Helps to download mods to file and automaticaly make simple descriptions for your modules.",
     "meta": {
@@ -1767,7 +1780,7 @@
       }
     ]
   },
-  "dekkusudev/mm-hikka-mods/miyahost.py": {
+  "dekkusudev\\mm-hikka-mods\\miyahost.py": {
     "name": "MiyaHostMod",
     "description": "Module to manage your miyahost.",
     "meta": {
@@ -1790,7 +1803,7 @@
       }
     ]
   },
-  "dekkusudev/mm-hikka-mods/MMAS.py": {
+  "dekkusudev\\mm-hikka-mods\\MMAS.py": {
     "name": "MMASMod",
     "description": "Protects your account from spam if anyone accessed your account/session.",
     "meta": {
@@ -1807,7 +1820,7 @@
       }
     ]
   },
-  "dekkusudev/mm-hikka-mods/PremiumStickers.py": {
+  "dekkusudev\\mm-hikka-mods\\PremiumStickers.py": {
     "name": "PSAMod",
     "description": "Send premium stickers without premium! Advanced version of Hikariatama's module.",
     "meta": {
@@ -1824,7 +1837,7 @@
       }
     ]
   },
-  "dekkusudev/mm-hikka-mods/Prodia.py": {
+  "dekkusudev\\mm-hikka-mods\\Prodia.py": {
     "name": "ProdiaMod",
     "description": "Image generator based on Prodia API. No API key required.",
     "meta": {
@@ -1838,7 +1851,7 @@
       }
     ]
   },
-  "dekkusudev/mm-hikka-mods/Reactor.py": {
+  "dekkusudev\\mm-hikka-mods\\Reactor.py": {
     "name": "ReactTorMod",
     "description": "Reacts manager.",
     "meta": {
@@ -1861,7 +1874,7 @@
       }
     ]
   },
-  "dekkusudev/mm-hikka-mods/Rechte.py": {
+  "dekkusudev\\mm-hikka-mods\\Rechte.py": {
     "name": "RechteMod",
     "description": "Group rights viewer and manager.",
     "meta": {
@@ -1944,7 +1957,7 @@
       }
     ]
   },
-  "dekkusudev/mm-hikka-mods/versteck.py": {
+  "dekkusudev\\mm-hikka-mods\\versteck.py": {
     "name": "VersteckMod",
     "description": "Work with VersteckAPI — download modules if you are common user, grant permissions for downloading if you are\ndeveloper!",
     "meta": {
@@ -1982,7 +1995,7 @@
       }
     ]
   },
-  "dekkusudev/mm-hikka-mods/YandexTrans.py": {
+  "dekkusudev\\mm-hikka-mods\\YandexTrans.py": {
     "name": "YaTranslateMod",
     "description": "Guaranteed to be the most advanced and feature-rich message translation module based on Yandex Translate,\nwith many useful features (GoogleTrans, but rewritten). RR-version (Requirements Reduced).",
     "meta": {
@@ -2026,7 +2039,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/achievements.py": {
+  "Den4ikSuperOstryyPer4ik\\Astro-modules\\achievements.py": {
     "name": "AchievementsMod",
     "description": "Create the achievement from https://minecraft-inside.ru/achievements/\n\nIdea from @Den4ikSOP & @boyhao",
     "meta": {
@@ -2040,7 +2053,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/akinator.py": {
+  "Den4ikSuperOstryyPer4ik\\Astro-modules\\akinator.py": {
     "name": "AkinatorGame",
     "description": "Akinator will guess any character you have in mind,\nYou just need to answer a couple of questions)",
     "meta": {
@@ -2054,7 +2067,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/AntiMat.py": {
+  "Den4ikSuperOstryyPer4ik\\Astro-modules\\AntiMat.py": {
     "name": "AntiMatMod",
     "description": "Будьте культурным человеком, не материтесь",
     "meta": {
@@ -2074,7 +2087,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/astroafk.py": {
+  "Den4ikSuperOstryyPer4ik\\Astro-modules\\astroafk.py": {
     "name": "AstroAfkMod",
     "description": "Полностью настраиваемый модуль для ухода в АФК режим! Обновление TxAFK!",
     "meta": {
@@ -2094,7 +2107,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/astroweather.py": {
+  "Den4ikSuperOstryyPer4ik\\Astro-modules\\astroweather.py": {
     "name": "AstroWeatherMod",
     "description": "Модуль для получения информации о погоде в Вашем городе, в красивом формате",
     "meta": {
@@ -2108,7 +2121,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/brawl_stats.py": {
+  "Den4ikSuperOstryyPer4ik\\Astro-modules\\brawl_stats.py": {
     "name": "BrawlStatsInfo",
     "description": "Brawl Stars Players/Clubs information :)",
     "meta": {
@@ -2137,7 +2150,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/commands_logger.py": {
+  "Den4ikSuperOstryyPer4ik\\Astro-modules\\commands_logger.py": {
     "name": "HikkaCommandsLoggerMod",
     "description": "Hikka Commands Logger",
     "meta": {
@@ -2151,7 +2164,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/Compliments.py": {
+  "Den4ikSuperOstryyPer4ik\\Astro-modules\\Compliments.py": {
     "name": "ComplimentsMod",
     "description": "Покажи девушке какая она прекрасная (ну или им, какие они прекрасные)",
     "meta": {
@@ -2168,7 +2181,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/convertio.py": {
+  "Den4ikSuperOstryyPer4ik\\Astro-modules\\convertio.py": {
     "name": "ConvertioMod",
     "description": "Convert file with api from https://convertio.co",
     "meta": {
@@ -2185,7 +2198,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/demotivator.py": {
+  "Den4ikSuperOstryyPer4ik\\Astro-modules\\demotivator.py": {
     "name": "DemotivatorMod",
     "description": "Demotivate picture with text, arguments and config.",
     "meta": {
@@ -2199,7 +2212,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/dialogs_manager.py": {
+  "Den4ikSuperOstryyPer4ik\\Astro-modules\\dialogs_manager.py": {
     "name": "DialogsManagerMod",
     "description": "Check your all info for dialogs, chats, PMs\nDelete definite dialog,\ndelete all dialogs by arguments,\nleave the chats, ids/usernames which you specify\nDialogs Manager!",
     "meta": {
@@ -2225,7 +2238,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/dl_yt_previews.py": {
+  "Den4ikSuperOstryyPer4ik\\Astro-modules\\dl_yt_previews.py": {
     "name": "YTPreviewMod",
     "description": "Скачивает превью с ютуба",
     "meta": {
@@ -2239,7 +2252,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/Emotions.py": {
+  "Den4ikSuperOstryyPer4ik\\Astro-modules\\Emotions.py": {
     "name": "EmotionsMod",
     "description": "Выражение эмоций в чате",
     "meta": {
@@ -2262,7 +2275,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/gamecheat.py": {
+  "Den4ikSuperOstryyPer4ik\\Astro-modules\\gamecheat.py": {
     "name": "GameeCheatMod",
     "description": "Читы для игр в @gamee",
     "meta": {
@@ -2277,7 +2290,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/inline_bot_manager.py": {
+  "Den4ikSuperOstryyPer4ik\\Astro-modules\\inline_bot_manager.py": {
     "name": "InlineBotManagerMod",
     "description": "Control over your Inline bot!",
     "meta": {
@@ -2306,7 +2319,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/iOSAppsForAndroid.py": {
+  "Den4ikSuperOstryyPer4ik\\Astro-modules\\iOSAppsForAndroid.py": {
     "name": "iOSAppsForAndroid",
     "description": "iOS Applications for Android, or more simply, Android applications with an interface like on iOS",
     "meta": {
@@ -2320,7 +2333,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/komarumod.py": {
+  "Den4ikSuperOstryyPer4ik\\Astro-modules\\komarumod.py": {
     "name": "KomaruMod",
     "description": "Random picture/video/gif from the @komarueveryday",
     "meta": {
@@ -2334,7 +2347,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/mindtalk.py": {
+  "Den4ikSuperOstryyPer4ik\\Astro-modules\\mindtalk.py": {
     "name": "MindTalkMod",
     "description": "Your little psychologist Based on MindTalk by Hikamoru",
     "meta": {
@@ -2354,7 +2367,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/minesweeper.py": {
+  "Den4ikSuperOstryyPer4ik\\Astro-modules\\minesweeper.py": {
     "name": "MineSwepperModule",
     "description": "Minesweeper game",
     "meta": {
@@ -2368,7 +2381,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/pcmanager.py": {
+  "Den4ikSuperOstryyPer4ik\\Astro-modules\\pcmanager.py": {
     "name": "PCManagerMod",
     "description": "Управление вашим компьютером через юзербота",
     "meta": {
@@ -2415,7 +2428,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/RandomPasswordGenerator.py": {
+  "Den4ikSuperOstryyPer4ik\\Astro-modules\\RandomPasswordGenerator.py": {
     "name": "PasswordGeneratorMod",
     "description": "Random password/pincode generator",
     "meta": {
@@ -2432,7 +2445,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/RandomStatuses.py": {
+  "Den4ikSuperOstryyPer4ik\\Astro-modules\\RandomStatuses.py": {
     "name": "RandomStatusesMod",
     "description": "Рандомные статусы для описания аккаунта в ТГ/Вацап/ВК и т.д.",
     "meta": {
@@ -2446,7 +2459,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/RandomTrack.py": {
+  "Den4ikSuperOstryyPer4ik\\Astro-modules\\RandomTrack.py": {
     "name": "RandomTrackMod",
     "description": "Получить рандомный трек. \nИспользуйте категории чтобы сгенерировать трек на свой вкус",
     "meta": {
@@ -2460,7 +2473,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/RandomUser.py": {
+  "Den4ikSuperOstryyPer4ik\\Astro-modules\\RandomUser.py": {
     "name": "RandomUserMod",
     "description": "choose a random user in chat\nAutors: @AstroModules & @smeowcodes",
     "meta": {
@@ -2474,7 +2487,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/shazam.py": {
+  "Den4ikSuperOstryyPer4ik\\Astro-modules\\shazam.py": {
     "name": "ShazamMod",
     "description": "Use <reply to voice> to search for a song using audio.",
     "meta": {
@@ -2488,7 +2501,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/Steam.py": {
+  "Den4ikSuperOstryyPer4ik\\Astro-modules\\Steam.py": {
     "name": "Steam",
     "description": "Get now played game",
     "meta": {
@@ -2511,7 +2524,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/summer.py": {
+  "Den4ikSuperOstryyPer4ik\\Astro-modules\\summer.py": {
     "name": "SummerMod",
     "description": "Сколько осталось дней до лета?)",
     "meta": {
@@ -2525,7 +2538,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/TwinkManager.py": {
+  "Den4ikSuperOstryyPer4ik\\Astro-modules\\TwinkManager.py": {
     "name": "TwinkManagerMod",
     "description": "Управление твинками через основной аккаунт.",
     "meta": {
@@ -2557,7 +2570,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/TxAFK.py": {
+  "Den4ikSuperOstryyPer4ik\\Astro-modules\\TxAFK.py": {
     "name": "TxAFKMod",
     "description": "Афк модуль от AstroModules с изменением био и имени",
     "meta": {
@@ -2577,7 +2590,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/video_to_voice.py": {
+  "Den4ikSuperOstryyPer4ik\\Astro-modules\\video_to_voice.py": {
     "name": "VideoToVoice",
     "description": "Convert Video to voice",
     "meta": {
@@ -2591,7 +2604,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/wordly.py": {
+  "Den4ikSuperOstryyPer4ik\\Astro-modules\\wordly.py": {
     "name": "WordlyHelper",
     "description": "Помощник для игры \"Вордли на Русском\"",
     "meta": {
@@ -2605,7 +2618,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/YandexMusic.py": {
+  "Den4ikSuperOstryyPer4ik\\Astro-modules\\YandexMusic.py": {
     "name": "YaMusicMod",
     "description": "Поиск музыки через музыкального бота от Яндекса",
     "meta": {
@@ -2619,7 +2632,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/вахуи_пон.py": {
+  "Den4ikSuperOstryyPer4ik\\Astro-modules\\вахуи_пон.py": {
     "name": "ВахуиПонMod",
     "description": "пон и вахуи",
     "meta": {
@@ -2636,7 +2649,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/пон_вахуи.py": {
+  "Den4ikSuperOstryyPer4ik\\Astro-modules\\пон_вахуи.py": {
     "name": "ПонВахуиMod",
     "description": "пон и вахуи",
     "meta": {
@@ -2653,7 +2666,7 @@
       }
     ]
   },
-  "dorotorothequickend/DorotoroModules/01code.py": {
+  "dorotorothequickend\\DorotoroModules\\01code.py": {
     "name": "tocodedecodemod",
     "description": "Ваш персональный шифратор в двоичный код.",
     "meta": {
@@ -2670,7 +2683,7 @@
       }
     ]
   },
-  "dorotorothequickend/DorotoroModules/AccountDeleter.py": {
+  "dorotorothequickend\\DorotoroModules\\AccountDeleter.py": {
     "name": "AccountDeleter",
     "description": null,
     "meta": {
@@ -2684,7 +2697,7 @@
       }
     ]
   },
-  "dorotorothequickend/DorotoroModules/AutoEdit.py": {
+  "dorotorothequickend\\DorotoroModules\\AutoEdit.py": {
     "name": "AutoEdit",
     "description": "Редактирует каждое ваше сообщение в определенное время на выбранный вами текст.\nНастройка через .config AutoEdit",
     "meta": {
@@ -2698,7 +2711,7 @@
       }
     ]
   },
-  "dorotorothequickend/DorotoroModules/CheckSpamBan.py": {
+  "dorotorothequickend\\DorotoroModules\\CheckSpamBan.py": {
     "name": "SpamBanCheckMod",
     "description": "Check spam ban for your account.",
     "meta": {
@@ -2712,7 +2725,7 @@
       }
     ]
   },
-  "dorotorothequickend/DorotoroModules/CringePhrases.py": {
+  "dorotorothequickend\\DorotoroModules\\CringePhrases.py": {
     "name": "CringePhrases",
     "description": "Отправляет случайную мега-кринж фразу.",
     "meta": {
@@ -2726,7 +2739,7 @@
       }
     ]
   },
-  "dorotorothequickend/DorotoroModules/Dota2RandomHero.py": {
+  "dorotorothequickend\\DorotoroModules\\Dota2RandomHero.py": {
     "name": "Dota2RandomHero",
     "description": null,
     "meta": {
@@ -2749,7 +2762,7 @@
       }
     ]
   },
-  "dorotorothequickend/DorotoroModules/DoYouKnowAlphabet.py": {
+  "dorotorothequickend\\DorotoroModules\\DoYouKnowAlphabet.py": {
     "name": "Alphabet",
     "description": "Special for Kids.",
     "meta": {
@@ -2772,7 +2785,7 @@
       }
     ]
   },
-  "dorotorothequickend/DorotoroModules/EMJviaTEXT.py": {
+  "dorotorothequickend\\DorotoroModules\\EMJviaTEXT.py": {
     "name": "EMJviaTEXT",
     "description": "[ONLY FOR TG PREMIUM]\nЭтот модуль создан чтобы не рыскать миллиарды стикерпаков. \nПример использования:\nПривет BloodTrail",
     "meta": {
@@ -2789,7 +2802,7 @@
       }
     ]
   },
-  "dorotorothequickend/DorotoroModules/ExcuseGenerator.py": {
+  "dorotorothequickend\\DorotoroModules\\ExcuseGenerator.py": {
     "name": "ExcuseGeneratorMod",
     "description": "Ваш преданный помощник!",
     "meta": {
@@ -2803,7 +2816,7 @@
       }
     ]
   },
-  "dorotorothequickend/DorotoroModules/FkinRickRoll.py": {
+  "dorotorothequickend\\DorotoroModules\\FkinRickRoll.py": {
     "name": "FuckingRickRoll",
     "description": "Лучший способ зарикроллить собеседника.",
     "meta": {
@@ -2820,7 +2833,7 @@
       }
     ]
   },
-  "dorotorothequickend/DorotoroModules/FoodRecipe.py": {
+  "dorotorothequickend\\DorotoroModules\\FoodRecipe.py": {
     "name": "FoodRecipe",
     "description": "Ищет рецепт блюда по его названию.",
     "meta": {
@@ -2834,7 +2847,7 @@
       }
     ]
   },
-  "dorotorothequickend/DorotoroModules/InlineTTS.py": {
+  "dorotorothequickend\\DorotoroModules\\InlineTTS.py": {
     "name": "InlineTTS",
     "description": "Синтезирует текст в голос ваших любимых героев!Пример использования: .atts arthas Привет",
     "meta": {
@@ -2908,7 +2921,7 @@
       }
     ]
   },
-  "dorotorothequickend/DorotoroModules/LessonHelper.py": {
+  "dorotorothequickend\\DorotoroModules\\LessonHelper.py": {
     "name": "LessonHelper",
     "description": "Ваш личный репетитор!",
     "meta": {
@@ -2928,7 +2941,7 @@
       }
     ]
   },
-  "dorotorothequickend/DorotoroModules/PasswordGenerator.py": {
+  "dorotorothequickend\\DorotoroModules\\PasswordGenerator.py": {
     "name": "passwordgeneratormod",
     "description": "Ваш персональный генератор паролей.",
     "meta": {
@@ -2942,7 +2955,7 @@
       }
     ]
   },
-  "dorotorothequickend/DorotoroModules/RandomHuman.py": {
+  "dorotorothequickend\\DorotoroModules\\RandomHuman.py": {
     "name": "RandomHuman",
     "description": "Отправляет рандомное имя, фамилию, дату рождения, email, пароль и телефон.",
     "meta": {
@@ -2971,7 +2984,7 @@
       }
     ]
   },
-  "dorotorothequickend/DorotoroModules/RandomJumoreska.py": {
+  "dorotorothequickend\\DorotoroModules\\RandomJumoreska.py": {
     "name": "RandomJumoreska",
     "description": "Отправляет случайную юмореску.",
     "meta": {
@@ -2985,7 +2998,7 @@
       }
     ]
   },
-  "dorotorothequickend/DorotoroModules/SimpleRolePlay.py": {
+  "dorotorothequickend\\DorotoroModules\\SimpleRolePlay.py": {
     "name": "SimpleRolePlay",
     "description": "Базовые команды для текстовых ролевых игр.",
     "meta": {
@@ -3008,7 +3021,7 @@
       }
     ]
   },
-  "DziruModules/hikkamods/Among.py": {
+  "DziruModules\\hikkamods\\Among.py": {
     "name": "AmongMod",
     "description": "Create AmongUs stickers",
     "meta": {
@@ -3022,7 +3035,7 @@
       }
     ]
   },
-  "DziruModules/hikkamods/AutoComment.py": {
+  "DziruModules\\hikkamods\\AutoComment.py": {
     "name": "AutoCommentMod",
     "description": "Automatically comments under any channels you want",
     "meta": {
@@ -3036,7 +3049,7 @@
       }
     ]
   },
-  "DziruModules/hikkamods/Carbon.py": {
+  "DziruModules\\hikkamods\\Carbon.py": {
     "name": "CarbonMod",
     "description": "Create beautiful code images. Edited by @Penggrin",
     "meta": {
@@ -3050,7 +3063,7 @@
       }
     ]
   },
-  "DziruModules/hikkamods/CryptoBalance.py": {
+  "DziruModules\\hikkamods\\CryptoBalance.py": {
     "name": "CryptoBalanceMod",
     "description": "Check your balance in many Crypto Wallet Bots",
     "meta": {
@@ -3076,7 +3089,7 @@
       }
     ]
   },
-  "DziruModules/hikkamods/DziShazam.py": {
+  "DziruModules\\hikkamods\\DziShazam.py": {
     "name": "DziShazamMod",
     "description": "Module for searching music's. Works through @lybot",
     "meta": {
@@ -3090,7 +3103,7 @@
       }
     ]
   },
-  "DziruModules/hikkamods/Gitinfo.py": {
+  "DziruModules\\hikkamods\\Gitinfo.py": {
     "name": "GitInfoMod",
     "description": "Get Github user info, simply type username",
     "meta": {
@@ -3104,7 +3117,7 @@
       }
     ]
   },
-  "DziruModules/hikkamods/GoodWishes.py": {
+  "DziruModules\\hikkamods\\GoodWishes.py": {
     "name": "GoodWishesMod",
     "description": "Good wishes for the day",
     "meta": {
@@ -3127,7 +3140,7 @@
       }
     ]
   },
-  "DziruModules/hikkamods/PinSaver.py": {
+  "DziruModules\\hikkamods\\PinSaver.py": {
     "name": "PinSaverMod",
     "description": "Pinterest saver via @TopSaverBot",
     "meta": {
@@ -3141,7 +3154,7 @@
       }
     ]
   },
-  "DziruModules/hikkamods/RepoSaver.py": {
+  "DziruModules\\hikkamods\\RepoSaver.py": {
     "name": "RepoSaverMod",
     "description": "GitHub Repository saver via @githubrepo_download_bot",
     "meta": {
@@ -3155,7 +3168,7 @@
       }
     ]
   },
-  "fajox1/famods/anonsms.py": {
+  "fajox1\\famods\\anonsms.py": {
     "name": "AnonSMS",
     "description": "Анонимное сообщение",
     "meta": {
@@ -3172,7 +3185,7 @@
       }
     ]
   },
-  "fajox1/famods/autogh.py": {
+  "fajox1\\famods\\autogh.py": {
     "name": "AutoGH",
     "description": "Авто-коммиты в Github",
     "meta": {
@@ -3186,7 +3199,7 @@
       }
     ]
   },
-  "fajox1/famods/avachanger.py": {
+  "fajox1\\famods\\avachanger.py": {
     "name": "AvaChanger",
     "description": "Смена аватарки по времени",
     "meta": {
@@ -3203,7 +3216,7 @@
       }
     ]
   },
-  "fajox1/famods/banforaskmod.py": {
+  "fajox1\\famods\\banforaskmod.py": {
     "name": "BanForAskMod",
     "description": "Бан за просьбу дать модулей",
     "meta": {
@@ -3217,7 +3230,7 @@
       }
     ]
   },
-  "fajox1/famods/bigmac.py": {
+  "fajox1\\famods\\bigmac.py": {
     "name": "BigMac",
     "description": "Авто-фарм в @BigMacMetreBot",
     "meta": {
@@ -3237,7 +3250,7 @@
       }
     ]
   },
-  "fajox1/famods/checkhost.py": {
+  "fajox1\\famods\\checkhost.py": {
     "name": "CheckHost",
     "description": "Проверка доступности веб-сайтов, серверов, хостов и IP-адресов с разных геолокаций и тд.",
     "meta": {
@@ -3251,7 +3264,7 @@
       }
     ]
   },
-  "fajox1/famods/chmodslist.py": {
+  "fajox1\\famods\\chmodslist.py": {
     "name": "CHmodsList",
     "description": "Список каналов с модулями (идея: @codrago)",
     "meta": {
@@ -3268,7 +3281,7 @@
       }
     ]
   },
-  "fajox1/famods/CodeBase64.py": {
+  "fajox1\\famods\\CodeBase64.py": {
     "name": "CodeBase64",
     "description": "Encode and decode base64",
     "meta": {
@@ -3285,7 +3298,7 @@
       }
     ]
   },
-  "fajox1/famods/cryptoqr.py": {
+  "fajox1\\famods\\cryptoqr.py": {
     "name": "CryptoQR",
     "description": "Создание QR код в стиле CryptoBot",
     "meta": {
@@ -3299,7 +3312,7 @@
       }
     ]
   },
-  "fajox1/famods/edmes.py": {
+  "fajox1\\famods\\edmes.py": {
     "name": "Edmes",
     "description": "Редактирует сообщение с заданим текстом.",
     "meta": {
@@ -3313,7 +3326,7 @@
       }
     ]
   },
-  "fajox1/famods/epsilion.py": {
+  "fajox1\\famods\\epsilion.py": {
     "name": "Epsilion",
     "description": "Авто-фарм в @EpsilionWarBot",
     "meta": {
@@ -3333,7 +3346,7 @@
       }
     ]
   },
-  "fajox1/famods/evalaliases.py": {
+  "fajox1\\famods\\evalaliases.py": {
     "name": "EvalAliases",
     "description": "Алиаси для eval",
     "meta": {
@@ -3353,7 +3366,7 @@
       }
     ]
   },
-  "fajox1/famods/executor.py": {
+  "fajox1\\famods\\executor.py": {
     "name": "Executor",
     "description": "Выполнение python кода",
     "meta": {
@@ -3367,7 +3380,7 @@
       }
     ]
   },
-  "fajox1/famods/fabrika.py": {
+  "fajox1\\famods\\fabrika.py": {
     "name": "Fabrika",
     "description": "Авто-фарм в @fabrika",
     "meta": {
@@ -3399,7 +3412,7 @@
       }
     ]
   },
-  "fajox1/famods/fabusiness.py": {
+  "fajox1\\famods\\fabusiness.py": {
     "name": "FAbusiness",
     "description": "Бесплатный Telegram business",
     "meta": {
@@ -3416,7 +3429,7 @@
       }
     ]
   },
-  "fajox1/famods/faker.py": {
+  "fajox1\\famods\\faker.py": {
     "name": "Faker",
     "description": "Генерация фейк информации",
     "meta": {
@@ -3430,7 +3443,7 @@
       }
     ]
   },
-  "fajox1/famods/famod.py": {
+  "fajox1\\famods\\famod.py": {
     "name": "Famod",
     "description": "Управление вещами, связанными с @FAmods_Bot",
     "meta": {
@@ -3447,7 +3460,7 @@
       }
     ]
   },
-  "fajox1/famods/famods_socket.py": {
+  "fajox1\\famods\\famods_socket.py": {
     "name": "FAmodsSocket",
     "description": "Установка модулей через @FAmods_Bot",
     "meta": {
@@ -3457,7 +3470,7 @@
     },
     "commands": []
   },
-  "fajox1/famods/freegpt.py": {
+  "fajox1\\famods\\freegpt.py": {
     "name": "FreeGPT",
     "description": "Бесплатный ChatGPT. БЕЗ API. БЕЗ БОТОВ.",
     "meta": {
@@ -3474,7 +3487,7 @@
       }
     ]
   },
-  "fajox1/famods/fun.py": {
+  "fajox1\\famods\\fun.py": {
     "name": "Fun",
     "description": "Module for fun...",
     "meta": {
@@ -3494,7 +3507,7 @@
       }
     ]
   },
-  "fajox1/famods/gemini.py": {
+  "fajox1\\famods\\gemini.py": {
     "name": "Gemini",
     "description": "Взаимодействие с AI Gemini",
     "meta": {
@@ -3508,7 +3521,7 @@
       }
     ]
   },
-  "fajox1/famods/gigachat.py": {
+  "fajox1\\famods\\gigachat.py": {
     "name": "GigaChat",
     "description": "GigaChat AI. БЕЗ АПИ",
     "meta": {
@@ -3522,7 +3535,7 @@
       }
     ]
   },
-  "fajox1/famods/giveaways.py": {
+  "fajox1\\famods\\giveaways.py": {
     "name": "Giveaways",
     "description": "Авто-участие в розыгрышах Telegram Premium",
     "meta": {
@@ -3536,7 +3549,7 @@
       }
     ]
   },
-  "fajox1/famods/grokai.py": {
+  "fajox1\\famods\\grokai.py": {
     "name": "GrokAI",
     "description": "Взаимодействие с Grok AI",
     "meta": {
@@ -3550,7 +3563,7 @@
       }
     ]
   },
-  "fajox1/famods/gsearch.py": {
+  "fajox1\\famods\\gsearch.py": {
     "name": "Gsearch",
     "description": "Поиск в Google",
     "meta": {
@@ -3564,7 +3577,7 @@
       }
     ]
   },
-  "fajox1/famods/hbotcommand.py": {
+  "fajox1\\famods\\hbotcommand.py": {
     "name": "HbotCommand",
     "description": "Дополнительная команда для твоего inline бота",
     "meta": {
@@ -3581,7 +3594,7 @@
       }
     ]
   },
-  "fajox1/famods/hetalib.py": {
+  "fajox1\\famods\\hetalib.py": {
     "name": "HetaLib",
     "description": "Модуль для работы с heta",
     "meta": {
@@ -3601,7 +3614,7 @@
       }
     ]
   },
-  "fajox1/famods/infoip.py": {
+  "fajox1\\famods\\infoip.py": {
     "name": "InfoIP",
     "description": "Информация об IP адресе",
     "meta": {
@@ -3615,7 +3628,7 @@
       }
     ]
   },
-  "fajox1/famods/phoneinfo.py": {
+  "fajox1\\famods\\phoneinfo.py": {
     "name": "PhoneInfo",
     "description": "Информация о телефоне",
     "meta": {
@@ -3632,7 +3645,7 @@
       }
     ]
   },
-  "fajox1/famods/picme.py": {
+  "fajox1\\famods\\picme.py": {
     "name": "PicMe",
     "description": "Кринж модуль",
     "meta": {
@@ -3646,7 +3659,7 @@
       }
     ]
   },
-  "fajox1/famods/pricefreedom.py": {
+  "fajox1\\famods\\pricefreedom.py": {
     "name": "PriceFreedom",
     "description": "Автоматизированная работа с @rabstvo_game_bot",
     "meta": {
@@ -3666,7 +3679,7 @@
       }
     ]
   },
-  "fajox1/famods/proxy.py": {
+  "fajox1\\famods\\proxy.py": {
     "name": "Proxy",
     "description": "Работа с прокси",
     "meta": {
@@ -3683,7 +3696,7 @@
       }
     ]
   },
-  "fajox1/famods/removebg.py": {
+  "fajox1\\famods\\removebg.py": {
     "name": "RemoveBG",
     "description": "Убрать фон из изображения",
     "meta": {
@@ -3697,7 +3710,7 @@
       }
     ]
   },
-  "fajox1/famods/requirements.py": {
+  "fajox1\\famods\\requirements.py": {
     "name": "Requirements",
     "description": "Работа с pip пакетами в модуле",
     "meta": {
@@ -3717,7 +3730,7 @@
       }
     ]
   },
-  "fajox1/famods/spotify4ik.py": {
+  "fajox1\\famods\\spotify4ik.py": {
     "name": "Spotify4ik",
     "description": "Слушай музыку в Spotify",
     "meta": {
@@ -3764,7 +3777,7 @@
       }
     ]
   },
-  "fajox1/famods/stats.py": {
+  "fajox1\\famods\\stats.py": {
     "name": "Stats",
     "description": "Показывает статистику твоего аккаунта",
     "meta": {
@@ -3778,7 +3791,7 @@
       }
     ]
   },
-  "fajox1/famods/telegrapher.py": {
+  "fajox1\\famods\\telegrapher.py": {
     "name": "Telegrapher",
     "description": "Создание статей и другое связанное с telegra.ph",
     "meta": {
@@ -3795,7 +3808,7 @@
       }
     ]
   },
-  "fajox1/famods/timer.py": {
+  "fajox1\\famods\\timer.py": {
     "name": "Timer",
     "description": "Показывает сколько времени осталось",
     "meta": {
@@ -3809,7 +3822,7 @@
       }
     ]
   },
-  "fajox1/famods/tondns.py": {
+  "fajox1\\famods\\tondns.py": {
     "name": "TonDNS",
     "description": "Модуль для работы с Ton DNS",
     "meta": {
@@ -3826,7 +3839,7 @@
       }
     ]
   },
-  "fajox1/famods/tonscan.py": {
+  "fajox1\\famods\\tonscan.py": {
     "name": "Tonscan",
     "description": "Информация о TON адресе",
     "meta": {
@@ -3849,7 +3862,7 @@
       }
     ]
   },
-  "fajox1/famods/vaper.py": {
+  "fajox1\\famods\\vaper.py": {
     "name": "Vaper",
     "description": "Авто-фарм в @vapeusebot",
     "meta": {
@@ -3869,7 +3882,7 @@
       }
     ]
   },
-  "fajox1/famods/wakatime.py": {
+  "fajox1\\famods\\wakatime.py": {
     "name": "Wakatime",
     "description": "Показывает твою Wakatime статистику",
     "meta": {
@@ -3883,7 +3896,7 @@
       }
     ]
   },
-  "fajox1/famods/xrocket.py": {
+  "fajox1\\famods\\xrocket.py": {
     "name": "xRocket",
     "description": "Автоматизация базового функционала @xRocket",
     "meta": {
@@ -3903,7 +3916,7 @@
       }
     ]
   },
-  "fajox1/famods/ytsearch.py": {
+  "fajox1\\famods\\ytsearch.py": {
     "name": "YTsearch",
     "description": "Поиск в Youtube",
     "meta": {
@@ -3920,7 +3933,7 @@
       }
     ]
   },
-  "GD-alt/mm-hikka-mods/AGA.py": {
+  "GD-alt\\mm-hikka-mods\\AGA.py": {
     "name": "AbsolutGrossartigAntwortMod",
     "description": "Tired of people asking you questions? Let this module answer them for you!\nP.S. Author is not responsible for all your problems after using it.",
     "meta": {
@@ -3934,7 +3947,7 @@
       }
     ]
   },
-  "GD-alt/mm-hikka-mods/asap.py": {
+  "GD-alt\\mm-hikka-mods\\asap.py": {
     "name": "ASAPMod",
     "description": "Advanced Sending Automatisation Program",
     "meta": {
@@ -3975,7 +3988,7 @@
       }
     ]
   },
-  "GD-alt/mm-hikka-mods/atoll.py": {
+  "GD-alt\\mm-hikka-mods\\atoll.py": {
     "name": "AtollMod",
     "description": "Atoll — it's like am Atool (Admin Tool) but sounds nicer. Some basic moderation features, just for me. Clean\ndocs, pure user experience.",
     "meta": {
@@ -4067,7 +4080,7 @@
       }
     ]
   },
-  "GD-alt/mm-hikka-mods/CoVis.py": {
+  "GD-alt\\mm-hikka-mods\\CoVis.py": {
     "name": "CoVisMod",
     "description": "Visualise colors by those formules.",
     "meta": {
@@ -4095,7 +4108,7 @@
       }
     ]
   },
-  "GD-alt/mm-hikka-mods/Dicedestroyer.py": {
+  "GD-alt\\mm-hikka-mods\\Dicedestroyer.py": {
     "name": "DicedestroyerMod",
     "description": "Keeps your chat clean from dices, darts and so on.",
     "meta": {
@@ -4109,7 +4122,7 @@
       }
     ]
   },
-  "GD-alt/mm-hikka-mods/Entziferrer.py": {
+  "GD-alt\\mm-hikka-mods\\Entziferrer.py": {
     "name": "EntziffererMod",
     "description": "Decoding QR codes.",
     "meta": {
@@ -4123,7 +4136,7 @@
       }
     ]
   },
-  "GD-alt/mm-hikka-mods/GLyrics.py": {
+  "GD-alt\\mm-hikka-mods\\GLyrics.py": {
     "name": "GLyricsMod",
     "description": "Get lyrics from Genius",
     "meta": {
@@ -4137,7 +4150,7 @@
       }
     ]
   },
-  "GD-alt/mm-hikka-mods/GoogleTrans.py": {
+  "GD-alt\\mm-hikka-mods\\GoogleTrans.py": {
     "name": "GoogleTranslateMod",
     "description": "Guaranteed to be the most advanced and feature-rich message translation module based on Google Translate,\nwith many useful features.",
     "meta": {
@@ -4181,7 +4194,7 @@
       }
     ]
   },
-  "GD-alt/mm-hikka-mods/GoogleTransRR.py": {
+  "GD-alt\\mm-hikka-mods\\GoogleTransRR.py": {
     "name": "GoogleTranslateMod",
     "description": "Guaranteed to be the most advanced and feature-rich message translation module based on Google Translate,\nwith many useful features.",
     "meta": {
@@ -4225,7 +4238,7 @@
       }
     ]
   },
-  "GD-alt/mm-hikka-mods/Grapes.py": {
+  "GD-alt\\mm-hikka-mods\\Grapes.py": {
     "name": "GrapesMod",
     "description": "Searching for random pic for your query. Original version/idea: Fl1yd.",
     "meta": {
@@ -4242,7 +4255,7 @@
       }
     ]
   },
-  "GD-alt/mm-hikka-mods/Holidays.py": {
+  "GD-alt\\mm-hikka-mods\\Holidays.py": {
     "name": "HolidaysMod",
     "description": "Holidays today.",
     "meta": {
@@ -4256,7 +4269,7 @@
       }
     ]
   },
-  "GD-alt/mm-hikka-mods/LiMERPMod.py": {
+  "GD-alt\\mm-hikka-mods\\LiMERPMod.py": {
     "name": "RPMod",
     "description": "A little upgraded mod of module of @trololo_1.",
     "meta": {
@@ -4306,7 +4319,7 @@
       }
     ]
   },
-  "GD-alt/mm-hikka-mods/MHelp.py": {
+  "GD-alt\\mm-hikka-mods\\MHelp.py": {
     "name": "MHelpMod",
     "description": "Helps to download mods to file and automaticaly make simple descriptions for your modules.",
     "meta": {
@@ -4329,7 +4342,7 @@
       }
     ]
   },
-  "GD-alt/mm-hikka-mods/miyahost.py": {
+  "GD-alt\\mm-hikka-mods\\miyahost.py": {
     "name": "MiyaHostMod",
     "description": "Module to manage your miyahost.",
     "meta": {
@@ -4352,7 +4365,7 @@
       }
     ]
   },
-  "GD-alt/mm-hikka-mods/MMAS.py": {
+  "GD-alt\\mm-hikka-mods\\MMAS.py": {
     "name": "MMASMod",
     "description": "Protects your account from spam if anyone accessed your account/session.",
     "meta": {
@@ -4369,7 +4382,7 @@
       }
     ]
   },
-  "GD-alt/mm-hikka-mods/PremiumStickers.py": {
+  "GD-alt\\mm-hikka-mods\\PremiumStickers.py": {
     "name": "PSAMod",
     "description": "Send premium stickers without premium! Advanced version of Hikariatama's module.",
     "meta": {
@@ -4386,7 +4399,7 @@
       }
     ]
   },
-  "GD-alt/mm-hikka-mods/Prodia.py": {
+  "GD-alt\\mm-hikka-mods\\Prodia.py": {
     "name": "ProdiaMod",
     "description": "Image generator based on Prodia API. No API key required.",
     "meta": {
@@ -4400,7 +4413,7 @@
       }
     ]
   },
-  "GD-alt/mm-hikka-mods/Reactor.py": {
+  "GD-alt\\mm-hikka-mods\\Reactor.py": {
     "name": "ReactTorMod",
     "description": "Reacts manager.",
     "meta": {
@@ -4423,7 +4436,7 @@
       }
     ]
   },
-  "GD-alt/mm-hikka-mods/Rechte.py": {
+  "GD-alt\\mm-hikka-mods\\Rechte.py": {
     "name": "RechteMod",
     "description": "Group rights viewer and manager.",
     "meta": {
@@ -4506,7 +4519,7 @@
       }
     ]
   },
-  "GD-alt/mm-hikka-mods/versteck.py": {
+  "GD-alt\\mm-hikka-mods\\versteck.py": {
     "name": "VersteckMod",
     "description": "Work with VersteckAPI — download modules if you are common user, grant permissions for downloading if you are\ndeveloper!",
     "meta": {
@@ -4544,7 +4557,7 @@
       }
     ]
   },
-  "GD-alt/mm-hikka-mods/YandexTrans.py": {
+  "GD-alt\\mm-hikka-mods\\YandexTrans.py": {
     "name": "YaTranslateMod",
     "description": "Guaranteed to be the most advanced and feature-rich message translation module based on Yandex Translate,\nwith many useful features (GoogleTrans, but rewritten). RR-version (Requirements Reduced).",
     "meta": {
@@ -4588,7 +4601,7 @@
       }
     ]
   },
-  "GeekTG/FTG-Modules/admin_tools.py": {
+  "GeekTG\\FTG-Modules\\admin_tools.py": {
     "name": "AdminToolsMod",
     "description": "Admin Tools",
     "meta": {
@@ -4631,7 +4644,7 @@
       }
     ]
   },
-  "GeekTG/FTG-Modules/audio_editor.py": {
+  "GeekTG\\FTG-Modules\\audio_editor.py": {
     "name": "AudioEditorMod",
     "description": "Module for working with sound",
     "meta": {
@@ -4690,7 +4703,7 @@
       }
     ]
   },
-  "GeekTG/FTG-Modules/autoprofile.py": {
+  "GeekTG\\FTG-Modules\\autoprofile.py": {
     "name": "AutoProfileMod",
     "description": "Automatic stuff for your profile :P",
     "meta": {
@@ -4721,7 +4734,7 @@
       }
     ]
   },
-  "GeekTG/FTG-Modules/avatar.py": {
+  "GeekTG\\FTG-Modules\\avatar.py": {
     "name": "GetPPMod",
     "description": null,
     "meta": {
@@ -4752,7 +4765,7 @@
       }
     ]
   },
-  "GeekTG/FTG-Modules/banwords.py": {
+  "GeekTG\\FTG-Modules\\banwords.py": {
     "name": "BanWordsMod",
     "description": "Плохие слова.",
     "meta": {
@@ -4777,7 +4790,7 @@
       }
     ]
   },
-  "GeekTG/FTG-Modules/calculator.py": {
+  "GeekTG\\FTG-Modules\\calculator.py": {
     "name": "CalculatorMod",
     "description": "Calculator module",
     "meta": {
@@ -4790,7 +4803,7 @@
       }
     ]
   },
-  "GeekTG/FTG-Modules/callcontrol.py": {
+  "GeekTG\\FTG-Modules\\callcontrol.py": {
     "name": "VGCallControllerMod",
     "description": "Control group voice calls",
     "meta": {
@@ -4806,7 +4819,7 @@
       }
     ]
   },
-  "GeekTG/FTG-Modules/chat.py": {
+  "GeekTG\\FTG-Modules\\chat.py": {
     "name": "ChatMod",
     "description": "Чат модуль",
     "meta": {
@@ -4849,7 +4862,7 @@
       }
     ]
   },
-  "GeekTG/FTG-Modules/chatvoicemod.py": {
+  "GeekTG\\FTG-Modules\\chatvoicemod.py": {
     "name": "ChatVoiceMod",
     "description": "Module for working with voicechat",
     "meta": {
@@ -4890,7 +4903,7 @@
       }
     ]
   },
-  "GeekTG/FTG-Modules/conthelper.py": {
+  "GeekTG\\FTG-Modules\\conthelper.py": {
     "name": "ConthelperMod",
     "description": "Commands:",
     "meta": {
@@ -4915,7 +4928,7 @@
       }
     ]
   },
-  "GeekTG/FTG-Modules/demot.py": {
+  "GeekTG\\FTG-Modules\\demot.py": {
     "name": "DemotivatorMod",
     "description": "Deotivators",
     "meta": {
@@ -4952,7 +4965,7 @@
       }
     ]
   },
-  "GeekTG/FTG-Modules/distort.py": {
+  "GeekTG\\FTG-Modules\\distort.py": {
     "name": "DistortMod",
     "description": "Stickers or photo distort",
     "meta": {
@@ -4971,7 +4984,7 @@
       }
     ]
   },
-  "GeekTG/FTG-Modules/downloader.py": {
+  "GeekTG\\FTG-Modules\\downloader.py": {
     "name": "DownloaderMod",
     "description": "Downloader module",
     "meta": {
@@ -4996,7 +5009,7 @@
       }
     ]
   },
-  "GeekTG/FTG-Modules/fake_actions.py": {
+  "GeekTG\\FTG-Modules\\fake_actions.py": {
     "name": "FakeMod",
     "description": "Imitates your actions",
     "meta": {
@@ -5039,7 +5052,7 @@
       }
     ]
   },
-  "GeekTG/FTG-Modules/file_uploader.py": {
+  "GeekTG\\FTG-Modules\\file_uploader.py": {
     "name": "FileUploaderMod",
     "description": "Uploader",
     "meta": {
@@ -5058,7 +5071,7 @@
       }
     ]
   },
-  "GeekTG/FTG-Modules/filter.py": {
+  "GeekTG\\FTG-Modules\\filter.py": {
     "name": "FiltersMod",
     "description": "Filters module",
     "meta": {
@@ -5080,7 +5093,7 @@
       }
     ]
   },
-  "GeekTG/FTG-Modules/image_editor.py": {
+  "GeekTG\\FTG-Modules\\image_editor.py": {
     "name": "ImageEditorMod",
     "description": "ImageEditor - Simple tool for working with images",
     "meta": {
@@ -5121,7 +5134,7 @@
       }
     ]
   },
-  "GeekTG/FTG-Modules/image_tools.py": {
+  "GeekTG\\FTG-Modules\\image_tools.py": {
     "name": "ImageToolsMod",
     "description": "Image tools module",
     "meta": {
@@ -5158,7 +5171,7 @@
       }
     ]
   },
-  "GeekTG/FTG-Modules/information.py": {
+  "GeekTG\\FTG-Modules\\information.py": {
     "name": "WhoIsMod",
     "description": "Get info about user/chat",
     "meta": {
@@ -5174,7 +5187,7 @@
       }
     ]
   },
-  "GeekTG/FTG-Modules/lmgtfy.py": {
+  "GeekTG\\FTG-Modules\\lmgtfy.py": {
     "name": "LMGTFYMod",
     "description": "Let me Google that for you, coz you too lazy to do that yourself.",
     "meta": {
@@ -5187,7 +5200,7 @@
       }
     ]
   },
-  "GeekTG/FTG-Modules/lyrics.py": {
+  "GeekTG\\FTG-Modules\\lyrics.py": {
     "name": "LyricsMod",
     "description": "Sings songs",
     "meta": {
@@ -5200,7 +5213,7 @@
       }
     ]
   },
-  "GeekTG/FTG-Modules/morze.py": {
+  "GeekTG\\FTG-Modules\\morze.py": {
     "name": "MorzeMod",
     "description": "Конвертация текста в шифр Морзе и наоборот.\n\nСимволы использовать не советую, могут возникать ошибки!!",
     "meta": {
@@ -5216,7 +5229,7 @@
       }
     ]
   },
-  "GeekTG/FTG-Modules/music.py": {
+  "GeekTG\\FTG-Modules\\music.py": {
     "name": "LyricsMod",
     "description": "Sings songs",
     "meta": {
@@ -5232,7 +5245,7 @@
       }
     ]
   },
-  "GeekTG/FTG-Modules/noterminal.py": {
+  "GeekTG\\FTG-Modules\\noterminal.py": {
     "name": "noTerminalMod",
     "description": "Runs commands",
     "meta": {
@@ -5251,7 +5264,7 @@
       }
     ]
   },
-  "GeekTG/FTG-Modules/notes.py": {
+  "GeekTG\\FTG-Modules\\notes.py": {
     "name": "NotesMod",
     "description": "Stores global notes (aka snips)",
     "meta": {
@@ -5279,7 +5292,7 @@
       }
     ]
   },
-  "GeekTG/FTG-Modules/notexec.py": {
+  "GeekTG\\FTG-Modules\\notexec.py": {
     "name": "ExecutorMod",
     "description": "Stores global notes (aka snips)",
     "meta": {
@@ -5292,7 +5305,7 @@
       }
     ]
   },
-  "GeekTG/FTG-Modules/pmlog.py": {
+  "GeekTG\\FTG-Modules\\pmlog.py": {
     "name": "PMLogMod",
     "description": "Logs unwanted PMs to a channel",
     "meta": {
@@ -5308,7 +5321,7 @@
       }
     ]
   },
-  "GeekTG/FTG-Modules/purge.py": {
+  "GeekTG\\FTG-Modules\\purge.py": {
     "name": "PurgeMod",
     "description": "Deletes your messages",
     "meta": {
@@ -5324,7 +5337,7 @@
       }
     ]
   },
-  "GeekTG/FTG-Modules/qr_code.py": {
+  "GeekTG\\FTG-Modules\\qr_code.py": {
     "name": "QRtoolsMod",
     "description": "Generator and reader of QR codes",
     "meta": {
@@ -5340,7 +5353,7 @@
       }
     ]
   },
-  "GeekTG/FTG-Modules/quotes.py": {
+  "GeekTG\\FTG-Modules\\quotes.py": {
     "name": "mQuotesMod",
     "description": "Quote a message using Mishase Quotes API",
     "meta": {
@@ -5356,7 +5369,7 @@
       }
     ]
   },
-  "GeekTG/FTG-Modules/range.py": {
+  "GeekTG\\FTG-Modules\\range.py": {
     "name": "RangeMod",
     "description": "Provides numbers as in Python range with delay",
     "meta": {
@@ -5378,7 +5391,7 @@
       }
     ]
   },
-  "GeekTG/FTG-Modules/recent_actions.py": {
+  "GeekTG\\FTG-Modules\\recent_actions.py": {
     "name": "RecentActionsMod",
     "description": "Reads recent actions",
     "meta": {
@@ -5391,7 +5404,7 @@
       }
     ]
   },
-  "GeekTG/FTG-Modules/rpmod.py": {
+  "GeekTG\\FTG-Modules\\rpmod.py": {
     "name": "RPMod",
     "description": "Модуль RPMod + дополнение после команды.+реплика.(указывать реплику на второй строке)",
     "meta": {
@@ -5422,7 +5435,7 @@
       }
     ]
   },
-  "GeekTG/FTG-Modules/screenshot.py": {
+  "GeekTG\\FTG-Modules\\screenshot.py": {
     "name": "WebShotMod",
     "description": "Screenshot module",
     "meta": {
@@ -5438,7 +5451,7 @@
       }
     ]
   },
-  "GeekTG/FTG-Modules/searcher.py": {
+  "GeekTG\\FTG-Modules\\searcher.py": {
     "name": "SearchMod",
     "description": "Searcher module",
     "meta": {
@@ -5451,7 +5464,7 @@
       }
     ]
   },
-  "GeekTG/FTG-Modules/squotes.py": {
+  "GeekTG\\FTG-Modules\\squotes.py": {
     "name": "ShitQuotesMod",
     "description": "Quotes by @sh1tchannel",
     "meta": {
@@ -5473,7 +5486,7 @@
       }
     ]
   },
-  "GeekTG/FTG-Modules/stickers.py": {
+  "GeekTG\\FTG-Modules\\stickers.py": {
     "name": "StickersMod",
     "description": "Tasks with stickers",
     "meta": {
@@ -5492,7 +5505,7 @@
       }
     ]
   },
-  "GeekTG/FTG-Modules/tags.py": {
+  "GeekTG\\FTG-Modules\\tags.py": {
     "name": "TagMod",
     "description": "Secretly tag a user",
     "meta": {
@@ -5508,7 +5521,7 @@
       }
     ]
   },
-  "GeekTG/FTG-Modules/terminal.py": {
+  "GeekTG\\FTG-Modules\\terminal.py": {
     "name": "TerminalMod",
     "description": "Runs commands",
     "meta": {
@@ -5536,7 +5549,7 @@
       }
     ]
   },
-  "GeekTG/FTG-Modules/text_generator.py": {
+  "GeekTG\\FTG-Modules\\text_generator.py": {
     "name": "TextGeneratorMod",
     "description": "Generating text using machine learning",
     "meta": {
@@ -5552,7 +5565,7 @@
       }
     ]
   },
-  "GeekTG/FTG-Modules/translate.py": {
+  "GeekTG\\FTG-Modules\\translate.py": {
     "name": "TranslatorMod",
     "description": "Translator Module",
     "meta": {
@@ -5568,7 +5581,7 @@
       }
     ]
   },
-  "GeekTG/FTG-Modules/tts.py": {
+  "GeekTG\\FTG-Modules\\tts.py": {
     "name": "DttsMod",
     "description": "Text to speech module",
     "meta": {
@@ -5590,7 +5603,7 @@
       }
     ]
   },
-  "GeekTG/FTG-Modules/url.py": {
+  "GeekTG\\FTG-Modules\\url.py": {
     "name": "URlMod",
     "description": "URL Module",
     "meta": {
@@ -5615,7 +5628,7 @@
       }
     ]
   },
-  "GeekTG/FTG-Modules/video_editor.py": {
+  "GeekTG\\FTG-Modules\\video_editor.py": {
     "name": "VideoEditorMod",
     "description": "Module for working with video",
     "meta": {
@@ -5671,7 +5684,7 @@
       }
     ]
   },
-  "GeekTG/FTG-Modules/vizjener.py": {
+  "GeekTG\\FTG-Modules\\vizjener.py": {
     "name": "VijenerMod",
     "description": "Конвертация текста в шифр Виженеря и наоборот.",
     "meta": {
@@ -5687,7 +5700,7 @@
       }
     ]
   },
-  "GeekTG/FTG-Modules/voice_recognition.py": {
+  "GeekTG\\FTG-Modules\\voice_recognition.py": {
     "name": "VoiceRecognitionMod",
     "description": "Распознавание речи через Google Recognition API",
     "meta": {
@@ -5700,7 +5713,7 @@
       }
     ]
   },
-  "GeekTG/FTG-Modules/warn.py": {
+  "GeekTG\\FTG-Modules\\warn.py": {
     "name": "WarnsMod",
     "description": "Система предупреждений.",
     "meta": {
@@ -5725,7 +5738,7 @@
       }
     ]
   },
-  "GeekTG/FTG-Modules/weather.py": {
+  "GeekTG\\FTG-Modules\\weather.py": {
     "name": "WeatherMod",
     "description": "Weather Module",
     "meta": {
@@ -5744,7 +5757,7 @@
       }
     ]
   },
-  "GeekTG/FTG-Modules/welcome.py": {
+  "GeekTG\\FTG-Modules\\welcome.py": {
     "name": "WelcomeMod",
     "description": "Приветствие новых пользователей в чате.",
     "meta": {
@@ -5760,7 +5773,7 @@
       }
     ]
   },
-  "GeekTG/FTG-Modules/ytdl.py": {
+  "GeekTG\\FTG-Modules\\ytdl.py": {
     "name": "YtDlMod",
     "description": "Youtube-Dl Module",
     "meta": {
@@ -5776,7 +5789,7 @@
       }
     ]
   },
-  "iamnalinor/FTG-modules/lavhost.py": {
+  "iamnalinor\\FTG-modules\\lavhost.py": {
     "name": "LavHostMod",
     "description": "Simple @lavHost manager",
     "meta": {
@@ -5802,7 +5815,7 @@
       }
     ]
   },
-  "iamnalinor/FTG-modules/membersquery.py": {
+  "iamnalinor\\FTG-modules\\membersquery.py": {
     "name": "MembersQueryMod",
     "description": "Finds an intersection between members of different groups",
     "meta": {
@@ -5819,7 +5832,7 @@
       }
     ]
   },
-  "iamnalinor/FTG-modules/msgrate.py": {
+  "iamnalinor\\FTG-modules\\msgrate.py": {
     "name": "MsgRateMod",
     "description": "Show chat activity, counted in MpH (messages per hour)",
     "meta": {
@@ -5836,7 +5849,7 @@
       }
     ]
   },
-  "iamnalinor/FTG-modules/speedtest.py": {
+  "iamnalinor\\FTG-modules\\speedtest.py": {
     "name": "SpeedtestMod",
     "description": "Tests your internet speed via speedtest.net",
     "meta": {
@@ -5850,7 +5863,7 @@
       }
     ]
   },
-  "iamnalinor/FTG-modules/swmute.py": {
+  "iamnalinor\\FTG-modules\\swmute.py": {
     "name": "SwmuteMod",
     "description": "Deletes messages from certain users",
     "meta": {
@@ -5873,7 +5886,7 @@
       }
     ]
   },
-  "idiotcoders/idiotmodules/animearts.py": {
+  "idiotcoders\\idiotmodules\\animearts.py": {
     "name": "animeartsMod",
     "description": "Sends cute anime art",
     "meta": {
@@ -5890,7 +5903,7 @@
       }
     ]
   },
-  "idiotcoders/idiotmodules/animetools.py": {
+  "idiotcoders\\idiotmodules\\animetools.py": {
     "name": "animetoolsMod",
     "description": "AnimeTools",
     "meta": {
@@ -5919,7 +5932,7 @@
       }
     ]
   },
-  "idiotcoders/idiotmodules/bio.py": {
+  "idiotcoders\\idiotmodules\\bio.py": {
     "name": "BioMod",
     "description": "💘\n    ",
     "meta": {
@@ -5963,7 +5976,7 @@
       }
     ]
   },
-  "idiotcoders/idiotmodules/irisfarm.py": {
+  "idiotcoders\\idiotmodules\\irisfarm.py": {
     "name": "IrisfarmMod",
     "description": "Автоматизирует работу с Iris Chat Manager (автоматическая ферма)",
     "meta": {
@@ -5980,7 +5993,7 @@
       }
     ]
   },
-  "idiotcoders/idiotmodules/lastfm.py": {
+  "idiotcoders\\idiotmodules\\lastfm.py": {
     "name": "LastFMMod",
     "description": "LastFM Now (based on SpotifyNow)",
     "meta": {
@@ -6003,7 +6016,7 @@
       }
     ]
   },
-  "idiotcoders/idiotmodules/loliart.py": {
+  "idiotcoders\\idiotmodules\\loliart.py": {
     "name": "loliartMod",
     "description": "Sends cute anime loli-art ☺",
     "meta": {
@@ -6017,7 +6030,7 @@
       }
     ]
   },
-  "idiotcoders/idiotmodules/promote.py": {
+  "idiotcoders\\idiotmodules\\promote.py": {
     "name": "PromoteMod",
     "description": "Managing administrators rights in chats.",
     "meta": {
@@ -6037,7 +6050,7 @@
       }
     ]
   },
-  "idiotcoders/idiotmodules/stablediffusion.py": {
+  "idiotcoders\\idiotmodules\\stablediffusion.py": {
     "name": "StableDiffusionMod",
     "description": "Some mod for work with StableDiffusion. API KEY required!",
     "meta": {
@@ -6054,7 +6067,7 @@
       }
     ]
   },
-  "idiotcoders/idiotmodules/timer.py": {
+  "idiotcoders\\idiotmodules\\timer.py": {
     "name": "TimerMod",
     "description": "Module that shows the time before an event",
     "meta": {
@@ -6068,7 +6081,7 @@
       }
     ]
   },
-  "idiotcoders/idiotmodules/toadbot.py": {
+  "idiotcoders\\idiotmodules\\toadbot.py": {
     "name": "ToadBotMod",
     "description": "Модуль для ухода за вашей жабой, когда вам лень или же когда у вас нет на это времени\n    ",
     "meta": {
@@ -6085,7 +6098,7 @@
       }
     ]
   },
-  "idiotcoders/idiotmodules/yoomoney.py": {
+  "idiotcoders\\idiotmodules\\yoomoney.py": {
     "name": "YooMoneyMod",
     "description": "Yoomoney Module.",
     "meta": {
@@ -6108,7 +6121,7 @@
       }
     ]
   },
-  "Ijidishurka/modules/amogus.py": {
+  "Ijidishurka\\modules\\amogus.py": {
     "name": "amogus",
     "description": "Подпишись на канал @modwini",
     "meta": {
@@ -6121,7 +6134,7 @@
       }
     ]
   },
-  "Ijidishurka/modules/bill.py": {
+  "Ijidishurka\\modules\\bill.py": {
     "name": "billy",
     "description": "Подпишись на канал @modwini",
     "meta": {
@@ -6134,7 +6147,7 @@
       }
     ]
   },
-  "Ijidishurka/modules/Cat.py": {
+  "Ijidishurka\\modules\\Cat.py": {
     "name": "CatModule",
     "description": "Отправляет случайное фото котика.",
     "meta": {
@@ -6148,7 +6161,7 @@
       }
     ]
   },
-  "Ijidishurka/modules/catt.py": {
+  "Ijidishurka\\modules\\catt.py": {
     "name": "catt",
     "description": "Подпишись на канал @modwini",
     "meta": {
@@ -6161,7 +6174,7 @@
       }
     ]
   },
-  "Ijidishurka/modules/gimntv.py": {
+  "Ijidishurka\\modules\\gimntv.py": {
     "name": "bas",
     "description": "Гимнт твича с Басбустом by @modwini",
     "meta": {
@@ -6183,7 +6196,7 @@
       }
     ]
   },
-  "Ijidishurka/modules/girlvoiceV3.py": {
+  "Ijidishurka\\modules\\girlvoiceV3.py": {
     "name": "voiceGirls",
     "description": "Голосовые сообщения девушек by @modwini",
     "meta": {
@@ -6274,7 +6287,7 @@
       }
     ]
   },
-  "Ijidishurka/modules/gs.py": {
+  "Ijidishurka\\modules\\gs.py": {
     "name": "KeywordMod",
     "description": "Присылает громкое голосовое сообщение +_+",
     "meta": {
@@ -6288,7 +6301,7 @@
       }
     ]
   },
-  "Ijidishurka/modules/lp.py": {
+  "Ijidishurka\\modules\\lp.py": {
     "name": "elpe",
     "description": null,
     "meta": {
@@ -6301,7 +6314,7 @@
       }
     ]
   },
-  "Ijidishurka/modules/MessageStats.py": {
+  "Ijidishurka\\modules\\MessageStats.py": {
     "name": "MessageStatsMod",
     "description": "Показывает статистику сообщений в текущем чате",
     "meta": {
@@ -6315,7 +6328,7 @@
       }
     ]
   },
-  "Ijidishurka/modules/MonacoFarm.py": {
+  "Ijidishurka\\modules\\MonacoFarm.py": {
     "name": "FarmMonacoMod",
     "description": "Модуль для автоматического фарминга в игровом боте @MonacoGamebot",
     "meta": {
@@ -6332,7 +6345,7 @@
       }
     ]
   },
-  "Ijidishurka/modules/oksimiron.py": {
+  "Ijidishurka\\modules\\oksimiron.py": {
     "name": "rap",
     "description": null,
     "meta": {
@@ -6346,7 +6359,7 @@
       }
     ]
   },
-  "Ijidishurka/modules/rand.py": {
+  "Ijidishurka\\modules\\rand.py": {
     "name": "кругляш",
     "description": "Подпишись на канал @modwini",
     "meta": {
@@ -6359,7 +6372,7 @@
       }
     ]
   },
-  "Ijidishurka/modules/ss.py": {
+  "Ijidishurka\\modules\\ss.py": {
     "name": "ss",
     "description": "Подпишись на канал @modwini",
     "meta": {
@@ -6372,7 +6385,7 @@
       }
     ]
   },
-  "Ijidishurka/modules/video_to_voice.py": {
+  "Ijidishurka\\modules\\video_to_voice.py": {
     "name": "VideoToVoiceMod",
     "description": "Модуль, который преобразует видео в голосовое сообщение или MP3 файл.",
     "meta": {
@@ -6389,7 +6402,7 @@
       }
     ]
   },
-  "Ijidishurka/modules/voiceGirlsV2.py": {
+  "Ijidishurka\\modules\\voiceGirlsV2.py": {
     "name": "voiceGirls2",
     "description": "Голосовые сообщения девушек by @modwini",
     "meta": {
@@ -6522,7 +6535,7 @@
       }
     ]
   },
-  "Ijidishurka/modules/voiceGirlsV4.py": {
+  "Ijidishurka\\modules\\voiceGirlsV4.py": {
     "name": "voiceGirls3",
     "description": "Голосовые сообщения девушек",
     "meta": {
@@ -6608,7 +6621,7 @@
       }
     ]
   },
-  "Ijidishurka/modules/xixixaxa.py": {
+  "Ijidishurka\\modules\\xixixaxa.py": {
     "name": "hihihaha",
     "description": "Громкий звук хихихаха👍\nПодпишись на канал @modwini",
     "meta": {
@@ -6621,7 +6634,7 @@
       }
     ]
   },
-  "kamolgks/Hikkamods/AnecdoteGenerator.py": {
+  "kamolgks\\Hikkamods\\AnecdoteGenerator.py": {
     "name": "AnecdoteGeneratorMod",
     "description": "Anecdote generator by @shitmodules",
     "meta": {
@@ -6638,7 +6651,7 @@
       }
     ]
   },
-  "kamolgks/Hikkamods/AnonymUploader.py": {
+  "kamolgks\\Hikkamods\\AnonymUploader.py": {
     "name": "AnonymUploader",
     "description": "Anonymous files upload via anonfiles.com",
     "meta": {
@@ -6652,7 +6665,7 @@
       }
     ]
   },
-  "kamolgks/Hikkamods/BotsDeleter.py": {
+  "kamolgks\\Hikkamods\\BotsDeleter.py": {
     "name": "BotsDeleterMod",
     "description": "Instant stop or removal of all running Telegram bots",
     "meta": {
@@ -6669,7 +6682,7 @@
       }
     ]
   },
-  "kamolgks/Hikkamods/Facts.py": {
+  "kamolgks\\Hikkamods\\Facts.py": {
     "name": "Facts",
     "description": "interesting facts by @shitmodules",
     "meta": {
@@ -6683,7 +6696,7 @@
       }
     ]
   },
-  "kamolgks/Hikkamods/FarmPA.py": {
+  "kamolgks\\Hikkamods\\FarmPA.py": {
     "name": "FarmPAMod",
     "description": "Module for automatic farming sm in Pipisa bot | PA -> PipisaBot by shitmodules.t.me",
     "meta": {
@@ -6700,7 +6713,7 @@
       }
     ]
   },
-  "kamolgks/Hikkamods/GamesForAndroid.py": {
+  "kamolgks\\Hikkamods\\GamesForAndroid.py": {
     "name": "GamesForAndroid",
     "description": "Hacked android games (All in categories, choose what you like and download.)",
     "meta": {
@@ -6714,7 +6727,7 @@
       }
     ]
   },
-  "kamolgks/Hikkamods/Holiday.py": {
+  "kamolgks\\Hikkamods\\Holiday.py": {
     "name": "Holiday",
     "description": "The module checks whether today is a holiday in your region.",
     "meta": {
@@ -6728,7 +6741,7 @@
       }
     ]
   },
-  "kamolgks/Hikkamods/Hw_age_ur.py": {
+  "kamolgks\\Hikkamods\\Hw_age_ur.py": {
     "name": "Hw_age_ur",
     "description": "Using this module, you can find out the age of a person on the date of his birth.",
     "meta": {
@@ -6742,7 +6755,7 @@
       }
     ]
   },
-  "kamolgks/Hikkamods/Imgbb.py": {
+  "kamolgks\\Hikkamods\\Imgbb.py": {
     "name": "Imgbb",
     "description": "Upload media to imgbb.com",
     "meta": {
@@ -6756,7 +6769,7 @@
       }
     ]
   },
-  "kamolgks/Hikkamods/IndividualLinks.py": {
+  "kamolgks\\Hikkamods\\IndividualLinks.py": {
     "name": "IndividualLinks",
     "description": "> Links to individual content in telegram.",
     "meta": {
@@ -6770,7 +6783,7 @@
       }
     ]
   },
-  "kamolgks/Hikkamods/MultiSaver.py": {
+  "kamolgks\\Hikkamods\\MultiSaver.py": {
     "name": "MultiSaverMod",
     "description": "Download video, photo from instagram, TikTok and Pinterest",
     "meta": {
@@ -6784,7 +6797,7 @@
       }
     ]
   },
-  "kamolgks/Hikkamods/RandomChats.py": {
+  "kamolgks\\Hikkamods\\RandomChats.py": {
     "name": "RandomChatsMod",
     "description": "The module throws off a random chat",
     "meta": {
@@ -6798,7 +6811,7 @@
       }
     ]
   },
-  "kamolgks/Hikkamods/SpellChecking.py": {
+  "kamolgks\\Hikkamods\\SpellChecking.py": {
     "name": "SpellCheckingMod",
     "description": "Check text for spelling errors by @shitmodules",
     "meta": {
@@ -6812,7 +6825,7 @@
       }
     ]
   },
-  "kamolgks/Hikkamods/UsernameChecker.py": {
+  "kamolgks\\Hikkamods\\UsernameChecker.py": {
     "name": "UsernameChecker",
     "description": "Validates a username and checks availability.\n\nAccepted characters: A-z (case-insensitive), 0-9 and underscores.\nLength: 5-32 characters.",
     "meta": {
@@ -6826,7 +6839,7 @@
       }
     ]
   },
-  "KorenbZla/HikkaModules/AuroraAFK.py": {
+  "KorenbZla\\HikkaModules\\AuroraAFK.py": {
     "name": "AuroraAFKMod",
     "description": "Your personal assistant to while you are in AFK mode",
     "meta": {
@@ -6849,7 +6862,7 @@
       }
     ]
   },
-  "KorenbZla/HikkaModules/AuroraBull.py": {
+  "KorenbZla\\HikkaModules\\AuroraBull.py": {
     "name": "AuroraBullMod",
     "description": "Module for insults, make the interlocutor depressed.",
     "meta": {
@@ -6869,7 +6882,7 @@
       }
     ]
   },
-  "KorenbZla/HikkaModules/AuroraDonate.py": {
+  "KorenbZla\\HikkaModules\\AuroraDonate.py": {
     "name": "AuroraDonateMod",
     "description": "Module for creating a message with your details for donations",
     "meta": {
@@ -6883,7 +6896,7 @@
       }
     ]
   },
-  "KorenbZla/HikkaModules/AuroraFarm.py": {
+  "KorenbZla\\HikkaModules\\AuroraFarm.py": {
     "name": "AuroraFarmMod",
     "description": "Automatic progress farm at @kynimeister_bot",
     "meta": {
@@ -6897,7 +6910,7 @@
       }
     ]
   },
-  "KorenbZla/HikkaModules/AuroraFeedBack.py": {
+  "KorenbZla\\HikkaModules\\AuroraFeedBack.py": {
     "name": "AuroraFeedBackMod",
     "description": "Multifunctional feedback bot.",
     "meta": {
@@ -6917,7 +6930,7 @@
       }
     ]
   },
-  "KorenbZla/HikkaModules/AuroraSpam.py": {
+  "KorenbZla\\HikkaModules\\AuroraSpam.py": {
     "name": "AuroraSpamMod",
     "description": "Module for mailings message",
     "meta": {
@@ -6931,7 +6944,7 @@
       }
     ]
   },
-  "KorenbZla/HikkaModules/AutoDeleteMessages.py": {
+  "KorenbZla\\HikkaModules\\AutoDeleteMessages.py": {
     "name": "AutoDeleteMessagesMod",
     "description": "Automatically deletes all your messages in the specified chats.",
     "meta": {
@@ -6945,7 +6958,7 @@
       }
     ]
   },
-  "KorenbZla/HikkaModules/AutoFarmUniversal.py": {
+  "KorenbZla\\HikkaModules\\AutoFarmUniversal.py": {
     "name": "AutoFarmUniversalMod",
     "description": "Universal auto farmer with settings in the config",
     "meta": {
@@ -6959,7 +6972,7 @@
       }
     ]
   },
-  "KorenbZla/HikkaModules/BanWord.py": {
+  "KorenbZla\\HikkaModules\\BanWord.py": {
     "name": "BanWordMod",
     "description": "Модуль для управления запрещёнными словами в чате.",
     "meta": {
@@ -6988,7 +7001,7 @@
       }
     ]
   },
-  "KorenbZla/HikkaModules/Deanon.py": {
+  "KorenbZla\\HikkaModules\\Deanon.py": {
     "name": "Deanon",
     "description": null,
     "meta": {
@@ -7002,7 +7015,7 @@
       }
     ]
   },
-  "KorenbZla/HikkaModules/HistoryFacts.py": {
+  "KorenbZla\\HikkaModules\\HistoryFacts.py": {
     "name": "HistoryFactMod",
     "description": "Get a random historical fact",
     "meta": {
@@ -7025,7 +7038,7 @@
       }
     ]
   },
-  "KorenbZla/HikkaModules/IrisFarm.py": {
+  "KorenbZla\\HikkaModules\\IrisFarm.py": {
     "name": "IrisFarmMod",
     "description": "Auto farm in iris bot",
     "meta": {
@@ -7042,7 +7055,7 @@
       }
     ]
   },
-  "KorenbZla/HikkaModules/Melody.py": {
+  "KorenbZla\\HikkaModules\\Melody.py": {
     "name": "MelodyMod",
     "description": "Module for playing various songs in a chat",
     "meta": {
@@ -7062,7 +7075,7 @@
       }
     ]
   },
-  "KorenbZla/HikkaModules/Meow.py": {
+  "KorenbZla\\HikkaModules\\Meow.py": {
     "name": "MeowMod",
     "description": "Start meowing in different languages",
     "meta": {
@@ -7079,7 +7092,7 @@
       }
     ]
   },
-  "KorenbZla/HikkaModules/MyDebtors.py": {
+  "KorenbZla\\HikkaModules\\MyDebtors.py": {
     "name": "MyDebtorsMod",
     "description": "Module for managing, adding, and deleting your debtors.",
     "meta": {
@@ -7108,7 +7121,7 @@
       }
     ]
   },
-  "KorenbZla/HikkaModules/RandomAvatars.py": {
+  "KorenbZla\\HikkaModules\\RandomAvatars.py": {
     "name": "RandomAvatars",
     "description": null,
     "meta": {
@@ -7122,7 +7135,7 @@
       }
     ]
   },
-  "KorenbZla/HikkaModules/Randomizer.py": {
+  "KorenbZla\\HikkaModules\\Randomizer.py": {
     "name": "RandomizerMod",
     "description": "Module for playing with dice, heads/tails and other games.",
     "meta": {
@@ -7142,7 +7155,7 @@
       }
     ]
   },
-  "KorenbZla/HikkaModules/RandomNumber.py": {
+  "KorenbZla\\HikkaModules\\RandomNumber.py": {
     "name": "RandomNumberMod",
     "description": "Random numbers generator",
     "meta": {
@@ -7156,7 +7169,7 @@
       }
     ]
   },
-  "KorenbZla/HikkaModules/Reports.py": {
+  "KorenbZla\\HikkaModules\\Reports.py": {
     "name": "ReportsMod",
     "description": "Module for sending reports to the administration.",
     "meta": {
@@ -7179,7 +7192,7 @@
       }
     ]
   },
-  "KorenbZla/HikkaModules/RPSgame.py": {
+  "KorenbZla\\HikkaModules\\RPSgame.py": {
     "name": "RPSgameMod",
     "description": "With this module, you can play the game «rock, paper, scissors».",
     "meta": {
@@ -7196,7 +7209,7 @@
       }
     ]
   },
-  "KorenbZla/HikkaModules/Send.py": {
+  "KorenbZla\\HikkaModules\\Send.py": {
     "name": "SendMod",
     "description": "Assistant for sending messages",
     "meta": {
@@ -7219,7 +7232,7 @@
       }
     ]
   },
-  "KorenbZla/HikkaModules/Warpigs.py": {
+  "KorenbZla\\HikkaModules\\Warpigs.py": {
     "name": "WarpigsMod",
     "description": "Automates work with @warpigs_bot",
     "meta": {
@@ -7245,7 +7258,7 @@
       }
     ]
   },
-  "KorenbZla/HikkaModules/Wikipedia.py": {
+  "KorenbZla\\HikkaModules\\Wikipedia.py": {
     "name": "WikipediaMod",
     "description": "Search for information on Wikipedia",
     "meta": {
@@ -7262,7 +7275,7 @@
       }
     ]
   },
-  "KorenbZla/HikkaModules/WordFinder.py": {
+  "KorenbZla\\HikkaModules\\WordFinder.py": {
     "name": "WordFinderMod",
     "description": "Universal module for searching for certain words in the text.",
     "meta": {
@@ -7276,7 +7289,7 @@
       }
     ]
   },
-  "MoriSummerz/ftg-mods/airalert.py": {
+  "MoriSummerz\\ftg-mods\\airalert.py": {
     "name": "AirAlertMod",
     "description": "🇺🇦 Предупреждение о воздушной тревоге.\nНужно быть подписаным на @air_alert_ua и включены уведомления в вашем боте",
     "meta": {
@@ -7290,7 +7303,7 @@
       }
     ]
   },
-  "MoriSummerz/ftg-mods/chatgpt.py": {
+  "MoriSummerz\\ftg-mods\\chatgpt.py": {
     "name": "ChatGPT",
     "description": "ChatGPT AI API interaction",
     "meta": {
@@ -7304,7 +7317,7 @@
       }
     ]
   },
-  "MoriSummerz/ftg-mods/lyrics.py": {
+  "MoriSummerz\\ftg-mods\\lyrics.py": {
     "name": "LyricsMod",
     "description": "Song lyrics from Genius",
     "meta": {
@@ -7321,7 +7334,7 @@
       }
     ]
   },
-  "MoriSummerz/ftg-mods/magictext-ftg.py": {
+  "MoriSummerz\\ftg-mods\\magictext-ftg.py": {
     "name": "MagicTextMod",
     "description": "Magic Text generator",
     "meta": {
@@ -7338,7 +7351,7 @@
       }
     ]
   },
-  "MoriSummerz/ftg-mods/magictext.py": {
+  "MoriSummerz\\ftg-mods\\magictext.py": {
     "name": "MagicTextMod",
     "description": "Magic Text generator",
     "meta": {
@@ -7361,7 +7374,7 @@
       }
     ]
   },
-  "MoriSummerz/ftg-mods/osu.py": {
+  "MoriSummerz\\ftg-mods\\osu.py": {
     "name": "OsuMod",
     "description": "\"I'm an osu!bot that can do some things written by @morisummerzxc",
     "meta": {
@@ -7381,7 +7394,7 @@
       }
     ]
   },
-  "MoriSummerz/ftg-mods/picsaver.py": {
+  "MoriSummerz\\ftg-mods\\picsaver.py": {
     "name": "PicsaverMod",
     "description": "\"Automatic Self-destructing media saver to Saved Messages",
     "meta": {
@@ -7398,7 +7411,7 @@
       }
     ]
   },
-  "MoriSummerz/ftg-mods/TimeBot.py": {
+  "MoriSummerz\\ftg-mods\\TimeBot.py": {
     "name": "TimerBotMod",
     "description": null,
     "meta": {
@@ -7411,7 +7424,7 @@
       }
     ]
   },
-  "MoriSummerz/ftg-mods/top20.py": {
+  "MoriSummerz\\ftg-mods\\top20.py": {
     "name": "Top20Mod",
     "description": null,
     "meta": {
@@ -7425,7 +7438,7 @@
       }
     ]
   },
-  "MoriSummerz/ftg-mods/weather.py": {
+  "MoriSummerz\\ftg-mods\\weather.py": {
     "name": "WeatherMod",
     "description": "Weather module",
     "meta": {
@@ -7442,7 +7455,7 @@
       }
     ]
   },
-  "MuRuLOSE/HikkaModulesRepo/!example.py": {
+  "MuRuLOSE\\HikkaModulesRepo\\!example.py": {
     "name": "MyModule",
     "description": "My module",
     "meta": {
@@ -7457,7 +7470,7 @@
       }
     ]
   },
-  "MuRuLOSE/HikkaModulesRepo/autogiveawayjoin.py": {
+  "MuRuLOSE\\HikkaModulesRepo\\autogiveawayjoin.py": {
     "name": "AutoGiveawayJoin",
     "description": "Авто присоеденение к розыгрышам в @mine_evo_bot",
     "meta": {
@@ -7472,7 +7485,7 @@
       }
     ]
   },
-  "MuRuLOSE/HikkaModulesRepo/AutoLeave.py": {
+  "MuRuLOSE\\HikkaModulesRepo\\AutoLeave.py": {
     "name": "AutoLeave",
     "description": "Auto leaving from channels and chats (maybe pm's)",
     "meta": {
@@ -7486,7 +7499,7 @@
       }
     ]
   },
-  "MuRuLOSE/HikkaModulesRepo/autoreader.py": {
+  "MuRuLOSE\\HikkaModulesRepo\\autoreader.py": {
     "name": "Autoreader",
     "description": "Для автоматического читания в чатах и лс",
     "meta": {
@@ -7510,7 +7523,7 @@
       }
     ]
   },
-  "MuRuLOSE/HikkaModulesRepo/ChannelCheck.py": {
+  "MuRuLOSE\\HikkaModulesRepo\\ChannelCheck.py": {
     "name": "ChannelCheck",
     "description": "Модуль для получении информации о нахождении человека в канале.",
     "meta": {
@@ -7525,7 +7538,7 @@
       }
     ]
   },
-  "MuRuLOSE/HikkaModulesRepo/CheckTime.py": {
+  "MuRuLOSE\\HikkaModulesRepo\\CheckTime.py": {
     "name": "CheckTime",
     "description": "Check time in your city",
     "meta": {
@@ -7546,7 +7559,7 @@
       }
     ]
   },
-  "MuRuLOSE/HikkaModulesRepo/compliments.py": {
+  "MuRuLOSE\\HikkaModulesRepo\\compliments.py": {
     "name": "compliments",
     "description": "Генерирует комплименты",
     "meta": {
@@ -7561,7 +7574,7 @@
       }
     ]
   },
-  "MuRuLOSE/HikkaModulesRepo/controlspam.py": {
+  "MuRuLOSE\\HikkaModulesRepo\\controlspam.py": {
     "name": "ControlSpam",
     "description": "Не просто спамь, а контролируй",
     "meta": {
@@ -7582,7 +7595,7 @@
       }
     ]
   },
-  "MuRuLOSE/HikkaModulesRepo/CustomPing.py": {
+  "MuRuLOSE\\HikkaModulesRepo\\CustomPing.py": {
     "name": "CustomPing",
     "description": "Have you seen a customizable ping module in Netfoll? I have, yes, but I find it unacceptable to use Netfoll, so I took the idea of custom ping, and replicated it.",
     "meta": {
@@ -7597,7 +7610,7 @@
       }
     ]
   },
-  "MuRuLOSE/HikkaModulesRepo/filters.py": {
+  "MuRuLOSE\\HikkaModulesRepo\\filters.py": {
     "name": "TextFilters",
     "description": "- Module for filter text",
     "meta": {
@@ -7612,7 +7625,7 @@
       }
     ]
   },
-  "MuRuLOSE/HikkaModulesRepo/FindID.py": {
+  "MuRuLOSE\\HikkaModulesRepo\\FindID.py": {
     "name": "FirstID",
     "description": "Find the first ID",
     "meta": {
@@ -7625,7 +7638,7 @@
       }
     ]
   },
-  "MuRuLOSE/HikkaModulesRepo/FuckJoins.py": {
+  "MuRuLOSE\\HikkaModulesRepo\\FuckJoins.py": {
     "name": "FuckJoins",
     "description": "Tired of entering channels without your knowledge via JoinChannelRequest?\nThen use this module! You can remove all such requests with one command from the module (file or raw).",
     "meta": {
@@ -7643,7 +7656,7 @@
       }
     ]
   },
-  "MuRuLOSE/HikkaModulesRepo/FuckTagOne.py": {
+  "MuRuLOSE\\HikkaModulesRepo\\FuckTagOne.py": {
     "name": "FuckTagOne",
     "description": null,
     "meta": {
@@ -7664,7 +7677,7 @@
       }
     ]
   },
-  "MuRuLOSE/HikkaModulesRepo/Genshin.py": {
+  "MuRuLOSE\\HikkaModulesRepo\\Genshin.py": {
     "name": "Genshin",
     "description": "Module for Genshin",
     "meta": {
@@ -7685,7 +7698,7 @@
       }
     ]
   },
-  "MuRuLOSE/HikkaModulesRepo/HTTPCat.py": {
+  "MuRuLOSE\\HikkaModulesRepo\\HTTPCat.py": {
     "name": "HTTPCat",
     "description": "Funny images with HTTP statuses",
     "meta": {
@@ -7700,7 +7713,7 @@
       }
     ]
   },
-  "MuRuLOSE/HikkaModulesRepo/InlineButtons.py": {
+  "MuRuLOSE\\HikkaModulesRepo\\InlineButtons.py": {
     "name": "InlineButtons",
     "description": "Create inline buttons easily",
     "meta": {
@@ -7715,7 +7728,7 @@
       }
     ]
   },
-  "MuRuLOSE/HikkaModulesRepo/INumber.py": {
+  "MuRuLOSE\\HikkaModulesRepo\\INumber.py": {
     "name": "INumber",
     "description": "Facts about numbers, dates, years, etc",
     "meta": {
@@ -7730,7 +7743,7 @@
       }
     ]
   },
-  "MuRuLOSE/HikkaModulesRepo/K.py": {
+  "MuRuLOSE\\HikkaModulesRepo\\K.py": {
     "name": "K",
     "description": "K",
     "meta": {
@@ -7743,7 +7756,7 @@
       }
     ]
   },
-  "MuRuLOSE/HikkaModulesRepo/MindGameCheat.py": {
+  "MuRuLOSE\\HikkaModulesRepo\\MindGameCheat.py": {
     "name": "MindGameCheat",
     "description": "Module for cheat in MindGame",
     "meta": {
@@ -7758,7 +7771,7 @@
       }
     ]
   },
-  "MuRuLOSE/HikkaModulesRepo/morse.py": {
+  "MuRuLOSE\\HikkaModulesRepo\\morse.py": {
     "name": "Morse",
     "description": "- Decode and Encode morse code",
     "meta": {
@@ -7776,7 +7789,7 @@
       }
     ]
   },
-  "MuRuLOSE/HikkaModulesRepo/NasaImages.py": {
+  "MuRuLOSE\\HikkaModulesRepo\\NasaImages.py": {
     "name": "NasaImages",
     "description": "Images from Nasa website",
     "meta": {
@@ -7794,7 +7807,7 @@
       }
     ]
   },
-  "MuRuLOSE/HikkaModulesRepo/PasswordUtils.py": {
+  "MuRuLOSE\\HikkaModulesRepo\\PasswordUtils.py": {
     "name": "PasswordUtils",
     "description": "Ваш помощник в безопасных паролях",
     "meta": {
@@ -7812,7 +7825,7 @@
       }
     ]
   },
-  "MuRuLOSE/HikkaModulesRepo/PinMoreChats.py": {
+  "MuRuLOSE\\HikkaModulesRepo\\PinMoreChats.py": {
     "name": "PinMoreChats",
     "description": null,
     "meta": {
@@ -7836,7 +7849,7 @@
       }
     ]
   },
-  "MuRuLOSE/HikkaModulesRepo/RandomDog.py": {
+  "MuRuLOSE\\HikkaModulesRepo\\RandomDog.py": {
     "name": "RandomDogs",
     "description": "Get random pictures with dogs",
     "meta": {
@@ -7851,7 +7864,7 @@
       }
     ]
   },
-  "MuRuLOSE/HikkaModulesRepo/RemoveLinks.py": {
+  "MuRuLOSE\\HikkaModulesRepo\\RemoveLinks.py": {
     "name": "RemoveLinks",
     "description": "Remove links from your messages",
     "meta": {
@@ -7869,7 +7882,7 @@
       }
     ]
   },
-  "MuRuLOSE/HikkaModulesRepo/ReplaceWords.py": {
+  "MuRuLOSE\\HikkaModulesRepo\\ReplaceWords.py": {
     "name": "ReplaceWords",
     "description": "Replaces words",
     "meta": {
@@ -7896,7 +7909,7 @@
       }
     ]
   },
-  "MuRuLOSE/HikkaModulesRepo/SearchersGenQuery.py": {
+  "MuRuLOSE\\HikkaModulesRepo\\SearchersGenQuery.py": {
     "name": "GoogleQueryGen",
     "description": "- Create links for search engines query",
     "meta": {
@@ -7923,7 +7936,7 @@
       }
     ]
   },
-  "MuRuLOSE/HikkaModulesRepo/SpyEVO.py": {
+  "MuRuLOSE\\HikkaModulesRepo\\SpyEVO.py": {
     "name": "SpyEVO",
     "description": "Модуль для",
     "meta": {
@@ -7941,7 +7954,7 @@
       }
     ]
   },
-  "MuRuLOSE/HikkaModulesRepo/SteamClient.py": {
+  "MuRuLOSE\\HikkaModulesRepo\\SteamClient.py": {
     "name": "SteamClient",
     "description": "Module for manage steam",
     "meta": {
@@ -7971,7 +7984,7 @@
       }
     ]
   },
-  "MuRuLOSE/HikkaModulesRepo/TempJoinChannel.py": {
+  "MuRuLOSE\\HikkaModulesRepo\\TempJoinChannel.py": {
     "name": "TempJoinChannel",
     "description": "Enter the channels temporarily!",
     "meta": {
@@ -7989,7 +8002,7 @@
       }
     ]
   },
-  "MuRuLOSE/HikkaModulesRepo/timer.py": {
+  "MuRuLOSE\\HikkaModulesRepo\\timer.py": {
     "name": "timer",
     "description": "Модуль который запускает таймер до события",
     "meta": {
@@ -8004,7 +8017,7 @@
       }
     ]
   },
-  "MuRuLOSE/HikkaModulesRepo/ToTHosting.py": {
+  "MuRuLOSE\\HikkaModulesRepo\\ToTHosting.py": {
     "name": "ToTHosting",
     "description": "Module for interaction with ToTHosting API (obviously) ",
     "meta": {
@@ -8028,7 +8041,7 @@
       }
     ]
   },
-  "MuRuLOSE/HikkaModulesRepo/VKMusic.py": {
+  "MuRuLOSE\\HikkaModulesRepo\\VKMusic.py": {
     "name": "VKMusic",
     "description": "Module for VK Music (Remember, if your server is outside of Russia, errors can happen because VK does not want to give out track information due to restrictions)",
     "meta": {
@@ -8046,7 +8059,7 @@
       }
     ]
   },
-  "MuRuLOSE/HikkaModulesRepo/YamiManager.py": {
+  "MuRuLOSE\\HikkaModulesRepo\\YamiManager.py": {
     "name": "YamiManager",
     "description": "Module for @YamiChat_bot ",
     "meta": {
@@ -8064,7 +8077,7 @@
       }
     ]
   },
-  "MuRuLOSE/HikkaModulesRepo/YoutubeDL.py": {
+  "MuRuLOSE\\HikkaModulesRepo\\YoutubeDL.py": {
     "name": "YoutubeDLB",
     "description": "THIS IS A BETA! BUGS MAY OCCUR!",
     "meta": {
@@ -8082,7 +8095,7 @@
       }
     ]
   },
-  "MuRuLOSE/HikkaModulesRepo/youtubesearcher.py": {
+  "MuRuLOSE\\HikkaModulesRepo\\youtubesearcher.py": {
     "name": "YoutubeSearcher",
     "description": "Ищет видео в ютуб",
     "meta": {
@@ -8097,7 +8110,7 @@
       }
     ]
   },
-  "N3rcy/modules/clown.py": {
+  "N3rcy\\modules\\clown.py": {
     "name": "ClownModule",
     "description": "Модуль для клоунизации 'pov - <username>'",
     "meta": {
@@ -8111,7 +8124,7 @@
       }
     ]
   },
-  "N3rcy/modules/emoji.py": {
+  "N3rcy\\modules\\emoji.py": {
     "name": "EmojiInfo",
     "description": "Module for retrieving information about emojis from emojipedia.org",
     "meta": {
@@ -8125,7 +8138,7 @@
       }
     ]
   },
-  "N3rcy/modules/GameInfo.py": {
+  "N3rcy\\modules\\GameInfo.py": {
     "name": "GameInfo",
     "description": "Module for fetching game information from RAWG",
     "meta": {
@@ -8139,7 +8152,7 @@
       }
     ]
   },
-  "N3rcy/modules/github.py": {
+  "N3rcy\\modules\\github.py": {
     "name": "GitHubMod",
     "description": "Module for fetching GitHub profile or repository information",
     "meta": {
@@ -8156,7 +8169,7 @@
       }
     ]
   },
-  "N3rcy/modules/jikan.py": {
+  "N3rcy\\modules\\jikan.py": {
     "name": "JikanModule",
     "description": "Module for working with Jikan API",
     "meta": {
@@ -8188,7 +8201,7 @@
       }
     ]
   },
-  "N3rcy/modules/news.py": {
+  "N3rcy\\modules\\news.py": {
     "name": "NewsMod",
     "description": "Module for displaying news from various sources",
     "meta": {
@@ -8223,7 +8236,7 @@
       }
     ]
   },
-  "N3rcy/modules/ocr.py": {
+  "N3rcy\\modules\\ocr.py": {
     "name": "OCRMod",
     "description": "Module for Optical Character Recognition",
     "meta": {
@@ -8237,7 +8250,7 @@
       }
     ]
   },
-  "N3rcy/modules/progmusic.py": {
+  "N3rcy\\modules\\progmusic.py": {
     "name": "MusicModule",
     "description": "Module for music for programming from https://musicforprogramming.net/",
     "meta": {
@@ -8251,7 +8264,7 @@
       }
     ]
   },
-  "N3rcy/modules/top.py": {
+  "N3rcy\\modules\\top.py": {
     "name": "Top",
     "description": "Module for viewing the top list in chat",
     "meta": {
@@ -8265,7 +8278,7 @@
       }
     ]
   },
-  "N3rcy/modules/twitch.py": {
+  "N3rcy\\modules\\twitch.py": {
     "name": "TwitchModule",
     "description": "Module for downloading Twitch clips and videos",
     "meta": {
@@ -8282,7 +8295,7 @@
       }
     ]
   },
-  "N3rcy/modules/watch.py": {
+  "N3rcy\\modules\\watch.py": {
     "name": "WatcherModule",
     "description": "Module for watching and responding to specific words",
     "meta": {
@@ -8302,7 +8315,7 @@
       }
     ]
   },
-  "N3rcy/modules/whisper.py": {
+  "N3rcy\\modules\\whisper.py": {
     "name": "WhisperMod",
     "description": "Module for speech recognition",
     "meta": {
@@ -8328,7 +8341,7 @@
       }
     ]
   },
-  "SekaiYoneya/Friendly-telegram/Anti-PM.py": {
+  "SekaiYoneya\\Friendly-telegram\\Anti-PM.py": {
     "name": "AntiPMMod",
     "description": null,
     "meta": {
@@ -8365,7 +8378,7 @@
       }
     ]
   },
-  "SekaiYoneya/Friendly-telegram/AudioConverter.py": {
+  "SekaiYoneya\\Friendly-telegram\\AudioConverter.py": {
     "name": "AudioConverterMod",
     "description": "Конвертирование в разные форматы",
     "meta": {
@@ -8381,7 +8394,7 @@
       }
     ]
   },
-  "SekaiYoneya/Friendly-telegram/AudioEditor.py": {
+  "SekaiYoneya\\Friendly-telegram\\AudioEditor.py": {
     "name": "AudioEditorMod",
     "description": "Модуль для работы со звуком(???)",
     "meta": {
@@ -8430,7 +8443,7 @@
       }
     ]
   },
-  "SekaiYoneya/Friendly-telegram/AutoBlackList.py": {
+  "SekaiYoneya\\Friendly-telegram\\AutoBlackList.py": {
     "name": "AutoBlackListMod",
     "description": "Кидает всех неконтактов в ЧС.",
     "meta": {
@@ -8449,7 +8462,7 @@
       }
     ]
   },
-  "SekaiYoneya/Friendly-telegram/BanMedia.py": {
+  "SekaiYoneya\\Friendly-telegram\\BanMedia.py": {
     "name": "BanMediaMod",
     "description": "Модуль блокировки стикеров или гифок в чатах.",
     "meta": {
@@ -8462,7 +8475,7 @@
       }
     ]
   },
-  "SekaiYoneya/Friendly-telegram/ChatModule.py": {
+  "SekaiYoneya\\Friendly-telegram\\ChatModule.py": {
     "name": "ChatMod",
     "description": "Чат модули",
     "meta": {
@@ -8493,7 +8506,7 @@
       }
     ]
   },
-  "SekaiYoneya/Friendly-telegram/ChatStats.py": {
+  "SekaiYoneya\\Friendly-telegram\\ChatStats.py": {
     "name": "ChatStatisticMod",
     "description": "Статистика чата",
     "meta": {
@@ -8506,7 +8519,7 @@
       }
     ]
   },
-  "SekaiYoneya/Friendly-telegram/Frazes.py": {
+  "SekaiYoneya\\Friendly-telegram\\Frazes.py": {
     "name": "FrazesMod",
     "description": "Госу, пикапы, подкаты.",
     "meta": {
@@ -8528,7 +8541,7 @@
       }
     ]
   },
-  "SekaiYoneya/Friendly-telegram/GroupCreator.py": {
+  "SekaiYoneya\\Friendly-telegram\\GroupCreator.py": {
     "name": "GroupCreatorMod",
     "description": "Создать чат или канал.",
     "meta": {
@@ -8541,7 +8554,7 @@
       }
     ]
   },
-  "SekaiYoneya/Friendly-telegram/kickall-addusers.py": {
+  "SekaiYoneya\\Friendly-telegram\\kickall-addusers.py": {
     "name": "addmembersMod",
     "description": null,
     "meta": {
@@ -8557,7 +8570,7 @@
       }
     ]
   },
-  "SekaiYoneya/Friendly-telegram/Leo.py": {
+  "SekaiYoneya\\Friendly-telegram\\Leo.py": {
     "name": "leomatchMod",
     "description": "Леонардо Дайвинчик",
     "meta": {
@@ -8582,7 +8595,7 @@
       }
     ]
   },
-  "SekaiYoneya/Friendly-telegram/MyRep.py": {
+  "SekaiYoneya\\Friendly-telegram\\MyRep.py": {
     "name": "MyRepMod",
     "description": "Модуль с вашей репутацией",
     "meta": {
@@ -8598,7 +8611,7 @@
       }
     ]
   },
-  "SekaiYoneya/Friendly-telegram/Online.py": {
+  "SekaiYoneya\\Friendly-telegram\\Online.py": {
     "name": "EternalOnlineMod",
     "description": "Вечный онлайн, который будет читать сообщения в чатах.",
     "meta": {
@@ -8611,7 +8624,7 @@
       }
     ]
   },
-  "SekaiYoneya/Friendly-telegram/Pic.py": {
+  "SekaiYoneya\\Friendly-telegram\\Pic.py": {
     "name": "PicPhotosMod",
     "description": "Фотографии из @pic.",
     "meta": {
@@ -8624,7 +8637,7 @@
       }
     ]
   },
-  "SekaiYoneya/Friendly-telegram/Pinger.py": {
+  "SekaiYoneya\\Friendly-telegram\\Pinger.py": {
     "name": "PingerMod",
     "description": "более точный пинг",
     "meta": {
@@ -8637,7 +8650,7 @@
       }
     ]
   },
-  "SekaiYoneya/Friendly-telegram/Quotes.py": {
+  "SekaiYoneya\\Friendly-telegram\\Quotes.py": {
     "name": "QuotesMod",
     "description": "Quotes a message",
     "meta": {
@@ -8656,7 +8669,7 @@
       }
     ]
   },
-  "SekaiYoneya/Friendly-telegram/RenameCont.py": {
+  "SekaiYoneya\\Friendly-telegram\\RenameCont.py": {
     "name": "RenameMod",
     "description": "Переиминовать или добавить в контакт.",
     "meta": {
@@ -8669,7 +8682,7 @@
       }
     ]
   },
-  "SekaiYoneya/Friendly-telegram/SearchMusic.py": {
+  "SekaiYoneya\\Friendly-telegram\\SearchMusic.py": {
     "name": "SearchMusicMod",
     "description": "Модуль SearchMusic - поиск музыки \nРаботает через бота @lybot ",
     "meta": {
@@ -8682,7 +8695,7 @@
       }
     ]
   },
-  "SekaiYoneya/Friendly-telegram/Sender.py": {
+  "SekaiYoneya\\Friendly-telegram\\Sender.py": {
     "name": "SenderMod",
     "description": null,
     "meta": {
@@ -8695,7 +8708,7 @@
       }
     ]
   },
-  "SekaiYoneya/Friendly-telegram/SendPhotos.py": {
+  "SekaiYoneya\\Friendly-telegram\\SendPhotos.py": {
     "name": "GetPPMod",
     "description": "Description for module",
     "meta": {
@@ -8708,7 +8721,7 @@
       }
     ]
   },
-  "SekaiYoneya/Friendly-telegram/SpamBot.py": {
+  "SekaiYoneya\\Friendly-telegram\\SpamBot.py": {
     "name": "SpamBotMod",
     "description": "Показывает ваши ограничения.",
     "meta": {
@@ -8739,7 +8752,7 @@
       }
     ]
   },
-  "SekaiYoneya/Friendly-telegram/WelcomeLeft.py": {
+  "SekaiYoneya\\Friendly-telegram\\WelcomeLeft.py": {
     "name": "WelcomeLeftMod",
     "description": "Вход и выход пользователей в чате.",
     "meta": {
@@ -8761,7 +8774,7 @@
       }
     ]
   },
-  "SekaiYoneya/Friendly-telegram/Whois.py": {
+  "SekaiYoneya\\Friendly-telegram\\Whois.py": {
     "name": "WhoIsMod",
     "description": "Получает информацию о пользователе.",
     "meta": {
@@ -8774,7 +8787,7 @@
       }
     ]
   },
-  "SekaiYoneya/Friendly-telegram/x0-Uploader.py": {
+  "SekaiYoneya\\Friendly-telegram\\x0-Uploader.py": {
     "name": "x0Mod",
     "description": "Uploader",
     "meta": {
@@ -8787,7 +8800,7 @@
       }
     ]
   },
-  "shadowhikka/sh.modules/100Percent.py": {
+  "shadowhikka\\sh.modules\\100Percent.py": {
     "name": "PercentMod",
     "description": "Create your text with inline percentages",
     "meta": {
@@ -8801,7 +8814,7 @@
       }
     ]
   },
-  "shadowhikka/sh.modules/CheckerUsernames.py": {
+  "shadowhikka\\sh.modules\\CheckerUsernames.py": {
     "name": "CheckerUsernamesMod",
     "description": "Check of avaliable usernames",
     "meta": {
@@ -8818,7 +8831,7 @@
       }
     ]
   },
-  "shadowhikka/sh.modules/ConvertTime.py": {
+  "shadowhikka\\sh.modules\\ConvertTime.py": {
     "name": "ConvertTimeMod",
     "description": "Convert time in days, hours, minutes and seconds",
     "meta": {
@@ -8832,7 +8845,7 @@
       }
     ]
   },
-  "shadowhikka/sh.modules/FoxAndDogsGallery.py": {
+  "shadowhikka\\sh.modules\\FoxAndDogsGallery.py": {
     "name": "FoxGalerryMod",
     "description": "🦊 Foxes, Dogs 🐶",
     "meta": {
@@ -8852,7 +8865,7 @@
       }
     ]
   },
-  "shadowhikka/sh.modules/GForYou.py": {
+  "shadowhikka\\sh.modules\\GForYou.py": {
     "name": "GYForYouMod",
     "description": "Погуглю за тебя",
     "meta": {
@@ -8866,7 +8879,7 @@
       }
     ]
   },
-  "shadowhikka/sh.modules/GPT2.py": {
+  "shadowhikka\\sh.modules\\GPT2.py": {
     "name": "GPT2Mod",
     "description": "ChatGPT в модуле",
     "meta": {
@@ -8880,7 +8893,7 @@
       }
     ]
   },
-  "shadowhikka/sh.modules/HentaiManga.py": {
+  "shadowhikka\\sh.modules\\HentaiManga.py": {
     "name": "HentaiMangaMod",
     "description": null,
     "meta": {
@@ -8897,7 +8910,7 @@
       }
     ]
   },
-  "shadowhikka/sh.modules/InlineVizitka.py": {
+  "shadowhikka\\sh.modules\\InlineVizitka.py": {
     "name": "InlineVizitkaMod",
     "description": "You information in inline vizitka",
     "meta": {
@@ -8914,7 +8927,7 @@
       }
     ]
   },
-  "shadowhikka/sh.modules/MyVizitka.py": {
+  "shadowhikka\\sh.modules\\MyVizitka.py": {
     "name": "MyVizitkaMod",
     "description": null,
     "meta": {
@@ -8928,7 +8941,7 @@
       }
     ]
   },
-  "shadowhikka/sh.modules/NewsLetter.py": {
+  "shadowhikka\\sh.modules\\NewsLetter.py": {
     "name": "NewsLetterMod",
     "description": "newsletter for chats",
     "meta": {
@@ -8945,7 +8958,7 @@
       }
     ]
   },
-  "shadowhikka/sh.modules/RandomMemes.py": {
+  "shadowhikka\\sh.modules\\RandomMemes.py": {
     "name": "RandomMemesMod",
     "description": "RandomMemes",
     "meta": {
@@ -8959,7 +8972,7 @@
       }
     ]
   },
-  "shadowhikka/sh.modules/StickerDownload.py": {
+  "shadowhikka\\sh.modules\\StickerDownload.py": {
     "name": "StickerDownloadMod",
     "description": "Sticker Downloader",
     "meta": {
@@ -8973,7 +8986,7 @@
       }
     ]
   },
-  "shadowhikka/sh.modules/TableInfo.py": {
+  "shadowhikka\\sh.modules\\TableInfo.py": {
     "name": "TableMod",
     "description": "Information in parents",
     "meta": {
@@ -8987,7 +9000,7 @@
       }
     ]
   },
-  "shadowhikka/sh.modules/trysamp.py": {
+  "shadowhikka\\sh.modules\\trysamp.py": {
     "name": "TrySampMod",
     "description": "Try such as in samp",
     "meta": {
@@ -9001,7 +9014,7 @@
       }
     ]
   },
-  "shadowhikka/sh.modules/VKInline.py": {
+  "shadowhikka\\sh.modules\\VKInline.py": {
     "name": "VKInlineMod",
     "description": "Your vk in inline",
     "meta": {
@@ -9015,7 +9028,7 @@
       }
     ]
   },
-  "shadowhikka/sh.modules/VulgarStories.py": {
+  "shadowhikka\\sh.modules\\VulgarStories.py": {
     "name": "VulgarStories",
     "description": "VulgarStories",
     "meta": {
@@ -9029,7 +9042,7 @@
       }
     ]
   },
-  "SkillsAngels/Modules/AnimeVoices.py": {
+  "SkillsAngels\\Modules\\AnimeVoices.py": {
     "name": "AnimeVoicesMod",
     "description": "🎤 Popular Anime Voices",
     "meta": {
@@ -9112,7 +9125,7 @@
       }
     ]
   },
-  "SkillsAngels/Modules/Complements.py": {
+  "SkillsAngels\\Modules\\Complements.py": {
     "name": "ComplementsMod",
     "description": "Модуль который дарит комплементы девушке/парню",
     "meta": {
@@ -9129,7 +9142,7 @@
       }
     ]
   },
-  "SkillsAngels/Modules/DrochBot.py": {
+  "SkillsAngels\\Modules\\DrochBot.py": {
     "name": "DrochBotMod",
     "description": "Автоматизирует работу с @DrochBot (автоматическая дрочка и др.)",
     "meta": {
@@ -9149,7 +9162,7 @@
       }
     ]
   },
-  "SkillsAngels/Modules/HFInfo.py": {
+  "SkillsAngels\\Modules\\HFInfo.py": {
     "name": "HFInfoMod",
     "description": "Show userbot info",
     "meta": {
@@ -9163,7 +9176,7 @@
       }
     ]
   },
-  "SkillsAngels/Modules/Iris.py": {
+  "SkillsAngels\\Modules\\Iris.py": {
     "name": "IrisMod",
     "description": "Для автоматического фарминга коинов в ирисботе",
     "meta": {
@@ -9195,7 +9208,7 @@
       }
     ]
   },
-  "SkillsAngels/Modules/IrisLab.py": {
+  "SkillsAngels\\Modules\\IrisLab.py": {
     "name": "IrisLabMod",
     "description": "Показывает лаб/жертв. Возможны задержки на получение инф-ции",
     "meta": {
@@ -9233,7 +9246,7 @@
       }
     ]
   },
-  "SkillsAngels/Modules/love.py": {
+  "SkillsAngels\\Modules\\love.py": {
     "name": "LoveMod",
     "description": "Красивые слова для второй половинки",
     "meta": {
@@ -9250,7 +9263,7 @@
       }
     ]
   },
-  "SkillsAngels/Modules/S-D Pics.py": {
+  "SkillsAngels\\Modules\\S-D Pics.py": {
     "name": "SDPicsMod",
     "description": "Module to save self-destructing media",
     "meta": {
@@ -9265,7 +9278,7 @@
       }
     ]
   },
-  "SkillsAngels/Modules/smile.py": {
+  "SkillsAngels\\Modules\\smile.py": {
     "name": "Smile",
     "description": null,
     "meta": {
@@ -9282,7 +9295,7 @@
       }
     ]
   },
-  "sqlmerr/hikka_mods/addlinktosymbols.py": {
+  "sqlmerr\\hikka_mods\\addlinktosymbols.py": {
     "name": "AddLinkToSymbols",
     "description": "Add link to symbols in text | Добавить ссылку на определённые символы в тексте",
     "meta": {
@@ -9296,7 +9309,7 @@
       }
     ]
   },
-  "sqlmerr/hikka_mods/animatedprofile.py": {
+  "sqlmerr\\hikka_mods\\animatedprofile.py": {
     "name": "AnimatedProfile",
     "description": "Module for your profile animation (name, bio) look in the config | Модуль для анимации вашего профиля (имя, био) смотрите конфиг",
     "meta": {
@@ -9319,7 +9332,7 @@
       }
     ]
   },
-  "sqlmerr/hikka_mods/autoformatter.py": {
+  "sqlmerr\\hikka_mods\\autoformatter.py": {
     "name": "AutoFormatter",
     "description": "Automatically formats the text of your messages | Check The Config",
     "meta": {
@@ -9336,7 +9349,7 @@
       }
     ]
   },
-  "sqlmerr/hikka_mods/autoforward.py": {
+  "sqlmerr\\hikka_mods\\autoforward.py": {
     "name": "AutoForward",
     "description": "Автоматически пересылает сообщения из каналов в один",
     "meta": {
@@ -9350,7 +9363,7 @@
       }
     ]
   },
-  "sqlmerr/hikka_mods/codeformat.py": {
+  "sqlmerr\\hikka_mods\\codeformat.py": {
     "name": "CodeFormat",
     "description": "Format your code!",
     "meta": {
@@ -9364,7 +9377,7 @@
       }
     ]
   },
-  "sqlmerr/hikka_mods/currencyconverter.py": {
+  "sqlmerr\\hikka_mods\\currencyconverter.py": {
     "name": "CurrencyConverter",
     "description": "Module for converting a large number of currencies to other currencies",
     "meta": {
@@ -9378,7 +9391,7 @@
       }
     ]
   },
-  "sqlmerr/hikka_mods/egsfreegames.py": {
+  "sqlmerr\\hikka_mods\\egsfreegames.py": {
     "name": "EGSFreeGames",
     "description": "Module for checking free games in Epic Games Store. Inline bot will send them every day in special chat",
     "meta": {
@@ -9392,7 +9405,7 @@
       }
     ]
   },
-  "sqlmerr/hikka_mods/fakedata.py": {
+  "sqlmerr\\hikka_mods\\fakedata.py": {
     "name": "FakeData",
     "description": "Just fake data of persons and credit cards",
     "meta": {
@@ -9406,7 +9419,7 @@
       }
     ]
   },
-  "sqlmerr/hikka_mods/FastChangeTgStatus.py": {
+  "sqlmerr\\hikka_mods\\FastChangeTgStatus.py": {
     "name": "FCTS",
     "description": "Change your status fast. Only for premium users | Изменяйте ваш статус быстро. Только для премиум пользователей",
     "meta": {
@@ -9429,7 +9442,7 @@
       }
     ]
   },
-  "sqlmerr/hikka_mods/inlinetimer.py": {
+  "sqlmerr\\hikka_mods\\inlinetimer.py": {
     "name": "InlineTimer",
     "description": "Описание нашего модуля",
     "meta": {
@@ -9443,7 +9456,7 @@
       }
     ]
   },
-  "sqlmerr/hikka_mods/numbersfacts.py": {
+  "sqlmerr\\hikka_mods\\numbersfacts.py": {
     "name": "NumbersFacts",
     "description": "Interesting facts about numbers | Check the config",
     "meta": {
@@ -9457,7 +9470,7 @@
       }
     ]
   },
-  "sqlmerr/hikka_mods/quicktools.py": {
+  "sqlmerr\\hikka_mods\\quicktools.py": {
     "name": "QuickTools",
     "description": "Module with various quick and useful tools",
     "meta": {
@@ -9477,7 +9490,7 @@
       }
     ]
   },
-  "sqlmerr/hikka_mods/random_emoji.py": {
+  "sqlmerr\\hikka_mods\\random_emoji.py": {
     "name": "RandomEmoji",
     "description": "Just random emojis",
     "meta": {
@@ -9491,7 +9504,7 @@
       }
     ]
   },
-  "sqlmerr/hikka_mods/silentmessages.py": {
+  "sqlmerr\\hikka_mods\\silentmessages.py": {
     "name": "SilentMessages",
     "description": "With this module you won't miss important messages sent without sound!",
     "meta": {
@@ -9505,7 +9518,7 @@
       }
     ]
   },
-  "sqlmerr/hikka_mods/triggers.py": {
+  "sqlmerr\\hikka_mods\\triggers.py": {
     "name": "Triggers",
     "description": "Triggers watches chat messages and can do anything, reply to a message with a given text, delete a message, execute any userbot command. Overall, a very cool module",
     "meta": {
@@ -9540,7 +9553,7 @@
       }
     ]
   },
-  "sqlmerr/hikka_mods/upgradedeval.py": {
+  "sqlmerr\\hikka_mods\\upgradedeval.py": {
     "name": "UpgradedEval",
     "description": "Just eval with customizable text and stdout",
     "meta": {
@@ -9554,7 +9567,7 @@
       }
     ]
   },
-  "thomasmod/hikkamods/atelegraph.py": {
+  "thomasmod\\hikkamods\\atelegraph.py": {
     "name": "ActuallTelegraphMod",
     "description": "Uploading a photo/gif/picture to actuall telegraph",
     "meta": {
@@ -9571,7 +9584,7 @@
       }
     ]
   },
-  "thomasmod/hikkamods/cchid.py": {
+  "thomasmod\\hikkamods\\cchid.py": {
     "name": "CChidMod",
     "description": "Модуль идентификации пользователей\n\n> Надеюсь вам понравятся...\n> И другие модули: @wilsonmods",
     "meta": {
@@ -9591,7 +9604,7 @@
       }
     ]
   },
-  "thomasmod/hikkamods/cdeanon.py": {
+  "thomasmod\\hikkamods\\cdeanon.py": {
     "name": "CDeanonMod",
     "description": "Anyone can be deanoned, just enter your Telegram username",
     "meta": {
@@ -9606,7 +9619,7 @@
       }
     ]
   },
-  "thomasmod/hikkamods/cmovies.py": {
+  "thomasmod\\hikkamods\\cmovies.py": {
     "name": "CMovies",
     "description": "Просмотр лучших фильмов, отсортированных по жанрам",
     "meta": {
@@ -9624,7 +9637,7 @@
       }
     ]
   },
-  "thomasmod/hikkamods/codemanager.py": {
+  "thomasmod\\hikkamods\\codemanager.py": {
     "name": "CodeManagerMod",
     "description": "Manager bot for working on modules (all Python files in general).",
     "meta": {
@@ -9645,7 +9658,7 @@
       }
     ]
   },
-  "thomasmod/hikkamods/crename.py": {
+  "thomasmod\\hikkamods\\crename.py": {
     "name": "ReanemerMod",
     "description": "Rename file name",
     "meta": {
@@ -9659,7 +9672,7 @@
       }
     ]
   },
-  "thomasmod/hikkamods/cringe.py": {
+  "thomasmod\\hikkamods\\cringe.py": {
     "name": "RandomCringeMod",
     "description": "Random cringe generate",
     "meta": {
@@ -9677,7 +9690,7 @@
       }
     ]
   },
-  "thomasmod/hikkamods/ctiktok.py": {
+  "thomasmod\\hikkamods\\ctiktok.py": {
     "name": "TikDownBotMod",
     "description": "Upload video via TikTok link «Optimized»",
     "meta": {
@@ -9692,7 +9705,7 @@
       }
     ]
   },
-  "thomasmod/hikkamods/cuploader.py": {
+  "thomasmod\\hikkamods\\cuploader.py": {
     "name": "UploadToProviderMod",
     "description": "Хостинг-провайдеры «skynet», «imgur», «oxo»",
     "meta": {
@@ -9712,7 +9725,7 @@
       }
     ]
   },
-  "thomasmod/hikkamods/musicfind.py": {
+  "thomasmod\\hikkamods\\musicfind.py": {
     "name": "MusicFinderMod",
     "description": "Find music quickly and the quality is very high",
     "meta": {
@@ -9730,7 +9743,7 @@
       }
     ]
   },
-  "thomasmod/hikkamods/mygallery.py": {
+  "thomasmod\\hikkamods\\mygallery.py": {
     "name": "MyGalleryMod",
     "description": "> This is the module in which my pictures are collected",
     "meta": {
@@ -9751,7 +9764,7 @@
       }
     ]
   },
-  "thomasmod/hikkamods/truefalse.py": {
+  "thomasmod\\hikkamods\\truefalse.py": {
     "name": "TrueOrFalseMod",
     "description": "The module will tell you if it's true or false",
     "meta": {
@@ -9766,7 +9779,7 @@
       }
     ]
   },
-  "trololo65/Modules/BFGMod.py": {
+  "trololo65\\Modules\\BFGMod.py": {
     "name": "BFGMod",
     "description": "Send mes",
     "meta": {
@@ -9789,7 +9802,7 @@
       }
     ]
   },
-  "trololo65/Modules/farmMoo.py": {
+  "trololo65\\Modules\\farmMoo.py": {
     "name": "FarmMooBotMod",
     "description": "Для автоматического фарминга мубота.\nотправляет мус, кликает, затем мук, кликает. и всё по циклу.",
     "meta": {
@@ -9805,7 +9818,7 @@
       }
     ]
   },
-  "trololo65/Modules/glitchMod.py": {
+  "trololo65\\Modules\\glitchMod.py": {
     "name": "glitchMod",
     "description": "Накладывает на изображения глитч эффект.",
     "meta": {
@@ -9822,7 +9835,7 @@
       }
     ]
   },
-  "trololo65/Modules/LsSend.py": {
+  "trololo65\\Modules\\LsSend.py": {
     "name": "LsSendMod",
     "description": "Отправка смс в лс по юзеру пользователя.",
     "meta": {
@@ -9836,7 +9849,7 @@
       }
     ]
   },
-  "trololo65/Modules/Morze.py": {
+  "trololo65\\Modules\\Morze.py": {
     "name": "MorzeMod",
     "description": "Конвертация текста в шифр Морзе и наоборот.\n\nСимволы использовать не советую, могут возникать ошибки!!",
     "meta": {
@@ -9852,7 +9865,7 @@
       }
     ]
   },
-  "trololo65/Modules/Num.py": {
+  "trololo65\\Modules\\Num.py": {
     "name": "NumMod",
     "description": "Заражает по реплаю.",
     "meta": {
@@ -9878,7 +9891,7 @@
       }
     ]
   },
-  "trololo65/Modules/RPMod.py": {
+  "trololo65\\Modules\\RPMod.py": {
     "name": "RPMod",
     "description": "Модуль RPMod.",
     "meta": {
@@ -9916,7 +9929,7 @@
       }
     ]
   },
-  "trololo65/Modules/SeeChat.py": {
+  "trololo65\\Modules\\SeeChat.py": {
     "name": "SeeChatMod",
     "description": "tracking in all PM chats.",
     "meta": {
@@ -9947,7 +9960,7 @@
       }
     ]
   },
-  "trololo65/Modules/translatepyMod.py": {
+  "trololo65\\Modules\\translatepyMod.py": {
     "name": "translatepyMod",
     "description": "Перевод текста. Автоматическое распознование языка.",
     "meta": {
@@ -9964,7 +9977,7 @@
       }
     ]
   },
-  "trololo65/Modules/ttsave.py": {
+  "trololo65\\Modules\\ttsave.py": {
     "name": "TTsaveMod",
     "description": "Save tiktok video",
     "meta": {
@@ -9981,7 +9994,7 @@
       }
     ]
   },
-  "trololo65/Modules/TTsaveMod.py": {
+  "trololo65\\Modules\\TTsaveMod.py": {
     "name": "TTsaveMod",
     "description": "Save tiktok video",
     "meta": {
@@ -9998,7 +10011,7 @@
       }
     ]
   },
-  "trololo65/Modules/Vizjener.py": {
+  "trololo65\\Modules\\Vizjener.py": {
     "name": "VijenerMod",
     "description": "Конвертация текста в шифр Виженеря и наоборот. ",
     "meta": {
@@ -10015,7 +10028,7 @@
       }
     ]
   },
-  "trololo65/Modules/VSpamMod.py": {
+  "trololo65\\Modules\\VSpamMod.py": {
     "name": "VSpamMod",
     "description": "Vspam",
     "meta": {
@@ -10037,7 +10050,7 @@
       }
     ]
   },
-  "trololo65/Modules/webshot.py": {
+  "trololo65\\Modules\\webshot.py": {
     "name": "WebShotMod",
     "description": "link to screen",
     "meta": {
@@ -10050,7 +10063,130 @@
       }
     ]
   },
-  "vsecoder/hikka_modules/accounttime.py": {
+  "unneyon\\hikka-mods\\caliases.py": {
+    "name": "CustomAliasesMod",
+    "description": "Module for custom aliases",
+    "meta": {
+      "pic": "https://static.unneyon.ru/get/caliases_icon.png",
+      "banner": "https://mods.unneyon.ru/banners/caliases.png",
+      "developer": "@unneyon_hmods"
+    },
+    "commands": [
+      {
+        "caliasescmd": "👉 Get all aliases"
+      },
+      {
+        "rmcaliascmd": "<name> 👉 Remove alias"
+      },
+      {
+        "caliascmd": "<name> <command>\n[args] 👉 Add new alias (may contain {args} keyword)"
+      }
+    ]
+  },
+  "unneyon\\hikka-mods\\deleter.py": {
+    "name": "DeleterMod",
+    "description": "Module for delete your messages",
+    "meta": {
+      "pic": "https://static.unneyon.ru/get/deleter_icon.png",
+      "banner": "https://mods.unneyon.ru/banners/deleter.png",
+      "developer": "@unneyon_hmods"
+    },
+    "commands": [
+      {
+        "delmsgcmd": "[count] — Delete messages (you can use your trigger from config: «{value}{count}» and write them only together!)"
+      }
+    ]
+  },
+  "unneyon\\hikka-mods\\tidal.py": {
+    "name": "TidalMod",
+    "description": "API wrapper over TIDAL Hi-Fi music streaming service\nThanks @hikarimods for original module: t.me/hikarimods/764",
+    "meta": {
+      "pic": "https://static.unneyon.ru/get/tidal_icon.png",
+      "banner": "https://mods.unneyon.ru/banners/tidal.png",
+      "developer": "@unneyon_hmods"
+    },
+    "commands": [
+      {
+        "tlogincmd": "Open OAuth window to login into TIDAL"
+      },
+      {
+        "tidalcmd": "<query> - Search track in TIDAL"
+      },
+      {
+        "turlcmd": "<ID/url> - Search track in TIDAL by ID or url"
+      }
+    ]
+  },
+  "unneyon\\hikka-mods\\warpigs.py": {
+    "name": "WarPigsMod",
+    "description": "Some auto-functions for your pig in @warpigs_bot",
+    "meta": {
+      "pic": "https://static.unneyon.ru/get/warpigs_icon.png",
+      "banner": "https://mods.unneyon.ru/banners/warpigs.png",
+      "developer": "@unneyon_hmods"
+    },
+    "commands": [
+      {
+        "afightcmd": "- Enable/disable autofight"
+      },
+      {
+        "agrowcmd": "- Enable/disable autogrow"
+      },
+      {
+        "setnamecmd": "<name> - Changes your pig's name"
+      }
+    ]
+  },
+  "unneyon\\hikka-mods\\yamusic.py": {
+    "name": "YaMusicMod",
+    "description": "The module for Yandex.Music streaming service",
+    "meta": {
+      "pic": "https://static.unneyon.ru/get/yamusic_icon.png",
+      "banner": "https://mods.unneyon.ru/banners/yamusic.png",
+      "developer": "@unneyon_hmods"
+    },
+    "commands": [
+      {
+        "yguidecmd": "- Guide for obtaining a Yandex.Music token"
+      },
+      {
+        "ynowcmd": "- Get now playing track"
+      },
+      {
+        "ysearchcmd": "<query> - Search track in Yandex.Music"
+      }
+    ]
+  },
+  "unneyon\\hikka-mods\\yamusic_beta.py": {
+    "name": "YaMusicMod",
+    "description": "The module for Yandex.Music streaming service [BETA]",
+    "meta": {
+      "pic": "https://static.unneyon.ru/get/yamusic_icon.png",
+      "banner": "https://mods.unneyon.ru/banners/yamusic.png",
+      "developer": "@unneyon_hmods"
+    },
+    "commands": [
+      {
+        "ybiocmd": "- Enable/disable autobio"
+      },
+      {
+        "yguidecmd": "- Guide for obtaining a Yandex.Music token"
+      },
+      {
+        "ynowcmd": "- Get now playing track"
+      },
+      {
+        "ysearchcmd": "<query> - Search track in Yandex.Music"
+      },
+      {
+        "yautomsgcmd": "- Enable all widgets"
+      },
+      {
+        "ywidgetcmd": "<link to message/post> - Make a message/post a widget"
+      }
+    ]
+  },
+  "vsecoder\\hikka_modules\\accounttime.py": {
     "name": "AcTimeMod",
     "description": "Module for get account time",
     "meta": {
@@ -10064,7 +10200,7 @@
       }
     ]
   },
-  "vsecoder/hikka_modules/ascii.py": {
+  "vsecoder\\hikka_modules\\ascii.py": {
     "name": "AsciiMod",
     "description": "Module for convert image to ascii",
     "meta": {
@@ -10078,7 +10214,7 @@
       }
     ]
   },
-  "vsecoder/hikka_modules/biopage.py": {
+  "vsecoder\\hikka_modules\\biopage.py": {
     "name": "BioPageMod",
     "description": "Module for create bio page",
     "meta": {
@@ -10092,7 +10228,7 @@
       }
     ]
   },
-  "vsecoder/hikka_modules/calc.py": {
+  "vsecoder\\hikka_modules\\calc.py": {
     "name": "CalcMod",
     "description": "Module for inline calc",
     "meta": {
@@ -10106,7 +10242,7 @@
       }
     ]
   },
-  "vsecoder/hikka_modules/chatgptfree.py": {
+  "vsecoder\\hikka_modules\\chatgptfree.py": {
     "name": "ChatGPTfreeMod",
     "description": "Бесплатный модуль для ChatGPT\nhttps://t.me/Jarvis_IT_Assistant_bot\nСначала запустите бота и отключите уведомления",
     "meta": {
@@ -10123,7 +10259,7 @@
       }
     ]
   },
-  "vsecoder/hikka_modules/CheckMods.py": {
+  "vsecoder\\hikka_modules\\CheckMods.py": {
     "name": "CheckModulesMod",
     "description": "Module for check modules",
     "meta": {
@@ -10137,7 +10273,7 @@
       }
     ]
   },
-  "vsecoder/hikka_modules/feedbackbot.py": {
+  "vsecoder\\hikka_modules\\feedbackbot.py": {
     "name": "FeedbackBotMod",
     "description": "FeedbackBot",
     "meta": {
@@ -10147,7 +10283,7 @@
     },
     "commands": []
   },
-  "vsecoder/hikka_modules/formatter.py": {
+  "vsecoder\\hikka_modules\\formatter.py": {
     "name": "FormatterMod",
     "description": "Module for prettifying the formatting of messages 🪛\n\n📌 For example write:\n--------------------\nHi, now is {now}, today is {today}, yesterday is {yesterday}, my id is {id}, username is @{username}...\n\n⌨️ Keyboard:\n~\n📥 Modules $ https://t.me/vsecoder_m\n👨‍💻 Dev $ https://t.me/vsecoder\n--------------------\n\nP.S. \"~\" is a separator for keyboard and message.\n     \"$\" is a separator for button and link.",
     "meta": {
@@ -10157,7 +10293,7 @@
     },
     "commands": []
   },
-  "vsecoder/hikka_modules/googleit.py": {
+  "vsecoder\\hikka_modules\\googleit.py": {
     "name": "GoogleItMod",
     "description": "Module for google search",
     "meta": {
@@ -10171,7 +10307,7 @@
       }
     ]
   },
-  "vsecoder/hikka_modules/hentaimanga.py": {
+  "vsecoder\\hikka_modules\\hentaimanga.py": {
     "name": "HentaiMangaMod",
     "description": null,
     "meta": {
@@ -10188,7 +10324,7 @@
       }
     ]
   },
-  "vsecoder/hikka_modules/hh.py": {
+  "vsecoder\\hikka_modules\\hh.py": {
     "name": "HHMod",
     "description": "@hikkahost userbot manager module",
     "meta": {
@@ -10208,7 +10344,7 @@
       }
     ]
   },
-  "vsecoder/hikka_modules/hypixel.py": {
+  "vsecoder\\hikka_modules\\hypixel.py": {
     "name": "HypixelMod",
     "description": "Module for getting information about minecraft Hypixel player",
     "meta": {
@@ -10223,7 +10359,7 @@
       }
     ]
   },
-  "vsecoder/hikka_modules/lmfify.py": {
+  "vsecoder\\hikka_modules\\lmfify.py": {
     "name": "LMFIFYMod",
     "description": "Let me find it for you in Google / Yandex",
     "meta": {
@@ -10237,7 +10373,7 @@
       }
     ]
   },
-  "vsecoder/hikka_modules/MangaSlider.py": {
+  "vsecoder\\hikka_modules\\MangaSlider.py": {
     "name": "MangaSliderMod",
     "description": null,
     "meta": {
@@ -10247,7 +10383,7 @@
     },
     "commands": []
   },
-  "vsecoder/hikka_modules/mazemod.py": {
+  "vsecoder\\hikka_modules\\mazemod.py": {
     "name": "MazeModMod",
     "description": "Module for play maze",
     "meta": {
@@ -10261,7 +10397,7 @@
       }
     ]
   },
-  "vsecoder/hikka_modules/monkeytype.py": {
+  "vsecoder\\hikka_modules\\monkeytype.py": {
     "name": "MonkeyTypeMod",
     "description": "Module for getting information about monkeytype.com stats\n\n{15/30/60/120:times} - dividing tests by time (default: 15)\nNeed only account username (not full link)!",
     "meta": {
@@ -10276,7 +10412,7 @@
       }
     ]
   },
-  "vsecoder/hikka_modules/octocode.py": {
+  "vsecoder\\hikka_modules\\octocode.py": {
     "name": "OctoCodeMod",
     "description": "Module for octopussed code\n\nhttps://github.com/charmbracelet/freeze based\n\nTo use, run this in .terminal:\n\nwget https://github.com/charmbracelet/freeze/releases/download/v0.1.6/freeze_0.1.6_amd64.deb\nsudo dpkg -i freeze_0.1.6_amd64.deb",
     "meta": {
@@ -10290,7 +10426,7 @@
       }
     ]
   },
-  "vsecoder/hikka_modules/profile.py": {
+  "vsecoder\\hikka_modules\\profile.py": {
     "name": "Profilemod",
     "description": "Module for get beautiful picture profile statistic",
     "meta": {
@@ -10304,7 +10440,7 @@
       }
     ]
   },
-  "vsecoder/hikka_modules/quotes.py": {
+  "vsecoder\\hikka_modules\\quotes.py": {
     "name": "QuotesMod",
     "description": "Quotes by @vsecoder [beta]\n\nNow doesn't work stickers, gifs, video.\n(Fake stories later)\n\nThk t.me/Fl1yd, based on his SQuotes module\nThk t.me/hikariatama, recognize from VTT module",
     "meta": {
@@ -10324,7 +10460,7 @@
       }
     ]
   },
-  "vsecoder/hikka_modules/RussianRoulette.py": {
+  "vsecoder\\hikka_modules\\RussianRoulette.py": {
     "name": "RussianRouletteMod",
     "description": "Module for \"Russian roulette\" game",
     "meta": {
@@ -10338,7 +10474,7 @@
       }
     ]
   },
-  "vsecoder/hikka_modules/searx.py": {
+  "vsecoder\\hikka_modules\\searx.py": {
     "name": "SearXMod",
     "description": "Module for multi search",
     "meta": {
@@ -10352,7 +10488,7 @@
       }
     ]
   },
-  "vsecoder/hikka_modules/speechcensorship.py": {
+  "vsecoder\\hikka_modules\\speechcensorship.py": {
     "name": "SpeechCensorshipMod",
     "description": "Module for censoring your speech",
     "meta": {
@@ -10366,7 +10502,7 @@
       }
     ]
   },
-  "vsecoder/hikka_modules/steam.py": {
+  "vsecoder\\hikka_modules\\steam.py": {
     "name": "SteamMod",
     "description": "Module for get Steam account information\n\nLater (TODO):\n- achivments list\n- {STEAM} widget",
     "meta": {
@@ -10380,7 +10516,7 @@
       }
     ]
   },
-  "vsecoder/hikka_modules/vsecodertranslate.py": {
+  "vsecoder\\hikka_modules\\vsecodertranslate.py": {
     "name": "VseTranslateMod",
     "description": "Traslate text",
     "meta": {
@@ -10394,7 +10530,7 @@
       }
     ]
   },
-  "vsecoder/hikka_modules/wikimod.py": {
+  "vsecoder\\hikka_modules\\wikimod.py": {
     "name": "WikiMod",
     "description": "Module for wikipedia search",
     "meta": {
@@ -10408,7 +10544,7 @@
       }
     ]
   },
-  "vsecoder/hikka_modules/ymnow.py": {
+  "vsecoder\\hikka_modules\\ymnow.py": {
     "name": "YmNowBetaMod",
     "description": "Module for yandex music. Based on SpotifyNow, YaNow and WakaTime. [BETA]\n\nNow on Ynison API.",
     "meta": {
@@ -10429,7 +10565,7 @@
       }
     ]
   },
-  "vsecoder/hikka_modules/ymnowbeta.py": {
+  "vsecoder\\hikka_modules\\ymnowbeta.py": {
     "name": "YmNowBetaMod",
     "description": "Module for yandex music. Based on SpotifyNow, YaNow and WakaTime. [BETA]",
     "meta": {
@@ -10447,7 +10583,7 @@
       }
     ]
   },
-  "Yahikoro/Modules-for-FTG/asser.py": {
+  "Yahikoro\\Modules-for-FTG\\asser.py": {
     "name": "AsserMod",
     "description": "easy as lists and as in PM.",
     "meta": {
@@ -10460,7 +10596,7 @@
       }
     ]
   },
-  "Yahikoro/Modules-for-FTG/AutoBlackList.py": {
+  "Yahikoro\\Modules-for-FTG\\AutoBlackList.py": {
     "name": "AutoBlackListMod",
     "description": "Кидает всех неконтактов в ЧС.",
     "meta": {
@@ -10479,7 +10615,7 @@
       }
     ]
   },
-  "Yahikoro/Modules-for-FTG/Conthelper.py": {
+  "Yahikoro\\Modules-for-FTG\\Conthelper.py": {
     "name": "ConthelperMod",
     "description": "Commands:",
     "meta": {
@@ -10504,7 +10640,7 @@
       }
     ]
   },
-  "Yahikoro/Modules-for-FTG/Cycles.py": {
+  "Yahikoro\\Modules-for-FTG\\Cycles.py": {
     "name": "CirclesMod",
     "description": "округляет всё",
     "meta": {
@@ -10517,7 +10653,7 @@
       }
     ]
   },
-  "Yahikoro/Modules-for-FTG/GitUploader.py": {
+  "Yahikoro\\Modules-for-FTG\\GitUploader.py": {
     "name": "GitaddMod",
     "description": "Загружает файлы на репозиторий GitHub",
     "meta": {
@@ -10530,7 +10666,7 @@
       }
     ]
   },
-  "Yahikoro/Modules-for-FTG/KeyboardSwitcher.py": {
+  "Yahikoro\\Modules-for-FTG\\KeyboardSwitcher.py": {
     "name": "KeyboardSwitcherMod",
     "description": "Смена расскаладки клавиатуры у текста",
     "meta": {
@@ -10543,7 +10679,7 @@
       }
     ]
   },
-  "Yahikoro/Modules-for-FTG/MafiaDrawing.py": {
+  "Yahikoro\\Modules-for-FTG\\MafiaDrawing.py": {
     "name": "MafiaDrawingMod",
     "description": "Модуль ловли подарков в True Mafia News.",
     "meta": {
@@ -10556,7 +10692,7 @@
       }
     ]
   },
-  "Yahikoro/Modules-for-FTG/SeeChat.py": {
+  "Yahikoro\\Modules-for-FTG\\SeeChat.py": {
     "name": "SeeChatMod",
     "description": "tracking in all PM chats.",
     "meta": {
@@ -10587,7 +10723,7 @@
       }
     ]
   },
-  "Yahikoro/Modules-for-FTG/Valute.py": {
+  "Yahikoro\\Modules-for-FTG\\Valute.py": {
     "name": "ValuteMod",
     "description": "Конвертер Валют",
     "meta": {
@@ -10600,7 +10736,7 @@
       }
     ]
   },
-  "Yahikoro/Modules-for-FTG/VMsm.py": {
+  "Yahikoro\\Modules-for-FTG\\VMsm.py": {
     "name": "VoiceMod",
     "description": "Module for working with voicechat\n    ",
     "meta": {
@@ -10646,7 +10782,7 @@
       }
     ]
   },
-  "Yahikoro/Modules-for-FTG/WriteCorrect.py": {
+  "Yahikoro\\Modules-for-FTG\\WriteCorrect.py": {
     "name": "ErrorMod",
     "description": "Модуль для проверки слов на наличие ошибок ",
     "meta": {
