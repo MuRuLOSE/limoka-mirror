@@ -1,0 +1,6 @@
+caliases
+deleter
+tidal
+warpigs
+yamusic
+yamusic_beta
