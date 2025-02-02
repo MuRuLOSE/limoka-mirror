@@ -14,8 +14,6 @@ import html
 import json
 
 from telethon.types import Message
-from telethon.errors.rpcerrorlist import YouBlockedUserError
-from ..inline.types import InlineCall
 from .. import utils, loader
 
 
@@ -283,7 +281,7 @@ class Limoka(loader.Module):
                     username=dev_username,
                     commands="".join(commands),
                     prefix=self.get_prefix(),
-                    module_path=module_path,
+                    module_path=module_path.replace("\\", "/"),
                 ),
             )
         except Exception:
