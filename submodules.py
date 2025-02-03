@@ -46,6 +46,7 @@ repos = [
     "https://github.com/fajox1/famods",
     "https://github.com/HikkTutor/HT",
     "https://github.com/unneyon/hikka-mods",
+    "https://github.com/TheKsenon/MyHikkaModules",
 ]
 
 for repo_url in repos:
