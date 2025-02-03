@@ -75,4 +75,19 @@ for repo_url in repos:
 
         print(f"Добавлен subtree: {repo_url} -> {local_path}")
     except subprocess.CalledProcessError:
-        pass
+        try:
+            subprocess.run(
+                [
+                    "git",
+                    "subtree",
+                    "add",
+                    "--prefix",
+                    local_path,
+                    repo_url,
+                    "master",
+                    "--squash",
+                ],
+                check=True,
+            )
+        except subprocess.CalledProcessError:
+            pass
