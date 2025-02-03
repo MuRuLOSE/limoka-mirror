@@ -1,10 +1,11 @@
 {
   "Limoka.py": {
     "name": "Limoka",
-    "description": "Search modules!",
+    "description": "Hikka modules are now in one place with easy searching!",
     "meta": {
       "pic": null,
-      "banner": null
+      "banner": null,
+      "developer": "@limokanews"
     },
     "commands": [
       {
@@ -22,7 +23,7 @@
     },
     "commands": [
       {
-        "accdata": null
+        "accdata": "RU: Узнать примерную дату регистрации аккаунта телеграмм | EN: Find out the approximate date of registration of the telegram account"
       }
     ]
   },
@@ -36,10 +37,10 @@
     },
     "commands": [
       {
-        "arandom": null
+        "arandom": "RU: Возвращает случайный тайтл из базы | EN: Returns a random title from the database"
       },
       {
-        "asearch_inline_handler": null
+        "asearch_inline_handler": "RU: Возвращает список найденных по названию тайтлов | EN: Returns a list of titles found by name"
       }
     ]
   },
@@ -53,16 +54,16 @@
     },
     "commands": [
       {
-        "fcatcmd": null
+        "fcatcmd": "RU: Файлы случайных фотографий кошек | EN: Random photos of cats files"
       },
       {
-        "fdogcmd": null
+        "fdogcmd": "RU: Случайные фотографии собачьих файлов | EN: Random photos of dog files"
       },
       {
-        "catcmd": null
+        "catcmd": "RU: Случайные фотографии кошек | EN: Random photos of cats"
       },
       {
-        "dogcmd": null
+        "dogcmd": "RU: Случайные фотографии собаки | EN: Random photos of dog"
       }
     ]
   },
@@ -76,7 +77,7 @@
     },
     "commands": [
       {
-        "quote": null
+        "quote": "RU: Получить случайную цитату из аниме | EN: Get a random quote from the anime"
       }
     ]
   },
@@ -90,7 +91,7 @@
     },
     "commands": [
       {
-        "arccmd": null
+        "arccmd": "RU: Отображается ваша статья Уголовного кодекса Российской Федерации | EN: Displays your article Criminal Code of the Russian Federation"
       }
     ]
   },
@@ -104,7 +105,7 @@
     },
     "commands": [
       {
-        "cascii": null
+        "cascii": "RU: <реплай на изображение> сделать ascii art | EN: <replay on image> make ascii art"
       }
     ]
   },
@@ -118,19 +119,19 @@
     },
     "commands": [
       {
-        "cookon": null
+        "cookon": "RU: Запустить автофарминг | EN: Launch auto-farming"
       },
       {
-        "cookoff": null
+        "cookoff": "RU: Остановить автофарминг | EN: Stop auto-farming"
       },
       {
-        "cookies": null
+        "cookies": "RU: Вывод кол-ва коинов, добытых этим модулем | EN: Output of the number of coins mined by this module"
       },
       {
-        "me": null
+        "me": "RU: Показывает ваш мешок | EN: Shows your bag"
       },
       {
-        "ckies": null
+        "ckies": "RU: Помощь по модулю AutofarmCookies | EN: Help with the AutofarmCookies module"
       }
     ]
   },
@@ -144,10 +145,10 @@
     },
     "commands": [
       {
-        "btname": null
+        "btname": "RU: Выставить таймер дней в ник (нестабильно) | EN: Set the timer of days in the nickname (unstable)"
       },
       {
-        "bt": null
+        "bt": "RU: Вывести таймер | EN: Display the timer"
       }
     ]
   },
@@ -161,7 +162,7 @@
     },
     "commands": [
       {
-        "spambancmd": null
+        "spambancmd": "RU: Проверяет вашу учетную запись на спам-бан с помощью бота @SpamBot | EN: Checks your account for spam ban via @SpamBot bot"
       }
     ]
   },
@@ -175,7 +176,7 @@
     },
     "commands": [
       {
-        "crypto": null
+        "crypto": "RU: Отображает текущий курс криптовалюты в рублях, долларах США и евро | EN: Displays the current cryptocurrency rate in RUB, USD, and EUR"
       }
     ]
   },
@@ -203,7 +204,7 @@
     },
     "commands": [
       {
-        "rfacecmd": null
+        "rfacecmd": "RU: Рандом kaomoji | EN: Random kaomoji"
       }
     ]
   },
@@ -243,10 +244,10 @@
     },
     "commands": [
       {
-        "fwalletcmd": null
+        "fwalletcmd": "RU: Чтобы заполучить поддельный кошелек | EN: To get a fake wallet"
       },
       {
-        "fwinfocmd": null
+        "fwinfocmd": "RU: Информация о FakeModule | EN: Info about FakeModule"
       }
     ]
   },
@@ -260,10 +261,10 @@
     },
     "commands": [
       {
-        "giga": null
+        "giga": "RU: Получите исчерпывающий ответ на свой вопрос | EN: Get GigaResponse to your question"
       },
       {
-        "gigamodel": null
+        "gigamodel": "RU: Получите исчерпывающий ответ на свой вопрос | EN: Get GigaResponse to your question"
       }
     ]
   },
@@ -277,16 +278,16 @@
     },
     "commands": [
       {
-        "glban": null
+        "glban": "RU: <реплай | юзер> [причина] [-s] - Забанить пользователя во всех чатах где ты админ | EN: <replay | user> [reason] [-s] - Ban the user in all chats where you are the admin"
       },
       {
-        "glunban": null
+        "glunban": "RU: <реплай | юзер> [причина] [-s] - Разбанить пользователя во всех где ты админ | EN: <replay | user> [reason] [-s] - To unban the user in all where you are the admin"
       },
       {
-        "glmute": null
+        "glmute": "RU: <реплай | юзер> [причина] [-s] - Замутить пользователя во всех чатах где ты админ | EN: <replay | user> [reason] [-s] - To hook up the user in all chats where you are the admin"
       },
       {
-        "glunmute": null
+        "glunmute": "RU: <реплай | юзер> [причина] [-s] - Размутит пользователя во всех где ты админ | EN: <replay | user> [reason] [-s] - Will confuse the user in all where you are the admin"
       }
     ]
   },
@@ -300,13 +301,13 @@
     },
     "commands": [
       {
-        "hinfocmd": null
+        "hinfocmd": "RU: Статус HikkaHost | EN: Status HikkaHost"
       },
       {
-        "hlogscmd": null
+        "hlogscmd": "RU: Логи HikkaHost | EN: Logs HikkaHost"
       },
       {
-        "hrestartcmd": null
+        "hrestartcmd": "RU: Рестарт HikkaHost | EN: Restart HikkaHost"
       }
     ]
   },
@@ -320,7 +321,7 @@
     },
     "commands": [
       {
-        "crinl_inline_handler": null
+        "crinl_inline_handler": "RU: Создать inline кнопку\nНапример: @username_bot crinl Текст сообщения, Текст кнопки, Ссылка в кнопке | EN: Create an inline button\nexample: @username_bot crinl Message text, Button text, Link in the button"
       }
     ]
   },
@@ -334,7 +335,7 @@
     },
     "commands": [
       {
-        "coin_inline_handler": null
+        "coin_inline_handler": "RU: Подбросит монетку  | EN: Flip a coin"
       }
     ]
   },
@@ -348,19 +349,19 @@
     },
     "commands": [
       {
-        "restart_inline_handler": null
+        "restart_inline_handler": "RU: Перезагрузить юзербота | EN: Reboot the userbot"
       },
       {
-        "update_inline_handler": null
+        "update_inline_handler": "RU: Обновить юзербота | EN: Update the userbot"
       },
       {
-        "terminal_inline_handler": null
+        "terminal_inline_handler": "RU: Выполнить команду в терминале (лучше сразу подготовить команду и просто вставить) | EN: Execute the command in the terminal (it is better to prepare the command immediately and just paste it)"
       },
       {
-        "modules_inline_handler": null
+        "modules_inline_handler": "RU: Вывести список установленных модулей через инлайн | EN: Display a list of installed modules via the inline"
       },
       {
-        "resetprefix_inline_handler": null
+        "resetprefix_inline_handler": "RU: Сбросить префикс (осторожнее, сбрасывает ваш префикс на . ) | EN: Reset the prefix (be careful, resets your prefix to . )"
       }
     ]
   },
@@ -374,7 +375,7 @@
     },
     "commands": [
       {
-        "ionicmd": null
+        "ionicmd": "RU: <реплай на сообщение/свой текст> | EN: <reply to the message/your own text>"
       }
     ]
   },
@@ -388,7 +389,7 @@
     },
     "commands": [
       {
-        "swap": null
+        "swap": "RU: При ответе на своё сообщение меняет раскладку путем редактирования, на чужое — в отдельном сообщении. | EN: Change keyboard layout for the replied message."
       }
     ]
   },
@@ -402,7 +403,7 @@
     },
     "commands": [
       {
-        "memescmd": null
+        "memescmd": ""
       }
     ]
   },
@@ -416,7 +417,7 @@
     },
     "commands": [
       {
-        "searchm": null
+        "searchm": "RU: Найти трек по названию в Yandex Music или VK: `searchm yandex {название}` или `searchm vk {название}` | EN: Find a track by name in Yandex Music or VK: `searchm yandex {name}` or `searchm vk {name}`"
       }
     ]
   },
@@ -430,13 +431,13 @@
     },
     "commands": [
       {
-        "novoice": null
+        "novoice": "RU: [on/off] — запрещает/разрешает всем пользователям отправку голосовых и видеосообщений. | EN: [on/off] — prohibits/allows all users to send voice and video messages."
       },
       {
-        "novoiceuser": null
+        "novoiceuser": "RU: [username/reply] — запрещает пользователю отправку голосовых и видеосообщений. | EN: [username/reply] — prohibits the user from sending voice and video messages."
       },
       {
-        "novoicerm": null
+        "novoicerm": "RU: [username/reply] — разрешает пользователю отправку голосовых и видеосообщений. | EN: [username/reply] — allows the user to send voice and video messages."
       }
     ]
   },
@@ -450,7 +451,7 @@
     },
     "commands": [
       {
-        "nsfwartcmd": null
+        "nsfwartcmd": "RU: Отправьте симпатичный nsfw-арт | EN: Send cute nsfw-art"
       }
     ]
   },
@@ -464,7 +465,7 @@
     },
     "commands": [
       {
-        "past": null
+        "past": "RU: Заливает код в Pastebin | EN: Uploads the code to Pastebin"
       }
     ]
   },
@@ -478,13 +479,13 @@
     },
     "commands": [
       {
-        "namecmd": null
+        "namecmd": "RU: для того, чтобы сменить свое имя/отчество | EN: for change your first/second name"
       },
       {
-        "aboutcmd": null
+        "aboutcmd": "RU: чтобы изменить свою биографию | EN: for change your bio"
       },
       {
-        "usercmd": "- for change your username. Enter value without \"@\"."
+        "usercmd": "- for change your username. Enter value without \"@\". | RU: для изменения вашего имени пользователя. Введите значение без '@' | EN: for change your username. Enter value without '@'"
       }
     ]
   },
@@ -498,7 +499,7 @@
     },
     "commands": [
       {
-        "vowelreplace": null
+        "vowelreplace": "RU: Включить или отключить замену гласных на ё. | EN: Enable or disable vowel substitution for ё."
       }
     ]
   },
@@ -512,7 +513,7 @@
     },
     "commands": [
       {
-        "password": "random password\n-n - numbers\n-s - symbols \n -l - letters"
+        "password": "random password\n-n - numbers\n-s - symbols \n -l - letters | RU: Случайный пароль\n-n - цифры\n-s - символы \n -l - буквы | EN: Random password\n-n - numbers\n-s - symbols \n -l - letters"
       }
     ]
   },
@@ -526,34 +527,34 @@
     },
     "commands": [
       {
-        "google": null
+        "google": "RU: Поискать в Google | EN: Search on Google"
       },
       {
-        "yandex": null
+        "yandex": "RU: Поискать в Yandex | EN: Search on Yandex"
       },
       {
-        "duckduckgo": null
+        "duckduckgo": "RU: Поискать в Duckduckgo | EN: Search on Duckduckgo"
       },
       {
-        "bing": null
+        "bing": "RU: Поискать в Bing | EN: Search on Bing"
       },
       {
-        "you": null
+        "you": "RU: Поискать в You | EN: Search on You"
       },
       {
-        "igoogle": null
+        "igoogle": "RU: Поискать в Google инлайн | EN: Search on Google inline"
       },
       {
-        "iyandex": null
+        "iyandex": "RU: Поискать в Yandex инлайн | EN: Search on Yandex inline"
       },
       {
-        "iduckduckgo": null
+        "iduckduckgo": "RU: Поискать в Duckduckgo инлайн | EN: Search on Duckduckgo inline"
       },
       {
-        "ibing": null
+        "ibing": "RU: Поискать в Bing инлайн | EN: Search on Bing inline"
       },
       {
-        "iyou": null
+        "iyou": "RU: Поискать в You инлайн | EN: Search on You inline"
       }
     ]
   },
@@ -567,10 +568,10 @@
     },
     "commands": [
       {
-        "shortencmd": null
+        "shortencmd": "RU: Сократить ссылку через bit.ly | EN: Shorten the link via bit.ly"
       },
       {
-        "statclcmd": null
+        "statclcmd": "RU: Посмотреть статистику ссылки через bit.ly | EN: View link statistics via bit.ly"
       }
     ]
   },
@@ -584,7 +585,7 @@
     },
     "commands": [
       {
-        "smdump": null
+        "smdump": "RU: выгружает все сообщения из Избранного / Saved Messages и собирает их в одном архиве. | EN: downloads all messages from Favorites / Saved Messages and collects them in one archive."
       }
     ]
   },
@@ -598,10 +599,10 @@
     },
     "commands": [
       {
-        "tgccmd": null
+        "tgccmd": "RU: <код состояния> - Получение информации о коде состояния | EN: <statuscode> - Get status code info"
       },
       {
-        "tgcscmd": null
+        "tgcscmd": "RU: Получите все коды статуса telegram | EN: Get all telegram status codes"
       }
     ]
   },
@@ -615,7 +616,7 @@
     },
     "commands": [
       {
-        "ttfcmd": null
+        "ttfcmd": "RU: Создать файл с вашим текстом или кодом | EN: Create a file with your text or code"
       }
     ]
   },
@@ -629,7 +630,7 @@
     },
     "commands": [
       {
-        "stcmd": null
+        "stcmd": "RU: <название цвета> [текст] | EN: <color name> [text]"
       }
     ]
   },
@@ -643,7 +644,7 @@
     },
     "commands": [
       {
-        "tt": null
+        "tt": "RU: Скачать видео или фото с TikTok | EN: Download videos or photos from TikTok"
       }
     ]
   },
@@ -657,7 +658,7 @@
     },
     "commands": [
       {
-        "gifc": null
+        "gifc": "RU: [reply | в одном сообщении с видео] — конвертирует видео в GIF. | EN: [reply | in one message with video] — Converts video to GIF."
       }
     ]
   },
@@ -671,7 +672,7 @@
     },
     "commands": [
       {
-        "vt": null
+        "vt": "RU: <ответ на файл> - Проверяет файлы на наличие вирусов с использованием VirusTotal | EN: <file response> - Checks files for viruses using VirusTotal"
       }
     ]
   },
@@ -685,7 +686,7 @@
     },
     "commands": [
       {
-        "voicedl": null
+        "voicedl": "RU:  [reply] — загружает выбранное голосовое сообщение в виде файла mp3 и кидает его в чат. | EN:  [reply] — downloads the selected voice message as an MP3 file and sends it in the chat."
       }
     ]
   },
@@ -872,10 +873,10 @@
     },
     "commands": [
       {
-        "modlist": "| Quick access to channels with modules"
+        "modlist": "| Quick access to channels with modules | RU:  | Быстрый доступ к каналам с модулями "
       },
       {
-        "offmodlist": "| Official channel with modules"
+        "offmodlist": "| Official channel with modules | RU:  | Оффициальные каналы с модулями "
       },
       {
         "addmchat": "[BOT API ID] | add chat"
@@ -932,7 +933,7 @@
     },
     "commands": [
       {
-        "checktokens": "| check tokens balance"
+        "checktokens": "| check tokens balance | RU: | Посмотреть баланс токенов"
       }
     ]
   },
@@ -1263,7 +1264,7 @@
     },
     "commands": [
       {
-        "memescmd": null
+        "memescmd": ""
       }
     ]
   },
@@ -1487,34 +1488,34 @@
     },
     "commands": [
       {
-        "ataskaddcmd": "Add a task to the list of tasks.\nUsage: .ataskadd <text>\n[time]\n[target]"
+        "ataskaddcmd": "Add a task to the list of tasks.\nUsage: .ataskadd <text>\n[time]\n[target] | RU: Добавить задачу в список задач.\nИспользование: .ataskadd <текст>\n[время]\n[адресат]"
       },
       {
-        "ataskremovecmd": "Remove a task from the list of tasks.\nUsage: .ataskremove <number>"
+        "ataskremovecmd": "Remove a task from the list of tasks.\nUsage: .ataskremove <number> | RU: Удалить задачу из списка задач.\nИспользование: .ataskremove <номер>"
       },
       {
-        "atasklistcmd": "Show the list of tasks."
+        "atasklistcmd": "Show the list of tasks. | RU: Показать список задач."
       },
       {
-        "ataskclearcmd": "Clear the list of tasks."
+        "ataskclearcmd": "Clear the list of tasks. | RU: Очистить список задач."
       },
       {
-        "ataskpausecmd": "Pause a task.\nUsage: .ataskpause <number>\nIf no arguments — pause all tasks."
+        "ataskpausecmd": "Pause a task.\nUsage: .ataskpause <number>\nIf no arguments — pause all tasks. | RU: Приостановить задачу.\nИспользование: .ataskpause <номер>\nБез аргументов — приостановить все задачи."
       },
       {
-        "ataskresumecmd": "Resume a task.\nUsage: .ataskresume <number>"
+        "ataskresumecmd": "Resume a task.\nUsage: .ataskresume <number> | RU: Возобновить задачу.\nИспользование: .ataskresume <номер>"
       },
       {
-        "ataskexeccmd": "Execute a task right now and replan according to the interval.\nUsage: .ataskexec <number>"
+        "ataskexeccmd": "Execute a task right now and replan according to the interval.\nUsage: .ataskexec <number> | RU: Выполнить задачу сейчас и перепланировать согласно интервалу.\nИспользование: .ataskexec <номер>"
       },
       {
-        "ataskreplancmd": "Change the interval of the task.\nUsage: .ataskreplan <number>"
+        "ataskreplancmd": "Change the interval of the task.\nUsage: .ataskreplan <number> | RU: Изменить интервал задачи.\nИспользование: .ataskreplan <номер> <время>"
       },
       {
-        "adeftintcmd": "Set the default interval.\nUsage: .ataskdeftint <time>"
+        "adeftintcmd": "Set the default interval.\nUsage: .ataskdeftint <time> | RU: Установить интервал по умолчанию.\nИспользование: .adeftint <время>"
       },
       {
-        "atzcmd": "Set the timezone explicitly if time displayed wrong.\nUsage: .atz <timezone>"
+        "atzcmd": "Set the timezone explicitly if time displayed wrong.\nUsage: .atz <timezone> | RU: Явно установить часовой пояс, если время отображается неверно.\nИспользование: .atz <часовой пояс>"
       }
     ]
   },
@@ -2049,7 +2050,7 @@
     },
     "commands": [
       {
-        "achievement": "[title] \"<text>\" [-icon <id>] [-title-color #<color>] [-text-color #<color>]"
+        "achievement": "[title] \"<text>\" [-icon <id>] [-title-color #<color>] [-text-color #<color>] | RU: [Заголовок] \"<текст>\" [-icon <id>] [-title-color #<цвет>] [-text-color #<цвет>]"
       }
     ]
   },
@@ -2063,7 +2064,7 @@
     },
     "commands": [
       {
-        "akinator": "- start the game"
+        "akinator": "- start the game | RU: - начать игру"
       }
     ]
   },
@@ -2160,7 +2161,7 @@
     },
     "commands": [
       {
-        "watcher": null
+        "watcher": ""
       }
     ]
   },
@@ -2194,7 +2195,7 @@
         "renewconvertio": "Renew convertio api key"
       },
       {
-        "convert": "<output format> <!reply to file> | Example: png"
+        "convert": "<output format> <!reply to file> | Example: png | RU: <выходной формат> | Пример: png"
       }
     ]
   },
@@ -2208,7 +2209,7 @@
     },
     "commands": [
       {
-        "demotivate": "<text>\n[-bottom/-btm-text/-bottom-text <text> - add. text below]\n[-wt/-watermark <text> - add watermark]\n[-font-color/-ftc <color> (red/while/blue/yellow/...) - font color (white by default)]\n[-fill-color/-flc <color> (red/while/blue/yellow/...) - background color (black by default)]\n[-font/-font-name/-font-link <link to file with fonts> (not zip, but ttf) - font for text]\n[-top-size/-topsize/-tpsz <size> (default 80) - main text size]\n[-bottom-size/-btmsz <size> (default 60) - extra size text]\n[-arrange - adjust photo frames]\n- demotivate a picture according to the given text and arguments"
+        "demotivate": "<text>\n[-bottom/-btm-text/-bottom-text <text> - add. text below]\n[-wt/-watermark <text> - add watermark]\n[-font-color/-ftc <color> (red/while/blue/yellow/...) - font color (white by default)]\n[-fill-color/-flc <color> (red/while/blue/yellow/...) - background color (black by default)]\n[-font/-font-name/-font-link <link to file with fonts> (not zip, but ttf) - font for text]\n[-top-size/-topsize/-tpsz <size> (default 80) - main text size]\n[-bottom-size/-btmsz <size> (default 60) - extra size text]\n[-arrange - adjust photo frames]\n- demotivate a picture according to the given text and arguments | RU: <текст>\n        [-bottom/-btm-text/-bottom-text <текст> - доп. текст внизу]\n        [-wt/-watermark <текст> - добавить водяной знак]\n        [-font-color/-ftc <цвет> (red/while/blue/yellow/...) - цвет шрифта (по дефолту white)]\n        [-fill-color/-flc <цвет> (red/while/blue/yellow/...) - цвет заднего фона (по дефолту black)]\n        [-font/-font-name/-font-link <ссылка на файл со шрифтами> (не zip, а ttf) - шрифт для текста]\n        [-top-size/-topsize/-tpsz <размер> (по дефолту 80) - размер главного текста]\n        [-bottom-size/-btmsz <размер> (по дефолту 60) - размер доп.(нижнего) текста]\n        [-arrange - регулировать рамки под фотографию]\n        - демотивировать картинку по заданному тексту и аргументам\n        "
       }
     ]
   },
@@ -2222,19 +2223,19 @@
     },
     "commands": [
       {
-        "dialogsinfo": "➪  all info for your dialogs, chats, PMs..."
+        "dialogsinfo": "➪  all info for your dialogs, chats, PMs... | RU: ➪  полная информация о ваших диалогах, чатах лс и т.д."
       },
       {
-        "dialog_clear": "<id or @username> ➪  delete dialog with user"
+        "dialog_clear": "<id or @username> ➪  delete dialog with user | RU: <id or @username> ➪  удалить чат(диалог) с юзером"
       },
       {
-        "dclear": "➪  alias for command 'dialog_clear'"
+        "dclear": "➪  alias for command 'dialog_clear' | RU: ➪  алиас для команды 'dialogs_clear'"
       },
       {
-        "all_dialogs_clear": "Arguments:\n-deleted ➪  delete all dialogs PM with deleted accounts\n-fake ➪  delete all dialogs PM with fake accounts\n-scam ➪  delete all dialogs PM with scam accounts\n-bots ➪  delete all dialog with bots\n-allpms ➪  delete all dialogs PM\n-prem ➪  delete all dialogs PM with PREMIUM⭐️ users"
+        "all_dialogs_clear": "Arguments:\n-deleted ➪  delete all dialogs PM with deleted accounts\n-fake ➪  delete all dialogs PM with fake accounts\n-scam ➪  delete all dialogs PM with scam accounts\n-bots ➪  delete all dialog with bots\n-allpms ➪  delete all dialogs PM\n-prem ➪  delete all dialogs PM with PREMIUM⭐️ users | RU: Аргументы:\n\t\t-deleted ➪  очистить все ЛС с удаленными аккаунтами\n\t\t-fake ➪  очистить все ЛС с аккаунтами с пометкой \"FAKE\"\n\t\t-scam ➪  очистить все ЛС со скам аккаунтами\n\t\t-bots ➪  очистить все ЛС с ботами\n\t\t-allpms ➪  очистить ВСЕ АБСОЛЮТНО ЛС(ОПАСНО)\n\t\t-prem ➪  очистить все ЛС с юзерами, обладающими Premium⭐️\n\t\t"
       },
       {
-        "leave_chats": "@chat_username1, @chat_username2, ... ➪  leave chats, with usernames in arguments"
+        "leave_chats": "@chat_username1, @chat_username2, ... ➪  leave chats, with usernames in arguments | RU: @chat_username1, @chat_username2, ... ➪  покинуть чаты, с определенными @username"
       }
     ]
   },
@@ -2248,7 +2249,7 @@
     },
     "commands": [
       {
-        "ytpcmd": "<link> --> download YouTube video preview"
+        "ytpcmd": "<link> --> download YouTube video preview | RU: <link> --> скачивает превью"
       }
     ]
   },
@@ -2300,22 +2301,22 @@
     },
     "commands": [
       {
-        "inlinebothelpcmd": "--> Check help for this module"
+        "inlinebothelpcmd": "--> Check help for this module | RU: --> Просмотреть помощь по этому модулю"
       },
       {
-        "ibsetnamecmd": "<name> --> change Name for your Inline-Bot"
+        "ibsetnamecmd": "<name> --> change Name for your Inline-Bot | RU: <имя> --> изменить имя для вашего Инлайн-Бота"
       },
       {
-        "ibsetqtextcmd": "<text> --> change text in InlineQuery for your Inline-Bot"
+        "ibsetqtextcmd": "<text> --> change text in InlineQuery for your Inline-Bot | RU: <текст> --> изменить текст в InlineQuery для вашего Инлайн-Бота"
       },
       {
-        "ibsetdescriptioncmd": "<description> --> change inline-bot description"
+        "ibsetdescriptioncmd": "<description> --> change inline-bot description | RU: <текст> --> изменить информацию о инлайн-боте"
       },
       {
-        "ibsetaboutcmd": "<about> --> change inline-bot about text"
+        "ibsetaboutcmd": "<about> --> change inline-bot about text | RU: <текст> --> изменить текст об информации о инлайн-боте"
       },
       {
-        "ibchecknamecmd": "-->check bot name to be: \"🌘 Hikka Userbot of {your nickname}\" "
+        "ibchecknamecmd": "-->check bot name to be: \"🌘 Hikka Userbot of {your nickname}\"  | RU: -->проверить имя бота, чтобы оно было: \"🌘 Hikka Userbot of {ваш ник}\" "
       }
     ]
   },
@@ -2329,7 +2330,7 @@
     },
     "commands": [
       {
-        "iappslistcmd": "-->Inline List iOS Apps for Android"
+        "iappslistcmd": "-->Inline List iOS Apps for Android | RU: -->Inline Лист iOS приложений для Android"
       }
     ]
   },
@@ -2343,7 +2344,7 @@
     },
     "commands": [
       {
-        "komaru": "- choose a random picture/gif/video"
+        "komaru": "- choose a random picture/gif/video | RU: - подобрать рандом картинку(пикчу)/видео/гиф"
       }
     ]
   },
@@ -2377,7 +2378,7 @@
     },
     "commands": [
       {
-        "minesweeper": "- start the game \"Minesweeper\" "
+        "minesweeper": "- start the game \"Minesweeper\"  | RU: - начать игру \"Сапёр\""
       }
     ]
   },
@@ -2438,10 +2439,10 @@
     },
     "commands": [
       {
-        "generatorcfgcmd": "—>config for this module"
+        "generatorcfgcmd": "—>config for this module | RU: —>конфиг этого модуля"
       },
       {
-        "igeneratorcmd": "—>generate random password/pin"
+        "igeneratorcmd": "—>generate random password/pin | RU: —>сгенерировать случайный пароль/пин-код"
       }
     ]
   },
@@ -2483,7 +2484,7 @@
     },
     "commands": [
       {
-        "irandusercmd": "choose a random user in chat | inline menu with prize buttons"
+        "irandusercmd": "choose a random user in chat | inline menu with prize buttons | RU: --> выбрать случайного пользователя в чате | inline-меню с призовыми кнопками"
       }
     ]
   },
@@ -2497,7 +2498,7 @@
     },
     "commands": [
       {
-        "sh": "<reply to audio> - recognize track"
+        "sh": "<reply to audio> - recognize track | RU: <reply to audio> - распознать трек"
       }
     ]
   },
@@ -2511,16 +2512,16 @@
     },
     "commands": [
       {
-        "steamnow": "- get what I'm playing at"
+        "steamnow": "- get what I'm playing at | RU:  - получить, во что я сейчас играю"
       },
       {
-        "sme": "- my steam account"
+        "sme": "- my steam account | RU: - открыть аккаунт Steam"
       },
       {
-        "game": "<id> - get game info"
+        "game": "<id> - get game info | RU: <id> - получить инфо об игре"
       },
       {
-        "steamtoggle": "- toggle widgets updates"
+        "steamtoggle": "- toggle widgets updates | RU: - вкл/выкл виджеты SteamNow"
       }
     ]
   },
@@ -3059,7 +3060,7 @@
     },
     "commands": [
       {
-        "carboncmd": "<code> - Create beautiful code image"
+        "carboncmd": "<code> - Create beautiful code image | RU: <код> - Сделать красивую фотку кода"
       }
     ]
   },
@@ -3073,19 +3074,19 @@
     },
     "commands": [
       {
-        "bcrypto": "Check your balance in @CryptoBot"
+        "bcrypto": "Check your balance in @CryptoBot | RU: Проверить твой баланс в @CryptoBot"
       },
       {
-        "bton": "Check your balance in @TonRocketBot"
+        "bton": "Check your balance in @TonRocketBot | RU: Проверить твой баланс в @TonRocketBot"
       },
       {
-        "bjet": "Check your balance in @xJetSwapBot"
+        "bjet": "Check your balance in @xJetSwapBot | RU: Проверить твой баланс в @xJetSwapBot"
       },
       {
-        "btest": "Check your balance in @CryptoTestNetBot"
+        "btest": "Check your balance in @CryptoTestNetBot | RU: Проверить твой баланс в @CryptoTestNetBot"
       },
       {
-        "bwallet": "Check your balance in @Wallet"
+        "bwallet": "Check your balance in @Wallet | RU: Проверить твой баланс в @Wallet"
       }
     ]
   },
@@ -3099,7 +3100,7 @@
     },
     "commands": [
       {
-        "mcdcmd": "<song> enter name"
+        "mcdcmd": "<song> enter name | RU: <песня> укажите название"
       }
     ]
   },
@@ -3957,34 +3958,34 @@
     },
     "commands": [
       {
-        "ataskaddcmd": "Add a task to the list of tasks.\nUsage: .ataskadd <text>\n[time]\n[target]"
+        "ataskaddcmd": "Add a task to the list of tasks.\nUsage: .ataskadd <text>\n[time]\n[target] | RU: Добавить задачу в список задач.\nИспользование: .ataskadd <текст>\n[время]\n[адресат]"
       },
       {
-        "ataskremovecmd": "Remove a task from the list of tasks.\nUsage: .ataskremove <number>"
+        "ataskremovecmd": "Remove a task from the list of tasks.\nUsage: .ataskremove <number> | RU: Удалить задачу из списка задач.\nИспользование: .ataskremove <номер>"
       },
       {
-        "atasklistcmd": "Show the list of tasks."
+        "atasklistcmd": "Show the list of tasks. | RU: Показать список задач."
       },
       {
-        "ataskclearcmd": "Clear the list of tasks."
+        "ataskclearcmd": "Clear the list of tasks. | RU: Очистить список задач."
       },
       {
-        "ataskpausecmd": "Pause a task.\nUsage: .ataskpause <number>\nIf no arguments — pause all tasks."
+        "ataskpausecmd": "Pause a task.\nUsage: .ataskpause <number>\nIf no arguments — pause all tasks. | RU: Приостановить задачу.\nИспользование: .ataskpause <номер>\nБез аргументов — приостановить все задачи."
       },
       {
-        "ataskresumecmd": "Resume a task.\nUsage: .ataskresume <number>"
+        "ataskresumecmd": "Resume a task.\nUsage: .ataskresume <number> | RU: Возобновить задачу.\nИспользование: .ataskresume <номер>"
       },
       {
-        "ataskexeccmd": "Execute a task right now and replan according to the interval.\nUsage: .ataskexec <number>"
+        "ataskexeccmd": "Execute a task right now and replan according to the interval.\nUsage: .ataskexec <number> | RU: Выполнить задачу сейчас и перепланировать согласно интервалу.\nИспользование: .ataskexec <номер>"
       },
       {
-        "ataskreplancmd": "Change the interval of the task.\nUsage: .ataskreplan <number>"
+        "ataskreplancmd": "Change the interval of the task.\nUsage: .ataskreplan <number> | RU: Изменить интервал задачи.\nИспользование: .ataskreplan <номер> <время>"
       },
       {
-        "adeftintcmd": "Set the default interval.\nUsage: .ataskdeftint <time>"
+        "adeftintcmd": "Set the default interval.\nUsage: .ataskdeftint <time> | RU: Установить интервал по умолчанию.\nИспользование: .adeftint <время>"
       },
       {
-        "atzcmd": "Set the timezone explicitly if time displayed wrong.\nUsage: .atz <timezone>"
+        "atzcmd": "Set the timezone explicitly if time displayed wrong.\nUsage: .atz <timezone> | RU: Явно установить часовой пояс, если время отображается неверно.\nИспользование: .atz <часовой пояс>"
       }
     ]
   },
@@ -4743,25 +4744,25 @@
     },
     "commands": [
       {
-        "avacmd": null
+        "avacmd": ""
       },
       {
-        "setavacmd": null
+        "setavacmd": ""
       },
       {
-        "delavacmd": null
+        "delavacmd": ""
       },
       {
-        "delavascmd": null
+        "delavascmd": ""
       },
       {
-        "setnamecmd": null
+        "setnamecmd": ""
       },
       {
-        "setbiocmd": null
+        "setbiocmd": ""
       },
       {
-        "setusercmd": null
+        "setusercmd": ""
       }
     ]
   },
@@ -5896,10 +5897,10 @@
     },
     "commands": [
       {
-        "artcmd": "Sends cute anime-art"
+        "artcmd": "Sends cute anime-art | RU: — Отправит милые аниме-арты"
       },
       {
-        "nsfwartcmd": "Sends nsfw anime-art"
+        "nsfwartcmd": "Sends nsfw anime-art | RU: — Отправит nsfw аниме-арты"
       }
     ]
   },
@@ -6003,16 +6004,16 @@
     },
     "commands": [
       {
-        "lsearchcmd": "<name of track> 👉 Search for tracks. Works without authorization"
+        "lsearchcmd": "<name of track> 👉 Search for tracks. Works without authorization | RU: <название> 👉 Поиск по трекам. Работает без авторизации"
       },
       {
-        "ltopcmd": "[count of tracks in top] 👉 Get the top most listened tracks. You can enter the count of tracks (optional)"
+        "ltopcmd": "[count of tracks in top] 👉 Get the top most listened tracks. You can enter the count of tracks (optional) | RU: [кол-во треков в топе] 👉 Получить топ самых прослушиваемых треков. Вы можете указать кол-во треков в топе (необязательно)"
       },
       {
-        "lbiocmd": "👉 Toggle bio playback streaming"
+        "lbiocmd": "👉 Toggle bio playback streaming | RU: 👉 Включить/выключить авто-био"
       },
       {
-        "lnowcmd": "👉 Shows track, that playing right now"
+        "lnowcmd": "👉 Shows track, that playing right now | RU: 👉 Покажет проигрываемый сейчас трек"
       }
     ]
   },
@@ -6026,7 +6027,7 @@
     },
     "commands": [
       {
-        "lolicmd": "— Send cute loli-art"
+        "lolicmd": "— Send cute loli-art | RU: — Отправит милый лоли-арт"
       }
     ]
   },
@@ -6040,13 +6041,13 @@
     },
     "commands": [
       {
-        "demotecmd": "<user> — Demote an administrator to a user."
+        "demotecmd": "<user> — Demote an administrator to a user. | RU: <пользователь> — Снятие прав администратора с пользователя."
       },
       {
-        "fullrightscmd": "<user> [role (aka [prefix])] — Promote an user to administrator with full rights."
+        "fullrightscmd": "<user> [role (aka [prefix])] — Promote an user to administrator with full rights. | RU: <пользователь> [роль (aka префикс)] — Повышение пользователя до администратора с полными правами."
       },
       {
-        "promotecmd": "<user> [role (aka [prefix])] — Promote an user to administrator."
+        "promotecmd": "<user> [role (aka [prefix])] — Promote an user to administrator. | RU: <пользователь> [роль (aka префикс)] — Повышение пользователя до администратора."
       }
     ]
   },
@@ -6060,10 +6061,10 @@
     },
     "commands": [
       {
-        "sdhelpcmd": "— help on using and configure the module"
+        "sdhelpcmd": "— help on using and configure the module | RU: — помощь по использованию и настройке модуля"
       },
       {
-        "sdcmd": "<prompt> — generate an image using StableDiffusion API"
+        "sdcmd": "<prompt> — generate an image using StableDiffusion API | RU: <prompt> — генерация изобраения с использованием StableDiffusion API."
       }
     ]
   },
@@ -6077,7 +6078,7 @@
     },
     "commands": [
       {
-        "timecmd": "— show how much time is left before the event"
+        "timecmd": "— show how much time is left before the event | RU: — показать, сколько осталось до <чего-либо>"
       }
     ]
   },
@@ -6108,16 +6109,16 @@
     },
     "commands": [
       {
-        "ypaycmd": "<sum> <title> ; <comment> 👉 Send payment link\nE.g: .ypay 100 For a coffee ; Bro, buy me a coffee, here is the link"
+        "ypaycmd": "<sum> <title> ; <comment> 👉 Send payment link\nE.g: .ypay 100 For a coffee ; Bro, buy me a coffee, here is the link | RU: <сумма> <назначение> ; <комментарий> 👉 Отправить ссылку для перевода\nE.g: .ypay 100 На кофе ; Бро, купи мне кофе, вот ссылка для перевода"
       },
       {
-        "ywalletcmd": "👉 Get YooMoney wallet info"
+        "ywalletcmd": "👉 Get YooMoney wallet info | RU: 👉 Узнать информацию вашего кошелька"
       },
       {
-        "yauthcmd": "👉 First stage of auth"
+        "yauthcmd": "👉 First stage of auth | RU: 👉 Первый этап авторизации"
       },
       {
-        "ycodecmd": "👉 Second stage of auth"
+        "ycodecmd": "👉 Second stage of auth | RU: 👉 Второй этап авторизации"
       }
     ]
   },
@@ -6310,7 +6311,7 @@
     },
     "commands": [
       {
-        "elpecmd": null
+        "elpecmd": ""
       }
     ]
   },
@@ -6355,7 +6356,7 @@
     },
     "commands": [
       {
-        "rapcmd": null
+        "rapcmd": ""
       }
     ]
   },
@@ -6644,7 +6645,7 @@
     },
     "commands": [
       {
-        "anec": "Sends an anecdote (not always funny)"
+        "anec": "Sends an anecdote (not always funny) | RU: Генерирует анекдоты (они не всегда смешные)"
       },
       {
         "joke": "Sends an anecdote x2 (not always funny)"
@@ -6675,10 +6676,10 @@
     },
     "commands": [
       {
-        "stopallbotscmd": "> To stop all bots from working"
+        "stopallbotscmd": "> To stop all bots from working | RU: > Чтобы остановить работу всех ботов"
       },
       {
-        "delallbotscmd": "> To delete dialogs with all bots"
+        "delallbotscmd": "> To delete dialogs with all bots | RU: > Чтобы удалить диалоги со всеми ботами"
       }
     ]
   },
@@ -6692,7 +6693,7 @@
     },
     "commands": [
       {
-        "ifacts": "> I'll look for some interesting information for you)"
+        "ifacts": "> I'll look for some interesting information for you) | RU: > Поищу для тебя какую нибудь интересную информацию)"
       }
     ]
   },
@@ -6706,10 +6707,10 @@
     },
     "commands": [
       {
-        "dfarm": "Turns on/off automatic farming mode for the Pipisa bot."
+        "dfarm": "Turns on/off automatic farming mode for the Pipisa bot. | RU: Включить/отключить режим автоматического фарма для бота Pipisa."
       },
       {
-        "chatidcmd": "The .chatid command shows the chat ID."
+        "chatidcmd": "The .chatid command shows the chat ID. | RU: Команда .chatid показывает идентификатор чата."
       }
     ]
   },
@@ -6723,7 +6724,7 @@
     },
     "commands": [
       {
-        "gameslist": "> .gameslist opens access to game categories (you can download games right here)"
+        "gameslist": "> .gameslist opens access to game categories (you can download games right here) | RU: .gameslist > открывает доступ к игровым категориям (можно скачивать игры прямо тут)"
       }
     ]
   },
@@ -6737,7 +6738,7 @@
     },
     "commands": [
       {
-        "holidaycmd": "> Checks if today is a holiday."
+        "holidaycmd": "> Checks if today is a holiday. | RU: > Проверяет, является ли сегодняшний день праздником."
       }
     ]
   },
@@ -6751,7 +6752,7 @@
     },
     "commands": [
       {
-        "yo": "> .yo 01.05.1996 | => date, month, year"
+        "yo": "> .yo 01.05.1996 | => date, month, year | RU: > .yo 01.05.1996 | => (число, месяц, год)"
       }
     ]
   },
@@ -6765,7 +6766,7 @@
     },
     "commands": [
       {
-        "imgbb": ".imgbb  - upload file to imgbb.com"
+        "imgbb": ".imgbb  - upload file to imgbb.com | RU: .imgbb <файл> - загрузить файл на imgbb.com"
       }
     ]
   },
@@ -6793,7 +6794,7 @@
     },
     "commands": [
       {
-        "imt": "> photo/video link"
+        "imt": "> photo/video link | RU: > Ссылка на фото/видео"
       }
     ]
   },
@@ -6807,7 +6808,7 @@
     },
     "commands": [
       {
-        "rchatcmd": "> Throws a random link to the chat"
+        "rchatcmd": "> Throws a random link to the chat | RU: > Кидает рандомную ссылку на чат"
       }
     ]
   },
@@ -6821,7 +6822,7 @@
     },
     "commands": [
       {
-        "orfgcmd": "> Suggestion for checking spelling errors"
+        "orfgcmd": "> Suggestion for checking spelling errors | RU: > Проверяет текст на орфографические ошибки."
       }
     ]
   },
@@ -6835,7 +6836,7 @@
     },
     "commands": [
       {
-        "ucheck": "> Enter the user for verification"
+        "ucheck": "> Enter the user for verification | RU: > Введите юзер для проверки."
       }
     ]
   },
@@ -6849,16 +6850,16 @@
     },
     "commands": [
       {
-        "afk": "[reason] - Set AFK mode status"
+        "afk": "[reason] - Set AFK mode status | RU: [reason] - Установить режим AFK"
       },
       {
-        "unafk": "Exit AFK mode"
+        "unafk": "Exit AFK mode | RU: Выйти из режима AFK"
       },
       {
-        "setstatus": "Set the AFK status"
+        "setstatus": "Set the AFK status | RU: Установить статус AFK"
       },
       {
-        "removestatus": "Удалить статус AFK."
+        "removestatus": "Удалить статус AFK. | RU: Удалить статус AFK"
       }
     ]
   },
@@ -6872,13 +6873,13 @@
     },
     "commands": [
       {
-        "abull": "Insult your interlocutor"
+        "abull": "Insult your interlocutor | RU: Оскорбите вашего собеседника."
       },
       {
-        "abullspam": "[time] [text] - Spam your interlocutor with insults"
+        "abullspam": "[time] [text] - Spam your interlocutor with insults | RU: [time] [text] - Заспамте оскорблениями вашего собеседника"
       },
       {
-        "abulloff": "Stop the insults"
+        "abulloff": "Stop the insults | RU: Остановить оскорбления"
       }
     ]
   },
@@ -6892,7 +6893,7 @@
     },
     "commands": [
       {
-        "dme": "- Open details for donations"
+        "dme": "- Open details for donations | RU: - Открыть реквизиты для донатов"
       }
     ]
   },
@@ -6906,7 +6907,7 @@
     },
     "commands": [
       {
-        "afarm": "{on/off} - turn auto farm on or off"
+        "afarm": "{on/off} - turn auto farm on or off | RU: {on/off} - включить или выключить автоматическую фарминг"
       }
     ]
   },
@@ -6920,13 +6921,13 @@
     },
     "commands": [
       {
-        "flink": "- Get a link to the feedback bot"
+        "flink": "- Get a link to the feedback bot | RU: - Получить ссылку на feedback бота"
       },
       {
-        "banfeedback": "[UserID] - Block the feedback bot user"
+        "banfeedback": "[UserID] - Block the feedback bot user | RU: [UserID] - Заблокировать пользователю feedback бота"
       },
       {
-        "unbanfeedback": "[UserID] - Unblock the feedback bot user"
+        "unbanfeedback": "[UserID] - Unblock the feedback bot user | RU: [UserID] - Разблокировать пользователю feedback бота"
       }
     ]
   },
@@ -6940,7 +6941,7 @@
     },
     "commands": [
       {
-        "aspam": "Start sending messages."
+        "aspam": "Start sending messages. | RU: Начать рассылку сообщений."
       }
     ]
   },
@@ -6954,7 +6955,7 @@
     },
     "commands": [
       {
-        "autodel": "<on/off> - set the module operation status"
+        "autodel": "<on/off> - set the module operation status | RU: <on/off> - установить статус работы модуля."
       }
     ]
   },
@@ -6968,7 +6969,7 @@
     },
     "commands": [
       {
-        "ufarm": "{on/off} - turn auto farm on or off"
+        "ufarm": "{on/off} - turn auto farm on or off | RU: {on/off} - включить или выключить автоматическую фарминг"
       }
     ]
   },
@@ -6982,22 +6983,22 @@
     },
     "commands": [
       {
-        "bwadd": "Adds a banned word."
+        "bwadd": "Adds a banned word. | RU: Добавляет запрещённое слово."
       },
       {
-        "bwdel": "Removes a banned word."
+        "bwdel": "Removes a banned word. | RU: Удаляет запрещённое слово."
       },
       {
-        "bwon": "Enables banwords in chat."
+        "bwon": "Enables banwords in chat. | RU: Включает банворды в чате."
       },
       {
-        "bwoff": "Disable banword in chat."
+        "bwoff": "Disable banword in chat. | RU: Отключает банворды в чате."
       },
       {
-        "bword": "Sets the action when a prohibited word is found (kick, mute, delete)."
+        "bword": "Sets the action when a prohibited word is found (kick, mute, delete). | RU: Устанавливает действие при нахождении запрещённого слова (kick, mute, delete)."
       },
       {
-        "bwlist": "Displays a list of prohibited words."
+        "bwlist": "Displays a list of prohibited words. | RU: Выводит список запрещённых слов."
       }
     ]
   },
@@ -7011,7 +7012,7 @@
     },
     "commands": [
       {
-        "deanon": "Search by @UserName/Number/Email"
+        "deanon": "Search by @UserName/Number/Email | RU: Поиск по @UserName/Number/Email"
       }
     ]
   },
@@ -7025,16 +7026,16 @@
     },
     "commands": [
       {
-        "rfact": "Output a random historical fact"
+        "rfact": "Output a random historical fact | RU: Вывод случайного исторического факта"
       },
       {
-        "hfact": "To deduce a random fact about Adolf Hitler"
+        "hfact": "To deduce a random fact about Adolf Hitler | RU: Вывод случайного факта об Адольфе Гитлере"
       },
       {
-        "mfact": "To deduce a random fact about Benito Mussolini"
+        "mfact": "To deduce a random fact about Benito Mussolini | RU: Вывести случайный факт о Бенито Муссолини"
       },
       {
-        "sfact": "To deduce a random fact about Joseph Stalin"
+        "sfact": "To deduce a random fact about Joseph Stalin | RU: Вывести случайный факт о Иосифе Сталине"
       }
     ]
   },
@@ -7051,7 +7052,7 @@
         "irfarm": "{on/off} - turn auto farm on or off"
       },
       {
-        "bag": "Look into the bag"
+        "bag": "Look into the bag | RU: Заглянуть в мешок."
       }
     ]
   },
@@ -7065,13 +7066,13 @@
     },
     "commands": [
       {
-        "заденьгида": "Play song «За деньги да»"
+        "заденьгида": "Play song «За деньги да» | RU: Включить песню «За деньги да»"
       },
       {
-        "LIPSIHA": "Play song «LIPSI HA»"
+        "LIPSIHA": "Play song «LIPSI HA» | RU: Включить песню «LIPSI HA»"
       },
       {
-        "stopplay": "Stop playing music"
+        "stopplay": "Stop playing music | RU: Остановить проигрывание музыки"
       }
     ]
   },
@@ -7085,10 +7086,10 @@
     },
     "commands": [
       {
-        "meow": "Start meowing in different languages"
+        "meow": "Start meowing in different languages | RU: Начать мяукать на разных языках"
       },
       {
-        "stopmeow": "Stop meowing in different languages"
+        "stopmeow": "Stop meowing in different languages | RU: Остановить мяуканье на разных языках"
       }
     ]
   },
@@ -7102,22 +7103,22 @@
     },
     "commands": [
       {
-        "dadd": "<name> <amount> - add a debtor"
+        "dadd": "<name> <amount> - add a debtor | RU: <name> <amount> - Добавить должника"
       },
       {
-        "dinfo": "<name> - Find out information about the debtor"
+        "dinfo": "<name> - Find out information about the debtor | RU: <name> - Узнать информацию о должнике"
       },
       {
-        "ddel": "<name> - Remove the debtor"
+        "ddel": "<name> - Remove the debtor | RU: <name> - Удалить должника"
       },
       {
-        "dlist": "List of all your debtors"
+        "dlist": "List of all your debtors | RU: Список всех ваших должников"
       },
       {
-        "ddelall": "Remove all your debtors"
+        "ddelall": "Remove all your debtors | RU: Удалить всех ваших должников"
       },
       {
-        "dset": "<name> <amount> - Change the debt"
+        "dset": "<name> <amount> - Change the debt | RU: <name> <amount> - Изменить долг"
       }
     ]
   },
@@ -7131,7 +7132,7 @@
     },
     "commands": [
       {
-        "rpavatars": "random paired avatars"
+        "rpavatars": "random paired avatars | RU: Поиск случайных парных аватарок"
       }
     ]
   },
@@ -7145,13 +7146,13 @@
     },
     "commands": [
       {
-        "cube": "[0-6] - Roll a dice with a number"
+        "cube": "[0-6] - Roll a dice with a number | RU: [0-6] - Бросить кубик с числом"
       },
       {
-        "monetka": "[орёл/решка] - Flips a coin and gives a random result"
+        "monetka": "[орёл/решка] - Flips a coin and gives a random result | RU: [орёл/решка] - Подбрасывает монетку, и выдает случайный результат"
       },
       {
-        "rnum": "[number] - Random number"
+        "rnum": "[number] - Random number | RU: [number] - Случайное число"
       }
     ]
   },
@@ -7165,7 +7166,7 @@
     },
     "commands": [
       {
-        "RandomNumber": "Random number"
+        "RandomNumber": "Random number | RU: Случайное число"
       }
     ]
   },
@@ -7179,33 +7180,16 @@
     },
     "commands": [
       {
-        "addadmins": "Add administrators from the config to the group"
+        "addadmins": "Add administrators from the config to the group | RU: Добавить администраторов из конфигурации в группу."
       },
       {
-        "chaton": "Enable chat for reports"
+        "chaton": "Enable chat for reports | RU: Включает чат для репортов."
       },
       {
-        "chatoff": "Disable chat for reports"
+        "chatoff": "Disable chat for reports | RU: Отключает чат для репортов."
       },
       {
-        "report": "Sends a report to the administration."
-      }
-    ]
-  },
-  "KorenbZla\\HikkaModules\\RPSgame.py": {
-    "name": "RPSgameMod",
-    "description": "With this module, you can play the game «rock, paper, scissors».",
-    "meta": {
-      "pic": null,
-      "banner": null,
-      "developer": "@AuroraModules"
-    },
-    "commands": [
-      {
-        "sgamerps": "- Start the game «Rock, Paper, Scissors»"
-      },
-      {
-        "cleargames": "- Complete all running games."
+        "report": "Sends a report to the administration. | RU: Отправляет репорт администрации."
       }
     ]
   },
@@ -7219,16 +7203,16 @@
     },
     "commands": [
       {
-        "send": "[text] - Write a message"
+        "send": "[text] - Write a message | RU: [text] - Написать сообщение"
       },
       {
-        "sendclosedtopic": "[text] - Write a message to a closed topic"
+        "sendclosedtopic": "[text] - Write a message to a closed topic | RU: [text] - Написать сообщение в закрытую тему"
       },
       {
-        "sendpm": "[@UserName] [text or replay] - Write a message to personal messages"
+        "sendpm": "[@UserName] [text or replay] - Write a message to personal messages | RU: [@UserName] [text or replay] - Написать сообщение в личные сообщения"
       },
       {
-        "ibsend": "[text] - Send a message via the inline form"
+        "ibsend": "[text] - Send a message via the inline form | RU: [text] - Отправить сообщение через инлайн-форму"
       }
     ]
   },
@@ -7242,19 +7226,19 @@
     },
     "commands": [
       {
-        "autogrow": "Automatic pig growth"
+        "autogrow": "Automatic pig growth | RU: Автоматический рост свиньи."
       },
       {
-        "ungrow": "Disable automatic growth."
+        "ungrow": "Disable automatic growth. | RU: Отключить автоматический рост."
       },
       {
-        "autofight": "Enable automatic pig fights"
+        "autofight": "Enable automatic pig fights | RU: Включить автоматические бои свиней."
       },
       {
-        "unfight": "Disable automatic pig fights"
+        "unfight": "Disable automatic pig fights | RU: Отключить автоматические бои свиней."
       },
       {
-        "nameset": "[name] - Set the name of your pig"
+        "nameset": "[name] - Set the name of your pig | RU: [name] - Установить имя вашей свиньи."
       }
     ]
   },
@@ -7268,10 +7252,10 @@
     },
     "commands": [
       {
-        "wikiru": "[prompt] - Search for material in Wikipedia in Russian."
+        "wikiru": "[prompt] - Search for material in Wikipedia in Russian. | RU: [prompt] - Поиск материала в Википедии на русском языке."
       },
       {
-        "wikien": "[prompt] - Search for material in Wikipedia in English."
+        "wikien": "[prompt] - Search for material in Wikipedia in English. | RU: [prompt] - Поиск материала в Википедии на английском языке."
       }
     ]
   },
@@ -7285,7 +7269,7 @@
     },
     "commands": [
       {
-        "wfind": "<on/off> - set the module operation status"
+        "wfind": "<on/off> - set the module operation status | RU: <on/off> - установить статус работы модуля"
       }
     ]
   },
@@ -7313,7 +7297,7 @@
     },
     "commands": [
       {
-        "gpt": "<question> - Ask a question"
+        "gpt": "<question> - Ask a question | RU: <вопрос> - Задать вопрос"
       }
     ]
   },
@@ -7434,7 +7418,7 @@
     },
     "commands": [
       {
-        "top20cmd": null
+        "top20cmd": ""
       }
     ]
   },
@@ -7466,7 +7450,7 @@
     },
     "commands": [
       {
-        "helloworld": "Hello world"
+        "helloworld": "Hello world | RU: Привет мир!"
       }
     ]
   },
@@ -7549,13 +7533,13 @@
     },
     "commands": [
       {
-        "setcity": "[Timezone / Nothing] - Set your city to default\nExample: .set_city Europe/Moscow"
+        "setcity": "[Timezone / Nothing] - Set your city to default\nExample: .set_city Europe/Moscow | RU:  [Часовой пояс / Ничего] - Поставь свой город по-улмолчанию\nПример: .set_city Europe/Moscow"
       },
       {
-        "showtime": "[Timezone / Nothing] - Find out the time\nExample: .show_time Europe/Moscow"
+        "showtime": "[Timezone / Nothing] - Find out the time\nExample: .show_time Europe/Moscow | RU:  [Часовой пояс / Ничего] - Узнать время"
       },
       {
-        "send_widget": "- Send widget"
+        "send_widget": "- Send widget | RU:  [Часовой пояс / Ничего] - Отправить виджет"
       }
     ]
   },
@@ -7606,7 +7590,7 @@
     },
     "commands": [
       {
-        "cping": "- Find out your userbot ping"
+        "cping": "- Find out your userbot ping | RU:  - Узнать пинг вашего юзербота"
       }
     ]
   },
@@ -7621,7 +7605,7 @@
     },
     "commands": [
       {
-        "filter_ch": "- [lower / capitalize / upper / off] - Chose filter"
+        "filter_ch": "- [lower / capitalize / upper / off] - Chose filter | RU:  - [lower / capitalize / upper / off] - Выбрать фильтр"
       }
     ]
   },
@@ -7649,10 +7633,10 @@
     },
     "commands": [
       {
-        "rjoinsrjoin": "[Reply to file / link to raw code (not work)] - Replace JoinChannelRequest to self.request_join"
+        "rjoinsrjoin": "[Reply to file / link to raw code (not work)] - Replace JoinChannelRequest to self.request_join | RU: [Ответ на файл / ссылка на сырой код (не работает)] - Заменить JoinChannelRequest на self.request_join"
       },
       {
-        "removejoins": "[Reply to file / link to raw code] - Remove JoinChannelRequest"
+        "removejoins": "[Reply to file / link to raw code] - Remove JoinChannelRequest | RU: [Ответ на файл / ссылка на сырой код] - Удалить JoinChannelRequest"
       }
     ]
   },
@@ -7667,13 +7651,13 @@
     },
     "commands": [
       {
-        "addignore": "[id / reply] - Add to ignore list"
+        "addignore": "[id / reply] - Add to ignore list | RU:  [id / reply] - Добавить в игнор лист"
       },
       {
-        "ignorelist": "- Check who in ignore"
+        "ignorelist": "- Check who in ignore | RU:  - Посмотреть кто у вас в игноре"
       },
       {
-        "removeignore": "[id / reply] - Remove from ignore list"
+        "removeignore": "[id / reply] - Remove from ignore list | RU:  [id / reply] - Удалить из списка игнора"
       }
     ]
   },
@@ -7688,13 +7672,13 @@
     },
     "commands": [
       {
-        "greload": "- You change credentials or want auth? You need to reload module"
+        "greload": "- You change credentials or want auth? You need to reload module | RU:  - Поменяли данные для входа или хотите авторизироваться? Вам нужно перезагрузить модуль"
       },
       {
-        "hoyoaccounts": "- Shows all accounts in Genshin"
+        "hoyoaccounts": "- Shows all accounts in Genshin | RU:  - Показывает все аккаунты в Genshin"
       },
       {
-        "activatepromo": null
+        "activatepromo": "RU:  [Промокод] - Активирует промокод"
       }
     ]
   },
@@ -7709,7 +7693,7 @@
     },
     "commands": [
       {
-        "gethttpcat": "[HTTP Status / HTTP Status group (ex. 4xx, 3xx) / Nothing] - Get picture with cat and HTTP code"
+        "gethttpcat": "[HTTP Status / HTTP Status group (ex. 4xx, 3xx) / Nothing] - Get picture with cat and HTTP code | RU:  [HTTP Статус / Ничего] - Получить картинку с котом и HTTP кодом"
       }
     ]
   },
@@ -7724,7 +7708,7 @@
     },
     "commands": [
       {
-        "cinline": "[Button text] [Button link] [Text] - Create inline button"
+        "cinline": "[Button text] [Button link] [Text] - Create inline button | RU:  [Текст кнопки] [Ссылка в кнопке] [Текст] - Создать инлайн кнопку"
       }
     ]
   },
@@ -7782,10 +7766,10 @@
     },
     "commands": [
       {
-        "decode_morse": "- [Text] - Translates into morse code"
+        "decode_morse": "- [Text] - Translates into morse code | RU:  - [Текст] - Переводит в азбуку морзе"
       },
       {
-        "encode_morse": "- [Text] - Translates from morse code"
+        "encode_morse": "- [Text] - Translates from morse code | RU:  - [Текст] - Переводит из азбуки морзе в текст"
       }
     ]
   },
@@ -7800,10 +7784,10 @@
     },
     "commands": [
       {
-        "randomcosmosphoto": "- Get random photo from Nasa website"
+        "randomcosmosphoto": "- Get random photo from Nasa website | RU:  - Получите случайное фото с вебсайта наса "
       },
       {
-        "todaycosmocpic": "- Today astronomic picture"
+        "todaycosmocpic": "- Today astronomic picture | RU:  - Сегодняшее астрономическое фото "
       }
     ]
   },
@@ -7818,10 +7802,10 @@
     },
     "commands": [
       {
-        "passwordchecker": "- [Password] - Check the password for security"
+        "passwordchecker": "- [Password] - Check the password for security | RU:  - [Пароль] - Проверить пароль на безопасность"
       },
       {
-        "passwordgen": "- Gen password"
+        "passwordgen": "- Gen password | RU:  - Генерация пароля"
       }
     ]
   },
@@ -7836,16 +7820,16 @@
     },
     "commands": [
       {
-        "pinchat": "- Add chat to pinned"
+        "pinchat": "- Add chat to pinned | RU:  - Добавить чат в закреплённых"
       },
       {
-        "unpinchat": "- Remove chat from pinned"
+        "unpinchat": "- Remove chat from pinned | RU:  - Удалить чат из закреплённых"
       },
       {
-        "listpinchats": "- View pinned chats"
+        "listpinchats": "- View pinned chats | RU:  - Посмотреть закреплённые чаты"
       },
       {
-        "pmcfaq": "- FAQ for module"
+        "pmcfaq": "- FAQ for module | RU:  - FAQ по модулю"
       }
     ]
   },
@@ -7860,7 +7844,7 @@
     },
     "commands": [
       {
-        "catchdog": "- Just return the picture of the dog"
+        "catchdog": "- Just return the picture of the dog | RU:  - Просто возращает картинку собачки"
       }
     ]
   },
@@ -7875,10 +7859,10 @@
     },
     "commands": [
       {
-        "rmlink": "[status] - Enable / Shutdown link blocking"
+        "rmlink": "[status] - Enable / Shutdown link blocking | RU:  [status] - Включить / выключить блокировку ссылок"
       },
       {
-        "addrmlink": "[id] - Add / Remove chat where blocking links (if add *, removing will be global in all chats)"
+        "addrmlink": "[id] - Add / Remove chat where blocking links (if add *, removing will be global in all chats) | RU:  [id] - Добавить / Удалить чат где блокируется ссылки (если добавить *, удаление будет глобальным во всех чатах)"
       }
     ]
   },
@@ -7893,19 +7877,19 @@
     },
     "commands": [
       {
-        "enable_rw": "- Enable / Disable replace words"
+        "enable_rw": "- Enable / Disable replace words | RU:  - Включить / Выключить замену слов"
       },
       {
-        "add_word": "- [Word] [What to replace it with] - Add word"
+        "add_word": "- [Word] [What to replace it with] - Add word | RU:  - [Слово] [Чем заменить] - Добавить слово"
       },
       {
-        "edit_word": "- [Word] [What to edit it with] - Edit word"
+        "edit_word": "- [Word] [What to edit it with] - Edit word | RU:  - [Слово] [На что изменить] - Изменить заменяемое слово"
       },
       {
-        "remove_word": "- [word] - Remove word"
+        "remove_word": "- [word] - Remove word | RU:  - [Слово] - Удалить слово"
       },
       {
-        "list_words": "- Watch all replaced words"
+        "list_words": "- Watch all replaced words | RU:  - Посмотреть все замены слов"
       }
     ]
   },
@@ -7920,19 +7904,19 @@
     },
     "commands": [
       {
-        "GoogleQueryGen": "- [Args] - Gen link for google query"
+        "GoogleQueryGen": "- [Args] - Gen link for google query | RU:  - [Аргументы] - Генерирует ссылку для гугл запроса"
       },
       {
-        "YandexQueryGen": "- [Args] - Gen link for yandex query"
+        "YandexQueryGen": "- [Args] - Gen link for yandex query | RU:  - [Аргументы] - Генерирует ссылку для яндекс запроса"
       },
       {
-        "BingQueryGen": "- [Args] - Gen link for bing query"
+        "BingQueryGen": "- [Args] - Gen link for bing query | RU:  - [Аргументы] - Генерирует ссылку для бинг запроса"
       },
       {
-        "DDGQueryGen": "- [Args] - Gen link for DuckDuckGo query"
+        "DDGQueryGen": "- [Args] - Gen link for DuckDuckGo query | RU:  - [Аргументы] - Генерирует ссылку для УткаУткаВперёд запроса"
       },
       {
-        "YahooQueryGen": "- [Args] - Gen link for yahoo query"
+        "YahooQueryGen": "- [Args] - Gen link for yahoo query | RU:  - [Аргументы] - Генерирует ссылку для яху запроса"
       }
     ]
   },
@@ -7965,13 +7949,13 @@
     },
     "commands": [
       {
-        "searchuser": "[Username] (--raw  raw json answer) (--id search by id) - Search user"
+        "searchuser": "[Username] (--raw  raw json answer) (--id search by id) - Search user | RU:  [Юзернейм] Найти пользователя (--id поиск по id)"
       },
       {
-        "vacbaninfo": "[Username] Informbation about user VAC-BANs (--id search by id)"
+        "vacbaninfo": "[Username] Informbation about user VAC-BANs (--id search by id) | RU:  [Юзернейм] Информация о VAC-BANах пользователя (--id поиск по id)"
       },
       {
-        "gameownedlist": "- [Username] Informbation about user games (--id search by id)"
+        "gameownedlist": "- [Username] Informbation about user games (--id search by id) | RU:  - [Юзернейм] Информация о играх пользователя (--id поиск по id)"
       },
       {
         "setwidgetsteam": "- Reply to message what need to be widget (--reset to remove widget)"
@@ -7980,7 +7964,7 @@
         "execsteamcode": "DO NOT USE THIS COMMAND! IT ONLY WORKS WHEN DEBUGGING IS ENABLED! THIS COMMAND IS FOR DEVELOPER"
       },
       {
-        "updateapikey": "- Update API key"
+        "updateapikey": "- Update API key | RU:  - Обновить API ключ"
       }
     ]
   },
@@ -7995,10 +7979,10 @@
     },
     "commands": [
       {
-        "addchannels": "- Add channels, put the word inline in the arguments if you need channels from there. Or list any channel attributes (ids, links, usernames). (Inline dont work)"
+        "addchannels": "- Add channels, put the word inline in the arguments if you need channels from there. Or list any channel attributes (ids, links, usernames). (Inline dont work) | RU: Добавь каналы, напишите в аргументы слово inline если нужны каналы оттуда. Либо перечислите любые признаки канала (айди, ссылки, юзернеймы). Inline dont work"
       },
       {
-        "leavechannels": "- Leave all channels that have been added"
+        "leavechannels": "- Leave all channels that have been added | RU: Покинуть все каналы которые были добавлены"
       }
     ]
   },
@@ -8052,10 +8036,10 @@
     },
     "commands": [
       {
-        "vkmpnow": "- Current song"
+        "vkmpnow": "- Current song | RU:  - Текущая песня"
       },
       {
-        "vkmtoken": "- Instructions for token and user ID"
+        "vkmtoken": "- Instructions for token and user ID | RU:  - Инструкции для токена и пользовательского индетефикатора"
       }
     ]
   },
@@ -8070,10 +8054,10 @@
     },
     "commands": [
       {
-        "scmmnd": "[cmd] [request] - Send command to Yami bot\nExample: .scmmnd /img arguments with req"
+        "scmmnd": "[cmd] [request] - Send command to Yami bot\nExample: .scmmnd /img arguments with req | RU:  [команда] [запрос] - Отправить команду Ями бот\nПример: .scmmnd /img аргументы с запросом"
       },
       {
-        "chalive": "- Check, to see if the bot is alive"
+        "chalive": "- Check, to see if the bot is alive | RU:  - Проверьте, жив ли бот"
       }
     ]
   },
@@ -8091,7 +8075,7 @@
         "videodl": "[link] - Download video"
       },
       {
-        "potoken": null
+        "potoken": ""
       }
     ]
   },
@@ -8120,7 +8104,7 @@
     },
     "commands": [
       {
-        "clown": "Добавляет текст поверх видео"
+        "clown": "Добавляет текст поверх видео | RU: Сделать клавном <ник> или реплай"
       }
     ]
   },
@@ -8134,7 +8118,7 @@
     },
     "commands": [
       {
-        "emoji": "Retrieve information about an emoji"
+        "emoji": "Retrieve information about an emoji | RU: Получить информацию об эмодзи"
       }
     ]
   },
@@ -8148,7 +8132,7 @@
     },
     "commands": [
       {
-        "gameinfo": "Fetch game information from RAWG"
+        "gameinfo": "Fetch game information from RAWG | RU: Получить информацию об игре <название игры>"
       }
     ]
   },
@@ -8162,10 +8146,10 @@
     },
     "commands": [
       {
-        "gitprof": "<profile / url> - Fetch information about GitHub profile"
+        "gitprof": "<profile / url> - Fetch information about GitHub profile | EN: <profile / url> - Fetch information about GitHub profile"
       },
       {
-        "gitrepo": "Fetch information about GitHub repository"
+        "gitrepo": "Fetch information about GitHub repository | RU: Fetch information about GitHub repository"
       }
     ]
   },
@@ -8179,25 +8163,25 @@
     },
     "commands": [
       {
-        "sanime": "Search for anime by title"
+        "sanime": "Search for anime by title | RU: Поиск аниме по названию | EN: Search for anime by title"
       },
       {
-        "smanga": "Search manga by title"
+        "smanga": "Search manga by title | RU: Поиск манги по названию | EN: Search manga by title"
       },
       {
-        "scharacter": "Search character by name"
+        "scharacter": "Search character by name | RU: Поиск персонажа по имени | EN: Search character by name"
       },
       {
-        "rсanime": "Get anime recommendations"
+        "rсanime": "Get anime recommendations | RU: Получить рекомендации аниме | EN: Get anime recommendations"
       },
       {
-        "rсmanga": "Get manga recommendations"
+        "rсmanga": "Get manga recommendations | RU: Получить рекомендации манги | EN: Get manga recommendations"
       },
       {
-        "ranime": "Random anime"
+        "ranime": "Random anime | RU: Случайное аниме | EN: Random anime"
       },
       {
-        "rmanga": "Random manga"
+        "rmanga": "Random manga | RU: Случайная манга | EN: Random manga"
       }
     ]
   },
@@ -8211,28 +8195,28 @@
     },
     "commands": [
       {
-        "playground": "Get the latest news from Playground"
+        "playground": "Get the latest news from Playground | RU: Получить последние новости с Playground"
       },
       {
-        "bbc": "Get the latest news from BBC"
+        "bbc": "Get the latest news from BBC | RU: Получить последние новости с BBC"
       },
       {
-        "cnn": "Get the latest news from CNN"
+        "cnn": "Get the latest news from CNN | RU: Получить последние новости с CNN"
       },
       {
-        "guardian": "Get the latest news from The Guardian"
+        "guardian": "Get the latest news from The Guardian | RU: Получить последние новости с The Guardian"
       },
       {
-        "lemonde": "Get the latest news from Le Monde"
+        "lemonde": "Get the latest news from Le Monde | RU: Получить последние новости с Le Monde"
       },
       {
-        "ria": "Get the latest news from RIA"
+        "ria": "Get the latest news from RIA | RU: Получить последние новости с Риа новости"
       },
       {
-        "rbc": "Get the latest news from rbc"
+        "rbc": "Get the latest news from rbc | RU: Получить последние новости с Рбк новости"
       },
       {
-        "lenta": "Get the latest news from lenta"
+        "lenta": "Get the latest news from lenta | RU: Получить последние новости с Lenta"
       }
     ]
   },
@@ -8246,7 +8230,7 @@
     },
     "commands": [
       {
-        "ocr": "Recognize text from an image in reply"
+        "ocr": "Recognize text from an image in reply | RU: Распознать текст на фото из реплая | EN: Recognize text from an image in reply"
       }
     ]
   },
@@ -8260,7 +8244,7 @@
     },
     "commands": [
       {
-        "prmusic": "Send music for programming"
+        "prmusic": "Send music for programming | EN: send random chill music"
       }
     ]
   },
@@ -8274,7 +8258,7 @@
     },
     "commands": [
       {
-        "top": "View top in the chat"
+        "top": "View top in the chat | RU: Посмотреть топ в чате"
       }
     ]
   },
@@ -8288,10 +8272,10 @@
     },
     "commands": [
       {
-        "twitch": "Download a clip from Twitch"
+        "twitch": "Download a clip from Twitch | RU: Скачать клип с Twitch"
       },
       {
-        "twitchvideo": "Download a video from Twitch"
+        "twitchvideo": "Download a video from Twitch | RU: Скачать видео с Twitch"
       }
     ]
   },
@@ -8305,13 +8289,13 @@
     },
     "commands": [
       {
-        "addwatch": "Add a word to be watched"
+        "addwatch": "Add a word to be watched | RU: Добавить отслеживание слова"
       },
       {
-        "rmwatch": "Remove a word from being watched"
+        "rmwatch": "Remove a word from being watched | RU: Удалить отслеживание слова"
       },
       {
-        "listwatches": "Show the list of watched words"
+        "listwatches": "Show the list of watched words | RU: Показать список отслеживаемых слов"
       }
     ]
   },
@@ -8325,19 +8309,19 @@
     },
     "commands": [
       {
-        "whisper": "Transcribe speech from a voice/video message in reply using openai api"
+        "whisper": "Transcribe speech from a voice/video message in reply using openai api | RU: распознать речь из голосового/видео сообщения в реплае, используя openai api"
       },
       {
-        "autowhspr": "Enable/disable auto-speech recognition for voice and video messages"
+        "autowhspr": "Enable/disable auto-speech recognition for voice and video messages | RU: включить/выключить автораспознавание голосовых и видео сообщений в чате где введена команда"
       },
       {
-        "hfwhisper": "Transcribe speech from a voice/video message in reply using hugging face api"
+        "hfwhisper": "Transcribe speech from a voice/video message in reply using hugging face api | RU: распознать речь из голосового/видео сообщения в реплае, используя hugging face api"
       },
       {
-        "hfautowhspr": "Enable/disable auto-speech recognition using Hugging Face API"
+        "hfautowhspr": "Enable/disable auto-speech recognition using Hugging Face API | RU: включить/выключить автораспознавание через Hugging Face API в текущем чате"
       },
       {
-        "hfguide": null
+        "hfguide": "RU: гайд как получить hugging face токен | EN: guide how to get hugging face token"
       }
     ]
   },
@@ -8374,7 +8358,7 @@
         "delcontcmd": "Используй: .delcont чтобы удалить пользователя из своих контактов."
       },
       {
-        "renamecmd": null
+        "renamecmd": ""
       }
     ]
   },
@@ -8515,7 +8499,7 @@
     },
     "commands": [
       {
-        "statacmd": null
+        "statacmd": ""
       }
     ]
   },
@@ -8633,7 +8617,7 @@
     },
     "commands": [
       {
-        "gowcmd": null
+        "gowcmd": ""
       }
     ]
   },
@@ -8659,7 +8643,7 @@
     },
     "commands": [
       {
-        "mquotecmd": null
+        "mquotecmd": ""
       },
       {
         "quotecmd": ".quote <reply> - quote a message"
@@ -8678,7 +8662,7 @@
     },
     "commands": [
       {
-        "renamecmd": null
+        "renamecmd": ""
       }
     ]
   },
@@ -8796,7 +8780,7 @@
     },
     "commands": [
       {
-        "x0cmd": null
+        "x0cmd": ""
       }
     ]
   },
@@ -8810,7 +8794,7 @@
     },
     "commands": [
       {
-        "percentcmd": "<Text with percentages> <Text at the end> [interval] -> For creating"
+        "percentcmd": "<Text with percentages> <Text at the end> [interval] -> For creating | RU: <Текст с процентами> <Текст в конце> [интервал] -> Для создания"
       }
     ]
   },
@@ -8923,7 +8907,7 @@
         "vizitkacmd": "Command for displaying a business card"
       },
       {
-        "vizinfocmd": null
+        "vizinfocmd": ""
       }
     ]
   },
@@ -8996,7 +8980,7 @@
     },
     "commands": [
       {
-        "tableaddcmd": null
+        "tableaddcmd": ""
       }
     ]
   },
@@ -9305,7 +9289,7 @@
     },
     "commands": [
       {
-        "addlinktosymbols": "[symbols] [link] [text or reply] Add link to symbols\n\nExample: .addlinktosymbols ah.e https://example.com hi hello. YOOOOOOO\nWrite characters without spaces."
+        "addlinktosymbols": "[symbols] [link] [text or reply] Add link to symbols\n\nExample: .addlinktosymbols ah.e https://example.com hi hello. YOOOOOOO\nWrite characters without spaces. | RU: [символы] [ссылка] [текст или реплай] Добавить ссылку на символы\n\nПример: .addlinktosymbols ап.ев https://example.com привет. Еееее хай\nСимволы пишите без пробелов. "
       }
     ]
   },
@@ -9319,16 +9303,16 @@
     },
     "commands": [
       {
-        "animatedname": "(aname) Turn on name animation"
+        "animatedname": "(aname) Turn on name animation | RU: (aname) Включить анимацию имени"
       },
       {
-        "animatedbio": "(abio) Turn on bio animation"
+        "animatedbio": "(abio) Turn on bio animation | RU: (abio) Включить анимацию био"
       },
       {
-        "stopanimatedname": "(stopaname) Turn off name animation"
+        "stopanimatedname": "(stopaname) Turn off name animation | RU: (stopaname) Выключить анимацию имени"
       },
       {
-        "stopanimatedbio": "(stopabio) Turn off bio animation"
+        "stopanimatedbio": "(stopabio) Turn off bio animation | RU: (stopabio) Выключить анимацию био"
       }
     ]
   },
@@ -9342,10 +9326,10 @@
     },
     "commands": [
       {
-        "watcher": null
+        "watcher": ""
       },
       {
-        "textformat": "Turn on/off The Module"
+        "textformat": "Turn on/off The Module | RU: Включить/выключить модуль"
       }
     ]
   },
@@ -9373,7 +9357,7 @@
     },
     "commands": [
       {
-        "code": null
+        "code": ""
       }
     ]
   },
@@ -9387,7 +9371,7 @@
     },
     "commands": [
       {
-        "cconvert": "[from] [to] Convert currency to other currency"
+        "cconvert": "[from] [to] Convert currency to other currency | RU: [from] [to] Конвертировать одну валюту в другую"
       }
     ]
   },
@@ -9401,7 +9385,7 @@
     },
     "commands": [
       {
-        "egsgames": "Get free games links available in Epic Games Store"
+        "egsgames": "Get free games links available in Epic Games Store | RU: Получить бесплатные игры доступные в Epic Games Store"
       }
     ]
   },
@@ -9415,7 +9399,7 @@
     },
     "commands": [
       {
-        "fakedata": "[locale (for example: \"ru_RU\" for Russian or \"fr_FR\" for French)] - Get fake data about person and credit card"
+        "fakedata": "[locale (for example: \"ru_RU\" for Russian or \"fr_FR\" for French)] - Get fake data about person and credit card | RU: [язык (к примеру: \"ru_RU\" для Русского или \"fr_FR\" для французского и т.д.)] - Получить фейковые данные человека и его кредитной карты"
       }
     ]
   },
@@ -9429,16 +9413,16 @@
     },
     "commands": [
       {
-        "statuschange": "[status name] - set this status | .statuslist to view your downloaded statuses"
+        "statuschange": "[status name] - set this status | .statuslist to view your downloaded statuses | RU: [имя статуса] - поставить этот статус | .statuslist для просмотра ваших установленных статусов"
       },
       {
-        "statuslist": "See list of all your statuses"
+        "statuslist": "See list of all your statuses | RU: Посмотреть список всех статусов"
       },
       {
-        "statusadd": "[emoji] [short name] Add a custom status"
+        "statusadd": "[emoji] [short name] Add a custom status | RU: [эмодзи] [короткое имя] Добавить кастомный статус"
       },
       {
-        "statusclear": "Clear all custom statuses"
+        "statusclear": "Clear all custom statuses | RU: Очистить все кастомные статусы"
       }
     ]
   },
@@ -9452,7 +9436,7 @@
     },
     "commands": [
       {
-        "timer": "Send timer"
+        "timer": "Send timer | RU: отправить таймер"
       }
     ]
   },
@@ -9466,7 +9450,7 @@
     },
     "commands": [
       {
-        "numberfact": "[number] - get fact about number"
+        "numberfact": "[number] - get fact about number | RU: [число] - получить факт об этом числе"
       }
     ]
   },
@@ -9480,13 +9464,13 @@
     },
     "commands": [
       {
-        "id": "<reply to message> Get user/chat/sender/replied message/message ID"
+        "id": "<reply to message> Get user/chat/sender/replied message/message ID | RU: <реплай на сообщение> Получить айди пользователя/чата/отправителя/сообщения"
       },
       {
-        "text": "<reply to message> Get replied message text"
+        "text": "<reply to message> Get replied message text | RU: <реплай на сообщение> Получить текст сообщения"
       },
       {
-        "reply_markup": "<reply to message> Get replied message reply markup (buttons)"
+        "reply_markup": "<reply to message> Get replied message reply markup (buttons) | RU: <реплай на сообщение> Получить кнопки сообщения"
       }
     ]
   },
@@ -9514,7 +9498,7 @@
     },
     "commands": [
       {
-        "silentmessages": "toggle module status"
+        "silentmessages": "toggle module status | RU: включить/выключить модуль"
       }
     ]
   },
@@ -9528,28 +9512,28 @@
     },
     "commands": [
       {
-        "triggeraddbase": "[text that the module will trigger on] <reply on the response text> - Add base trigger"
+        "triggeraddbase": "[text that the module will trigger on] <reply on the response text> - Add base trigger | RU: [текст, на который будет тригеррится модуль] <реплай на текст ответа> - Добавить базовый триггер"
       },
       {
-        "triggeradd": "[trigger] - Add a trigger from raw data"
+        "triggeradd": "[trigger] - Add a trigger from raw data | RU: [триггер] - Добавить триггер из сырых данных"
       },
       {
-        "triggers": "View all triggers"
+        "triggers": "View all triggers | RU: Посмотреть все триггеры"
       },
       {
-        "triggerchat": "Add chat, where triggers will work"
+        "triggerchat": "Add chat, where triggers will work | RU: Добавить чат, где будут работать триггеры"
       },
       {
-        "tconfig": "Config for the module."
+        "tconfig": "Config for the module. | RU: Конфиг модуля"
       },
       {
-        "triggerdel": "[trigger's id] - Delete trigger"
+        "triggerdel": "[trigger's id] - Delete trigger | RU: [айди триггера] - Удалить триггер"
       },
       {
-        "triggerget": "[trigger's id] - Get trigger"
+        "triggerget": "[trigger's id] - Get trigger | RU: [айди триггера] - Получить триггер"
       },
       {
-        "triggerset": "[trigger's id] [edited trigger] - Edit trigger"
+        "triggerset": "[trigger's id] [edited trigger] - Edit trigger | RU: [айди триггера] [измененный триггер] - Изменить триггер"
       }
     ]
   },
@@ -9563,7 +9547,7 @@
     },
     "commands": [
       {
-        "ie": "Upgraded eval"
+        "ie": "Upgraded eval | RU: Улучшенный eval"
       }
     ]
   },
@@ -9615,7 +9599,7 @@
     },
     "commands": [
       {
-        "deanon": "[username] - Without «@»"
+        "deanon": "[username] - Without «@» | RU: [юзернейм] - Без «@»"
       }
     ]
   },
@@ -9683,10 +9667,10 @@
     },
     "commands": [
       {
-        "addcringe": "Add cringe via configuration"
+        "addcringe": "Add cringe via configuration | RU: Добавить кринж через конфигурацию"
       },
       {
-        "cringe": "Send random cringe"
+        "cringe": "Send random cringe | RU: Отправить случайный кринж"
       }
     ]
   },
@@ -9736,10 +9720,10 @@
     },
     "commands": [
       {
-        "sptdl": "[type] - to find on Spotify"
+        "sptdl": "[type] - to find on Spotify | RU: [название] - Введите, чтобы найти на Spotify"
       },
       {
-        "vkdl": "[type] - to find via VK"
+        "vkdl": "[type] - to find via VK | RU: [название] - Введите, чтобы найти через VK"
       }
     ]
   },
@@ -9754,13 +9738,13 @@
     },
     "commands": [
       {
-        "gl": "> Open my gallery"
+        "gl": "> Open my gallery | RU:  > Открыть мою галерею"
       },
       {
-        "glcf": "> Open gallery configuration"
+        "glcf": "> Open gallery configuration | RU:  > Открыть конфигурацию галереи"
       },
       {
-        "gltutor": "> Tutor how to add a photo to the MyGallery"
+        "gltutor": "> Tutor how to add a photo to the MyGallery | RU:  > Тутор как добавить фото в MyGallery"
       }
     ]
   },
@@ -9775,7 +9759,7 @@
     },
     "commands": [
       {
-        "tof": "[text] - True or False"
+        "tof": "[text] - True or False | RU: Показывает правду или ложь"
       }
     ]
   },
@@ -10073,13 +10057,13 @@
     },
     "commands": [
       {
-        "caliasescmd": "👉 Get all aliases"
+        "caliasescmd": "👉 Get all aliases | RU: 👉 Получить список всех алиасов"
       },
       {
-        "rmcaliascmd": "<name> 👉 Remove alias"
+        "rmcaliascmd": "<name> 👉 Remove alias | RU: <имя> 👉 Удалить алиас"
       },
       {
-        "caliascmd": "<name> <command>\n[args] 👉 Add new alias (may contain {args} keyword)"
+        "caliascmd": "<name> <command>\n[args] 👉 Add new alias (may contain {args} keyword) | RU: <имя> <команда>\n[аргументы] 👉 Добавить новый алиас (может содержать ключевое слово {args})"
       }
     ]
   },
@@ -10093,7 +10077,7 @@
     },
     "commands": [
       {
-        "delmsgcmd": "[count] — Delete messages (you can use your trigger from config: «{value}{count}» and write them only together!)"
+        "delmsgcmd": "[count] — Delete messages (you can use your trigger from config: «{value}{count}» and write them only together!) | RU: [число] — Удалить сообщения (можно использовать значение из конфига: «{значение}{число}», без пробела!)"
       }
     ]
   },
@@ -10107,13 +10091,13 @@
     },
     "commands": [
       {
-        "tlogincmd": "Open OAuth window to login into TIDAL"
+        "tlogincmd": "Open OAuth window to login into TIDAL | RU: Авторизация в TIDAL"
       },
       {
-        "tidalcmd": "<query> - Search track in TIDAL"
+        "tidalcmd": "<query> - Search track in TIDAL | RU: <запрос> - Поиск трека в TIDAL"
       },
       {
-        "turlcmd": "<ID/url> - Search track in TIDAL by ID or url"
+        "turlcmd": "<ID/url> - Search track in TIDAL by ID or url | RU: <ID/ссылка> - Поиск трека в TIDAL по ID или ссылке"
       }
     ]
   },
@@ -10127,13 +10111,13 @@
     },
     "commands": [
       {
-        "afightcmd": "- Enable/disable autofight"
+        "afightcmd": "- Enable/disable autofight | RU: - Включить/отключить автобой"
       },
       {
-        "agrowcmd": "- Enable/disable autogrow"
+        "agrowcmd": "- Enable/disable autogrow | RU: - Включить/отключить автокормёжку"
       },
       {
-        "setnamecmd": "<name> - Changes your pig's name"
+        "setnamecmd": "<name> - Changes your pig's name | RU: <имя> - Меняет имя вашего хряка"
       }
     ]
   },
@@ -10147,13 +10131,13 @@
     },
     "commands": [
       {
-        "yguidecmd": "- Guide for obtaining a Yandex.Music token"
+        "yguidecmd": "- Guide for obtaining a Yandex.Music token | RU: - Гайд по получению токена Яндекс.Музыки"
       },
       {
-        "ynowcmd": "- Get now playing track"
+        "ynowcmd": "- Get now playing track | RU: - Получить трек, который играет сейчас"
       },
       {
-        "ysearchcmd": "<query> - Search track in Yandex.Music"
+        "ysearchcmd": "<query> - Search track in Yandex.Music | RU: <запрос> - Поиск трека в Яндекс.Музыке"
       }
     ]
   },
@@ -10167,22 +10151,22 @@
     },
     "commands": [
       {
-        "ybiocmd": "- Enable/disable autobio"
+        "ybiocmd": "- Enable/disable autobio | RU: - Включить/выключить автобио"
       },
       {
-        "yguidecmd": "- Guide for obtaining a Yandex.Music token"
+        "yguidecmd": "- Guide for obtaining a Yandex.Music token | RU: - Гайд по получению токена Яндекс.Музыки"
       },
       {
-        "ynowcmd": "- Get now playing track"
+        "ynowcmd": "- Get now playing track | RU: - Получить трек, который играет сейчас"
       },
       {
-        "ysearchcmd": "<query> - Search track in Yandex.Music"
+        "ysearchcmd": "<query> - Search track in Yandex.Music | RU: <запрос> - Поиск трека в Яндекс.Музыке"
       },
       {
-        "yautomsgcmd": "- Enable all widgets"
+        "yautomsgcmd": "- Enable all widgets | RU: - Включить все виджеты"
       },
       {
-        "ywidgetcmd": "<link to message/post> - Make a message/post a widget"
+        "ywidgetcmd": "<link to message/post> - Make a message/post a widget | RU: <ссылка на сообщение/пост> - Сделать сообщение/пост виджетом"
       }
     ]
   },
@@ -10334,13 +10318,13 @@
     },
     "commands": [
       {
-        "hinfocmd": "- статус юзербота"
+        "hinfocmd": "- статус юзербота | EN:  - ub status"
       },
       {
-        "hlogscmd": "- логи юзербота"
+        "hlogscmd": "- логи юзербота | EN:  - ub logs"
       },
       {
-        "hrestartcmd": "- перезагрузить юзербота"
+        "hrestartcmd": "- перезагрузить юзербота | EN:  - ub restart"
       }
     ]
   },
@@ -10662,7 +10646,7 @@
     },
     "commands": [
       {
-        "gitaddcmd": null
+        "gitaddcmd": ""
       }
     ]
   },

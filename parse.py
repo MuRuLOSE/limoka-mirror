@@ -19,6 +19,23 @@ def get_module_info(module_path):
     def get_decorator_names(decorator_list):
         return [ast.unparse(decorator) for decorator in decorator_list]
 
+    def extract_loader_command_args(decorator):
+        """Извлекает аргументы `ru_doc` и `en_doc` из `@loader.command`."""
+        if (
+            isinstance(decorator, ast.Call)
+            and hasattr(decorator.func, "attr")
+            and decorator.func.attr == "command"
+        ):
+            ru_doc = None
+            en_doc = None
+            for keyword in decorator.keywords:
+                if keyword.arg == "ru_doc":
+                    ru_doc = ast.literal_eval(keyword.value)
+                elif keyword.arg == "en_doc":
+                    en_doc = ast.literal_eval(keyword.value)
+            return ru_doc, en_doc
+        return None, None
+
     result = {}
     for node in ast.walk(tree):
         if isinstance(node, ast.ClassDef):
@@ -43,8 +60,28 @@ def get_module_info(module_path):
                         continue
 
                     method_docstring = ast.get_docstring(class_body_node)
+                    command_name = class_body_node.name
+                    ru_doc, en_doc = None, None
+
+                    # Проверяем каждый декоратор на наличие ru_doc и en_doc
+                    for decorator in class_body_node.decorator_list:
+                        ru_doc_tmp, en_doc_tmp = extract_loader_command_args(decorator)
+                        if ru_doc_tmp:
+                            ru_doc = ru_doc_tmp
+                        if en_doc_tmp:
+                            en_doc = en_doc_tmp
+
+                    # Формируем описание команды
+                    descriptions = []
+                    if method_docstring:
+                        descriptions.append(method_docstring)
+                    if ru_doc:
+                        descriptions.append(f"RU: {ru_doc}")
+                    if en_doc:
+                        descriptions.append(f"EN: {en_doc}")
+
                     class_info["commands"].append(
-                        {class_body_node.name: method_docstring}
+                        {command_name: " | ".join(descriptions)}
                     )
 
             result = class_info
@@ -68,6 +105,6 @@ for root, _, files in os.walk(base_dir):
                 print(f"Ошибка при парсинге файла {file_path}: {e}")
 
 with open("modules.json", "w", encoding="utf-8") as json_file:
-    json.dump(modules_data, json_file, ensure_ascii=False, indent=2)
+   json.dump(modules_data, json_file, ensure_ascii=False, indent=2)
 
 print("Файл modules.json создан!")

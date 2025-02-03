@@ -92,14 +92,14 @@ class Limoka(loader.Module):
             "\n<i>{fact}</i>"
         ),
         "found": (
-            "<emoji document_id=5188311512791393083>🔎</emoji> Found the module <b>{name}</b> by query: <b>{query}</b>"
+            "<emoji document_id=5413334818047940135>🔍</emoji> Found the module <b>{name}</b> by query: <b>{query}</b>"
             "\n"
-            "\n<b>ℹ️ Description:</b> {description}"
-            "\n<b><emoji document_id=5190458330719461749>🧑‍💻</emoji> Developer:</b> {username}"
+            "\n<b><emoji document_id=5418376169055602355>ℹ️</emoji> Description:</b> {description}"
+            "\n<b><emoji document_id=5418299289141004396>🧑‍💻</emoji> Developer:</b> {username}"
             "\n\n{commands}"
-            "\n<code>{prefix}dlm https://git.vsecoder.dev/root/limoka/-/raw/main/{module_path}</code>"
+            "\n<emoji document_id=5411143117711624172>🪄</emoji> <code>{prefix}dlm https://git.vsecoder.dev/root/limoka/-/raw/main/{module_path}</code>"
         ),
-        "command_template": "{emoji} <code>{prefix}{command}</code> - {description}\n",
+        "command_template": "{emoji} <code>{prefix}{command}</code> {description}\n",
         "emojis": {
             1: "<emoji document_id=5416037945909987712>1️⃣</emoji>",
             2: "<emoji document_id=5413855071731470617>2️⃣</emoji>",
@@ -138,7 +138,7 @@ class Limoka(loader.Module):
             "\n"
             "\n<emoji document_id=5411143117711624172>🪄</emoji> <code>{prefix}dlm https://git.vsecoder.dev/root/limoka/-/raw/main/{module_path}</code>"
         ),
-        "command_template": "{emoji} <code>{prefix}{command}</code> - {description}\n",
+        "command_template": "{emoji} <code>{prefix}{command}</code> {description}\n",
         "404": "<emoji document_id=5210952531676504517>❌</emoji> <b>Не найдено по запросу: <i>{query}</i></b>",
         "noargs": "<emoji document_id=5210952531676504517>❌</emoji> <b>Нет аргументов</b>",
         "?": "<emoji document_id=5951895176908640647>🔎</emoji> Запрос слишком короткий / не найден",
