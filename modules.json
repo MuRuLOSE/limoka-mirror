@@ -16316,6 +16316,369 @@
       }
     ]
   },
+  "TheKsenon\\MyHikkaModules\\audio2text.py": {
+    "name": "Audio2TextMod",
+    "description": "Module for speech-to-text conversion",
+    "meta": {
+      "pic": null,
+      "banner": "https://i.ibb.co/7k4sJRR/5ad271ae-ec1b-4803-a714-5d6628ee8f50.jpg",
+      "developer": "@kmodules"
+    },
+    "commands": [
+      {
+        "audio2text": "RU: Преобразовать аудио в текст (ответом на аудиосообщение) | EN: Convert audio to text (reply to voice message)"
+      }
+    ]
+  },
+  "TheKsenon\\MyHikkaModules\\copyuser.py": {
+    "name": "ProfileToolsModule",
+    "description": "Copy profile data from any user",
+    "meta": {
+      "pic": null,
+      "banner": "https://i.ibb.co/515XxY1/e3583b3c-434a-49fc-b532-cc70a3b5eccc.jpg",
+      "developer": "@kmodules"
+    },
+    "commands": [
+      {
+        "copyuser": "RU: Скопировать профиль пользователя (работает по reply/@username/ID) | EN: Copy user profile (works with reply/@username/ID)"
+      },
+      {
+        "backupme": "RU: Создать резервную копию вашего профиля | EN: Create backup of your profile"
+      },
+      {
+        "restoreme": "RU: Восстановить профиль из резервной копии | EN: Restore profile from backup"
+      }
+    ]
+  },
+  "TheKsenon\\MyHikkaModules\\counttime.py": {
+    "name": "CountTimeModule",
+    "description": "Модуль для отслеживания времени до разных событий, ВРЕМЯ может быть неправильное, потому что у вас на сервере такое время. На Termux время правильное...",
+    "meta": {
+      "pic": null,
+      "banner": null,
+      "developer": "@kmodules"
+    },
+    "commands": [
+      {
+        "nytime": "Показывает время до нового года"
+      },
+      {
+        "wintertime": "Показывает время до зимы"
+      },
+      {
+        "springtime": "Показывает время до весны"
+      },
+      {
+        "summertime": "Показывает время до лета"
+      },
+      {
+        "autumntime": "Показывает время до осени"
+      }
+    ]
+  },
+  "TheKsenon\\MyHikkaModules\\currency.py": {
+    "name": "CurrencyMod",
+    "description": "Get current currency exchange rates",
+    "meta": {
+      "pic": null,
+      "banner": null
+    },
+    "commands": [
+      {
+        "rate": "<from> <to> - Get exchange rate"
+      }
+    ]
+  },
+  "TheKsenon\\MyHikkaModules\\github.py": {
+    "name": "GitHubInfoMod",
+    "description": "Module for viewing GitHub profile information",
+    "meta": {
+      "pic": null,
+      "banner": null,
+      "developer": "@kmodules"
+    },
+    "commands": [
+      {
+        "github": "RU: <username> - получить информацию о профиле GitHub | EN: <username> - get GitHub profile information"
+      }
+    ]
+  },
+  "TheKsenon\\MyHikkaModules\\kaccountdata.py": {
+    "name": "AccountDataMod",
+    "description": "Получить информацию об аккаунте, дц, регистрации(нестабильно). \n\nФункционал как у AyuGram.",
+    "meta": {
+      "pic": null,
+      "banner": null,
+      "developer": "@kmodules"
+    },
+    "commands": [
+      {
+        "aboutacc": "Получить информацию об аккаунте | .aboutacc <username/reply>"
+      }
+    ]
+  },
+  "TheKsenon\\MyHikkaModules\\kcustominfo.py": {
+    "name": "CustomInfoMod",
+    "description": "Улучшенная информация о юзерботе - ping, и т.д.",
+    "meta": {
+      "pic": null,
+      "banner": null,
+      "developer": "@kmodules"
+    },
+    "commands": [
+      {
+        "cinfo": "Показать информацию о юзерботе"
+      },
+      {
+        "setcinfo": "Установить кастомный текст информации: .setcinfo <текст>"
+      }
+    ]
+  },
+  "TheKsenon\\MyHikkaModules\\ksenonafk.py": {
+    "name": "KsenonAFKMod",
+    "description": "Универсальный AFK модуль с поддержкой кастом сообщения и премиум статуса.",
+    "meta": {
+      "pic": null,
+      "banner": "https://i.ibb.co/gy5xbPd/d4be263e-63b5-42e1-ac2b-0dac067b0623.jpg",
+      "developer": "@kmodules"
+    },
+    "commands": [
+      {
+        "afk": "[reason] [time] - Set AFK mode status | RU: [причина] [время] - Установить режим AFK"
+      },
+      {
+        "unafk": "Exit AFK mode | RU: Выйти из режима AFK"
+      },
+      {
+        "ignorusers": "<count> <minutes> - Set message limit per chat | RU: <кол-во> <минуты> - Установить ограничение сообщений в чате"
+      },
+      {
+        "timeafk": "<minutes> <max_msgs> - Set time-based message limits | RU: <минуты> <макс.сообщений> - Установить временной лимит сообщений"
+      }
+    ]
+  },
+  "TheKsenon\\MyHikkaModules\\ksenongpt.py": {
+    "name": "KsenonGPTMod",
+    "description": "KsenonGPT module for text and image generation using KsenonAPI",
+    "meta": {
+      "pic": null,
+      "banner": null,
+      "developer": "@kmodules"
+    },
+    "commands": [
+      {
+        "setmodelcmd": "Set default AI model for text generation"
+      },
+      {
+        "gentextcmd": "Generate text - .gentext <prompt>"
+      },
+      {
+        "genimgcmd": "Generate image - .genimg <prompt> <model>"
+      },
+      {
+        "txtmodelscmd": "List of text models"
+      },
+      {
+        "imgmodelscmd": "List of image models"
+      },
+      {
+        "kupdatecmd": "Check for updates"
+      }
+    ]
+  },
+  "TheKsenon\\MyHikkaModules\\kshortlinker.py": {
+    "name": "ShortLinkerMod",
+    "description": "Модуль для сокращения ссылок.",
+    "meta": {
+      "pic": null,
+      "banner": null,
+      "developer": "@kmodules"
+    },
+    "commands": [
+      {
+        "shortlinkcmd": "Использование: .shortlink <url>"
+      }
+    ]
+  },
+  "TheKsenon\\MyHikkaModules\\kuploader.py": {
+    "name": "UploaderMod",
+    "description": "Module for uploading files to various file hosting services",
+    "meta": {
+      "pic": null,
+      "banner": null,
+      "developer": "@kmodules"
+    },
+    "commands": [
+      {
+        "catboxcmd": "Upload file to catbox.moe"
+      },
+      {
+        "envscmd": "Upload file to envs.sh"
+      },
+      {
+        "kappacmd": "Upload file to kappa.lol"
+      },
+      {
+        "oxocmd": "Upload file to 0x0.st"
+      },
+      {
+        "x0cmd": "Upload file to x0.at"
+      },
+      {
+        "tmpfilescmd": "Upload file to tmpfiles.org"
+      },
+      {
+        "pomfcmd": "Upload file to pomf.lain.la"
+      },
+      {
+        "bashcmd": "Upload file to bashupload.com"
+      }
+    ]
+  },
+  "TheKsenon\\MyHikkaModules\\kweather.py": {
+    "name": "WeatherMod",
+    "description": "Модуль для просмотра погоды",
+    "meta": {
+      "pic": null,
+      "banner": null
+    },
+    "commands": [
+      {
+        "weathercmd": "Использование: .weather <город>"
+      }
+    ]
+  },
+  "TheKsenon\\MyHikkaModules\\obxod.py": {
+    "name": "OfftopTextMod",
+    "description": "Обход в оффтопе хикки",
+    "meta": {
+      "pic": null,
+      "banner": null
+    },
+    "commands": [
+      {
+        "oftcmd": "Отправить сообщение"
+      }
+    ]
+  },
+  "TheKsenon\\MyHikkaModules\\quizai.py": {
+    "name": "QuizGameMod",
+    "description": "Игра-викторина с разными темами и сложностями",
+    "meta": {
+      "pic": null,
+      "banner": "https://i.ibb.co/NsMcJVJ/6116dddf-38f7-4bad-9b69-10c1e3c19fa5.jpg",
+      "developer": "@kmodules"
+    },
+    "commands": [
+      {
+        "quiz": "Начать викторину\nАргументы: -t \"тема\" -d <easy/normal/hard/impossible> -m <stable/fast>\nПример: .quiz -t \"Minecraft\" -d easy -m stable"
+      }
+    ]
+  },
+  "TheKsenon\\MyHikkaModules\\randomfact.py": {
+    "name": "RandomFactMod",
+    "description": "Рандомные факты",
+    "meta": {
+      "pic": null,
+      "banner": null,
+      "developer": "@kmodules"
+    },
+    "commands": [
+      {
+        "randomfact": "Получить случайный факт"
+      }
+    ]
+  },
+  "TheKsenon\\MyHikkaModules\\randommemes.py": {
+    "name": "RandomMemesModule",
+    "description": "2 mode random memes.",
+    "meta": {
+      "pic": null,
+      "banner": "https://i.ibb.co/hK4zxP7/6f8d18ef-53d2-42a5-94e5-c0abef97b1bb.jpg",
+      "developer": "@kmodules"
+    },
+    "commands": [
+      {
+        "rnmeme": "RU: NSFW мемы | EN: NSFW memes"
+      },
+      {
+        "rmeme": "RU: Безопасные мемы | EN: Safe memes"
+      }
+    ]
+  },
+  "TheKsenon\\MyHikkaModules\\russianroulette.py": {
+    "name": "RussianRouletteModule",
+    "description": "Русская рулетка. Немного ИСПОЛЬЗУЙТЕ НА СВОЙ СТРАХ И РИСК.",
+    "meta": {
+      "pic": null,
+      "banner": null,
+      "developer": "@kmodules"
+    },
+    "commands": [
+      {
+        "roulettecmd": "Начать игру в русскую рулетку"
+      }
+    ]
+  },
+  "TheKsenon\\MyHikkaModules\\telegraph.py": {
+    "name": "TelegraphMod",
+    "description": "Create article using telegra.ph",
+    "meta": {
+      "pic": null,
+      "banner": null,
+      "developer": "@kmodules"
+    },
+    "commands": [
+      {
+        "telegraphcmd": "Create article. Use: .telegraph <title> | <description>"
+      }
+    ]
+  },
+  "TheKsenon\\MyHikkaModules\\text2speech.py": {
+    "name": "Text2SpeechMod",
+    "description": "Module for converting text to speech",
+    "meta": {
+      "pic": null,
+      "banner": "https://i.ibb.co/Q6syvcG/5da73c45-b14f-4fe5-a8b6-85fc32a4b6c0.jpg",
+      "developer": "@kmodules"
+    },
+    "commands": [
+      {
+        "text2speech": "RU: Преобразовать текст в речь (использование: .text2speech <текст> <alex/sophia>) | EN: Convert text to speech (usage: .text2speech <text> <alex/sophia>)"
+      },
+      {
+        "t2s": "RU: Алиас команды .text2speech (использование: .t2s <текст> <alex/sophia>) | EN: Alias for .text2speech command (usage: .t2s <text> <alex/sophia>)"
+      }
+    ]
+  },
+  "TheKsenon\\MyHikkaModules\\wikisearch.py": {
+    "name": "WikiSearchMod",
+    "description": "Поиск информации в Википедии",
+    "meta": {
+      "pic": null,
+      "banner": null,
+      "developer": "@kmodules"
+    },
+    "commands": [
+      {
+        "wksearch": "Поиск в Википедии - .wksearch <запрос>"
+      }
+    ]
+  },
+  "TheKsenon\\MyHikkaModules\\ytsearch.py": {
+    "name": "YouTubeSearchMod",
+    "description": "Module for searching videos on YouTube",
+    "meta": {
+      "pic": null,
+      "banner": "https://i.ibb.co/84JDV0z/29a858b1-0c80-4c88-8042-9d7622ebc7f9.jpg",
+      "developer": "@kmodules"
+    },
+    "commands": [
+      {
+        "ytsearch": "RU: Поиск видео на YouTube. Использование: .ytsearch <запрос> | EN: Search for videos on YouTube. Usage: .ytsearch <query>"
+      }
+    ]
+  },
   "thomasmod\\hikkamods\\atelegraph.py": {
     "name": "ActuallTelegraphMod",
     "description": "Uploading a photo/gif/picture to actuall telegraph",
