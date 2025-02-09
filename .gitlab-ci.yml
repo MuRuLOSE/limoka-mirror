@@ -8,6 +8,7 @@ variables:
   BRANCH_NAME: "update-submodules-$(date +%Y-%m-%d)"
 
 before_script:
+  - apt update && apt install -y git curl jq
   - git config --global user.email "ci-bot@example.com"
   - git config --global user.name "CI Bot"
   - git checkout -b $BRANCH_NAME
