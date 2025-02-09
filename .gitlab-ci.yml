@@ -6,7 +6,7 @@ stages:
   - create_mr
 
 variables:
-  BRANCH_NAME: "update-submodules"
+  BRANCH_NAME: "update-submodules_$CI_COMMIT_SHA"
 
 before_run:
   stage: before
