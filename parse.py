@@ -50,6 +50,7 @@ def get_module_info(module_path):
                 "description": class_docstring,
                 "meta": meta_info,
                 "commands": [],
+                "new_commands": [],
             }
 
             for class_body_node in node.body:
@@ -63,7 +64,6 @@ def get_module_info(module_path):
                     command_name = class_body_node.name
                     ru_doc, en_doc = None, None
 
-                    # Проверяем каждый декоратор на наличие ru_doc и en_doc
                     for decorator in class_body_node.decorator_list:
                         ru_doc_tmp, en_doc_tmp = extract_loader_command_args(decorator)
                         if ru_doc_tmp:
@@ -71,17 +71,28 @@ def get_module_info(module_path):
                         if en_doc_tmp:
                             en_doc = en_doc_tmp
 
-                    # Формируем описание команды
                     descriptions = []
                     if method_docstring:
                         descriptions.append(method_docstring)
                     if ru_doc:
-                        descriptions.append(f"RU: {ru_doc}")
+                        descriptions.append(ru_doc)
                     if en_doc:
-                        descriptions.append(f"EN: {en_doc}")
+                        descriptions.append(en_doc)
 
                     class_info["commands"].append(
-                        {command_name: " | ".join(descriptions)}
+                        {command_name: ' '.join(descriptions)}
+                    )
+
+                    command_name = command_name.replace('cmd', '')
+
+                    class_info["new_commands"].append(
+                        {
+                            command_name: {
+                                "ru_doc": ru_doc,
+                                "en_doc": en_doc,
+                                "doc": method_docstring,
+                            }
+                        }
                     )
 
             result = class_info

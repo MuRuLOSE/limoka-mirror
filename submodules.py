@@ -54,12 +54,10 @@ for repo_url in repos:
     owner, repo_name = repo_path.split("/")
     local_path = f"{owner}/{repo_name}"
 
-    # Создаем каталог для владельца, если его нет
     if not os.path.exists(owner):
         os.makedirs(owner)
 
     try:
-        # Используем git subtree для добавления репозитория
         subprocess.run(
             [
                 "git",
