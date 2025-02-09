@@ -1,16 +1,29 @@
-#              © Copyright 2024
+# ---------------------------------------------------------------------------------
+# Author: @shiro_hikka
+# Name: Timer
+# Description: Creates fine adorned timer
+# Commands: timer
+# ---------------------------------------------------------------------------------
+#              © Copyright 2025
 #
 # 🔒      Licensed under the GNU AGPLv3
 # 🌐 https://www.gnu.org/licenses/agpl-3.0.html
+# ---------------------------------------------------------------------------------
+# scope: hikka_only
 # meta developer: @shiro_hikka
+# meta banner: https://0x0.st/s/FIR0RnhUN5pZV5CZ6sNFEw/8KBz.jpg
+# ---------------------------------------------------------------------------------
+
+__version__ = (1, 0, 0)
 
 from .. import loader, utils
 from telethon.tl.types import Message
 import re
 import asyncio
 
+@loader.tds
 class Timer(loader.Module):
-    """猫ちゃん | Timer"""
+    """Creates fine adorned timer"""
 
     strings = {
         "name": "Timer",
@@ -18,60 +31,50 @@ class Timer(loader.Module):
     }
 
     async def parseArgs(self, message, args, parsed):
-        for i in args:
-            if i[-1] not in ["h", "m", "s"]:
-                args.remove(i)
+        for arg in args:
+            if arg[-1] not in ["h", "m", "s"]:
+                args.remove(arg)
 
-        for i in args:
-            parsed[i[-1]] = int(re.sub(r"[^0-9]", "", i))
+        for arg in args:
+            parsed[arg[-1]] = int(re.sub(r"[^0-9]", "", arg))
         return parsed
 
+
     async def timercmd(self, message: Message):
-        """ [5h 5m 5s] - turn on the timer"""
-        args = utils.get_args_raw(message)
+        """ [5h 5m 5s] - launch the timer"""
+        args = (utils.get_args_raw(message)).split()
+        parsed = {"h": None, "m": None, "s": None}
         if not args:
-            await utils.answer(message, "<b>Specify time</b>")
-            return
+            return await utils.answer(message, "Specify time")
 
-        hours = 0
-        mins = 0
-        secs = 0
-        parsed = {
-            "h": None,
-            "m": None,
-            "s": None
-        }
-        args = args.split()
-        r = await self.parseArgs(message, args, parsed)
-        if all(r[i] is None for i in parsed):
-            await utils.answer(message, "<b>Time isn't specified</b>")
-            return
+        _parsed = await self.parseArgs(message, args, parsed)
+        if all(_parsed[i] is None for i in parsed):
+            return await utils.answer(message, "<b>Time isn't specified</b>")
 
-        if r["h"]:
-            hours = r["h"] * 3600
-        if r["m"]:
-            mins = r["m"] * 60
-        if r["s"]:
-            secs = r["s"]
-        t = secs + mins + hours
+        hours = _parsed["h"] * 3600 if _parsed["h"] else 0
+        mins = _parsed["m"] * 60 if _parsed["m"] else 0
+        secs = _parsed["s"] if _parsed["s"] else 0
+        _time = secs + mins + hours
+
         c = f"{hours}:{mins}:{secs}"
         pretime = "<i>{}:{}</i>"
-
-        while t > -1:
-            h = f"{t//3600}"
-            m = f"{t%3600//60}"
-            s = f"{t%3600%60}"
-            if t > 59:
+        while _time > -1:
+            h = f"{_time//3600}"
+            m = f"{_time%3600//60}"
+            s = f"{_time%3600%60}"
+            if _time > 59:
                 q = self.strings["q"].format(c, pretime.format(h, m))
             else:
                 q = self.strings["q"].format(c, pretime.format(h, f"{m}:{s}"))
+
             try:
                 await utils.answer(message, q)
             except:
                 pass
-            t -= 1
+
+            _time -= 1
             await asyncio.sleep(1)
 
         regex = r"\..*\<.*?\>.*"
-        a = re.sub(regex, "\n<emoji document_id=5222108309795908493>✨</emoji> <b>Time's over</b>", q.replace("\n", "."))
-        await utils.answer(message, a)
+        answer = re.sub(regex, "\n<emoji document_id=5222108309795908493>✨</emoji> <b>Time's over</b>", q.replace("\n", "."))
+        await utils.answer(message, answer)

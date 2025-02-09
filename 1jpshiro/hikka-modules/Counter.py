@@ -1,49 +1,61 @@
-#              © Copyright 2024
+# ---------------------------------------------------------------------------------
+# Author: @shiro_hikka
+# Name: Counter
+# Description: Inline Clicks Counter
+# Commands: count, creset
+# ---------------------------------------------------------------------------------
+#              © Copyright 2025
 #
 # 🔒      Licensed under the GNU AGPLv3
 # 🌐 https://www.gnu.org/licenses/agpl-3.0.html
+# ---------------------------------------------------------------------------------
+# scope: hikka_only
 # meta developer: @shiro_hikka
+# meta banner: https://0x0.st/s/FIR0RnhUN5pZV5CZ6sNFEw/8KBz.jpg
+# ---------------------------------------------------------------------------------
+
+__version__ = (1, 0, 1)
 
 from .. import loader, utils
 from telethon.tl.types import Message
 from ..inline.types import InlineCall
 import asyncio
 
-NAME = "Counter"
-
+@loader.tds
 class Counter(loader.Module):
-    """猫ちゃん | InlineCounter"""
+    """Inline Clicks Counter"""
 
     strings = {
         "name": "Counter",
         "count": "Counter: {}"
     }
 
+    async def client_ready(self):
+        counts = self.db.get(__name__, "c")
+        users = self.db.get(__name__, "u")
+        if not counts:
+            self.db.set(__name__, "c", 0)
+        if not users:
+            self.db.set(__name__, "u", [])
+
+
     async def cresetcmd(self, message: Message):
-        """ [-u] [-c] - reset counter\n-u (users list) -c (counts list)"""
+        """ [-u] [-c] - reset the counter\n-u (users list) -c (counts list)"""
         args = (utils.get_args_raw(message)).split()
+
         if all(i not in ["-u", "-c"] for i in args):
-            await utils.answer(message, "<b>Incorrect flag</b>")
-            await asyncio.sleep(4)
-            await message.delete()
-            return
+            return await utils.answer(message, "<emoji document_id=5233657262106485430>🤨</emoji> Incorrect flag")
 
         if "-u" in args:
-            self.db.set(NAME, "u", [])
+            self.db.set(__name__, "u", [])
         if "-c" in args:
-            self.db.set(NAME, "c", 0)
+            self.db.set(__name__, "c", 0)
+
         await message.delete()
-        return
 
     async def countcmd(self, message: Message):
-        """ - creates an inline button for counting a presses"""
-        if not self.db.get(NAME, "c"):
-            self.db.set(NAME, "c", 0)
-
-        if not self.db.get(NAME, "u"):
-            self.db.set(NAME, "u", [])
-
-        q = self.db.get(NAME, "c")
+        """ Creates an inline button for counting a presses"""
+        counts = self.db.get(__name__, "c")
 
         await self.inline.form(
             text=self.strings["count"].format(q),
@@ -60,19 +72,19 @@ class Counter(loader.Module):
 
     async def back(self, call: InlineCall):
         id = call.from_user.id
-        if id in self.db.get(NAME, "u"):
+        if id in self.db.get(__name__, "u"):
             return
 
-        q = self.db.get(NAME, "c")
-        q = q + 1
-        self.db.set(NAME, "c", q)
+        counts = self.db.get(__name__, "c")
+        counts += 1
+        self.db.set(__name__, "c", counts)
 
-        d = self.db.get(NAME, "u")
-        d.append(id)
-        self.db.set(NAME, "u", d)
+        users = self.db.get(__name__, "u")
+        users.append(id)
+        self.db.set(__name__, "u", users)
 
         await call.edit(
-            text=self.strings["count"].format(q),
+            text=self.strings["count"].format(counts),
             reply_markup=[
                 {
                     "text": "Click",

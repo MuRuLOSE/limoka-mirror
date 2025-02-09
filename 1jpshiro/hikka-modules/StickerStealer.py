@@ -1,146 +1,135 @@
-#              © Copyright 2024
+# ---------------------------------------------------------------------------------
+# Author: @shiro_hikka
+# Name: Sticker stealer
+# Description: Emoji / Sticker pickpocket
+# Commands: steal
+# ---------------------------------------------------------------------------------
+#              © Copyright 2025
 #
 # 🔒      Licensed under the GNU AGPLv3
 # 🌐 https://www.gnu.org/licenses/agpl-3.0.html
+# ---------------------------------------------------------------------------------
+# scope: hikka_only
 # meta developer: @shiro_hikka
+# meta banner: https://0x0.st/s/FIR0RnhUN5pZV5CZ6sNFEw/8KBz.jpg
+# ---------------------------------------------------------------------------------
+
+__version__ = (1, 0, 1)
 
 from .. import loader, utils
 from telethon.tl.types import Message
 import asyncio
 
+@loader.tds
 class StickerStealer(loader.Module):
-    """猫ちゃん | Emoji/sticker stealer"""
+    """Emoji / Sticker pickpocket"""
 
     strings = {
         "name": "StickerStealer",
-        "incorrect": "<emoji document_id=5231302159739395058>🔒</emoji> <i>It's not a sticker or emoji</i>"
+        "incorrect": "<emoji document_id=5233657262106485430>🤨</emoji> It's not a sticker or emoji"
     }
 
     def __init__(self):
         self.config = loader.ModuleConfig(
             loader.ConfigValue(
-                "emoji",
+                "Emoji pack",
                 "emsaved",
                 lambda: "Specify a name of your emoji pack",
             ),
             loader.ConfigValue(
-                "video_sticker",
+                "Animated sticker pack",
                 "vssaved",
-                lambda: "Specify a name if your video sticker pack"
+                lambda: "Specify a name of your animated sticker pack"
             ),
             loader.ConfigValue(
-                "static_sticker",
+                "Static sticker pack",
                 "sssaved",
                 lambda: "Specify a name of your static sticker pack"
             )
         )
 
+
     def checkType(self, reply, message):
         if hasattr(reply, "media"):
             if hasattr(reply.media, "document"):
-                if hasattr(reply.media.document, "attributes"):
-                    if len(reply.media.document.attributes) > 1:
-                        if hasattr(reply.media.document.attributes[1], "stickerset"):
-                            if hasattr(reply.media.document.attributes[0], "duration"):
-                                return 3
-                            else:
-                                return 4
+                mime_type = reply.media.document.mime_type.split('/')
+                if mime_type[1] == "webp":
+                    return 3
+                elif mime_type[1] == "webm":
+                    return 2
 
-        if not (reply.entities is None):
+        if reply.entities:
             return 1
-
-        if hasattr(message, "reply_to"):
-            if not (message.reply_to.quote_entities is None):
-                return 2
 
         else:
             return 0
 
+
     async def stealcmd(self, message: Message):
-        """ <reply / quote reply> - add an emoji or sticker to your pack\nEmoji: only one type of emoji at time is available"""
-        await utils.answer(message, "<i>....</i>")
+        """ <reply / quote reply> - add an emoji or sticker to your pack
+        Emoji: one type of emoji only is possible to be used at time"""
+        await utils.answer(message, "....")
         reply = await message.get_reply_message()
         bot = "Stickers"
 
-        dict_cfg = {
-            1: self.config["emoji"],
-            2: self.config["emoji"],
-            3: self.config["video_sticker"],
-            4: self.config["static_sticker"]
+        cfg_ref = {
+            1: self.config["Emoji pack"],
+            2: self.config["Animated sticker pack"],
+            3: self.config["Static sticker pack"]
         }
-
-        dict_type = {
+        entity_type = {
             1: "An emoji",
-            2: "An emoji",
-            3: "A sticker",
-            4: "A sticker"
+            2: "A sticker",
+            3: "A sticker"
         }
 
         async with self.client.conversation(bot) as bot:
-            send = await bot.send_message("/addsticker")
-            resp = await bot.get_response()
+            _entity_type = self.checkType(reply, message)
+            if _entity_type == 0:
+                return await utils.answer(message, self.strings["incorrect"])
 
-            await asyncio.sleep(1)
-            await send.delete()
-            await resp.delete()
-
-            _type = self.checkType(reply, message)
-
-            if any(_type == i for i in [1, 2]):
-                send = await bot.send_message(self.config['emoji'])
-            elif _type == 3:
-                send = await bot.send_message(self.config['video_sticker'])
-            elif _type == 4:
-                send = await bot.send_message(self.config['static_sticker'])
+            elif _entity_type == 1:
+                outgoing = await bot.send_message("/addemoji")
             else:
-                await utils.answer(
-                    message,
-                    self.strings["incorrect"]
-                )
+                outgoing = await bot.send_message("/addsticker")
+            response = await bot.get_response()
 
-                resp = await bot.get_response()
-                await resp.delete()
-                return
+            await asyncio.sleep(2)
+            await outgoing.delete()
+            await response.delete()
 
-            resp = await bot.get_response()
-            if resp.text == "Не выбран набор стикеров.":
-                await utils.answer(
-                    message,
-                    f"<i>Create {dict_type[_type].lower()} pack with public name</i> <b>{dict_cfg[_type]}</b>"
-                )
-                await resp.delete()
-                await send.delete()
-                return
+            if _entity_type == 1:
+                outgoing = await bot.send_message(self.config["emoji"])
+            elif _entity_type == 2:
+                outgoing = await bot.send_message(self.config["video_sticker"])
+            else:
+                outgoing = await bot.send_message(self.config["static_sticker"])
 
-            await asyncio.sleep(1)
-            await send.delete()
-            await resp.delete()
+            response = await bot.get_response()
+            await asyncio.sleep(2)
+            await response.delete()
+            await outgoing.delete()
 
-            if _type == 1:
+            if response.text == "Не выбран набор стикеров.":
+                return await utils.answer(message, f"Create {entity_type[_entity_type].lower()} pack with a public name <b>{cfg_ref[_entity_type]}</b>")
+
+            if _entity_type == 1:
                 emoji = reply.message
                 toSend = reply
-            elif _type == 2:
-                rep = message.reply_to
-                emoji = rep.quote_text
-                qoute_rep = rep.quote_entities[0].document_id
-                toSend = f"<emoji document_id={quote_rep}>{emoji}</emoji>"
             else:
                 emoji = reply.media.document.attributes[1].alt
                 toSend = reply
 
-            send = await bot.send_message(toSend)
-            resp = await bot.get_response()
-            await asyncio.sleep(1)
-            await send.delete()
-            await resp.delete()
+            outgoing = await bot.send_message(toSend)
+            response = await bot.get_response()
+            await asyncio.sleep(2)
+            await outgoing.delete()
+            await response.delete()
 
-            send = await bot.send_message(emoji)
-            resp = await bot.get_response()
-            await asyncio.sleep(1)
-            await send.delete()
-            await resp.delete()
+            outgoing = await bot.send_message(emoji)
+            response = await bot.get_response()
+            await asyncio.sleep(2)
+            await outgoing.delete()
+            await response.delete()
 
-            await utils.answer(
-                message,
-                f"<b>{dict_type[_type]} has been added</b>"
-            )
+            await utils.answer(message, f"<b>{entity_type[_entity_type]} added</b>")
