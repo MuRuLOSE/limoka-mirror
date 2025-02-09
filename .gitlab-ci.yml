@@ -31,12 +31,8 @@ commit_changes:
   script:
     - export COMMIT_TIME=$(git show -s --format=%ct $CI_COMMIT_SHA)
     - git add .
-    - if git diff-index --quiet HEAD --; then
-        echo "Нет изменений";
-      else
-        git commit -m "Обновление submodules $COMMIT_TIME";
-        git push --set-upstream origin $BRANCH_NAME;
-      fi
+    - git commit -m "Обновление submodules $COMMIT_TIME"
+    - git push --set-upstream origin $BRANCH_NAME
 
 create_merge_request:
   stage: create_mr
