@@ -49,6 +49,17 @@ repos = [
     "https://github.com/TheKsenon/MyHikkaModules",
 ]
 
+
+def is_repo_public(repo_url):
+    """Проверяет, доступен ли репозиторий без аутентификации."""
+    status = subprocess.run(
+        ["git", "ls-remote", repo_url],
+        stdout=subprocess.DEVNULL,
+        stderr=subprocess.DEVNULL,
+    )
+    return status.returncode == 0
+
+
 for repo_url in repos:
     repo_path = repo_url.replace("https://github.com/", "")
     owner, repo_name = repo_path.split("/")
@@ -56,6 +67,10 @@ for repo_url in repos:
 
     if not os.path.exists(owner):
         os.makedirs(owner)
+
+    if not is_repo_public(repo_url):
+        print(f"Пропускаем закрытый или недоступный репозиторий: {repo_url}")
+        continue
 
     try:
         subprocess.run(
@@ -88,5 +103,6 @@ for repo_url in repos:
                 ],
                 check=True,
             )
+            print(f"Добавлен subtree (ветка master): {repo_url} -> {local_path}")
         except subprocess.CalledProcessError:
-            pass
+            print(f"Ошибка при добавлении {repo_url}, пропускаем.")

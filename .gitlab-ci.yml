@@ -1,0 +1,43 @@
+stages:
+  - update
+  - parse
+  - commit
+  - create_mr
+
+variables:
+  BRANCH_NAME: "update-submodules-$(date +%Y-%m-%d)"
+
+before_script:
+  - apt update && apt install -y git curl jq
+  - git config --global user.email "ci-bot@example.com"
+  - git config --global user.name "CI Bot"
+  - git checkout -b $BRANCH_NAME
+
+update_submodules:
+  stage: update
+  script:
+    - python3 update.py
+
+parse_modules:
+  stage: parse
+  script:
+    - python3 parse.py
+
+commit_changes:
+  stage: commit
+  script:
+    - git add .
+    - git commit -m "Обновление submodules: $(date +%Y-%m-%d)" || echo "Нет изменений"
+    - git push --set-upstream origin $BRANCH_NAME
+
+create_merge_request:
+  stage: create_mr
+  script:
+    - |
+      curl --request POST --header "PRIVATE-TOKEN: $GITLAB_TOKEN" \
+        --data "source_branch=$BRANCH_NAME" \
+        --data "target_branch=main" \
+        --data "title=Обновление модулей $(date +%Y-%m-%d)" \
+        "https://gitlab.com/api/v4/projects/$CI_PROJECT_ID/merge_requests"
+  only:
+    - main
