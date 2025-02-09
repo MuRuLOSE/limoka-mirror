@@ -11,17 +11,17 @@ variables:
 update_submodules:
   stage: before
   script:
-  - apt update && apt install -y git curl jq
-  - git config --global user.email "ci-bot@example.com"
-  - git config --global user.name "CI Bot"
-  - git checkout -b $BRANCH_NAME
+    - apt update && apt install -y git curl jq
+    - git config --global user.email "gitlab_admin_9dee57@example.com"
+    - git config --global user.name "Administrator"
+    - git checkout -b $BRANCH_NAME
 
 update_submodules:
   stage: update
   script:
     - python3 update.py
 
-parse_modules:
+parse:
   stage: parse
   script:
     - python3 parse.py
@@ -31,8 +31,12 @@ commit_changes:
   script:
     - export COMMIT_TIME=$(git show -s --format=%ct $CI_COMMIT_SHA)
     - git add .
-    - git commit -m "Обновление submodules $COMMIT_TIME" || echo "Нет изменений"
-    - git push --set-upstream origin $BRANCH_NAME
+    - if git diff-index --quiet HEAD --; then
+        echo "Нет изменений";
+      else
+        git commit -m "Обновление submodules $COMMIT_TIME";
+        git push --set-upstream origin $BRANCH_NAME;
+      fi
 
 create_merge_request:
   stage: create_mr
