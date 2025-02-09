@@ -1,8 +1,20 @@
-#              © Copyright 2024
+# ---------------------------------------------------------------------------------
+# Author: @shiro_hikka
+# Name: Tracker
+# Description: Tracks the change history of usernames and nicknames of users
+# Commands: track, addtrack, deltrack, trackstat
+# ---------------------------------------------------------------------------------
+#              © Copyright 2025
 #
 # 🔒      Licensed under the GNU AGPLv3
 # 🌐 https://www.gnu.org/licenses/agpl-3.0.html
+# ---------------------------------------------------------------------------------
+# scope: hikka_only
 # meta developer: @shiro_hikka
+# meta banner: https://0x0.st/s/FIR0RnhUN5pZV5CZ6sNFEw/8KBz.jpg
+# ---------------------------------------------------------------------------------
+
+__version__ = (1, 1, 0)
 
 from .. import loader, utils
 from telethon.tl.types import Message
@@ -11,123 +23,61 @@ import datetime
 import time as t
 import re
 
-NAME = "Tracker"
-
+@loader.tds
 class Tracker(loader.Module):
-    """猫ちゃん | This module tracks the change history of an usernames and nicknames of the users you added to the track list"""
+    """Tracks the change history of usernames and nicknames of users"""
 
     strings = {
         "name": "Tracker",
-        "enabled": "The tracker was successfully enabled",
-        "disabled": "The tracker was successfully disabled",
-        "no_user": "Seems this user doesn't exist, try another ID/Username",
+        "enabled": "The tracker successfully enabled",
+        "disabled": "The tracker successfully disabled",
+        "no_user": "It seems this user doesn't exist, try another ID/Username",
         "change_status": "You just changed a status of tracking the user",
         "new_user": "You've successfully added a new user to track",
         "no_stat": "You're currently tracking no user",
         "only_one": "You're currently tracking only one user",
-        "exists": "This user already exists in the track list, he's ID is {}",
-        "cfg": "Specify a time-span for the cooldown before next check"
+        "removed": "You've removed this user from the track list and each ID was descendingly replaced",
+        "not_removed": "This user isn't added to the list so there's nobody to remove",
+        "exists": "This user's already included in the track list, he's ID is {}",
+        "cfg": "Specify a period of the cooldown between checks"
     }
 
     def __init__(self):
         self.config = loader.ModuleConfig(
             loader.ConfigValue(
-                "cooldown",
+                "Cooldown",
                 120,
                 lambda: self.strings["cfg"],
                 validator = loader.validators.Integer()
             )
         )
 
-    async def client_ready(self, client, db):
-        if not self.db.get(NAME, "status"):
-            self.db.set(NAME, "status", False)
-        if not self.db.get(NAME, "users"):
-            self.db.set(NAME, "users", {})
-        if not self.db.get(NAME, "time"):
-            self.db.set(NAME, "time", t.time())
+    async def client_ready(self):
+        if not self.db.get(__name__, "status"):
+            self.db.set(__name__, "status", False)
 
-    async def showStat(self, call: InlineCall, ID, action) -> None:
-        users = self.db.get(NAME, "users")
-        if not users:
-            await call.answer(self.strings["no_stat"])
-            return
+        if not self.db.get(__name__, "users"):
+            self.db.set(__name__, "users", {})
 
-        user = await self.client.get_entity(users[str(ID)]["user_id"])
+        if not self.db.get(__name__, "time"):
+            self.db.set(__name__, "time", t.time())
 
-        ID = ID + 1 if action == "next" else ID - 1 if action == "previous" else ID
-        if ID == 0:
-            ID = len(users)
-        elif ID > len(users):
-            ID = 1
 
-        ID = str(ID)
-        if action == "change_status":
-            users[ID]["active"] = not(users[ID]["active"])
-            status = "In progress" if users[ID]["active"] else "Inactive"
-            await call.answer(self.strings["change_status"])
-
-        elif action == "previous":
-            if len(users) == 1:
-                await call.answer(self.strings["only_one"])
-                return
-            status = "In progress" if users[ID]["active"] else "Inactive"
-
-        elif action == "next":
-            if len(users) == 1:
-                await call.answer(self.strings["only_one"])
-                return
-            status = "In progress" if users[ID]["active"] else "Inactive"
-
-        self.db.set(NAME, "users", users)
-
-        text = (
-            f"<b>ID:</b> <a href='tg://user?id={user.id}'>{user.id}</a>\n"+
-            "\n     <b>Nicknames</b>\n"+
-            "\n".join(users[ID]["nicks"])+
-            "\n\n     <b>Usernames</b>\n"+
-            "\n".join(users[ID]["unames"])
-        )
-
-        await call.edit(
-            text=text,
-            reply_markup=[
-                [
-                    {
-                        "text": f"Tracking status: {status}",
-                        "callback": lambda call: self.showStat(call, int(ID), "change_status")
-                    }
-                ],
-                [
-                    {
-                        "text": "Previous user",
-                        "callback": lambda call: self.showStat(call, int(ID), "previous")
-                    },
-                    {
-                        "text": "Next user",
-                        "callback": lambda call: self.showStat(call, int(ID), "next")
-                    }
-                ]
-            ]
-        )
-
-    @loader.command(ru_doc = " - включить / выключить слежку")
     async def trackcmd(self, message: Message):
-        """ - enable / disable the tracking"""
-        isEnDis = not(self.db.get(NAME, "status") is True)
-        self.db.set(NAME, "status", isEnDis)
+        """ Enable / Disable the tracking"""
+        status = not(self.db.get(__name__, "status"))
+        self.db.set(__name__, "status", status)
 
-        if isEnDis is True:
+        if status is True:
             await utils.answer(message, self.strings["enabled"])
 
-        elif isEnDis is False:
-            await utils.answer(message, self.strings["enabled"])
+        else:
+            await utils.answer(message, self.strings["disabled"])
 
-    @loader.command(ru_doc = " <ID / Имя пользователя> - добавить нового пользователя в слежку")
     async def addtrackcmd(self, message: Message):
         """ <ID / Username> - add a new user to track"""
         args = utils.get_args_raw(message)
-        users = self.db.get(NAME, "users")
+        users = self.db.get(__name__, "users")
         ID = len(users) + 1
         ID = str(ID)
 
@@ -135,13 +85,11 @@ class Tracker(loader.Module):
             user = await self.client.get_entity(int(args) if args.isdigit() else args)
 
         except Exception:
-            await utils.answer(message, self.strings["no_user"])
-            return
+            return await utils.answer(message, self.strings["no_user"])
 
         for _user in users:
             if users[_user]["user_id"] == user.id:
-                await utils.answer(message, self.strings["exists"].format(_user))
-                return
+                return await utils.answer(message, self.strings["exists"].format(_user))
 
         UID = user.id
         nick = f"{user.first_name} {user.last_name}" if user.last_name else user.first_name
@@ -166,24 +114,52 @@ class Tracker(loader.Module):
             "user_id": UID
         }
 
-        self.db.set(NAME, "users", users)
+        self.db.set(__name__, "users", users)
         await utils.answer(message, self.strings["new_user"])
 
-    @loader.command(ru_doc = " - посмотреть статистику по пользователям")
-    async def trackstatcmd(self, message: Message):
-        """ - view the statistic about users you tracks"""
-        users = self.db.get(NAME, "users")
+    async def deltrackcmd(self, message: Message):
+        """ Remove user from the track list"""
+        args = utils.get_args_raw(message)
+        users = self.db.get(__name__, "users")
         if not users:
-            await utils.answer(message, self.strings["no_stat"])
-            return
+            return await utils.answer(message, self.strings["no_stat"]+"\nWho do you suppose to remove")
+
+        try:
+            user = await self.client.get_entity(int(args) if args.isdigit() else args)
+
+        except Exception:
+            return await utils.answer(message, self.strings["no_user"])
+
+
+        for _user in users:
+            if users[_user]["user_id"] == user.id:
+                ID = int(_user)
+                del users[_user]
+
+                for i in range(ID, len(users)+1):
+                    if i == ID:
+                        continue
+
+                    users[str(i-1)] = users.pop(str(i))
+
+                self.db.set(__name__, "users", users)
+                return await utils.answer(message, self.strings["removed"])
+
+        await utils.answer(message, self.strings["not_removed"])
+
+    async def trackstatcmd(self, message: Message):
+        """ View the statistic about users you're tracking"""
+        users = self.db.get(__name__, "users")
+        if not users:
+            return await utils.answer(message, self.strings["no_stat"])
 
         ID = "1"
         user = await self.client.get_entity(users[ID]["user_id"])
         status = "In progress" if users[ID]["active"] else "Inactive"
 
         text = (
-            f"<b>ID:</b> <a href='tg://user?id={user.id}'>{user.id}</a>\n"+
-            "\n     <b>Nicknames</b>\n"+
+            f"<b>ID:</b> <a href='tg://user?id={user.id}'>{user.id}</a>"+
+            "\n\n     <b>Nicknames</b>\n"+
             "\n".join(users[ID]["nicks"])+
             "\n\n     <b>Usernames</b>\n"+
             "\n".join(users[ID]["unames"])
@@ -212,12 +188,69 @@ class Tracker(loader.Module):
             ]
         )
 
+
+    async def showStat(self, call: InlineCall, ID, action) -> None:
+        users = self.db.get(__name__, "users")
+        if not users:
+            return await call.answer(self.strings["no_stat"])
+
+        user = await self.client.get_entity(users[str(ID)]["user_id"])
+        ID = ID + 1 if action == "next" else ID - 1 if action == "previous" else ID
+
+        if ID == 0:
+            ID = len(users)
+        elif ID > len(users):
+            ID = 1
+
+        ID = str(ID)
+        if action == "change_status":
+            users[ID]["active"] = not(users[ID]["active"])
+            await call.answer(self.strings["change_status"])
+
+        else:
+            if len(users) == 1:
+                return await call.answer(self.strings["only_one"])
+
+        status = "In progress" if users[ID]["active"] else "Inactive"
+        self.db.set(__name__, "users", users)
+
+        text = (
+            f"<b>ID:</b> <a href='tg://user?id={user.id}'>{user.id}</a>"+
+            "\n\n     <b>Nicknames</b>\n"+
+            "\n".join(users[ID]["nicks"])+
+            "\n\n     <b>Usernames</b>\n"+
+            "\n".join(users[ID]["unames"])
+        )
+
+        await call.edit(
+            text=text,
+            reply_markup=[
+                [
+                    {
+                        "text": f"Tracking status: {status}",
+                        "callback": lambda call: self.showStat(call, int(ID), "change_status")
+                    }
+                ],
+                [
+                    {
+                        "text": "Previous user",
+                        "callback": lambda call: self.showStat(call, int(ID), "previous")
+                    },
+                    {
+                        "text": "Next user",
+                        "callback": lambda call: self.showStat(call, int(ID), "next")
+                    }
+                ]
+            ]
+        )
+
+
     async def watcher(self, message: Message):
-        diff = t.time() - self.db.get(NAME, "time")
-        if diff < self.config["cooldown"]:
+        diff = t.time() - self.db.get(__name__, "time")
+        if diff < self.config["Cooldown"]:
             return
 
-        users = self.db.get(NAME, "users")
+        users = self.db.get(__name__, "users")
         if not users:
             return
 
@@ -247,5 +280,5 @@ class Tracker(loader.Module):
                     )
                 )
 
-            self.db.set(NAME, "users", users)
-            self.db.set(NAME, "time", t.time())
+            self.db.set(__name__, "users", users)
+            self.db.set(__name__, "time", t.time())

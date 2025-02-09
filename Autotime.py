@@ -1,36 +1,50 @@
-#              © Copyright 2024
+# ---------------------------------------------------------------------------------
+# Author: @shiro_hikka
+# Name: Autotime
+# Description: Automatic stuff for your profile
+# Commands: autoname, autobio, cfgset
+# ---------------------------------------------------------------------------------
+#              © Copyright 2025
 #
 # 🔒      Licensed under the GNU AGPLv3
 # 🌐 https://www.gnu.org/licenses/agpl-3.0.html
+# ---------------------------------------------------------------------------------
+# scope: hikka_only
 # meta developer: @shiro_hikka
+# meta banner: https://0x0.st/s/FIR0RnhUN5pZV5CZ6sNFEw/8KBz.jpg
+# ---------------------------------------------------------------------------------
 
-import asyncio
+__version__ = (1, 0, 0)
+
 from telethon.tl.functions.account import UpdateProfileRequest
 from telethon.utils import get_display_name
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import Message
 
+from .. import loader, utils
 import re
 import datetime
-from .. import loader, utils
+import asyncio
 
+@loader.tds
 class Autotime(loader.Module):
-    """猫ちゃん | Automatic stuff for your profile"""
+    """Automatic stuff for your profile"""
 
     strings = {
         "name": "Autotime",
-        "no_time": "You didn't specify a {time}",
-        "cfg": "Positive or negative integer from -12 to 12"
+        "no_time": "<emoji document_id=5289755247298747469>😒</emoji> You didn't place a {time}",
+        "cfg": "Positive or negative integer from -12 to 12 inclusively"
     }
 
     def __init__(self):
         self.bio_on = False
         self.name_on = False
+
         self.config = loader.ModuleConfig(
             loader.ConfigValue(
-                "timezone",
+                "Timezone",
                 "0",
-                lambda: self.strings['cfg'],
+                lambda: self.strings["cfg"],
                 validator=loader.validators.Integer()
             )
         )
@@ -39,7 +53,7 @@ class Autotime(loader.Module):
         self.me = await self.client.get_me()
 
     def _time(self):
-        offset = datetime.timedelta(hours=self.config["timezone"])
+        offset = datetime.timedelta(hours=self.config["Timezone"])
         tz = datetime.timezone(offset)
         now = datetime.datetime.now(tz)
         time = now.strftime("%H:%M")
@@ -47,20 +61,20 @@ class Autotime(loader.Module):
 
 
     async def cfgsetcmd(self, message: Message):
-        """ <number> - to specify a timezone\nregarding to UTC+0"""
+        """ <number> - specify a timezone
+        Regarding to UTC+0"""
         tz = utils.get_args_raw(message)
         q = await self.invoke(
             "fconfig",
-            f"{self.strings('name')} timezone {tz}",
+            f"{self.strings('name')} Timezone {tz}",
             message.chat.id
         )
-        await self.client.delete_messages(
-            message.chat.id,
-            [message, q]
-        )
+
+        await self.client.delete_messages(message.chat.id, [message, q])
 
     async def autonamecmd(self, message: Message):
-        """ <text> - autotime in nickname | {time} must be specified in the text\nWrite without argument to disable"""
+        """ <text> - autotime in nickname | {time} must be placed in the text
+        Write without argument to disable"""
         args = utils.get_args_raw(message)
 
         if not args:
@@ -71,12 +85,10 @@ class Autotime(loader.Module):
             name.replace("  ", "")
 
             await self.client(UpdateProfileRequest(first_name=name))
-            await message.delete()
-            return
+            return await message.delete()
 
         if "{time}" not in args:
-            await utils.answer(message, self.strings["no_time"])
-            return
+            return await utils.answer(message, self.strings["no_time"])
 
         self.name_on = True
         await message.delete()
@@ -87,7 +99,8 @@ class Autotime(loader.Module):
             await asyncio.sleep(180)
 
     async def autobiocmd(self, message: Message):
-        """ <text> - autotime in bio | {time} must be specified in the text\nWrite without argument to disable"""
+        """ <text> - autotime in bio | {time} must be placed in the text
+        Write without argument to disable"""
         args = utils.get_args_raw(message)
 
         if not args:
@@ -98,12 +111,10 @@ class Autotime(loader.Module):
             bio.replace("  ", " ")
 
             await self.client(UpdateProfileRequest(about=bio))
-            await message.delete()
-            return
+            return await message.delete()
 
         if "{time}" not in args:
-            await utils.answer(message, self.strings["no_time"])
-            return
+            return await utils.answer(message, self.strings["no_time"])
 
         self.bio_on = True
         await message.delete()
@@ -112,4 +123,3 @@ class Autotime(loader.Module):
             text = args.replace("{time}", self._time())
             await self.client(UpdateProfileRequest(about=text))
             await asyncio.sleep(180)
-		
