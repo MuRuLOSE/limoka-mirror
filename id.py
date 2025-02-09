@@ -13,6 +13,8 @@
 # Commands: id, chatid, userid
 # scope: hikka_only
 # meta developer: @codrago_m
+# meta banner: https://mods.codrago.top/banners/id.png
+# meta pic: https://0x0.st/s/08-gkYETpY6T2EfdVLbjcw/8KPt.webp
 # ---------------------------------------------------------------------------------
 
 __version__ = (1, 0, 0)
@@ -22,6 +24,7 @@ from .. import loader, utils
 @loader.tds
 class ID(loader.Module):
     """ID of all!"""
+
     strings = {
     "name": "ID",
     "Error_reply": "<emoji document_id=5328145443106873128>✖️</emoji> <b>Where your reply?</b>",
