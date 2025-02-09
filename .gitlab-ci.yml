@@ -27,7 +27,7 @@ commit_changes:
   stage: commit
   script:
     - git add .
-    - git commit -m "Обновление submodules: $(date +%Y-%m-%d)" || echo "Нет изменений"
+    - git commit -m "Обновление submodules $(date +%Y-%m-%d)" || echo "Нет изменений"
     - git push --set-upstream origin $BRANCH_NAME
 
 create_merge_request:
