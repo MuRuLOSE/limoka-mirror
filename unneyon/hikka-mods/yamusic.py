@@ -280,6 +280,7 @@ class YaMusicMod(loader.Module):
         )
 
 
+    # Original code: https://github.com/FozerG/YandexMusicRPC/blob/302d3c83c59392dd32595844f0dd54a9439b70d8/main.py#L139
     async def get_now_playing(self, token: str):
         device_info = {"app_name": "Chrome", "type": 1}
         ws_proto = {
