@@ -8,7 +8,7 @@ stages:
 variables:
   BRANCH_NAME: "update-submodules"
 
-update_submodules:
+before_run:
   stage: before
   script:
     - apt update && apt install -y git curl jq
