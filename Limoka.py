@@ -92,7 +92,7 @@ class Limoka(loader.Module):
             "\n<b><emoji document_id=5418376169055602355>ℹ️</emoji> Description:</b> {description}"
             "\n<b><emoji document_id=5418299289141004396>🧑‍💻</emoji> Developer:</b> {username}"
             "\n\n{commands}"
-            "\n<emoji document_id=5411143117711624172>🪄</emoji> <code>{prefix}dlm https://git.vsecoder.dev/root/limoka/-/raw/main/{module_path}</code>"
+            "\n<emoji document_id=5411143117711624172>🪄</emoji> <code>{prefix}dlm {url}{module_path}</code>"
         ),
         "command_template": "{emoji} <code>{prefix}{command}</code> {description}\n",
         "emojis": {
@@ -134,7 +134,7 @@ class Limoka(loader.Module):
             "\n"
             "\n{commands}"
             "\n"
-            "\n<emoji document_id=5411143117711624172>🪄</emoji> <code>{prefix}dlm https://git.vsecoder.dev/root/limoka/-/raw/main/{module_path}</code>"
+            "\n<emoji document_id=5411143117711624172>🪄</emoji> <code>{prefix}dlm {url}{module_path}</code>"
         ),
         "command_template": "{emoji} <code>{prefix}{command}</code> {description}\n",
         "404": "<emoji document_id=5210952531676504517>❌</emoji> <b>Не найдено по запросу: <i>{query}</i></b>",
@@ -170,8 +170,8 @@ class Limoka(loader.Module):
         self.config = loader.ModuleConfig(
             loader.ConfigValue(
                 "limoka_url",
-                "https://git.vsecoder.dev/root/limoka/-/raw/main/modules.json",
-                "Mirror: https://raw.githubusercontent.com/MuRuLOSE/limoka-mirror/refs/heads/main/modules.json",
+                "https://git.vsecoder.dev/root/limoka/-/raw/main/",
+                "Mirror: https://raw.githubusercontent.com/MuRuLOSE/limoka-mirror/refs/heads/main/",
                 validator=loader.validators.String(),
             )
         )
@@ -218,7 +218,9 @@ class Limoka(loader.Module):
         if not args:
             return await utils.answer(message, self.strings["noargs"])
 
-        modules = await self.api.get_all_modules(self.config["limoka_url"])
+        modules = await self.api.get_all_modules(
+            self.config["limoka_url"] + "modules.json"
+        )
 
         await utils.answer(
             message,
@@ -297,6 +299,7 @@ class Limoka(loader.Module):
                     description=(
                         translated_desc if description else self.strings["no_info"]
                     ),
+                    url=self.config["limoka_url"],
                     username=dev_username,
                     commands="".join(commands),
                     prefix=self.get_prefix(),
@@ -312,6 +315,7 @@ class Limoka(loader.Module):
                     description=(
                         translated_desc if description else self.strings["no_info"]
                     ),
+                    url=self.config["limoka_url"],
                     username=dev_username,
                     commands="".join(commands),
                     prefix=self.get_prefix(),
@@ -331,7 +335,9 @@ class Limoka(loader.Module):
                 "message": self.strings["inlinenoargs"],
             }
 
-        modules = await self.api.get_all_modules(self.config["limoka_url"])
+        modules = await self.api.get_all_modules(
+            self.config["limoka_url"] + "modules.json"
+        )
 
         contents = []
 
@@ -392,6 +398,7 @@ class Limoka(loader.Module):
                 "message": self.strings["found"].format(
                     name=module_info["name"],
                     query=query.args,
+                    url=self.config["limoka_url"],
                     description=module_info["description"],
                     username=module_info["meta"].get("developer", "Unknown"),
                     commands="".join(self.generate_commands(module_info)),
