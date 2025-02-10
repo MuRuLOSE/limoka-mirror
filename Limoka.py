@@ -14,6 +14,7 @@ import json
 
 from telethon.types import Message
 from .. import utils, loader
+from ..types import InlineQuery
 
 
 logger = logging.getLogger("Limoka")
@@ -26,7 +27,7 @@ class Search:
         )
         self.query = query
 
-    def search_module(self, content):
+    def search_module(self, content, best_match: bool = True):
         if not os.path.exists("limoka_search"):
             os.makedirs("limoka_search")
 
@@ -56,27 +57,21 @@ class Search:
                 results = searcher.search(wildcard_query)
 
             if results:
-                best_match = results[0]
-                return best_match["path"]
+                if best_match:
+                    best_match = results[0]
+                    return best_match["path"]
+                else:
+                    return set([result["path"] for result in results])
             else:
                 return 0
 
 
 class LimokaAPI:
-    async def get_all_modules(self) -> dict:
+    async def get_all_modules(self, url: str) -> dict:
         async with aiohttp.ClientSession() as session:
-            async with session.get(
-                "https://git.vsecoder.dev/root/limoka/-/raw/main/modules.json"
-            ) as response:
+            async with session.get(url) as response:
                 text = await response.text()
                 return json.loads(text)
-
-    async def get_module_raw(self, module_path: str) -> str:
-        async with aiohttp.ClientSession() as session:
-            async with session.get(
-                f"https://git.vsecoder.dev/root/limoka/-/raw/main/{module_path}"
-            ) as response:
-                return await response.text()
 
 
 @loader.tds
@@ -119,6 +114,9 @@ class Limoka(loader.Module):
             "<emoji document_id=5472193350520021357>🛡</emoji> The limoka catalog is carefully moderated!",
             "<emoji document_id=5940434198413184876>🚀</emoji> Limoka performance allows you to search for modules quickly!",
         ],
+        "inline404": "Not found",
+        "inline?": "Request too short / not found",
+        "inlinenoargs": "Please, enter query",
     }
 
     strings_ru = {
@@ -147,7 +145,21 @@ class Limoka(loader.Module):
             "<emoji document_id=5472193350520021357>🛡</emoji> Каталог лимоки тщательно модерируется!",
             "<emoji document_id=5940434198413184876>🚀</emoji> Производительность лимоки позволяет вам искать модули с невероятной скоростью",
         ],
+        "inline404": "Не найдено",
+        "inline?": "Запрос слишком короткий / не найден",
+        "inlinenoargs": "Введите запрос",
     }
+
+    def translate_description(self, command):
+        user_lang = self._db.get("hikka.translations", "lang", "en")[0:2]
+
+        descriptions = {}
+
+        for lang, description in command.items():
+            if description:
+                descriptions.update({lang[0:2]: description})
+
+        return descriptions[user_lang]
 
     async def client_ready(self, client, db):
         self.client = client
@@ -155,9 +167,48 @@ class Limoka(loader.Module):
 
     def __init__(self):
         self.api = LimokaAPI()
+        self.config = loader.ModuleConfig(
+            loader.ConfigValue(
+                "limoka_url",
+                "https://git.vsecoder.dev/root/limoka/-/raw/main/modules.json",
+                "Mirror: https://raw.githubusercontent.com/MuRuLOSE/limoka-mirror/refs/heads/main/modules.json",
+                validator=loader.validators.String(),
+            )
+        )
+        self.name = self.strings["name"]
+
+    def generate_commands(self, module_info):
+        commands = []
+        command_count = 0
+        end_count_cmds = False
+
+        for func in module_info["commands"]:
+            if end_count_cmds:
+                break
+            for command, description in func.items():
+                if command_count == 9:
+                    commands.append("...")
+                    end_count_cmds = True
+                    break
+                command_count += 1
+                emoji = self.strings["emojis"].get(command_count, "")
+                commands.append(
+                    self.strings["command_template"].format(
+                        prefix=self.get_prefix(),
+                        command=html.escape(command.replace("cmd", "")),
+                        emoji=emoji,
+                        description=(
+                            html.escape(description)
+                            if description
+                            else self.strings["no_info"]
+                        ),
+                    )
+                )
+
+        return commands
 
     @loader.command()
-    async def limoka(self, message: Message):
+    async def limokacmd(self, message: Message):
         """[query] - Search module"""
         args = utils.get_args_raw(message)
 
@@ -167,7 +218,7 @@ class Limoka(loader.Module):
         if not args:
             return await utils.answer(message, self.strings["noargs"])
 
-        modules = await self.api.get_all_modules()
+        modules = await self.api.get_all_modules(self.config["limoka_url"])
 
         await utils.answer(
             message,
@@ -177,8 +228,6 @@ class Limoka(loader.Module):
                 query=args,
             ),
         )
-
-        modules = await self.api.get_all_modules()
 
         contents = []
 
@@ -219,32 +268,6 @@ class Limoka(loader.Module):
 
         dev_username = module_info["meta"].get("developer", "Unknown")
 
-        commands = []
-        command_count = 0
-        end_count_cmds = False
-        for func in module_info["commands"]:
-            if end_count_cmds:
-                break
-            for command, description in func.items():
-                if command_count == 9:
-                    commands.append("...")
-                    end_count_cmds = True
-                    break
-                command_count += 1
-                emoji = self.strings["emojis"].get(command_count, "")
-                commands.append(
-                    self.strings["command_template"].format(
-                        prefix=self.get_prefix(),
-                        command=html.escape(command.replace("cmd", "")),
-                        emoji=emoji,
-                        description=(
-                            html.escape(description)
-                            if description
-                            else self.strings["no_info"]
-                        ),
-                    )
-                )
-
         name = module_info["name"]
         description = (
             html.escape(module_info["description"])
@@ -261,6 +284,8 @@ class Limoka(loader.Module):
                 raw_text=description,
                 entities=message.entities,
             )
+
+        commands = self.generate_commands(module_info)
 
         try:
             await utils.answer_file(
@@ -293,3 +318,88 @@ class Limoka(loader.Module):
                     module_path=module_path,
                 ),
             )
+
+    @loader.inline_handler()
+    async def limoka(self, query: InlineQuery):
+        """[query] - Inline search modules"""
+
+        if not query.args:
+            return {
+                "title": "No query",
+                "description": self.strings["inlinenoargs"],
+                "thumb": "https://img.icons8.com/?size=100&id=NIWYFnJlcBfr&format=png&color=000000",
+                "message": self.strings["inlinenoargs"],
+            }
+
+        modules = await self.api.get_all_modules(self.config["limoka_url"])
+
+        contents = []
+
+        for module_path, module_data in modules.items():
+            contents.append(
+                {
+                    "id": module_path,
+                    "content": module_data["name"],
+                }
+            )
+
+        for module_path, module_data in modules.items():
+            contents.append(
+                {
+                    "id": module_path,
+                    "content": module_data["description"],
+                }
+            )
+
+        for module_path, module_data in modules.items():
+            for func in module_data["commands"]:
+                for command, description in func.items():
+                    contents.append({"id": module_path, "content": command})
+                    contents.append({"id": module_path, "content": description})
+
+        searcher = Search(query.args)
+
+        try:
+            results = searcher.search_module(contents, best_match=False)
+        except IndexError:
+            return {
+                "title": "Something went wrong...",
+                "description": self.strings["inline?"],
+                "thumb": "https://img.icons8.com/?size=100&id=rUSWMuGVdxJj&format=png&color=000000",
+                "message": self.strings["inline?"],
+            }
+
+        if not results:
+            return {
+                "title": "No results",
+                "description": self.strings["inline404"],
+                "thumb": "https://img.icons8.com/?size=100&id=olDsW0G3zz22&format=png&color=000000",
+                "message": self.strings["inline404"],
+            }
+
+        return [
+            {
+                "title": f"{utils.escape_html(module_info['name'])}",
+                "description": utils.escape_html(module_info["description"]),
+                "thumb": module_info["meta"].get(
+                    "pic",
+                    "https://img.icons8.com/?size=100&id=olDsW0G3zz22&format=png&color=000000",
+                ),
+                "photo": module_info["meta"].get(
+                    "banner",
+                    "https://habrastorage.org/getpro/habr/upload_files/9c7/5fa/c54/9c75fac54ebb0beaf89abd7d86b4787c.jpg",
+                ),
+                "message": self.strings["found"].format(
+                    name=module_info["name"],
+                    query=query.args,
+                    description=module_info["description"],
+                    username=module_info["meta"].get("developer", "Unknown"),
+                    commands="".join(self.generate_commands(module_info)),
+                    module_path=path.replace("\\", "/"),
+                    prefix=self.get_prefix(),
+                ),
+            }
+            for path in results
+            if (module_info := modules.get(path))
+            and (func := module_info.get("commands"))
+        ]
