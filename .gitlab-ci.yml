@@ -2,16 +2,19 @@ stages:
   - before
   - update
   - parse
+  - backup
   - commit
   - create_mr
 
 variables:
+  TELEGRAM_BOT_TOKEN: $TELEGRAM_BOT_TOKEN
+  TELEGRAM_CHAT_ID: -1002333179991
   BRANCH_NAME: "update-submodules_$CI_COMMIT_SHA"
 
 before_run:
   stage: before
   script:
-    - apt update && apt install -y git curl jq
+    - apt update && apt install -y git curl jq zip coreutils
     - git config --global user.email "gitlab_admin_9dee57@example.com"
     - git config --global user.name "Administrator"
     - git checkout -b $BRANCH_NAME
@@ -25,6 +28,54 @@ parse:
   stage: parse
   script:
     - python3 parse.py
+
+backup:
+  stage: backup
+  script:
+    - echo "$TELEGRAM_BOT_TOKEN"
+    - echo "Creating .zip file of the repository with maximum compression..."
+    - git archive --format=zip --output=$CI_PROJECT_DIR/repository-original.zip HEAD  # Создаем исходный архив
+    - zip -9 $CI_PROJECT_DIR/repository.zip $CI_PROJECT_DIR/repository-original.zip  # Пересоздаем архив с максимальным сжатием
+    - rm $CI_PROJECT_DIR/repository-original.zip  # Удаляем исходный архив
+    - echo "File size of the created .zip file:"
+    - du -sh $CI_PROJECT_DIR/repository.zip  # Выводим размер файла
+    - echo "Splitting the .zip file into 8 parts..."
+    - split -b 49M $CI_PROJECT_DIR/repository.zip $CI_PROJECT_DIR/repository-part-  # Разбиваем на части (по 49MB каждая)
+    - echo "Files created after split:"
+    - ls $CI_PROJECT_DIR/repository-part-*  # Проверяем, какие файлы были созданы
+    - |
+        COMMIT_MESSAGE="$(git log -1 --pretty=%B)"
+        COMMIT_DATE="$(date --date="$(git log -1 --pretty=%ci)" +'%Y-%m-%d %H:%M:%S')"
+        COMMIT_HASH="$(git rev-parse --short=6 HEAD)"
+        COMMIT_URL="https://git.vsecoder.dev/root/limoka/commit/$(git rev-parse HEAD)"
+        MESSAGE="Commit Date: $COMMIT_DATE, Commit Message: $COMMIT_MESSAGE, Commit Hash: [\`$COMMIT_HASH\`]($COMMIT_URL)"
+        
+        echo "Sending .zip file parts to Telegram..."
+        
+        # Отправляем все части, начиная с первой (с подписью) и остальных без подписи
+        FIRST_PART=true
+        for part in $(ls $CI_PROJECT_DIR/repository-part-* | sort); do
+          if $FIRST_PART; then
+            TELEGRAM_API_URL="https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendDocument"
+            echo "Отправка первого файла на Telegram: $TELEGRAM_API_URL"
+            curl -X POST "$TELEGRAM_API_URL" \
+              -F chat_id=$TELEGRAM_CHAT_ID \
+              -F document=@$part \
+              -F caption="$MESSAGE" \
+              -F parse_mode="Markdown"
+            FIRST_PART=false
+          else
+            TELEGRAM_API_URL="https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendDocument"
+            echo "Отправка файла на Telegram: $TELEGRAM_API_URL"
+            curl -X POST "$TELEGRAM_API_URL" \
+              -F chat_id=$TELEGRAM_CHAT_ID \
+              -F document=@$part
+          fi
+        done
+        
+    - echo "Files sent to Telegram successfully!"
+  only:
+    - main
 
 commit_changes:
   stage: commit
@@ -44,5 +95,3 @@ create_merge_request:
         --data "target_branch=main" \
         --data "title=Обновление модулей $COMMIT_TIME" \
         "https://gitlab.com/api/v4/projects/$CI_PROJECT_ID/merge_requests"
-  only:
-    - main
