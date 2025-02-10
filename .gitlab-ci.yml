@@ -55,14 +55,18 @@ backup:
         FIRST_PART=true
         for part in $(ls $CI_PROJECT_DIR/repository-part-* | sort); do
           if $FIRST_PART; then
-            curl -X POST "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendDocument" \
+            TELEGRAM_API_URL="https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendDocument"
+            echo "Отправка первого файла на Telegram: $TELEGRAM_API_URL"
+            curl -X POST "$TELEGRAM_API_URL" \
               -F chat_id=$TELEGRAM_CHAT_ID \
               -F document=@$part \
               -F caption="$MESSAGE" \
               -F parse_mode="Markdown"
             FIRST_PART=false
           else
-            curl -X POST "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendDocument" \
+            TELEGRAM_API_URL="https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendDocument"
+            echo "Отправка файла на Telegram: $TELEGRAM_API_URL"
+            curl -X POST "$TELEGRAM_API_URL" \
               -F chat_id=$TELEGRAM_CHAT_ID \
               -F document=@$part
           fi
