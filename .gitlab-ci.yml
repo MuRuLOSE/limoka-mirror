@@ -2,9 +2,9 @@ stages:
   - before
   - update
   - parse
+  - backup
   - commit
   - create_mr
-  - backup
 
 variables:
   TELEGRAM_BOT_TOKEN: $TELEGRAM_BOT_TOKEN
