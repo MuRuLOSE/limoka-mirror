@@ -47,7 +47,7 @@ backup:
         COMMIT_MESSAGE="$(git log -1 --pretty=%B)"
         COMMIT_DATE="$(date --date="$(git log -1 --pretty=%ci)" +'%Y-%m-%d %H:%M:%S')"
         COMMIT_HASH="$(git rev-parse --short=6 HEAD)"
-        COMMIT_URL="https://git.vsecoder.dev/test/test/commit/$(git rev-parse HEAD)"
+        COMMIT_URL="https://git.vsecoder.dev/root/limoka/commit/$(git rev-parse HEAD)"
         MESSAGE="Commit Date: $COMMIT_DATE, Commit Message: $COMMIT_MESSAGE, Commit Hash: [\`$COMMIT_HASH\`]($COMMIT_URL)"
         
         echo "Sending .zip file parts to Telegram..."
