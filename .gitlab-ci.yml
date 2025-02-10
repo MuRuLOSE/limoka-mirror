@@ -29,25 +29,6 @@ parse:
   script:
     - python3 parse.py
 
-commit_changes:
-  stage: commit
-  script:
-    - export COMMIT_TIME=$(git show -s --format=%ct $CI_COMMIT_SHA)
-    - git add .
-    - git commit -m "Обновление submodules $COMMIT_TIME"
-    - git push --set-upstream origin $BRANCH_NAME
-
-create_merge_request:
-  stage: create_mr
-  script:
-    - export COMMIT_TIME=$(git show -s --format=%ct $CI_COMMIT_SHA)
-    - |
-      curl --request POST --header "PRIVATE-TOKEN: $GITLAB_TOKEN" \
-        --data "source_branch=$BRANCH_NAME" \
-        --data "target_branch=main" \
-        --data "title=Обновление модулей $COMMIT_TIME" \
-        "https://gitlab.com/api/v4/projects/$CI_PROJECT_ID/merge_requests"
-
 backup:
   stage: backup
   script:
@@ -90,3 +71,22 @@ backup:
     - echo "Files sent to Telegram successfully!"
   only:
     - main
+
+commit_changes:
+  stage: commit
+  script:
+    - export COMMIT_TIME=$(git show -s --format=%ct $CI_COMMIT_SHA)
+    - git add .
+    - git commit -m "Обновление submodules $COMMIT_TIME"
+    - git push --set-upstream origin $BRANCH_NAME
+
+create_merge_request:
+  stage: create_mr
+  script:
+    - export COMMIT_TIME=$(git show -s --format=%ct $CI_COMMIT_SHA)
+    - |
+      curl --request POST --header "PRIVATE-TOKEN: $GITLAB_TOKEN" \
+        --data "source_branch=$BRANCH_NAME" \
+        --data "target_branch=main" \
+        --data "title=Обновление модулей $COMMIT_TIME" \
+        "https://gitlab.com/api/v4/projects/$CI_PROJECT_ID/merge_requests"
