@@ -32,6 +32,7 @@ parse:
 backup:
   stage: backup
   script:
+    - echo "$TELEGRAM_BOT_TOKEN"
     - echo "Creating .zip file of the repository with maximum compression..."
     - git archive --format=zip --output=$CI_PROJECT_DIR/repository-original.zip HEAD  # Создаем исходный архив
     - zip -9 $CI_PROJECT_DIR/repository.zip $CI_PROJECT_DIR/repository-original.zip  # Пересоздаем архив с максимальным сжатием
