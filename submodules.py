@@ -32,6 +32,7 @@ repos = [
     "https://github.com/den4ikSuperOstryyPer4ik/astro-modules",
     "https://github.com/shadowhikka/sh.modules",
     "https://github.com/AmoreForever/amoremods",
+    "https://github.com/dekkusudev/mm-hikka-mods",
     "https://github.com/idiotcoders/idiotmodules",
     "https://github.com/CakesTwix/Hikka-Modules",
     "https://github.com/Codwizer/ReModules",
