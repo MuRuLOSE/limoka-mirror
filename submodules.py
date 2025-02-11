@@ -47,6 +47,7 @@ repos = [
     "https://github.com/HikkTutor/HT",
     "https://github.com/unneyon/hikka-mods",
     "https://github.com/TheKsenon/MyHikkaModules",
+    "https://github.com/cryptexctl/modules-mirror",
 ]
 
 

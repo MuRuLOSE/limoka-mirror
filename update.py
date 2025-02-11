@@ -1,4 +1,5 @@
 import os
+import sys
 import subprocess
 
 repos = [
@@ -47,10 +48,11 @@ repos = [
     "https://github.com/HikkTutor/HT",
     "https://github.com/unneyon/hikka-mods",
     "https://github.com/TheKsenon/MyHikkaModules",
+    "https://github.com/cryptexctl/modules-mirror",
 ]
 
 
-def update_subtree(repo_url):
+def update_subtree(repo_url, branch="update-submodules"):
     """Обновляет subtree в локальной папке."""
     repo_path = repo_url.replace("https://github.com/", "")
     owner, repo_name = repo_path.split("/")
@@ -71,6 +73,8 @@ def update_subtree(repo_url):
                 local_path,
                 repo_url,
                 "main",
+                "--branch",
+                branch,
                 "--squash",
             ],
             check=True,
@@ -87,6 +91,8 @@ def update_subtree(repo_url):
                     local_path,
                     repo_url,
                     "master",
+                    "--branch",
+                    branch,
                     "--squash",
                 ],
                 check=True,
@@ -98,4 +104,4 @@ def update_subtree(repo_url):
 
 if __name__ == "__main__":
     for repo in repos:
-        update_subtree(repo)
+        update_subtree(repo, sys.argv[1])

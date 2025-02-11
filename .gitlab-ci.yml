@@ -22,7 +22,8 @@ before_run:
 update_submodules:
   stage: update
   script:
-    - python3 update.py
+    - python3 submodules.py
+    - python3 update.py $BRANCH_NAME
 
 parse:
   stage: parse
