@@ -1,0 +1,50 @@
+name: Mirror limoka Repository
+
+on:
+  schedule:
+    - cron: '0 * * * *'
+  push:
+    branches:
+      - main
+    # Исключаем запуск workflow при изменении файлов в .github/workflows
+    paths-ignore:
+      - '.github/workflows/**'
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout limoka repository from git.vsecoder.dev
+      run: |
+        git clone https://git.vsecoder.dev/root/limoka.git
+        cd limoka
+
+    - name: Restore GitHub workflow file if missing
+      run: |
+        cd limoka
+        # Проверка, существует ли директория .github/workflows
+        if [ ! -d ".github/workflows" ]; then
+          mkdir -p .github/workflows
+          # Загрузка файла workflow с Gist в нужную директорию
+          curl -L https://raw.githubusercontent.com/hikka-limoka/stuff/refs/heads/main/Mirror.yml -o .github/workflows/Mirror.yml
+        fi
+
+    - name: Set git user
+      run: |
+        git config --global user.email "actions@github.com"
+        git config --global user.name "GitHub Actions"
+
+    - name: Add and commit the workflow file (if needed)
+      run: |
+        cd limoka
+        git add .github/workflows/Mirror.yml
+        git commit -m "Add Mirror.yml workflow file" || echo "No changes to commit"
+
+    - name: Push to GitHub mirror repository
+      run: |
+        cd limoka
+        git remote add mirror https://$GITHUB_TOKEN@github.com/murulose/limoka-mirror.git
+        git push --mirror https://$GITHUB_TOKEN@github.com/murulose/limoka-mirror.git
+      env:
+        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
