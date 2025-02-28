@@ -24,12 +24,12 @@ before_run:
     - git config --global user.name "Administrator"
     - git fetch origin
     - git checkout main
+    - git remote set-url origin "https://oauth2:${GITLAB_TOKEN}@${REPO_URL}"
     - echo "Синхронизируем main с origin/main..."
     - git reset --hard origin/main
     - echo "Удаляем ветку ${BRANCH_NAME} из удалённого репозитория..."
     - git push origin --delete ${BRANCH_NAME} || echo "Ветка ${BRANCH_NAME} не существовала или не удалось удалить"
     - git checkout -b ${BRANCH_NAME}
-    - git remote set-url origin "https://oauth2:${GITLAB_TOKEN}@${REPO_URL}"
     - echo "Создаём новую ветку ${BRANCH_NAME}..."
     - git push origin ${BRANCH_NAME} --force || echo "Ошибка при создании ветки"
 
