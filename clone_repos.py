@@ -33,11 +33,11 @@ repos = [
     "https://github.com/anon97945/hikka-mods",
     "https://github.com/dorotorothequickend/DorotoroModules",
     "https://github.com/den4ikSuperOstryyPer4ik/astro-modules",
-    "https://github.com/shadowhikka/sh.modules",
+    "https://github.com/ssshdev/sh.modules",
     "https://github.com/AmoreForever/amoremods",
     "https://github.com/idiotcoders/idiotmodules",
     "https://github.com/CakesTwix/Hikka-Modules",
-    "https://github.com/Codwizer/ReModules",
+    "https://github.com/C0dwiz/H.Modules",
     "https://github.com/GD-alt/mm-hikka-mods",
     "https://github.com/HitaloSama/FTG-modules-repo",
     "https://github.com/SekaiYoneya/Friendly-telegram",
@@ -60,10 +60,8 @@ def is_repo_public(repo_url):
     return result.returncode == 0
 
 def is_repo_accessible(repo_url):
-    # Проверяем доступность репозитория через HTTP-запрос
     try:
         response = requests.head(repo_url, timeout=5)
-        # 200 — доступен, 404 — удалён, 403 — приватный или недоступен
         return response.status_code == 200
     except requests.RequestException:
         return False
@@ -86,22 +84,27 @@ def get_repo_path(repo_url):
     return repo_url.replace("https://github.com/", "")
 
 def clean_unused_repos():
-    # Получаем список всех директорий в корне
-    existing_dirs = {d for d in os.listdir() if os.path.isdir(d)}
-    # Формируем список директорий, которые должны быть (из repos)
+    current_dir = os.getcwd()
+    print(f"Текущая директория: {current_dir}")
+    
+    existing_dirs = {d for d in os.listdir(current_dir) if os.path.isdir(os.path.join(current_dir, d))}
+    print(f"Все директории до фильтрации: {existing_dirs}")
+    
+    if ".git" in existing_dirs:
+        existing_dirs.remove(".git")
+    
     expected_dirs = {get_repo_path(url).split('/')[0] for url in repos}
+    print(f"Ожидаемые директории: {expected_dirs}")
 
-    # Удаляем директории, которых нет в списке repos
     for dir_name in existing_dirs:
-        if dir_name not in expected_dirs:
-            dir_path = os.path.join(os.getcwd(), dir_name)
+        dir_path = os.path.join(current_dir, dir_name)
+        if dir_name not in expected_dirs and dir_name != ".git":  # Двойная проверка
             shutil.rmtree(dir_path, ignore_errors=True)
             print(f"Удалена директория, отсутствующая в списке repos: {dir_path}")
 
-    # Проверяем доступность репозиториев и удаляем недоступные
     for repo_url in repos:
         repo_path = get_repo_path(repo_url)
-        local_path = os.path.join(os.getcwd(), repo_path)
+        local_path = os.path.join(current_dir, repo_path)
         if os.path.exists(local_path):
             if not is_repo_accessible(repo_url):
                 shutil.rmtree(local_path, ignore_errors=True)
@@ -137,6 +140,6 @@ def clone_or_update_repo(repo_url):
         print(f"Ошибка при клонировании {repo_url}: {e.output}, пропускаем.")
 
 if __name__ == "__main__":
-    clean_unused_repos()  # Удаляем ненужные и недоступные репозитории
+    clean_unused_repos()
     for repo_url in repos:
         clone_or_update_repo(repo_url)
