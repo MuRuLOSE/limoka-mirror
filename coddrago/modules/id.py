@@ -14,12 +14,13 @@
 # scope: hikka_only
 # meta developer: @codrago_m
 # meta banner: https://mods.codrago.top/banners/id.png
-# meta pic: https://0x0.st/s/08-gkYETpY6T2EfdVLbjcw/8KPt.webp
+# meta pic: https://kappa.lol/p3wVI
 # ---------------------------------------------------------------------------------
 
 __version__ = (1, 0, 0)
 
 from .. import loader, utils
+import telethon as tl
 
 @loader.tds
 class ID(loader.Module):
@@ -35,6 +36,16 @@ class ID(loader.Module):
     "Error_reply": "<emoji document_id=5328145443106873128>✖️</emoji> <b>Где твой реплай?</b>",
     "not_chat": "<emoji document_id=5328145443106873128>✖️</emoji> <b>Это не чат!</b>"
 }
+
+    def __init__(self):
+        self.config = loader.ModuleConfig(
+            loader.ConfigValue(
+                "bot_api_id",
+                "True",
+                "Bot API id for channels and chats",
+                validator=loader.validators.Boolean(),
+            ),
+        )
 
     
     async def useridcmd(self, message):
@@ -52,7 +63,14 @@ class ID(loader.Module):
         except ValueError:
             user = await message.client.get_entity(message.sender_id)
 
-        await utils.answer(message, f"<emoji document_id=5301034196490268401>🪐</emoji> <bUser:</b> <code>{user.first_name}</code>\n<emoji document_id=5314260526803462610>😴</emoji> <b>User ID:</b> <code>{user.id}</code>")
+        if isinstance(user, tl.types.User):
+            await utils.answer(message, f"<emoji document_id=5301034196490268401>🪐</emoji> <bUser:</b> <code>{user.first_name}</code>\n<emoji document_id=5314260526803462610>😴</emoji> <b>User ID:</b> <code>{user.id}</code>")
+
+        elif self.config["bot_api_id"] == True:
+            await utils.answer(message, f"<emoji document_id=5301034196490268401>🪐</emoji> <bUser:</b> <code>{user.title}</code>\n<emoji document_id=5314260526803462610>😴</emoji> <b>User ID:</b> <code>-100{user.id}</code>")
+
+        else:
+            await utils.answer(message, f"<emoji document_id=5301034196490268401>🪐</emoji> <bUser:</b> <code>{user.title}</code>\n<emoji document_id=5314260526803462610>😴</emoji> <b>User ID:</b> <code>{user.id}</code>")
 
     async def idcmd(self, message):
         """| Get your ID"""
@@ -64,4 +82,8 @@ class ID(loader.Module):
     async def chatidcmd(self, message):
         """| Get chat ID"""
 
-        await utils.answer(message, f"<emoji document_id=5301034196490268401>🪐</emoji><code> {message.chat.title}</code>\n<emoji document_id=5314260526803462610>😴</emoji> <b>Chat ID</b>: <code>{message.peer_id.channel_id}</code>")
+        if self.config["bot_api_id"] == True:
+            await utils.answer(message, f"<emoji document_id=5301034196490268401>🪐</emoji><code> {message.chat.title}</code>\n<emoji document_id=5314260526803462610>😴</emoji> <b>Chat ID</b>: <code>-100{message.peer_id.channel_id}</code>")
+
+        else:
+            await utils.answer(message, f"<emoji document_id=5301034196490268401>🪐</emoji><code> {message.chat.title}</code>\n<emoji document_id=5314260526803462610>😴</emoji> <b>Chat ID</b>: <code>{message.peer_id.channel_id}</code>")

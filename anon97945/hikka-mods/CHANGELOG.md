@@ -1,5 +1,13 @@
 # 📝 Apodiktum Modules Changelog:
 
+## 🆕 Version 2.0.64
+### 📃 module updates:
+- no_ttl | fixed for forums
+
+## 🆕 Version 2.0.63
+### 📕 new modules:
+- no_ttl | Send messages without ttl by removing ttl before and set it again after.
+
 ## 🆕 Version 2.0.62
 ### ℹ️ General:
 - updated addons copyright and media link

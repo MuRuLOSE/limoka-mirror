@@ -7,9 +7,9 @@ import logging
 logger = logging.getLogger(__name__)
 
 # meta developer: @kmodules
-# changelog: Фикс, добавлена команда .setmodel
+# changelog: Фиксы, обновитесь обязательно 
 
-__version__ = (1, 5, 2)
+__version__ = (1, 5, 4)
 version = __version__
 
 @loader.tds
@@ -25,7 +25,7 @@ class KsenonGPTMod(loader.Module):
         "image_generated": "<emoji document_id=5766879414704935108>🖼</emoji> <b>Image generated!</b>\n\n<emoji document_id=5994544674604322765>🤖</emoji> <b>Model:</b> <code>{}</code>\n<emoji document_id=5877465816030515018>🔗</emoji> <b>Request:</b> <code>{}</code>\n\n<emoji document_id=5877307202888273539>📥</emoji> <b>Link:</b> {}",
         "error_blocked": "<emoji document_id=5832546462478635761>🔒</emoji> <b>You have been blocked!</b>\n\n<emoji document_id=5879896690210639947>🗑</emoji><b>NSFW | politics etc. generation is prohibited.</b>",
         "error_occurred": "<emoji document_id=5881702736843511327>⚠️</emoji> <b>An error occurred!</b>\n\n<emoji document_id=5967816500415827773>💻</emoji> <b>Model:</b> {}\n<emoji document_id=5874986954180791957>📶</emoji> <b>Server status, code:</b> {}\n<emoji document_id=5832251986635920010>➡️</emoji> <b>Error:</b> {}",
-        "text_models": "<emoji document_id=5879585266426973039>🌐</emoji> <b>Text models:</b>\n\n<blockquote>o1-preview\ngpt-4o\nclaude-3-5-sonnet\nsearchgpt (GPT + Internet)\nblackboxai-pro\nclaude-3-5-sonnet-20240620\nclaude-3-haiku-ddg\ngemini-1.5-pro-latest\nllama-3.1-405b\ngpt-3.5-turbo-202201\ngpt-4o-mini-ddg\ngpt-4o-2024-05-13\nmicrosoft/Phi-3.5-mini-instruct\nQwen/Qwen2.5-Coder-32B-Instruct\nQwen/QwQ-32B-Preview</blockquote>\n\n<emoji document_id=5843908536467198016>✅️</emoji> <b>We have 167 models!</b>\n<emoji document_id=5778423822940114949>🛡</emoji><b> </b><a href=\"api.theksenon.pro/v1/api/text/models\"><b>api.theksenon.pro/v1/api/text/models</b></a>",
+        "text_models": "<emoji document_id=5879585266426973039>🌐</emoji> <b>Text models:</b>\n\n<blockquote>o1-preview\ngpt-4o\nclaude-3-5-sonnet\nsearchgpt (GPT + Internet)\nblackboxai-pro\nclaude-3-5-sonnet-20240620\nclaude-3-haiku-ddg\ngemini-1.5-pro-latest\nllama-3.1-405b\ngpt-3.5-turbo-202201\ngpt-4o-mini-ddg\ngpt-4o-2024-05-13\nmicrosoft/Phi-3.5-mini-instruct\nQwen/Qwen2.5-Coder-32B-Instruct\nQwen/QwQ-32B-Preview</blockquote>\n\n<emoji document_id=5843908536467198016>✅️</emoji> <b>We have 150+ models!</b>\n<emoji document_id=5778423822940114949>🛡</emoji><b><b> https://t.me/ksenonapi_models</b>",
         "image_models": "<emoji document_id=5879585266426973039>🌐</emoji> <b>Image models:</b>\n\n<blockquote><b>flux-pro-mg\nflux-dev\nsd3-ultra\npixart-alpha</b></blockquote>",
         "no_args": "<emoji document_id=5881702736843511327>⚠️</emoji> <b>No arguments provided!</b>",
         "update_available": "<emoji document_id=5420323339723881652>⚠️</emoji> <b>KsenonGPT update available!</b>\n\n<emoji document_id=5449683594425410231>🔼</emoji> <b>New version: {}</b>\n<emoji document_id=5447183459602669338>🔽</emoji> <b>Current version: {}</b>\n\n<emoji document_id=5447410659077661506>🌐</emoji> <b>Changelog:</b>\n<emoji document_id=5458603043203327669>🔔</emoji> <i>{}</i>\n\n<emoji document_id=5206607081334906820>✔️</emoji> <b>Command to update:</b>\n<code>.dlmod https://raw.githubusercontent.com/TheKsenon/MyHikkaModules/refs/heads/main/ksenongpt.py</code>",
@@ -45,7 +45,7 @@ class KsenonGPTMod(loader.Module):
         "image_generated": "<emoji document_id=5766879414704935108>🖼</emoji> <b>Изображение сгенерировано!</b>\n\n<emoji document_id=5994544674604322765>🤖</emoji> <b>Модель:</b> <code>{}</code>\n<emoji document_id=5877465816030515018>🔗</emoji> <b>Запрос:</b> <code>{}</code>\n\n<emoji document_id=5877307202888273539>📥</emoji> <b>Ссылка:</b> {}",
         "error_blocked": "<emoji document_id=5832546462478635761>🔒</emoji> <b>Вы были заблокированы!</b>\n\n<emoji document_id=5879896690210639947>🗑</emoji><b>Запрещено генерировать NSFW | политика и т.д.</b>",
         "error_occurred": "<emoji document_id=5881702736843511327>⚠️</emoji> <b>Произошла ошибка!</b>\n\n<emoji document_id=5967816500415827773>💻</emoji> <b>Модель:</b> {}\n<emoji document_id=5874986954180791957>📶</emoji> <b>Статус сервера, код:</b> {}\n<emoji document_id=5832251986635920010>➡️</emoji> <b>Ошибка:</b> {}",
-        "text_models": "<emoji document_id=5879585266426973039>🌐</emoji> <b>Текстовые модели:</b>\n\n<blockquote>o1-preview\ngpt-4o\nclaude-3-5-sonnet\nsearchgpt (GPT + Internet)\nblackboxai-pro\nclaude-3-5-sonnet-20240620\nclaude-3-haiku-ddg\ngemini-1.5-pro-latest\nllama-3.1-405b\ngpt-3.5-turbo-202201\ngpt-4o-mini-ddg\ngpt-4o-2024-05-13\nmicrosoft/Phi-3.5-mini-instruct\nQwen/Qwen2.5-Coder-32B-Instruct\nQwen/QwQ-32B-Preview</blockquote>\n\n<emoji document_id=5843908536467198016>✅️</emoji> <b>У нас 167 моделей!</b>\n<emoji document_id=5778423822940114949>🛡</emoji><b> </b><a href=\"api.theksenon.pro/v1/api/text/models\"><b>api.theksenon.pro/v1/api/text/models</b></a>",
+        "text_models": "<emoji document_id=5879585266426973039>🌐</emoji> <b>Текстовые модели:</b>\n\n<blockquote>o1-preview\ngpt-4o\nclaude-3-5-sonnet\nsearchgpt (GPT + Internet)\nblackboxai-pro\nclaude-3-5-sonnet-20240620\nclaude-3-haiku-ddg\ngemini-1.5-pro-latest\nllama-3.1-405b\ngpt-3.5-turbo-202201\ngpt-4o-mini-ddg\ngpt-4o-2024-05-13\nmicrosoft/Phi-3.5-mini-instruct\nQwen/Qwen2.5-Coder-32B-Instruct\nQwen/QwQ-32B-Preview</blockquote>\n\n<emoji document_id=5843908536467198016>✅️</emoji> <b>У нас 150+ моделей!</b>\n<emoji document_id=5778423822940114949>🛡</emoji><b><b> https://t.me/ksenonapi_models</b>",
         "image_models": "<emoji document_id=5879585266426973039>🌐</emoji> <b>Модели для изображений:</b>\n\n<blockquote><b>flux-pro-mg\nflux-dev\nsd3-ultra\npixart-alpha</b></blockquote>",
         "no_args": "<emoji document_id=5881702736843511327>⚠️</emoji> <b>Не указаны аргументы!</b>",
         "update_available": "<emoji document_id=5420323339723881652>⚠️</emoji> <b>Доступно обновление KsenonGPT!</b>\n\n<emoji document_id=5449683594425410231>🔼</emoji> <b>Новая версия: {}</b>\n<emoji document_id=5447183459602669338>🔽</emoji> <b>Текущая версия: {}</b>\n\n<emoji document_id=5447410659077661506>🌐</emoji> <b>Список изменений:</b>\n<emoji document_id=5458603043203327669>🔔</emoji> <i>{}</i>\n\n<emoji document_id=5206607081334906820>✔️</emoji> <b>Команда для обновления:</b>\n<code>.dlmod https://raw.githubusercontent.com/TheKsenon/MyHikkaModules/refs/heads/main/ksenongpt.py</code>",
@@ -74,12 +74,12 @@ class KsenonGPTMod(loader.Module):
     def _create_model_buttons(self):
         buttons = []
         models = [
-            ("o1-preview", "o1-preview"),
+            ("DeepSeek R1", "deepseek-r1"),
             ("GPT-4o", "gpt-4o"),
             ("Claude 3.5 Sonnet", "claude-3-5-sonnet"),
             ("SearchGPT", "searchgpt"),
-            ("Claude 3 Haiku", "claude-3-haiku-ddg"),
-            ("GPT-4o Mini", "gpt-4o-mini-ddg")
+            ("P1", "p1"),
+            ("Gemini 2.0 Flash", "gemini-flash-2.0")
         ]
         
         row = []
