@@ -20,6 +20,7 @@ before_run:
       when: on_success
     - when: never
   script:
+    - pip install requests
     - git config --global user.email "gitlab_admin_9dee57@example.com"
     - git config --global user.name "Administrator"
     - git fetch origin
@@ -130,3 +131,13 @@ backup:
   only:
     - main
 
+
+parse:
+  stage: parse
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "schedule" || ($CI_PIPELINE_SOURCE == "merge_request_event" && $CI_MERGE_REQUEST_EVENT_TYPE == "merged")'
+      when: on_success
+    - when: never
+  script:
+    - echo "Запускаем parse после закрытия MR или по расписанию..."
+    - python3 parse.py || echo "Скрипт parse.py не найден или завершился с ошибкой"

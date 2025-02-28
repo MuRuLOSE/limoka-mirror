@@ -2,6 +2,7 @@ import os
 import shutil
 import subprocess
 import re
+import requests
 
 repos = [
     "https://github.com/DziruModules/hikkamods",
@@ -58,6 +59,15 @@ def is_repo_public(repo_url):
     )
     return result.returncode == 0
 
+def is_repo_accessible(repo_url):
+    # Проверяем доступность репозитория через HTTP-запрос
+    try:
+        response = requests.head(repo_url, timeout=5)
+        # 200 — доступен, 404 — удалён, 403 — приватный или недоступен
+        return response.status_code == 200
+    except requests.RequestException:
+        return False
+
 def is_valid_filename(filename):
     invalid_chars = r'[<>:"/\\|?*]'
     return not re.search(invalid_chars, filename)
@@ -71,6 +81,31 @@ def rename_invalid_files(local_path):
                 new_path = os.path.join(root, new_file)
                 os.rename(old_path, new_path)
                 print(f"Переименован файл: {old_path} -> {new_path}")
+
+def get_repo_path(repo_url):
+    return repo_url.replace("https://github.com/", "")
+
+def clean_unused_repos():
+    # Получаем список всех директорий в корне
+    existing_dirs = {d for d in os.listdir() if os.path.isdir(d)}
+    # Формируем список директорий, которые должны быть (из repos)
+    expected_dirs = {get_repo_path(url).split('/')[0] for url in repos}
+
+    # Удаляем директории, которых нет в списке repos
+    for dir_name in existing_dirs:
+        if dir_name not in expected_dirs:
+            dir_path = os.path.join(os.getcwd(), dir_name)
+            shutil.rmtree(dir_path, ignore_errors=True)
+            print(f"Удалена директория, отсутствующая в списке repos: {dir_path}")
+
+    # Проверяем доступность репозиториев и удаляем недоступные
+    for repo_url in repos:
+        repo_path = get_repo_path(repo_url)
+        local_path = os.path.join(os.getcwd(), repo_path)
+        if os.path.exists(local_path):
+            if not is_repo_accessible(repo_url):
+                shutil.rmtree(local_path, ignore_errors=True)
+                print(f"Удалена директория недоступного или удалённого репозитория: {local_path}")
 
 def clone_or_update_repo(repo_url):
     repo_path = repo_url.replace("https://github.com/", "")
@@ -102,5 +137,6 @@ def clone_or_update_repo(repo_url):
         print(f"Ошибка при клонировании {repo_url}: {e.output}, пропускаем.")
 
 if __name__ == "__main__":
+    clean_unused_repos()  # Удаляем ненужные и недоступные репозитории
     for repo_url in repos:
         clone_or_update_repo(repo_url)
