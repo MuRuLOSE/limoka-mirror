@@ -1,10 +1,10 @@
 stages:
   - before
   - update
+  - parse
   - commit
   - create_mr
   - backup
-  - parse
 
 variables:
   BRANCH_NAME: "update-submodules_${CI_COMMIT_SHA}"
