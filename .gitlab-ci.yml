@@ -1,49 +1,102 @@
 stages:
   - before
   - update
-  - parse
-  - backup
   - commit
   - create_mr
+  - backup
 
 variables:
-  TELEGRAM_BOT_TOKEN: $TELEGRAM_BOT_TOKEN
-  TELEGRAM_CHAT_ID: -1002333179991
-  BRANCH_NAME: "update-submodules_$CI_COMMIT_SHA"
+  BRANCH_NAME: "update-submodules_${CI_COMMIT_SHA}"
+  REPO_URL: "git.vsecoder.dev/MuRuLOSE/limoka-test.git"
+  GITLAB_TOKEN: $GITLAB_TOKEN
+  GIT_DEPTH: 0 
+
+image: python:3.9
 
 before_run:
   stage: before
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "schedule"'
+      when: on_success
+    - when: never
   script:
-    - apt update && apt install -y git curl jq zip coreutils
     - git config --global user.email "gitlab_admin_9dee57@example.com"
     - git config --global user.name "Administrator"
-    - git checkout -b $BRANCH_NAME
+    - git fetch origin
+    - git checkout main
+    - echo "Синхронизируем main с origin/main..."
+    - git reset --hard origin/main
+    - echo "Удаляем ветку ${BRANCH_NAME} из удалённого репозитория..."
+    - git push origin --delete ${BRANCH_NAME} || echo "Ветка ${BRANCH_NAME} не существовала или не удалось удалить"
+    - git checkout -b ${BRANCH_NAME}
+    - git remote set-url origin "https://oauth2:${GITLAB_TOKEN}@${REPO_URL}"
+    - echo "Создаём новую ветку ${BRANCH_NAME}..."
+    - git push origin ${BRANCH_NAME} --force || echo "Ошибка при создании ветки"
 
-update_submodules:
+update_repos:
   stage: update
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "schedule"'
+      when: on_success
+    - when: never
   script:
-    - python3 submodules.py
-    - python3 update.py $BRANCH_NAME
+    - git checkout ${BRANCH_NAME}
+    - echo "Cloning and update repositories..."
+    - python3 clone_repos.py
+    - git add *
+    - git commit -m "Added and updated repositories $(date +'%Y-%m-%d %H:%M:%S')" || echo "No changes for commit"
+    - git remote set-url origin "https://oauth2:${GITLAB_TOKEN}@${REPO_URL}"
+    - git push origin ${BRANCH_NAME} --force
 
-parse:
-  stage: parse
+commit_changes:
+  stage: commit
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "schedule"'
+      when: on_success
+    - when: never
   script:
-    - python3 parse.py
+    - git checkout ${BRANCH_NAME}
+    - git add * || echo "No changes"
+    - git commit -m "Финальный коммит $(date +'%Y-%m-%d %H:%M:%S')" || echo "No changes for final commit"
+    - git remote set-url origin "https://oauth2:${GITLAB_TOKEN}@${REPO_URL}"
+    - git push origin ${BRANCH_NAME} --force
+
+create_merge_request:
+  stage: create_mr
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "schedule"'
+      when: on_success
+    - when: never
+  script:
+    - echo "Checking branch status before MR..."
+    - git fetch origin
+    - git log ${BRANCH_NAME} -1
+    - git diff origin/main origin/${BRANCH_NAME} || echo "No diff between main and ${BRANCH_NAME}"
+    - echo "Creating Merge Request..."
+    - |
+      curl --request POST \
+           --header "PRIVATE-TOKEN: ${GITLAB_TOKEN}" \
+           --data "source_branch=${BRANCH_NAME}" \
+           --data "target_branch=main" \
+           --data "title=Обновление репозиториев $(date +'%Y-%m-%d %H:%M:%S')" \
+           "https://git.vsecoder.dev/api/v4/projects/MuRuLOSE%2Flimoka-test/merge_requests" \
+           || echo "MR creating failure"
+
 
 backup:
   stage: backup
   script:
     - echo "$TELEGRAM_BOT_TOKEN"
     - echo "Creating .zip file of the repository with maximum compression..."
-    - git archive --format=zip --output=$CI_PROJECT_DIR/repository-original.zip HEAD  # Создаем исходный архив
-    - zip -9 $CI_PROJECT_DIR/repository.zip $CI_PROJECT_DIR/repository-original.zip  # Пересоздаем архив с максимальным сжатием
-    - rm $CI_PROJECT_DIR/repository-original.zip  # Удаляем исходный архив
+    - git archive --format=zip --output=$CI_PROJECT_DIR/repository-original.zip HEAD
+    - zip -9 $CI_PROJECT_DIR/repository.zip $CI_PROJECT_DIR/repository-original.zip
+    - rm $CI_PROJECT_DIR/repository-original.zip
     - echo "File size of the created .zip file:"
-    - du -sh $CI_PROJECT_DIR/repository.zip  # Выводим размер файла
+    - du -sh $CI_PROJECT_DIR/repository.zip
     - echo "Splitting the .zip file into 8 parts..."
-    - split -b 49M $CI_PROJECT_DIR/repository.zip $CI_PROJECT_DIR/repository-part-  # Разбиваем на части (по 49MB каждая)
+    - split -b 49M $CI_PROJECT_DIR/repository.zip $CI_PROJECT_DIR/repository-part-
     - echo "Files created after split:"
-    - ls $CI_PROJECT_DIR/repository-part-*  # Проверяем, какие файлы были созданы
+    - ls $CI_PROJECT_DIR/repository-part-*
     - |
         COMMIT_MESSAGE="$(git log -1 --pretty=%B)"
         COMMIT_DATE="$(date --date="$(git log -1 --pretty=%ci)" +'%Y-%m-%d %H:%M:%S')"
@@ -53,7 +106,6 @@ backup:
         
         echo "Sending .zip file parts to Telegram..."
         
-        # Отправляем все части, начиная с первой (с подписью) и остальных без подписи
         FIRST_PART=true
         for part in $(ls $CI_PROJECT_DIR/repository-part-* | sort); do
           if $FIRST_PART; then
@@ -78,21 +130,3 @@ backup:
   only:
     - main
 
-commit_changes:
-  stage: commit
-  script:
-    - export COMMIT_TIME=$(git show -s --format=%ct $CI_COMMIT_SHA)
-    - git add .
-    - git commit -m "Обновление submodules $COMMIT_TIME"
-    - git push --set-upstream origin $BRANCH_NAME
-
-create_merge_request:
-  stage: create_mr
-  script:
-    - export COMMIT_TIME=$(git show -s --format=%ct $CI_COMMIT_SHA)
-    - |
-      curl --request POST --header "PRIVATE-TOKEN: $GITLAB_TOKEN" \
-        --data "source_branch=$BRANCH_NAME" \
-        --data "target_branch=main" \
-        --data "title=Обновление модулей $COMMIT_TIME" \
-        "https://gitlab.com/api/v4/projects/$CI_PROJECT_ID/merge_requests"

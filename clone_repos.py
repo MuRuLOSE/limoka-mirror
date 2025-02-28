@@ -1,6 +1,7 @@
 import os
-import sys
+import shutil
 import subprocess
+import re
 
 repos = [
     "https://github.com/DziruModules/hikkamods",
@@ -51,57 +52,57 @@ repos = [
     "https://github.com/cryptexctl/modules-mirror",
 ]
 
+def is_repo_public(repo_url):
+    result = subprocess.run(
+        ["git", "ls-remote", repo_url],
+        stdout=subprocess.DEVNULL,
+        stderr=subprocess.DEVNULL,
+    )
+    return result.returncode == 0
 
-def update_subtree(repo_url, branch="update-submodules"):
-    """Обновляет subtree в локальной папке."""
+def is_valid_filename(filename):
+    invalid_chars = r'[<>:"/\\|?*]'
+    return not re.search(invalid_chars, filename)
+
+def rename_invalid_files(local_path):
+    for root, dirs, files in os.walk(local_path):
+        for file in files:
+            if not is_valid_filename(file):
+                old_path = os.path.join(root, file)
+                new_file = re.sub(r'[<>:"/\\|?*]', '_', file)
+                new_path = os.path.join(root, new_file)
+                os.rename(old_path, new_path)
+                print(f"Переименован файл: {old_path} -> {new_path}")
+
+def clone_or_update_repo(repo_url):
     repo_path = repo_url.replace("https://github.com/", "")
     owner, repo_name = repo_path.split("/")
     local_path = f"{owner}/{repo_name}"
 
-    if not os.path.exists(local_path):
-        print(f"Пропускаем {repo_name}, так как папка не найдена")
+    if not os.path.exists(owner):
+        os.makedirs(owner)
+
+    if os.path.exists(local_path):
+        shutil.rmtree(local_path)
+        print(f"Удалена старая директория: {local_path}")
+
+    if not is_repo_public(repo_url):
+        print(f"Пропускаем закрытый или недоступный репозиторий: {repo_url}")
         return
 
-    print(f"Обновляем {repo_name}...")
     try:
         subprocess.run(
-            [
-                "git",
-                "subtree",
-                "pull",
-                "--prefix",
-                local_path,
-                repo_url,
-                "main",
-                "--branch",
-                branch,
-                "--squash",
-            ],
+            ["git", "clone", repo_url, local_path],
             check=True,
+            capture_output=True,
+            text=True,
         )
-        print(f"✅ {repo_name} успешно обновлён!")
-    except subprocess.CalledProcessError:
-        try:
-            subprocess.run(
-                [
-                    "git",
-                    "subtree",
-                    "pull",
-                    "--prefix",
-                    local_path,
-                    repo_url,
-                    "master",
-                    "--branch",
-                    branch,
-                    "--squash",
-                ],
-                check=True,
-            )
-            print(f"✅ {repo_name} успешно обновлён (ветка master)!")
-        except subprocess.CalledProcessError:
-            print(f"❌ Ошибка обновления {repo_name}, пропускаем.")
-
+        shutil.rmtree(os.path.join(local_path, ".git"))
+        rename_invalid_files(local_path)
+        print(f"Клонирован и обработан репозиторий: {repo_url} -> {local_path}")
+    except subprocess.CalledProcessError as e:
+        print(f"Ошибка при клонировании {repo_url}: {e.output}, пропускаем.")
 
 if __name__ == "__main__":
-    for repo in repos:
-        update_subtree(repo, sys.argv[1])
+    for repo_url in repos:
+        clone_or_update_repo(repo_url)
