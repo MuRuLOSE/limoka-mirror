@@ -78,7 +78,7 @@ create_merge_request:
            --header "PRIVATE-TOKEN: ${GITLAB_TOKEN}" \
            --data "source_branch=${BRANCH_NAME}" \
            --data "target_branch=main" \
-           --data "title=Обновление репозиториев $(date +'%Y-%m-%d %H:%M:%S')" \
+           --data "title=Update of repositories $(date +'%Y-%m-%d %H:%M:%S')" \
            "https://git.vsecoder.dev/api/v4/projects/root%2Flimoka/merge_requests" \
            || echo "MR creating failure"
 
