@@ -9,7 +9,7 @@
     },
     "commands": [
       {
-        "limoka": "[query] - Search module"
+        "limokacmd": "[query] - Search module"
       }
     ],
     "new_commands": [
@@ -108,10 +108,10 @@
     },
     "commands": [
       {
-        "stoppurgecmd": "Interupt the process of deletion"
+        "stoppurgecmd": "Interrupt the deletion process\nUse in the chat where you've previously started deletion"
       },
       {
-        "purgecmd": "[reply] [10s / 10m / 10h / 10d] - delete all your messages in the current chat or only ones up to the message you replied to\nPosible to do in a specific time\nExample: 10h 3d"
+        "purgecmd": "[reply] [10s / 10m / 10h / 10d] [-all] - delete all your messages in the current chat or only ones up to the message you replied to\nPossible to do with a delay\n-all - to delete messages from each topic if this is a forum otherwise flag'll just be ignored\nExample: 10h 3d"
       }
     ],
     "new_commands": [
@@ -119,14 +119,14 @@
         "stoppurge": {
           "ru_doc": null,
           "en_doc": null,
-          "doc": "Interupt the process of deletion"
+          "doc": "Interrupt the deletion process\nUse in the chat where you've previously started deletion"
         }
       },
       {
         "purge": {
           "ru_doc": null,
           "en_doc": null,
-          "doc": "[reply] [10s / 10m / 10h / 10d] - delete all your messages in the current chat or only ones up to the message you replied to\nPosible to do in a specific time\nExample: 10h 3d"
+          "doc": "[reply] [10s / 10m / 10h / 10d] [-all] - delete all your messages in the current chat or only ones up to the message you replied to\nPossible to do with a delay\n-all - to delete messages from each topic if this is a forum otherwise flag'll just be ignored\nExample: 10h 3d"
         }
       }
     ]
@@ -2781,6 +2781,39 @@
       }
     ]
   },
+  "anon97945/hikka-mods/no_ttl.py": {
+    "name": "NoTTLMod",
+    "description": "Send messages without TTL.",
+    "meta": {
+      "pic": "https://t.me/apodiktum_dumpster/13",
+      "banner": "https://t.me/apodiktum_dumpster/11",
+      "developer": "@apodiktum_modules"
+    },
+    "commands": [
+      {
+        "cnottlcmd": "This will open the config for the module."
+      },
+      {
+        "nottlcmd": "Command to send a message without TTL."
+      }
+    ],
+    "new_commands": [
+      {
+        "cnottl": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "This will open the config for the module."
+        }
+      },
+      {
+        "nottl": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "Command to send a message without TTL."
+        }
+      }
+    ]
+  },
   "anon97945/hikka-mods/pmlog.py": {
     "name": "ApodiktumPMLogMod",
     "description": "Logs PMs to a group/channel",
@@ -3613,7 +3646,7 @@
   },
   "C0dwiz/H.Modules/CheckSpamBan.py": {
     "name": "SpamBanCheckMod",
-    "description": "Check spam ban for your account.",
+    "description": "Checks spam ban for your account.",
     "meta": {
       "pic": null,
       "banner": null,
@@ -3621,12 +3654,12 @@
     },
     "commands": [
       {
-        "spambancmd": "Проверяет вашу учетную запись на спам-бан с помощью бота @SpamBot Checks your account for spam ban via @SpamBot bot"
+        "spambot": "Проверяет вашу учетную запись на спам-бан с помощью бота @SpamBot Checks your account for spam ban via @SpamBot bot"
       }
     ],
     "new_commands": [
       {
-        "spamban": {
+        "spambot": {
           "ru_doc": "Проверяет вашу учетную запись на спам-бан с помощью бота @SpamBot",
           "en_doc": "Checks your account for spam ban via @SpamBot bot",
           "doc": null
@@ -3984,55 +4017,68 @@
     },
     "commands": [
       {
-        "restart_inline_handler": "Перезагрузить юзербота Reboot the userbot"
-      },
-      {
-        "update_inline_handler": "Обновить юзербота Update the userbot"
-      },
-      {
-        "terminal_inline_handler": "Выполнить команду в терминале (лучше сразу подготовить команду и просто вставить) Execute the command in the terminal (it is better to prepare the command immediately and just paste it)"
-      },
-      {
-        "modules_inline_handler": "Вывести список установленных модулей через инлайн Display a list of installed modules via the inline"
-      },
-      {
-        "resetprefix_inline_handler": "Сбросить префикс (осторожнее, сбрасывает ваш префикс на . ) Reset the prefix (be careful, resets your prefix to . )"
+        "terminal_inline_handler": ""
       }
     ],
     "new_commands": [
       {
-        "restart_inline_handler": {
-          "ru_doc": "Перезагрузить юзербота",
-          "en_doc": "Reboot the userbot",
-          "doc": null
-        }
-      },
-      {
-        "update_inline_handler": {
-          "ru_doc": "Обновить юзербота",
-          "en_doc": "Update the userbot",
-          "doc": null
-        }
-      },
-      {
         "terminal_inline_handler": {
-          "ru_doc": "Выполнить команду в терминале (лучше сразу подготовить команду и просто вставить)",
-          "en_doc": "Execute the command in the terminal (it is better to prepare the command immediately and just paste it)",
+          "ru_doc": null,
+          "en_doc": null,
           "doc": null
+        }
+      }
+    ]
+  },
+  "C0dwiz/H.Modules/IrisSimpleMod.py": {
+    "name": "IrisSimpleMod",
+    "description": "Модуль для базового взаимодействия с Ирисом",
+    "meta": {
+      "pic": null,
+      "banner": null,
+      "developer": "@hikka_mods"
+    },
+    "commands": [
+      {
+        "bag": "Check bag Проверить мешок"
+      },
+      {
+        "farm": "Farm iris-coins Зафармить ирис-коины"
+      },
+      {
+        "irisstats": "Display user stats Вывести анкету"
+      },
+      {
+        "irisping": "Display bot stats Вывести статистику ботов"
+      }
+    ],
+    "new_commands": [
+      {
+        "bag": {
+          "ru_doc": "Проверить мешок",
+          "en_doc": null,
+          "doc": "Check bag"
         }
       },
       {
-        "modules_inline_handler": {
-          "ru_doc": "Вывести список установленных модулей через инлайн",
-          "en_doc": "Display a list of installed modules via the inline",
-          "doc": null
+        "farm": {
+          "ru_doc": "Зафармить ирис-коины",
+          "en_doc": null,
+          "doc": "Farm iris-coins"
         }
       },
       {
-        "resetprefix_inline_handler": {
-          "ru_doc": "Сбросить префикс (осторожнее, сбрасывает ваш префикс на . )",
-          "en_doc": "Reset the prefix (be careful, resets your prefix to . )",
-          "doc": null
+        "irisstats": {
+          "ru_doc": "Вывести анкету",
+          "en_doc": null,
+          "doc": "Display user stats"
+        }
+      },
+      {
+        "irisping": {
+          "ru_doc": "Вывести статистику ботов",
+          "en_doc": null,
+          "doc": "Display bot stats"
         }
       }
     ]
@@ -4108,7 +4154,7 @@
   },
   "C0dwiz/H.Modules/Music.py": {
     "name": "MusicMod",
-    "description": "Поиск музыки через музыкальных ботов.",
+    "description": null,
     "meta": {
       "pic": null,
       "banner": null,
@@ -4116,14 +4162,14 @@
     },
     "commands": [
       {
-        "searchm": "Найти трек по названию в Yandex Music или VK: `searchm yandex {название}` или `searchm vk {название}` Find a track by name in Yandex Music or VK: `searchm yandex {name}` or `searchm vk {name}`"
+        "music": "Найти трек в Yandex Music или VK: `.music yandex {название}` или `.music vk {название}` Find a track in Yandex Music or VK: `.music yandex {name}` or `.music vk {name}`"
       }
     ],
     "new_commands": [
       {
-        "searchm": {
-          "ru_doc": "Найти трек по названию в Yandex Music или VK: `searchm yandex {название}` или `searchm vk {название}`",
-          "en_doc": "Find a track by name in Yandex Music or VK: `searchm yandex {name}` or `searchm vk {name}`",
+        "music": {
+          "ru_doc": "Найти трек в Yandex Music или VK: `.music yandex {название}` или `.music vk {название}`",
+          "en_doc": "Find a track in Yandex Music or VK: `.music yandex {name}` or `.music vk {name}`",
           "doc": null
         }
       }
@@ -4509,6 +4555,29 @@
       }
     ]
   },
+  "C0dwiz/H.Modules/TempChat.py": {
+    "name": "TempChatMod",
+    "description": "Creates a temporary private chat with a message forwarding restriction and adds the specified user to it.",
+    "meta": {
+      "pic": null,
+      "banner": null,
+      "developer": "@hikka_mods"
+    },
+    "commands": [
+      {
+        "tmpchat": "Create temporary chat. Usage: .tmpchat [@user/reply] [time] Создает временный чат. Использование: .tmpchat [@user/reply] [time]"
+      }
+    ],
+    "new_commands": [
+      {
+        "tmpchat": {
+          "ru_doc": "Создает временный чат. Использование: .tmpchat [@user/reply] [time]",
+          "en_doc": null,
+          "doc": "Create temporary chat. Usage: .tmpchat [@user/reply] [time]"
+        }
+      }
+    ]
+  },
   "C0dwiz/H.Modules/Text2File.py": {
     "name": "Text2File",
     "description": "Module for convertation your text to file",
@@ -4603,7 +4672,7 @@
   },
   "C0dwiz/H.Modules/VirusTotal.py": {
     "name": "VirusTotalMod",
-    "description": "Checks files for viruses using VirusTotal",
+    "description": "Checks files for viruses using VirusTotal.",
     "meta": {
       "pic": null,
       "banner": null,
@@ -5949,7 +6018,7 @@
     "name": "ID",
     "description": "ID of all!",
     "meta": {
-      "pic": "https://0x0.st/s/08-gkYETpY6T2EfdVLbjcw/8KPt.webp",
+      "pic": "https://kappa.lol/p3wVI",
       "banner": "https://mods.codrago.top/banners/id.png",
       "developer": "@codrago_m"
     },
@@ -6223,8 +6292,10 @@
     "name": "SwitchToHeroku",
     "description": "Auto switching from Hikka to Heroku",
     "meta": {
-      "pic": null,
-      "banner": null
+      "pic": "https://kappa.lol/2Z_Q-",
+      "banner": "https://mods.codrago.top/banners/banner.png",
+      "developer": "@codrago_m",
+      "# meta_desc": "Switch your hikka to heroku"
     },
     "commands": [
       {
@@ -7147,6 +7218,253 @@
           "ru_doc": null,
           "en_doc": null,
           "doc": "<ответ на файл> - Проверяет файлы на наличие вирусов с использованием VirusTotal"
+        }
+      }
+    ]
+  },
+  "cryptexctl/modules-mirror/actually.py": {
+    "name": "ActuallyMod",
+    "description": "ehm, actually🤓️.",
+    "meta": {
+      "pic": null,
+      "banner": null,
+      "developer": "@systemxplore"
+    },
+    "commands": [
+      {
+        "actually": "ehm, actually'"
+      }
+    ],
+    "new_commands": [
+      {
+        "actually": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "ehm, actually'"
+        }
+      }
+    ]
+  },
+  "cryptexctl/modules-mirror/avaclone.py": {
+    "name": "AvaCloneMod",
+    "description": "Устанавливает фото/видео/гиф аватарку многократно.\nОсторожно: возможен бан или флудвейт.",
+    "meta": {
+      "pic": null,
+      "banner": null,
+      "developer": "@systemxplore"
+    },
+    "commands": [
+      {
+        "avaclone": "Устанавливает аватарку указанное количество раз.\nИспользуйте: .avaclone <количество> [ответ на файл/ссылка]"
+      }
+    ],
+    "new_commands": [
+      {
+        "avaclone": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "Устанавливает аватарку указанное количество раз.\nИспользуйте: .avaclone <количество> [ответ на файл/ссылка]"
+        }
+      }
+    ]
+  },
+  "cryptexctl/modules-mirror/komarumod.py": {
+    "name": "KomaruMod",
+    "description": "Достает рандомную гифку из @komarugif\nканал заменил @systemxplore, оригинальный разработчик: @wmodules",
+    "meta": {
+      "pic": null,
+      "banner": null,
+      "developer": "@wmodules"
+    },
+    "commands": [
+      {
+        "komarugifcmd": "Рандомная гифка"
+      }
+    ],
+    "new_commands": [
+      {
+        "komarugif": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "Рандомная гифка"
+        }
+      }
+    ]
+  },
+  "cryptexctl/modules-mirror/notesmod.py": {
+    "name": "NotesFileMod",
+    "description": "Модуль для заметок с хранением в файлах",
+    "meta": {
+      "pic": null,
+      "banner": null,
+      "developer": "@systemxplore"
+    },
+    "commands": [
+      {
+        "noteadd": "Добавить заметку.\nИспользование: .noteadd #tag <текст>"
+      },
+      {
+        "notedelete": "Удалить заметку.\nИспользование: .notedelete #tag"
+      },
+      {
+        "noteview": "Просмотреть заметку.\nИспользование: .noteview #tag"
+      },
+      {
+        "notelist": "Показать список всех заметок."
+      }
+    ],
+    "new_commands": [
+      {
+        "noteadd": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "Добавить заметку.\nИспользование: .noteadd #tag <текст>"
+        }
+      },
+      {
+        "notedelete": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "Удалить заметку.\nИспользование: .notedelete #tag"
+        }
+      },
+      {
+        "noteview": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "Просмотреть заметку.\nИспользование: .noteview #tag"
+        }
+      },
+      {
+        "notelist": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "Показать список всех заметок."
+        }
+      }
+    ]
+  },
+  "cryptexctl/modules-mirror/randomtrack.py": {
+    "name": "RandomTrackMod",
+    "description": "Отправляет случайный трек из указанного канала.",
+    "meta": {
+      "pic": null,
+      "banner": null,
+      "developer": "@systemxplore"
+    },
+    "commands": [
+      {
+        "randomtrack": "Отправляет случайный трек из вашего канала."
+      }
+    ],
+    "new_commands": [
+      {
+        "randomtrack": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "Отправляет случайный трек из вашего канала."
+        }
+      }
+    ]
+  },
+  "cryptexctl/modules-mirror/SomethingCreatingScriptErrors.py": {
+    "name": "ScriptErrorMod",
+    "description": null,
+    "meta": {
+      "pic": null,
+      "banner": null,
+      "developer": "@systemxplore"
+    },
+    "commands": [
+      {
+        "скриптовыеошибки": ""
+      }
+    ],
+    "new_commands": [
+      {
+        "скриптовыеошибки": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": null
+        }
+      }
+    ]
+  },
+  "cryptexctl/modules-mirror/zovmodule.py": {
+    "name": "LeeterMod",
+    "description": "Тут либо гойда либо зов\nлибо ZOVишь либо leetируешь",
+    "meta": {
+      "pic": null,
+      "banner": null,
+      "developer": "@systemxplore"
+    },
+    "commands": [
+      {
+        "leeter": "Включить/выключить обработку сообщений."
+      },
+      {
+        "zovmode": "Переключить режим: leet или zov."
+      }
+    ],
+    "new_commands": [
+      {
+        "leeter": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "Включить/выключить обработку сообщений."
+        }
+      },
+      {
+        "zovmode": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "Переключить режим: leet или zov."
+        }
+      }
+    ]
+  },
+  "cryptexctl/modules-mirror/овощерезка.py": {
+    "name": "RandomPostMod",
+    "description": "Отправляет случайный пост из p2 или pixelgang с картинками.",
+    "meta": {
+      "pic": null,
+      "banner": null,
+      "developer": "@systemxplore"
+    },
+    "commands": [
+      {
+        "овощерезка": "Отправляет случайный мемасек из p2 или pixelgang "
+      }
+    ],
+    "new_commands": [
+      {
+        "овощерезка": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "Отправляет случайный мемасек из p2 или pixelgang "
+        }
+      }
+    ]
+  },
+  "cryptexctl/modules-mirror/сланцы2.py": {
+    "name": "SlantsyMod",
+    "description": "АХХХ ЭТО ГОРЯЩИЕ СЛАНЦЫ ЧААТ\nАХХХ ЭТО ГОРЯЩИЕ СЛАНЦЫ ЧААТ\nАХХХ ЭТО ГОРЯЩИЕ СЛАНЦЫ ЧААТ\nАХХХ ЭТО ГОРЯЩИЕ СЛАНЦЫ ЧААТ",
+    "meta": {
+      "pic": null,
+      "banner": null,
+      "developer": "@systemxplore"
+    },
+    "commands": [
+      {
+        "этосланцычат": "АХХХ ЭТО ГОРЯЩИЕ СЛАНЦЫ ЧААТ\nАХХХ ЭТО ГОРЯЩИЕ СЛАНЦЫ ЧААТ\nАХХХ ЭТО ГОРЯЩИЕ СЛАНЦЫ ЧААТ\nАХХХ ЭТО ГОРЯЩИЕ СЛАНЦЫ ЧААТ\nАХХХ ЭТО ГОРЯЩИЕ СЛАНЦЫ ЧААТ\nАХХХ ЭТО ГОРЯЩИЕ СЛАНЦЫ ЧААТ\nАХХХ ЭТО ГОРЯЩИЕ СЛАНЦЫ ЧААТ\nАХХХ ЭТО ГОРЯЩИЕ СЛАНЦЫ ЧААТ\nАХХХ ЭТО ГОРЯЩИЕ СЛАНЦЫ ЧААТ\nАХХХ ЭТО ГОРЯЩИЕ СЛАНЦЫ ЧААТ\nАХХХ ЭТО ГОРЯЩИЕ СЛАНЦЫ ЧААТ\nАХХХ ЭТО ГОРЯЩИЕ СЛАНЦЫ ЧААТ\nАХХХ ЭТО ГОРЯЩИЕ СЛАНЦЫ ЧААТ\nАХХХ ЭТО ГОРЯЩИЕ СЛАНЦЫ ЧААТ\nАХХХ ЭТО ГОРЯЩИЕ СЛАНЦЫ ЧААТ\nАХХХ ЭТО ГОРЯЩИЕ СЛАНЦЫ ЧААТ\nАХХХ ЭТО ГОРЯЩИЕ СЛАНЦЫ ЧААТ\nАХХХ ЭТО ГОРЯЩИЕ СЛАНЦЫ ЧААТ\nАХХХ ЭТО ГОРЯЩИЕ СЛАНЦЫ ЧААТ\nАХХХ ЭТО ГОРЯЩИЕ СЛАНЦЫ ЧААТ\nАХХХ ЭТО ГОРЯЩИЕ СЛАНЦЫ ЧААТ\nАХХХ ЭТО ГОРЯЩИЕ СЛАНЦЫ ЧААТ\nАХХХ ЭТО ГОРЯЩИЕ СЛАНЦЫ ЧААТ\nАХХХ ЭТО ГОРЯЩИЕ СЛАНЦЫ ЧААТ"
+      }
+    ],
+    "new_commands": [
+      {
+        "этосланцычат": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "АХХХ ЭТО ГОРЯЩИЕ СЛАНЦЫ ЧААТ\nАХХХ ЭТО ГОРЯЩИЕ СЛАНЦЫ ЧААТ\nАХХХ ЭТО ГОРЯЩИЕ СЛАНЦЫ ЧААТ\nАХХХ ЭТО ГОРЯЩИЕ СЛАНЦЫ ЧААТ\nАХХХ ЭТО ГОРЯЩИЕ СЛАНЦЫ ЧААТ\nАХХХ ЭТО ГОРЯЩИЕ СЛАНЦЫ ЧААТ\nАХХХ ЭТО ГОРЯЩИЕ СЛАНЦЫ ЧААТ\nАХХХ ЭТО ГОРЯЩИЕ СЛАНЦЫ ЧААТ\nАХХХ ЭТО ГОРЯЩИЕ СЛАНЦЫ ЧААТ\nАХХХ ЭТО ГОРЯЩИЕ СЛАНЦЫ ЧААТ\nАХХХ ЭТО ГОРЯЩИЕ СЛАНЦЫ ЧААТ\nАХХХ ЭТО ГОРЯЩИЕ СЛАНЦЫ ЧААТ\nАХХХ ЭТО ГОРЯЩИЕ СЛАНЦЫ ЧААТ\nАХХХ ЭТО ГОРЯЩИЕ СЛАНЦЫ ЧААТ\nАХХХ ЭТО ГОРЯЩИЕ СЛАНЦЫ ЧААТ\nАХХХ ЭТО ГОРЯЩИЕ СЛАНЦЫ ЧААТ\nАХХХ ЭТО ГОРЯЩИЕ СЛАНЦЫ ЧААТ\nАХХХ ЭТО ГОРЯЩИЕ СЛАНЦЫ ЧААТ\nАХХХ ЭТО ГОРЯЩИЕ СЛАНЦЫ ЧААТ\nАХХХ ЭТО ГОРЯЩИЕ СЛАНЦЫ ЧААТ\nАХХХ ЭТО ГОРЯЩИЕ СЛАНЦЫ ЧААТ\nАХХХ ЭТО ГОРЯЩИЕ СЛАНЦЫ ЧААТ\nАХХХ ЭТО ГОРЯЩИЕ СЛАНЦЫ ЧААТ\nАХХХ ЭТО ГОРЯЩИЕ СЛАНЦЫ ЧААТ"
         }
       }
     ]
@@ -10675,7 +10993,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/achievements.py": {
+  "den4ikSuperOstryyPer4ik/astro-modules/achievements.py": {
     "name": "AchievementsMod",
     "description": "Create the achievement from https://minecraft-inside.ru/achievements/\n\nIdea from @Den4ikSOP & @boyhao",
     "meta": {
@@ -10698,7 +11016,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/akinator.py": {
+  "den4ikSuperOstryyPer4ik/astro-modules/akinator.py": {
     "name": "AkinatorGame",
     "description": "Akinator will guess any character you have in mind,\nYou just need to answer a couple of questions)",
     "meta": {
@@ -10721,7 +11039,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/AntiMat.py": {
+  "den4ikSuperOstryyPer4ik/astro-modules/AntiMat.py": {
     "name": "AntiMatMod",
     "description": "Будьте культурным человеком, не материтесь",
     "meta": {
@@ -10764,7 +11082,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/astroafk.py": {
+  "den4ikSuperOstryyPer4ik/astro-modules/astroafk.py": {
     "name": "AstroAfkMod",
     "description": "Полностью настраиваемый модуль для ухода в АФК режим! Обновление TxAFK!",
     "meta": {
@@ -10807,7 +11125,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/astroweather.py": {
+  "den4ikSuperOstryyPer4ik/astro-modules/astroweather.py": {
     "name": "AstroWeatherMod",
     "description": "Модуль для получения информации о погоде в Вашем городе, в красивом формате",
     "meta": {
@@ -10830,7 +11148,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/brawl_stats.py": {
+  "den4ikSuperOstryyPer4ik/astro-modules/brawl_stats.py": {
     "name": "BrawlStatsInfo",
     "description": "Brawl Stars Players/Clubs information :)",
     "meta": {
@@ -10903,7 +11221,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/commands_logger.py": {
+  "den4ikSuperOstryyPer4ik/astro-modules/commands_logger.py": {
     "name": "HikkaCommandsLoggerMod",
     "description": "Hikka Commands Logger",
     "meta": {
@@ -10926,7 +11244,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/Compliments.py": {
+  "den4ikSuperOstryyPer4ik/astro-modules/Compliments.py": {
     "name": "ComplimentsMod",
     "description": "Покажи девушке какая она прекрасная (ну или им, какие они прекрасные)",
     "meta": {
@@ -10959,7 +11277,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/convertio.py": {
+  "den4ikSuperOstryyPer4ik/astro-modules/convertio.py": {
     "name": "ConvertioMod",
     "description": "Convert file with api from https://convertio.co",
     "meta": {
@@ -10992,7 +11310,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/demotivator.py": {
+  "den4ikSuperOstryyPer4ik/astro-modules/demotivator.py": {
     "name": "DemotivatorMod",
     "description": "Demotivate picture with text, arguments and config.",
     "meta": {
@@ -11015,7 +11333,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/dialogs_manager.py": {
+  "den4ikSuperOstryyPer4ik/astro-modules/dialogs_manager.py": {
     "name": "DialogsManagerMod",
     "description": "Check your all info for dialogs, chats, PMs\nDelete definite dialog,\ndelete all dialogs by arguments,\nleave the chats, ids/usernames which you specify\nDialogs Manager!",
     "meta": {
@@ -11078,7 +11396,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/dl_yt_previews.py": {
+  "den4ikSuperOstryyPer4ik/astro-modules/dl_yt_previews.py": {
     "name": "YTPreviewMod",
     "description": "Скачивает превью с ютуба",
     "meta": {
@@ -11101,7 +11419,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/Emotions.py": {
+  "den4ikSuperOstryyPer4ik/astro-modules/Emotions.py": {
     "name": "EmotionsMod",
     "description": "Выражение эмоций в чате",
     "meta": {
@@ -11154,7 +11472,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/gamecheat.py": {
+  "den4ikSuperOstryyPer4ik/astro-modules/gamecheat.py": {
     "name": "GameeCheatMod",
     "description": "Читы для игр в @gamee",
     "meta": {
@@ -11178,7 +11496,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/inline_bot_manager.py": {
+  "den4ikSuperOstryyPer4ik/astro-modules/inline_bot_manager.py": {
     "name": "InlineBotManagerMod",
     "description": "Control over your Inline bot!",
     "meta": {
@@ -11251,7 +11569,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/iOSAppsForAndroid.py": {
+  "den4ikSuperOstryyPer4ik/astro-modules/iOSAppsForAndroid.py": {
     "name": "iOSAppsForAndroid",
     "description": "iOS Applications for Android, or more simply, Android applications with an interface like on iOS",
     "meta": {
@@ -11274,7 +11592,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/komarumod.py": {
+  "den4ikSuperOstryyPer4ik/astro-modules/komarumod.py": {
     "name": "KomaruMod",
     "description": "Random picture/video/gif from the @komarueveryday",
     "meta": {
@@ -11297,7 +11615,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/mindtalk.py": {
+  "den4ikSuperOstryyPer4ik/astro-modules/mindtalk.py": {
     "name": "MindTalkMod",
     "description": "Your little psychologist Based on MindTalk by Hikamoru",
     "meta": {
@@ -11340,7 +11658,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/minesweeper.py": {
+  "den4ikSuperOstryyPer4ik/astro-modules/minesweeper.py": {
     "name": "MineSwepperModule",
     "description": "Minesweeper game",
     "meta": {
@@ -11363,7 +11681,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/pcmanager.py": {
+  "den4ikSuperOstryyPer4ik/astro-modules/pcmanager.py": {
     "name": "PCManagerMod",
     "description": "Управление вашим компьютером через юзербота",
     "meta": {
@@ -11496,7 +11814,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/RandomPasswordGenerator.py": {
+  "den4ikSuperOstryyPer4ik/astro-modules/RandomPasswordGenerator.py": {
     "name": "PasswordGeneratorMod",
     "description": "Random password/pincode generator",
     "meta": {
@@ -11529,7 +11847,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/RandomStatuses.py": {
+  "den4ikSuperOstryyPer4ik/astro-modules/RandomStatuses.py": {
     "name": "RandomStatusesMod",
     "description": "Рандомные статусы для описания аккаунта в ТГ/Вацап/ВК и т.д.",
     "meta": {
@@ -11552,7 +11870,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/RandomTrack.py": {
+  "den4ikSuperOstryyPer4ik/astro-modules/RandomTrack.py": {
     "name": "RandomTrackMod",
     "description": "Получить рандомный трек. \nИспользуйте категории чтобы сгенерировать трек на свой вкус",
     "meta": {
@@ -11575,7 +11893,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/RandomUser.py": {
+  "den4ikSuperOstryyPer4ik/astro-modules/RandomUser.py": {
     "name": "RandomUserMod",
     "description": "choose a random user in chat\nAutors: @AstroModules & @smeowcodes",
     "meta": {
@@ -11598,7 +11916,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/shazam.py": {
+  "den4ikSuperOstryyPer4ik/astro-modules/shazam.py": {
     "name": "ShazamMod",
     "description": "Use <reply to voice> to search for a song using audio.",
     "meta": {
@@ -11621,7 +11939,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/Steam.py": {
+  "den4ikSuperOstryyPer4ik/astro-modules/Steam.py": {
     "name": "Steam",
     "description": "Get now played game",
     "meta": {
@@ -11674,7 +11992,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/summer.py": {
+  "den4ikSuperOstryyPer4ik/astro-modules/summer.py": {
     "name": "SummerMod",
     "description": "Сколько осталось дней до лета?)",
     "meta": {
@@ -11697,7 +12015,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/TwinkManager.py": {
+  "den4ikSuperOstryyPer4ik/astro-modules/TwinkManager.py": {
     "name": "TwinkManagerMod",
     "description": "Управление твинками через основной аккаунт.",
     "meta": {
@@ -11780,7 +12098,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/TxAFK.py": {
+  "den4ikSuperOstryyPer4ik/astro-modules/TxAFK.py": {
     "name": "TxAFKMod",
     "description": "Афк модуль от AstroModules с изменением био и имени",
     "meta": {
@@ -11823,7 +12141,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/video_to_voice.py": {
+  "den4ikSuperOstryyPer4ik/astro-modules/video_to_voice.py": {
     "name": "VideoToVoice",
     "description": "Convert Video to voice",
     "meta": {
@@ -11846,7 +12164,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/wordly.py": {
+  "den4ikSuperOstryyPer4ik/astro-modules/wordly.py": {
     "name": "WordlyHelper",
     "description": "Помощник для игры \"Вордли на Русском\"",
     "meta": {
@@ -11869,7 +12187,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/YandexMusic.py": {
+  "den4ikSuperOstryyPer4ik/astro-modules/YandexMusic.py": {
     "name": "YaMusicMod",
     "description": "Поиск музыки через музыкального бота от Яндекса",
     "meta": {
@@ -11892,7 +12210,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/вахуи_пон.py": {
+  "den4ikSuperOstryyPer4ik/astro-modules/вахуи_пон.py": {
     "name": "ВахуиПонMod",
     "description": "пон и вахуи",
     "meta": {
@@ -11925,7 +12243,7 @@
       }
     ]
   },
-  "Den4ikSuperOstryyPer4ik/Astro-modules/пон_вахуи.py": {
+  "den4ikSuperOstryyPer4ik/astro-modules/пон_вахуи.py": {
     "name": "ПонВахуиMod",
     "description": "пон и вахуи",
     "meta": {
@@ -12735,6 +13053,29 @@
           "ru_doc": null,
           "en_doc": null,
           "doc": "<действие> <фраза>- совмещает описание окружающей обстановки, действие от 3го лица (см. описание .do) с одновременной фразой своего персонажа. Пример использования: .todo Спокойной ночи. засыпая"
+        }
+      }
+    ]
+  },
+  "dorotorothequickend/DorotoroModules/WhataWord_.py": {
+    "name": "whataword",
+    "description": "Ищет определение слова.",
+    "meta": {
+      "pic": null,
+      "banner": "https://raw.githubusercontent.com/dorotorothequickend/DorotoroModules/main/banners/DorotoroWhataWord.png",
+      "developer": "@DorotoroMods"
+    },
+    "commands": [
+      {
+        "wawcmd": "<слово> - ищет определение вашего слова."
+      }
+    ],
+    "new_commands": [
+      {
+        "waw": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "<слово> - ищет определение вашего слова."
         }
       }
     ]
@@ -34792,11 +35133,12 @@
   },
   "sqlmerr/hikka_mods/addlinktosymbols.py": {
     "name": "AddLinkToSymbols",
-    "description": "Add link to symbols in text | Добавить ссылку на определённые символы в тексте",
+    "description": "Add link to symbols in text",
     "meta": {
       "pic": null,
       "banner": "https://github.com/sqlmerr/hikka_mods/blob/main/assets/sqlmerrmodules_example.png?raw=true",
-      "developer": "@sqlmerr_m"
+      "developer": "@sqlmerr_m",
+      "icon": "https://github.com/sqlmerr/hikka_mods/blob/main/assets/icons/addlinktosymbols.png?raw=true"
     },
     "commands": [
       {
@@ -34815,10 +35157,11 @@
   },
   "sqlmerr/hikka_mods/animatedprofile.py": {
     "name": "AnimatedProfile",
-    "description": "Module for your profile animation (name, bio) look in the config | Модуль для анимации вашего профиля (имя, био) смотрите конфиг",
+    "description": "Module for your profile animation (name, bio) look in the config",
     "meta": {
       "pic": null,
       "banner": null,
+      "icon": "https://github.com/sqlmerr/hikka_mods/blob/main/assets/icons/animatedprofile.png?raw=true",
       "developer": "@sqlmerr_m"
     },
     "commands": [
@@ -34872,6 +35215,7 @@
     "meta": {
       "pic": null,
       "banner": "https://github.com/sqlmerr/sqlmerr/blob/main/assets/hikka_mods/sqlmerrmodules_autoformatter.png?raw=true",
+      "icon": "https://github.com/sqlmerr/hikka_mods/blob/main/assets/icons/autoformatter.png?raw=true",
       "developer": "@sqlmerr_m"
     },
     "commands": [
@@ -34951,7 +35295,8 @@
     "meta": {
       "pic": null,
       "banner": "https://github.com/sqlmerr/hikka_mods/blob/main/assets/banners/currencyconverter.png?raw=true",
-      "developer": "@sqlmerr_m"
+      "developer": "@sqlmerr_m",
+      "icon": "https://github.com/sqlmerr/hikka_mods/blob/main/assets/icons/currencyconverter.png?raw=true"
     },
     "commands": [
       {
@@ -34974,7 +35319,8 @@
     "meta": {
       "pic": null,
       "banner": "https://github.com/sqlmerr/hikka_mods/blob/main/assets/banners/egsfreegames.png?raw=true",
-      "developer": "@sqlmerr_m"
+      "developer": "@sqlmerr_m",
+      "icon": "https://github.com/sqlmerr/hikka_mods/blob/main/assets/icons/egsfreegames.png?raw=true"
     },
     "commands": [
       {
@@ -34997,7 +35343,8 @@
     "meta": {
       "pic": null,
       "banner": "https://github.com/sqlmerr/sqlmerr/blob/main/assets/hikka_mods/sqlmerrmodules_fakedata.png?raw=true",
-      "developer": "@sqlmerr_m"
+      "developer": "@sqlmerr_m",
+      "icon": "https://github.com/sqlmerr/hikka_mods/blob/main/assets/icons/fakedata.png?raw=true"
     },
     "commands": [
       {
@@ -35020,7 +35367,8 @@
     "meta": {
       "pic": null,
       "banner": null,
-      "developer": "@sqlmerr_m"
+      "developer": "@sqlmerr_m",
+      "icon": "https://github.com/sqlmerr/hikka_mods/blob/main/assets/icons/FastChangeTgStatus.png?raw=true"
     },
     "commands": [
       {
@@ -35073,7 +35421,8 @@
     "meta": {
       "pic": null,
       "banner": "https://github.com/sqlmerr/sqlmerr/blob/main/assets/hikka_mods/sqlmerrmodules_inlinetimer.png?raw=true",
-      "developer": "@sqlmerr_m"
+      "developer": "@sqlmerr_m",
+      "icon": "https://github.com/sqlmerr/hikka_mods/blob/main/assets/icons/inlinetimer.png?raw=true"
     },
     "commands": [
       {
@@ -35096,7 +35445,8 @@
     "meta": {
       "pic": null,
       "banner": "https://github.com/sqlmerr/sqlmerr/blob/main/assets/hikka_mods/sqlmerrmodules_numberfacts.png?raw=true",
-      "developer": "@sqlmerr_m"
+      "developer": "@sqlmerr_m",
+      "icon": "https://github.com/sqlmerr/hikka_mods/blob/main/assets/icons/numberfacts.png?raw=true"
     },
     "commands": [
       {
@@ -35119,7 +35469,8 @@
     "meta": {
       "pic": null,
       "banner": "https://github.com/sqlmerr/sqlmerr/blob/main/assets/hikka_mods/quicktools.png?raw=true",
-      "developer": "@sqlmerr_m"
+      "developer": "@sqlmerr_m",
+      "icon": "https://github.com/sqlmerr/hikka_mods/blob/main/assets/icons/quicktools.png?raw=true"
     },
     "commands": [
       {
@@ -35162,6 +35513,7 @@
     "meta": {
       "pic": null,
       "banner": "https://github.com/sqlmerr/sqlmerr/blob/main/assets/hikka_mods/sqlmerrmodules_randomemoji.png?raw=true",
+      "icon": "https://github.com/sqlmerr/hikka_mods/blob/main/assets/icons/random_emoji.png?raw=true",
       "developer": "@sqlmerr_m"
     },
     "commands": [
@@ -35185,7 +35537,8 @@
     "meta": {
       "pic": null,
       "banner": "https://github.com/sqlmerr/sqlmerr/blob/main/assets/hikka_mods/sqlmerrmodules_silentmessages.png?raw=true",
-      "developer": "@sqlmerr_m"
+      "developer": "@sqlmerr_m",
+      "icon": "https://github.com/sqlmerr/hikka_mods/blob/main/assets/icons/silentmessages.png?raw=true"
     },
     "commands": [
       {
@@ -35204,10 +35557,11 @@
   },
   "sqlmerr/hikka_mods/triggers.py": {
     "name": "Triggers",
-    "description": "Triggers watches chat messages and can do anything, reply to a message with a given text, delete a message, execute any userbot command. Overall, a very cool module",
+    "description": "Triggers watch chat messages and can do anything, reply to a message with a given text, delete a message, execute any userbot command. Overall, a very cool module",
     "meta": {
       "pic": null,
       "banner": "https://github.com/sqlmerr/hikka_mods/blob/main/assets/banners/triggers.png?raw=true",
+      "icon": "https://github.com/sqlmerr/hikka_mods/blob/main/assets/icons/triggers.png?raw=true",
       "developer": "@sqlmerr_m"
     },
     "commands": [
@@ -35230,7 +35584,7 @@
         "triggerdel": "[trigger's id] - Delete trigger [айди триггера] - Удалить триггер"
       },
       {
-        "tcallback": "[callback_id: str] <reply to python code> - Add a callback that trigger can execute"
+        "tcallback": "[callback_id: str] <reply to python code> - Add a callback that trigger can execute [айди колбека: str] <реплай на пайтон код> - Добавить колбек, который триггер сможет выполнить"
       },
       {
         "triggerget": "[trigger's id] - Get trigger [айди триггера] - Получить триггер"
@@ -35287,7 +35641,7 @@
       },
       {
         "tcallback": {
-          "ru_doc": null,
+          "ru_doc": "[айди колбека: str] <реплай на пайтон код> - Добавить колбек, который триггер сможет выполнить",
           "en_doc": null,
           "doc": "[callback_id: str] <reply to python code> - Add a callback that trigger can execute"
         }
@@ -35321,6 +35675,7 @@
     "meta": {
       "pic": null,
       "banner": "https://github.com/sqlmerr/sqlmerr/blob/main/assets/hikka_mods/sqlmerrmodules_upgradedeval.png?raw=true",
+      "icon": "https://github.com/sqlmerr/hikka_mods/blob/main/assets/icons/upgradedeval.png?raw=true",
       "developer": "@sqlmerr_m"
     },
     "commands": [
@@ -35545,9 +35900,9 @@
       }
     ]
   },
-  "TheKsenon/MyHikkaModules/kaccountdata.py": {
-    "name": "AccountDataMod",
-    "description": "Получить информацию об аккаунте, дц, регистрации(нестабильно). \n\nФункционал как у AyuGram.",
+  "TheKsenon/MyHikkaModules/howmuch.py": {
+    "name": "HowMuchMod",
+    "description": "Модуль для проверки насколько вы ...",
     "meta": {
       "pic": null,
       "banner": null,
@@ -35555,15 +35910,88 @@
     },
     "commands": [
       {
-        "aboutacc": "Получить информацию об аккаунте | .aboutacc <username/reply>"
+        "howmuch": "Проверить насколько вы подходите под шаблон"
+      },
+      {
+        "templates": "Показать список доступных шаблонов"
+      },
+      {
+        "addtemplate": "Добавить новый шаблон"
+      },
+      {
+        "deltemplate": "Удалить пользовательский шаблон"
+      },
+      {
+        "backupts": "Сделать бэкап пользовательских шаблонов"
+      },
+      {
+        "restorets": "Восстановить шаблоны из бэкапа"
+      }
+    ],
+    "new_commands": [
+      {
+        "howmuch": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "Проверить насколько вы подходите под шаблон"
+        }
+      },
+      {
+        "templates": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "Показать список доступных шаблонов"
+        }
+      },
+      {
+        "addtemplate": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "Добавить новый шаблон"
+        }
+      },
+      {
+        "deltemplate": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "Удалить пользовательский шаблон"
+        }
+      },
+      {
+        "backupts": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "Сделать бэкап пользовательских шаблонов"
+        }
+      },
+      {
+        "restorets": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "Восстановить шаблоны из бэкапа"
+        }
+      }
+    ]
+  },
+  "TheKsenon/MyHikkaModules/kaccountdata.py": {
+    "name": "AccountDataMod",
+    "description": "Получить информацию об аккаунте, дц, дату регистрации.",
+    "meta": {
+      "pic": null,
+      "banner": null,
+      "developer": "@kmodules"
+    },
+    "commands": [
+      {
+        "aboutacc": "<username/reply> - Получить информацию об аккаунте <юзернейм/реплай> - Получить информацию об аккаунте <username/reply> - Get account information"
       }
     ],
     "new_commands": [
       {
         "aboutacc": {
-          "ru_doc": null,
-          "en_doc": null,
-          "doc": "Получить информацию об аккаунте | .aboutacc <username/reply>"
+          "ru_doc": "<юзернейм/реплай> - Получить информацию об аккаунте",
+          "en_doc": "<username/reply> - Get account information",
+          "doc": "<username/reply> - Получить информацию об аккаунте"
         }
       }
     ]
@@ -37159,7 +37587,7 @@
     "name": "CustomAliasesMod",
     "description": "Module for custom aliases",
     "meta": {
-      "pic": "https://static.unneyon.ru/get/caliases_icon.png",
+      "pic": "https://static.unneyon.ru/mods/caliases_icon.png",
       "banner": "https://mods.unneyon.ru/banners/caliases.png",
       "developer": "@unneyon_hmods"
     },
@@ -37202,7 +37630,7 @@
     "name": "DeleterMod",
     "description": "Module for delete your messages",
     "meta": {
-      "pic": "https://static.unneyon.ru/get/deleter_icon.png",
+      "pic": "https://static.unneyon.ru/mods/deleter_icon.png",
       "banner": "https://mods.unneyon.ru/banners/deleter.png",
       "developer": "@unneyon_hmods"
     },
@@ -37225,7 +37653,7 @@
     "name": "TidalMod",
     "description": "API wrapper over TIDAL Hi-Fi music streaming service\nThanks @hikarimods for original module: t.me/hikarimods/764",
     "meta": {
-      "pic": "https://static.unneyon.ru/get/tidal_icon.png",
+      "pic": "https://static.unneyon.ru/mods/tidal_icon.png",
       "banner": "https://mods.unneyon.ru/banners/tidal.png",
       "developer": "@unneyon_hmods"
     },
@@ -37268,7 +37696,7 @@
     "name": "WarPigsMod",
     "description": "Some auto-functions for your pig in @warpigs_bot",
     "meta": {
-      "pic": "https://static.unneyon.ru/get/warpigs_icon.png",
+      "pic": "https://static.unneyon.ru/mods/warpigs_icon.png",
       "banner": "https://mods.unneyon.ru/banners/warpigs.png",
       "developer": "@unneyon_hmods"
     },
@@ -37311,7 +37739,7 @@
     "name": "YaMusicMod",
     "description": "The module for Yandex.Music streaming service",
     "meta": {
-      "pic": "https://static.unneyon.ru/get/yamusic_icon.png",
+      "pic": "https://static.unneyon.ru/mods/yamusic_icon.png",
       "banner": "https://mods.unneyon.ru/banners/yamusic.png",
       "developer": "@unneyon_hmods"
     },
@@ -37354,7 +37782,7 @@
     "name": "YaMusicMod",
     "description": "The module for Yandex.Music streaming service [BETA]",
     "meta": {
-      "pic": "https://static.unneyon.ru/get/yamusic_icon.png",
+      "pic": "https://static.unneyon.ru/mods/yamusic_icon.png",
       "banner": "https://mods.unneyon.ru/banners/yamusic.png",
       "developer": "@unneyon_hmods"
     },
