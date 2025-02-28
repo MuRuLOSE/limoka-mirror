@@ -7,7 +7,7 @@ stages:
 
 variables:
   BRANCH_NAME: "update-submodules_${CI_COMMIT_SHA}"
-  REPO_URL: "git.vsecoder.dev/MuRuLOSE/limoka-test.git"
+  REPO_URL: "git.vsecoder.dev/root/limoka.git"
   GITLAB_TOKEN: $GITLAB_TOKEN
   GIT_DEPTH: 0 
 
@@ -79,7 +79,7 @@ create_merge_request:
            --data "source_branch=${BRANCH_NAME}" \
            --data "target_branch=main" \
            --data "title=Обновление репозиториев $(date +'%Y-%m-%d %H:%M:%S')" \
-           "https://git.vsecoder.dev/api/v4/projects/MuRuLOSE%2Flimoka-test/merge_requests" \
+           "https://git.vsecoder.dev/api/v4/projects/root%2Flimoka/merge_requests" \
            || echo "MR creating failure"
 
 
