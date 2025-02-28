@@ -13,7 +13,7 @@ __version__ = (1, 0, 0)
 # You CANNOT edit, distribute or redistribute this file without direct permission from the author.
 
 # meta banner: https://mods.unneyon.ru/banners/warpigs.png
-# meta pic: https://static.unneyon.ru/get/warpigs_icon.png
+# meta pic: https://static.unneyon.ru/mods/warpigs_icon.png
 # meta developer: @unneyon_hmods
 # scope: hikka_only
 # scope: hikka_min 1.6.3

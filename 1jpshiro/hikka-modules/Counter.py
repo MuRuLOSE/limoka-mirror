@@ -58,7 +58,7 @@ class Counter(loader.Module):
         counts = self.db.get(__name__, "c")
 
         await self.inline.form(
-            text=self.strings["count"].format(q),
+            text=self.strings["count"].format(counts),
             message=message,
             reply_markup=[
                 {

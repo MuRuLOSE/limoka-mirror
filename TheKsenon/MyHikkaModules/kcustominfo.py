@@ -7,10 +7,8 @@ import os
 from telethon.tl.types import MessageEntityUrl
 import re
 
-
+__version__ = (1, 1, 0)
 # meta developer: @kmodules
-__version__ = (1, 0, 1)
-
 
 @loader.tds
 class CustomInfoMod(loader.Module):
@@ -20,6 +18,7 @@ class CustomInfoMod(loader.Module):
         "name": "K:CustomInfo", 
         "update_available": "<b>Доступно обновление!</b>",
         "latest_version": "<b>У вас последняя версия.</b>",
+        "old_format_warning": "<b>✏️ Тег {system_info} устарел. Используйте:\n\n{ram_using} - использованная RAM\n{ram_total} - всего RAM\n{rom_using} - использованная память\n{rom_total} - всего памяти</b>"
     }
     
     def __init__(self):
@@ -33,7 +32,10 @@ class CustomInfoMod(loader.Module):
             "<emoji document_id=5453900977432188793>⭐</emoji> <b>Ping:</b> <b>{ping}</b> <b>мс</b>\n"
             "<emoji document_id=5258113901106580375>⌛</emoji> <b>Аптайм:</b> <b>{uptime}</b>\n"
             "<emoji document_id=5258466217273871977>💡</emoji> <b>Префикс:</b> «<b>{prefix}</b>»\n\n"
-            "{system_info}",
+            "<emoji document_id=5873146865637133757>🎤</emoji> <b>RAM сервера:</b> <code>{ram_using} GB | {ram_total} GB</code>\n"
+            "<emoji document_id=5870982283724328568>⚙</emoji> <b>Память:</b> <code>{rom_using} GB | {rom_total} GB</code>\n\n"
+            "<emoji document_id=5391034312759980875>🥷</emoji><b> OC: {os_name} {os_version}</b>\n"
+            "<emoji document_id=5235588635885054955>🎲</emoji> <b>Процессор:</b> <b>{cpu_info}</b>",
             lambda: "Шаблон для вывода информации",
             
             "banner_url",
@@ -90,31 +92,34 @@ class CustomInfoMod(loader.Module):
         ping = round((time.perf_counter_ns() - start) / 10**6, 3)
         await msg.delete()
 
-        platform_name = utils.get_platform_name()
-        is_termux = "Termux" in platform_name
-        
-        if is_termux:
-            system_info = ""
-        else:
-            ram_used, ram_total = self.get_ram_info()
-            disk_used, disk_total = self.get_disk_info()
-            system_info = (
-                f"<emoji document_id=5873146865637133757>🎤</emoji> <b>RAM сервера:</b> <code>{ram_used} GB | {ram_total} GB</code>\n"
-                f"<emoji document_id=5870982283724328568>⚙</emoji> <b>Память:</b> <code>{disk_used} GB | {disk_total} GB</code>\n\n"
-                f"<emoji document_id=5391034312759980875>🥷</emoji><b> OC: {platform.system()} {platform.release()}</b>\n"
-                f"<emoji document_id=5235588635885054955>🎲</emoji> <b>Процессор:</b> <b>{self.get_cpu_info()}</b>"
-            )
+        ram_used, ram_total = self.get_ram_info()
+        disk_used, disk_total = self.get_disk_info()
 
-        info = self.config["custom_info_text"].format(
-            owner=self._client.hikka_me.first_name + ' ' + (self._client.hikka_me.last_name or ''),
-            version='3.0.0',
-            branch=branch,
-            update_status=update_status,
-            prefix=self.get_prefix(),
-            ping=ping,
-            uptime=utils.formatted_uptime(),
-            system_info=system_info
-        )
+        template = self.config["custom_info_text"]
+        
+        # Create format dict
+        format_dict = {
+            "owner": self._client.hikka_me.first_name + ' ' + (self._client.hikka_me.last_name or ''),
+            "version": '3.0.0',
+            "branch": branch,
+            "update_status": update_status,
+            "prefix": self.get_prefix(),
+            "ping": ping,
+            "uptime": utils.formatted_uptime(),
+            "ram_using": ram_used,
+            "ram_total": ram_total,
+            "rom_using": disk_used,
+            "rom_total": disk_total,
+            "os_name": platform.system(),
+            "os_version": platform.release(),
+            "cpu_info": self.get_cpu_info()
+        }
+
+        # If old format is used, add system_info to format dict
+        if "{system_info}" in template:
+            format_dict["system_info"] = self.strings["old_format_warning"]
+
+        info = template.format(**format_dict)
         
         reply_to = await message.get_reply_message()
         thread = getattr(message, 'message_thread_id', None)
