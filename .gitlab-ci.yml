@@ -62,6 +62,7 @@ parse:
     - git checkout ${BRANCH_NAME}
     - git add *
     - git commit -m "Added modules.json"
+    - git remote set-url origin "https://oauth2:${GITLAB_TOKEN}@${REPO_URL}"
     - git push origin ${BRANCH_NAME} --force
 
 commit_changes:
