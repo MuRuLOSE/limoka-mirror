@@ -27249,6 +27249,1289 @@
       }
     ]
   },
+  "Den4ikSuperOstryyPer4ik/Astro-modules/astroafk.py": {
+    "name": "AstroAfkMod",
+    "description": "Полностью настраиваемый модуль для ухода в АФК режим! Обновление TxAFK!",
+    "meta": {
+      "pic": null,
+      "banner": "https://raw.githubusercontent.com/Den4ikSuperOstryyPer4ik/Astro-modules/main/Banners/AstroAFK.jpg",
+      "developer": "@AstroModules"
+    },
+    "commands": [
+      {
+        "asst": "- открыть настройки модуля"
+      },
+      {
+        "goafk": "<reason/empty>- войти в АФК режим"
+      },
+      {
+        "ungoafk": "- выйти из режима АФК"
+      }
+    ],
+    "new_commands": [
+      {
+        "asst": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "- открыть настройки модуля"
+        }
+      },
+      {
+        "goafk": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "<reason/empty>- войти в АФК режим"
+        }
+      },
+      {
+        "ungoafk": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "- выйти из режима АФК"
+        }
+      }
+    ]
+  },
+  "Den4ikSuperOstryyPer4ik/Astro-modules/TxAFK.py": {
+    "name": "TxAFKMod",
+    "description": "Афк модуль от AstroModules с изменением био и имени",
+    "meta": {
+      "pic": null,
+      "banner": null,
+      "developer": "@AstroModules"
+    },
+    "commands": [
+      {
+        "txcfgcmd": "- открыть конфиг модуля"
+      },
+      {
+        "goafkcmd": "- войти в AFK режим"
+      },
+      {
+        "ungoafkcmd": "- выйти из режима AFK"
+      }
+    ],
+    "new_commands": [
+      {
+        "txcfg": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "- открыть конфиг модуля"
+        }
+      },
+      {
+        "goafk": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "- войти в AFK режим"
+        }
+      },
+      {
+        "ungoafk": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "- выйти из режима AFK"
+        }
+      }
+    ]
+  },
+  "Den4ikSuperOstryyPer4ik/Astro-modules/RandomTrack.py": {
+    "name": "RandomTrackMod",
+    "description": "Получить рандомный трек. \nИспользуйте категории чтобы сгенерировать трек на свой вкус",
+    "meta": {
+      "pic": null,
+      "banner": "https://raw.githubusercontent.com/Den4ikSuperOstryyPer4ik/Astro-modules/main/Banners/RandomTrack.jpg",
+      "developer": "@AstroModules"
+    },
+    "commands": [
+      {
+        "rt": "- сгенерировать трек.\n\n      🫠 Категории:\n<f> - фонки\n<r> - ремиксы\n<m> - мемные звуки\n<s> - грустная музыка\n<h> - хайперпоп музыка\n<p> - популярная музыка\n<n> - ностальгические треки\n<my> - треки из вашего плейлиста\n\n      🤫 По желанию, в конфиге, можно указать свои каналы откуда будет отбираться музыка\n      "
+      }
+    ],
+    "new_commands": [
+      {
+        "rt": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "- сгенерировать трек.\n\n      🫠 Категории:\n<f> - фонки\n<r> - ремиксы\n<m> - мемные звуки\n<s> - грустная музыка\n<h> - хайперпоп музыка\n<p> - популярная музыка\n<n> - ностальгические треки\n<my> - треки из вашего плейлиста\n\n      🤫 По желанию, в конфиге, можно указать свои каналы откуда будет отбираться музыка\n      "
+        }
+      }
+    ]
+  },
+  "Den4ikSuperOstryyPer4ik/Astro-modules/akinator.py": {
+    "name": "AkinatorGame",
+    "description": "Akinator will guess any character you have in mind,\nYou just need to answer a couple of questions)",
+    "meta": {
+      "pic": null,
+      "banner": "https://raw.githubusercontent.com/Den4ikSuperOstryyPer4ik/Astro-modules/main/Banners/Akinator.jpg",
+      "developer": "@AstroModules"
+    },
+    "commands": [
+      {
+        "akinator": "- start the game - начать игру"
+      }
+    ],
+    "new_commands": [
+      {
+        "akinator": {
+          "ru_doc": "- начать игру",
+          "en_doc": null,
+          "doc": "- start the game"
+        }
+      }
+    ]
+  },
+  "Den4ikSuperOstryyPer4ik/Astro-modules/Emotions.py": {
+    "name": "EmotionsMod",
+    "description": "Выражение эмоций в чате",
+    "meta": {
+      "pic": null,
+      "banner": "https://raw.githubusercontent.com/Den4ikSuperOstryyPer4ik/Astro-modules/main/Banners/Emotions.jpg",
+      "developer": "@AstroModules, @HikariMods"
+    },
+    "commands": [
+      {
+        "emogocmd": "- вкл/выкл эмоции в данном чате"
+      },
+      {
+        "emoclearcmd": "<y> - сбросить список эмоций"
+      },
+      {
+        "emolistcmd": "- список доступных эмоций"
+      },
+      {
+        "emocmd": "<символ|слово> <эмоция> - добавить эмоцию в базу модуля"
+      }
+    ],
+    "new_commands": [
+      {
+        "emogo": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "- вкл/выкл эмоции в данном чате"
+        }
+      },
+      {
+        "emoclear": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "<y> - сбросить список эмоций"
+        }
+      },
+      {
+        "emolist": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "- список доступных эмоций"
+        }
+      },
+      {
+        "emo": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "<символ|слово> <эмоция> - добавить эмоцию в базу модуля"
+        }
+      }
+    ]
+  },
+  "Den4ikSuperOstryyPer4ik/Astro-modules/iOSAppsForAndroid.py": {
+    "name": "iOSAppsForAndroid",
+    "description": "iOS Applications for Android, or more simply, Android applications with an interface like on iOS",
+    "meta": {
+      "pic": null,
+      "banner": "https://raw.githubusercontent.com/Den4ikSuperOstryyPer4ik/Astro-modules/main/Banners/iOSAppsForAndroid.jpg",
+      "developer": "@AstroModules"
+    },
+    "commands": [
+      {
+        "iappslistcmd": "-->Inline List iOS Apps for Android -->Inline Лист iOS приложений для Android"
+      }
+    ],
+    "new_commands": [
+      {
+        "iappslist": {
+          "ru_doc": "-->Inline Лист iOS приложений для Android",
+          "en_doc": null,
+          "doc": "-->Inline List iOS Apps for Android"
+        }
+      }
+    ]
+  },
+  "Den4ikSuperOstryyPer4ik/Astro-modules/RandomStatuses.py": {
+    "name": "RandomStatusesMod",
+    "description": "Рандомные статусы для описания аккаунта в ТГ/Вацап/ВК и т.д.",
+    "meta": {
+      "pic": null,
+      "banner": "https://raw.githubusercontent.com/Den4ikSuperOstryyPer4ik/Astro-modules/main/Banners/RandomStatuses.jpg",
+      "developer": "@AstroModules"
+    },
+    "commands": [
+      {
+        "rstatuscmd": "Рандомный статус на описание аккаунта в ТГ/ВК/Вацап и т.д."
+      }
+    ],
+    "new_commands": [
+      {
+        "rstatus": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "Рандомный статус на описание аккаунта в ТГ/ВК/Вацап и т.д."
+        }
+      }
+    ]
+  },
+  "Den4ikSuperOstryyPer4ik/Astro-modules/inline_bot_manager.py": {
+    "name": "InlineBotManagerMod",
+    "description": "Control over your Inline bot!",
+    "meta": {
+      "pic": null,
+      "banner": "https://raw.githubusercontent.com/Den4ikSuperOstryyPer4ik/Astro-modules/main/Banners/InlineBotManager.jpg",
+      "developer": "@AstroModules"
+    },
+    "commands": [
+      {
+        "inlinebothelpcmd": "--> Check help for this module --> Просмотреть помощь по этому модулю"
+      },
+      {
+        "ibsetnamecmd": "<name> --> change Name for your Inline-Bot <имя> --> изменить имя для вашего Инлайн-Бота"
+      },
+      {
+        "ibsetqtextcmd": "<text> --> change text in InlineQuery for your Inline-Bot <текст> --> изменить текст в InlineQuery для вашего Инлайн-Бота"
+      },
+      {
+        "ibsetdescriptioncmd": "<description> --> change inline-bot description <текст> --> изменить информацию о инлайн-боте"
+      },
+      {
+        "ibsetaboutcmd": "<about> --> change inline-bot about text <текст> --> изменить текст об информации о инлайн-боте"
+      },
+      {
+        "ibchecknamecmd": "-->check bot name to be: \"🌘 Hikka Userbot of {your nickname}\"  -->проверить имя бота, чтобы оно было: \"🌘 Hikka Userbot of {ваш ник}\" "
+      }
+    ],
+    "new_commands": [
+      {
+        "inlinebothelp": {
+          "ru_doc": "--> Просмотреть помощь по этому модулю",
+          "en_doc": null,
+          "doc": "--> Check help for this module"
+        }
+      },
+      {
+        "ibsetname": {
+          "ru_doc": "<имя> --> изменить имя для вашего Инлайн-Бота",
+          "en_doc": null,
+          "doc": "<name> --> change Name for your Inline-Bot"
+        }
+      },
+      {
+        "ibsetqtext": {
+          "ru_doc": "<текст> --> изменить текст в InlineQuery для вашего Инлайн-Бота",
+          "en_doc": null,
+          "doc": "<text> --> change text in InlineQuery for your Inline-Bot"
+        }
+      },
+      {
+        "ibsetdescription": {
+          "ru_doc": "<текст> --> изменить информацию о инлайн-боте",
+          "en_doc": null,
+          "doc": "<description> --> change inline-bot description"
+        }
+      },
+      {
+        "ibsetabout": {
+          "ru_doc": "<текст> --> изменить текст об информации о инлайн-боте",
+          "en_doc": null,
+          "doc": "<about> --> change inline-bot about text"
+        }
+      },
+      {
+        "ibcheckname": {
+          "ru_doc": "-->проверить имя бота, чтобы оно было: \"🌘 Hikka Userbot of {ваш ник}\" ",
+          "en_doc": null,
+          "doc": "-->check bot name to be: \"🌘 Hikka Userbot of {your nickname}\" "
+        }
+      }
+    ]
+  },
+  "Den4ikSuperOstryyPer4ik/Astro-modules/minesweeper.py": {
+    "name": "MineSwepperModule",
+    "description": "Minesweeper game",
+    "meta": {
+      "pic": null,
+      "banner": "https://raw.githubusercontent.com/Den4ikSuperOstryyPer4ik/Astro-modules/main/Banners/MineSwepper.png",
+      "developer": "@AstroModules"
+    },
+    "commands": [
+      {
+        "minesweeper": "- start the game \"Minesweeper\"  - начать игру \"Сапёр\""
+      }
+    ],
+    "new_commands": [
+      {
+        "minesweeper": {
+          "ru_doc": "- начать игру \"Сапёр\"",
+          "en_doc": null,
+          "doc": "- start the game \"Minesweeper\" "
+        }
+      }
+    ]
+  },
+  "Den4ikSuperOstryyPer4ik/Astro-modules/komarumod.py": {
+    "name": "KomaruMod",
+    "description": "Random picture/video/gif from the @komarueveryday",
+    "meta": {
+      "pic": null,
+      "banner": "https://raw.githubusercontent.com/Den4ikSuperOstryyPer4ik/Astro-modules/main/Banners/Komaru.jpg",
+      "developer": "@AstroModules"
+    },
+    "commands": [
+      {
+        "komaru": "- choose a random picture/gif/video - подобрать рандом картинку(пикчу)/видео/гиф"
+      }
+    ],
+    "new_commands": [
+      {
+        "komaru": {
+          "ru_doc": "- подобрать рандом картинку(пикчу)/видео/гиф",
+          "en_doc": null,
+          "doc": "- choose a random picture/gif/video"
+        }
+      }
+    ]
+  },
+  "Den4ikSuperOstryyPer4ik/Astro-modules/AntiMat.py": {
+    "name": "AntiMatMod",
+    "description": "Будьте культурным человеком, не материтесь",
+    "meta": {
+      "pic": null,
+      "banner": "https://raw.githubusercontent.com/Den4ikSuperOstryyPer4ik/Astro-modules/main/Banners/AntiMat.jpg",
+      "developer": "@AstroModules"
+    },
+    "commands": [
+      {
+        "antimat": "- активировать или диактивировать АнтиМат"
+      },
+      {
+        "matlist": "- открыть список матов"
+      },
+      {
+        "amchatcmd": "- запретить/разрешить чату выражаться нецензурой"
+      }
+    ],
+    "new_commands": [
+      {
+        "antimat": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "- активировать или диактивировать АнтиМат"
+        }
+      },
+      {
+        "matlist": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "- открыть список матов"
+        }
+      },
+      {
+        "amchat": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "- запретить/разрешить чату выражаться нецензурой"
+        }
+      }
+    ]
+  },
+  "Den4ikSuperOstryyPer4ik/Astro-modules/shazam.py": {
+    "name": "ShazamMod",
+    "description": "Use <reply to voice> to search for a song using audio.",
+    "meta": {
+      "pic": null,
+      "banner": "https://raw.githubusercontent.com/Den4ikSuperOstryyPer4ik/Astro-modules/main/Banners/AstroShazam.png",
+      "developer": "@AstroModules"
+    },
+    "commands": [
+      {
+        "sh": "<reply to audio> - recognize track <reply to audio> - распознать трек"
+      }
+    ],
+    "new_commands": [
+      {
+        "sh": {
+          "ru_doc": "<reply to audio> - распознать трек",
+          "en_doc": null,
+          "doc": "<reply to audio> - recognize track"
+        }
+      }
+    ]
+  },
+  "Den4ikSuperOstryyPer4ik/Astro-modules/вахуи_пон.py": {
+    "name": "ВахуиПонMod",
+    "description": "пон и вахуи",
+    "meta": {
+      "pic": null,
+      "banner": null,
+      "developer": "@AstroModules"
+    },
+    "commands": [
+      {
+        "понcmd": "--> пон"
+      },
+      {
+        "вахуиcmd": "--> вахуи"
+      }
+    ],
+    "new_commands": [
+      {
+        "пон": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "--> пон"
+        }
+      },
+      {
+        "вахуи": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "--> вахуи"
+        }
+      }
+    ]
+  },
+  "Den4ikSuperOstryyPer4ik/Astro-modules/astroweather.py": {
+    "name": "AstroWeatherMod",
+    "description": "Модуль для получения информации о погоде в Вашем городе, в красивом формате",
+    "meta": {
+      "pic": null,
+      "banner": "https://raw.githubusercontent.com/Den4ikSuperOstryyPer4ik/Astro-modules/main/Banners/AstroWeather.jpg",
+      "developer": "@AstroModules"
+    },
+    "commands": [
+      {
+        "aw": "<город> - узнать погоду в указанном городе"
+      }
+    ],
+    "new_commands": [
+      {
+        "aw": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "<город> - узнать погоду в указанном городе"
+        }
+      }
+    ]
+  },
+  "Den4ikSuperOstryyPer4ik/Astro-modules/brawl_stats.py": {
+    "name": "BrawlStatsInfo",
+    "description": "Brawl Stars Players/Clubs information :)",
+    "meta": {
+      "pic": null,
+      "banner": "https://raw.githubusercontent.com/Den4ikSuperOstryyPer4ik/Astro-modules/main/Banners/BrawlStats.jpg",
+      "developer": "@AstroModules"
+    },
+    "commands": [
+      {
+        "get_my_ip": "Получить свой IP-Адрес для получения API-Токен BrawlStarsAPI"
+      },
+      {
+        "set_bs_api_token": "<api_token> - сохранить свой API-Токен в конфиге модуля."
+      },
+      {
+        "bs_get_player": "<#player_tag> <#player_tag2> -> получить информацию об игроке/игроках(теги можно через пробел указывать)"
+      },
+      {
+        "bs_get_club": "<#CLUB_TAG> -> получить информацию о клубе по его #ТЕГУ"
+      },
+      {
+        "bs_get_club_members": "<#CLUB_TAG> -> получить информацию об участниках клуба по его #ТЕГУ"
+      },
+      {
+        "bs_get_player_brawlers": "<#player_tag> -> получить информацию о Бравлерах(Бойцах) игрока по его #ТЕГУ"
+      }
+    ],
+    "new_commands": [
+      {
+        "get_my_ip": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "Получить свой IP-Адрес для получения API-Токен BrawlStarsAPI"
+        }
+      },
+      {
+        "set_bs_api_token": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "<api_token> - сохранить свой API-Токен в конфиге модуля."
+        }
+      },
+      {
+        "bs_get_player": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "<#player_tag> <#player_tag2> -> получить информацию об игроке/игроках(теги можно через пробел указывать)"
+        }
+      },
+      {
+        "bs_get_club": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "<#CLUB_TAG> -> получить информацию о клубе по его #ТЕГУ"
+        }
+      },
+      {
+        "bs_get_club_members": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "<#CLUB_TAG> -> получить информацию об участниках клуба по его #ТЕГУ"
+        }
+      },
+      {
+        "bs_get_player_brawlers": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "<#player_tag> -> получить информацию о Бравлерах(Бойцах) игрока по его #ТЕГУ"
+        }
+      }
+    ]
+  },
+  "Den4ikSuperOstryyPer4ik/Astro-modules/dialogs_manager.py": {
+    "name": "DialogsManagerMod",
+    "description": "Check your all info for dialogs, chats, PMs\nDelete definite dialog,\ndelete all dialogs by arguments,\nleave the chats, ids/usernames which you specify\nDialogs Manager!",
+    "meta": {
+      "pic": null,
+      "banner": "https://raw.githubusercontent.com/Den4ikSuperOstryyPer4ik/Astro-modules/main/Banners/DialogsManager.jpg",
+      "developer": "@AstroModules"
+    },
+    "commands": [
+      {
+        "dialogsinfo": "➪  all info for your dialogs, chats, PMs... ➪  полная информация о ваших диалогах, чатах лс и т.д."
+      },
+      {
+        "dialog_clear": "<id or @username> ➪  delete dialog with user <id or @username> ➪  удалить чат(диалог) с юзером"
+      },
+      {
+        "dclear": "➪  alias for command 'dialog_clear' ➪  алиас для команды 'dialogs_clear'"
+      },
+      {
+        "all_dialogs_clear": "Arguments:\n-deleted ➪  delete all dialogs PM with deleted accounts\n-fake ➪  delete all dialogs PM with fake accounts\n-scam ➪  delete all dialogs PM with scam accounts\n-bots ➪  delete all dialog with bots\n-allpms ➪  delete all dialogs PM\n-prem ➪  delete all dialogs PM with PREMIUM⭐️ users Аргументы:\n\t\t-deleted ➪  очистить все ЛС с удаленными аккаунтами\n\t\t-fake ➪  очистить все ЛС с аккаунтами с пометкой \"FAKE\"\n\t\t-scam ➪  очистить все ЛС со скам аккаунтами\n\t\t-bots ➪  очистить все ЛС с ботами\n\t\t-allpms ➪  очистить ВСЕ АБСОЛЮТНО ЛС(ОПАСНО)\n\t\t-prem ➪  очистить все ЛС с юзерами, обладающими Premium⭐️\n\t\t"
+      },
+      {
+        "leave_chats": "@chat_username1, @chat_username2, ... ➪  leave chats, with usernames in arguments @chat_username1, @chat_username2, ... ➪  покинуть чаты, с определенными @username"
+      }
+    ],
+    "new_commands": [
+      {
+        "dialogsinfo": {
+          "ru_doc": "➪  полная информация о ваших диалогах, чатах лс и т.д.",
+          "en_doc": null,
+          "doc": "➪  all info for your dialogs, chats, PMs..."
+        }
+      },
+      {
+        "dialog_clear": {
+          "ru_doc": "<id or @username> ➪  удалить чат(диалог) с юзером",
+          "en_doc": null,
+          "doc": "<id or @username> ➪  delete dialog with user"
+        }
+      },
+      {
+        "dclear": {
+          "ru_doc": "➪  алиас для команды 'dialogs_clear'",
+          "en_doc": null,
+          "doc": "➪  alias for command 'dialog_clear'"
+        }
+      },
+      {
+        "all_dialogs_clear": {
+          "ru_doc": "Аргументы:\n\t\t-deleted ➪  очистить все ЛС с удаленными аккаунтами\n\t\t-fake ➪  очистить все ЛС с аккаунтами с пометкой \"FAKE\"\n\t\t-scam ➪  очистить все ЛС со скам аккаунтами\n\t\t-bots ➪  очистить все ЛС с ботами\n\t\t-allpms ➪  очистить ВСЕ АБСОЛЮТНО ЛС(ОПАСНО)\n\t\t-prem ➪  очистить все ЛС с юзерами, обладающими Premium⭐️\n\t\t",
+          "en_doc": null,
+          "doc": "Arguments:\n-deleted ➪  delete all dialogs PM with deleted accounts\n-fake ➪  delete all dialogs PM with fake accounts\n-scam ➪  delete all dialogs PM with scam accounts\n-bots ➪  delete all dialog with bots\n-allpms ➪  delete all dialogs PM\n-prem ➪  delete all dialogs PM with PREMIUM⭐️ users"
+        }
+      },
+      {
+        "leave_chats": {
+          "ru_doc": "@chat_username1, @chat_username2, ... ➪  покинуть чаты, с определенными @username",
+          "en_doc": null,
+          "doc": "@chat_username1, @chat_username2, ... ➪  leave chats, with usernames in arguments"
+        }
+      }
+    ]
+  },
+  "Den4ikSuperOstryyPer4ik/Astro-modules/Compliments.py": {
+    "name": "ComplimentsMod",
+    "description": "Покажи девушке какая она прекрасная (ну или им, какие они прекрасные)",
+    "meta": {
+      "pic": null,
+      "banner": "https://raw.githubusercontent.com/Den4ikSuperOstryyPer4ik/Astro-modules/main/Banners/Compliments.jpg",
+      "developer": "@AstroModules"
+    },
+    "commands": [
+      {
+        "complimentscfgcmd": "—>конфиг этого модуля"
+      },
+      {
+        "ilikecmd": "Инлайн анимация комплиментов(полная настройка в конфиге)"
+      }
+    ],
+    "new_commands": [
+      {
+        "complimentscfg": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "—>конфиг этого модуля"
+        }
+      },
+      {
+        "ilike": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "Инлайн анимация комплиментов(полная настройка в конфиге)"
+        }
+      }
+    ]
+  },
+  "Den4ikSuperOstryyPer4ik/Astro-modules/achievements.py": {
+    "name": "AchievementsMod",
+    "description": "Create the achievement from https://minecraft-inside.ru/achievements/\n\nIdea from @Den4ikSOP & @boyhao",
+    "meta": {
+      "pic": null,
+      "banner": "https://raw.githubusercontent.com/Den4ikSuperOstryyPer4ik/Astro-modules/main/Banners/Achievements.jpg",
+      "developer": "@AstroModules"
+    },
+    "commands": [
+      {
+        "achievement": "[title] \"<text>\" [-icon <id>] [-title-color #<color>] [-text-color #<color>] [Заголовок] \"<текст>\" [-icon <id>] [-title-color #<цвет>] [-text-color #<цвет>]"
+      }
+    ],
+    "new_commands": [
+      {
+        "achievement": {
+          "ru_doc": "[Заголовок] \"<текст>\" [-icon <id>] [-title-color #<цвет>] [-text-color #<цвет>]",
+          "en_doc": null,
+          "doc": "[title] \"<text>\" [-icon <id>] [-title-color #<color>] [-text-color #<color>]"
+        }
+      }
+    ]
+  },
+  "Den4ikSuperOstryyPer4ik/Astro-modules/convertio.py": {
+    "name": "ConvertioMod",
+    "description": "Convert file with api from https://convertio.co",
+    "meta": {
+      "pic": null,
+      "banner": "https://raw.githubusercontent.com/Den4ikSuperOstryyPer4ik/Astro-modules/main/Banners/Convertio.jpg",
+      "developer": "@AstroModules"
+    },
+    "commands": [
+      {
+        "renewconvertio": "Renew convertio api key"
+      },
+      {
+        "convert": "<output format> <!reply to file> | Example: png <выходной формат> | Пример: png"
+      }
+    ],
+    "new_commands": [
+      {
+        "renewconvertio": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "Renew convertio api key"
+        }
+      },
+      {
+        "convert": {
+          "ru_doc": "<выходной формат> | Пример: png",
+          "en_doc": null,
+          "doc": "<output format> <!reply to file> | Example: png"
+        }
+      }
+    ]
+  },
+  "Den4ikSuperOstryyPer4ik/Astro-modules/demotivator.py": {
+    "name": "DemotivatorMod",
+    "description": "Demotivate picture with text, arguments and config.",
+    "meta": {
+      "pic": null,
+      "banner": "https://raw.githubusercontent.com/Den4ikSuperOstryyPer4ik/Astro-modules/main/Banners/Demotivator.jpg",
+      "developer": "@AstroModules"
+    },
+    "commands": [
+      {
+        "demotivate": "<text>\n[-bottom/-btm-text/-bottom-text <text> - add. text below]\n[-wt/-watermark <text> - add watermark]\n[-font-color/-ftc <color> (red/while/blue/yellow/...) - font color (white by default)]\n[-fill-color/-flc <color> (red/while/blue/yellow/...) - background color (black by default)]\n[-font/-font-name/-font-link <link to file with fonts> (not zip, but ttf) - font for text]\n[-top-size/-topsize/-tpsz <size> (default 80) - main text size]\n[-bottom-size/-btmsz <size> (default 60) - extra size text]\n[-arrange - adjust photo frames]\n- demotivate a picture according to the given text and arguments <текст>\n        [-bottom/-btm-text/-bottom-text <текст> - доп. текст внизу]\n        [-wt/-watermark <текст> - добавить водяной знак]\n        [-font-color/-ftc <цвет> (red/while/blue/yellow/...) - цвет шрифта (по дефолту white)]\n        [-fill-color/-flc <цвет> (red/while/blue/yellow/...) - цвет заднего фона (по дефолту black)]\n        [-font/-font-name/-font-link <ссылка на файл со шрифтами> (не zip, а ttf) - шрифт для текста]\n        [-top-size/-topsize/-tpsz <размер> (по дефолту 80) - размер главного текста]\n        [-bottom-size/-btmsz <размер> (по дефолту 60) - размер доп.(нижнего) текста]\n        [-arrange - регулировать рамки под фотографию]\n        - демотивировать картинку по заданному тексту и аргументам\n        "
+      }
+    ],
+    "new_commands": [
+      {
+        "demotivate": {
+          "ru_doc": "<текст>\n        [-bottom/-btm-text/-bottom-text <текст> - доп. текст внизу]\n        [-wt/-watermark <текст> - добавить водяной знак]\n        [-font-color/-ftc <цвет> (red/while/blue/yellow/...) - цвет шрифта (по дефолту white)]\n        [-fill-color/-flc <цвет> (red/while/blue/yellow/...) - цвет заднего фона (по дефолту black)]\n        [-font/-font-name/-font-link <ссылка на файл со шрифтами> (не zip, а ttf) - шрифт для текста]\n        [-top-size/-topsize/-tpsz <размер> (по дефолту 80) - размер главного текста]\n        [-bottom-size/-btmsz <размер> (по дефолту 60) - размер доп.(нижнего) текста]\n        [-arrange - регулировать рамки под фотографию]\n        - демотивировать картинку по заданному тексту и аргументам\n        ",
+          "en_doc": null,
+          "doc": "<text>\n[-bottom/-btm-text/-bottom-text <text> - add. text below]\n[-wt/-watermark <text> - add watermark]\n[-font-color/-ftc <color> (red/while/blue/yellow/...) - font color (white by default)]\n[-fill-color/-flc <color> (red/while/blue/yellow/...) - background color (black by default)]\n[-font/-font-name/-font-link <link to file with fonts> (not zip, but ttf) - font for text]\n[-top-size/-topsize/-tpsz <size> (default 80) - main text size]\n[-bottom-size/-btmsz <size> (default 60) - extra size text]\n[-arrange - adjust photo frames]\n- demotivate a picture according to the given text and arguments"
+        }
+      }
+    ]
+  },
+  "Den4ikSuperOstryyPer4ik/Astro-modules/пон_вахуи.py": {
+    "name": "ПонВахуиMod",
+    "description": "пон и вахуи",
+    "meta": {
+      "pic": null,
+      "banner": null,
+      "developer": "@AstroModules"
+    },
+    "commands": [
+      {
+        "пон": "--> инлайн меню со стикерами пон"
+      },
+      {
+        "вахуи": "--> инлайн меню со стикерами \"вахуи\" "
+      }
+    ],
+    "new_commands": [
+      {
+        "пон": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "--> инлайн меню со стикерами пон"
+        }
+      },
+      {
+        "вахуи": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "--> инлайн меню со стикерами \"вахуи\" "
+        }
+      }
+    ]
+  },
+  "Den4ikSuperOstryyPer4ik/Astro-modules/commands_logger.py": {
+    "name": "HikkaCommandsLoggerMod",
+    "description": "Hikka Commands Logger",
+    "meta": {
+      "pic": null,
+      "banner": "https://raw.githubusercontent.com/Den4ikSuperOstryyPer4ik/Astro-modules/main/Banners/HikkaCommandsLogger.jpg",
+      "developer": "@AstroModules"
+    },
+    "commands": [
+      {
+        "watcher": ""
+      }
+    ],
+    "new_commands": [
+      {
+        "watcher": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": null
+        }
+      }
+    ]
+  },
+  "Den4ikSuperOstryyPer4ik/Astro-modules/YandexMusic.py": {
+    "name": "YaMusicMod",
+    "description": "Поиск музыки через музыкального бота от Яндекса",
+    "meta": {
+      "pic": null,
+      "banner": "https://raw.githubusercontent.com/Den4ikSuperOstryyPer4ik/Astro-modules/main/Banners/YaMusic.jpg",
+      "developer": "@AstroModules"
+    },
+    "commands": [
+      {
+        "ymcmd": "- найти трек по названию"
+      }
+    ],
+    "new_commands": [
+      {
+        "ym": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "- найти трек по названию"
+        }
+      }
+    ]
+  },
+  "Den4ikSuperOstryyPer4ik/Astro-modules/gamecheat.py": {
+    "name": "GameeCheatMod",
+    "description": "Читы для игр в @gamee",
+    "meta": {
+      "pic": null,
+      "banner": "https://raw.githubusercontent.com/Den4ikSuperOstryyPer4ik/Astro-modules/main/Banners/GameeCheat.jpg",
+      "developer": "@astromodules",
+      "designer": "@XizurK"
+    },
+    "commands": [
+      {
+        "chg": "<ссылка> <рекорд> - запустить чит"
+      }
+    ],
+    "new_commands": [
+      {
+        "chg": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "<ссылка> <рекорд> - запустить чит"
+        }
+      }
+    ]
+  },
+  "Den4ikSuperOstryyPer4ik/Astro-modules/RandomUser.py": {
+    "name": "RandomUserMod",
+    "description": "choose a random user in chat\nAutors: @AstroModules & @smeowcodes",
+    "meta": {
+      "pic": null,
+      "banner": "https://raw.githubusercontent.com/Den4ikSuperOstryyPer4ik/Astro-modules/main/Banners/RandomUser.jpg",
+      "developer": "@AstroModules"
+    },
+    "commands": [
+      {
+        "irandusercmd": "choose a random user in chat | inline menu with prize buttons --> выбрать случайного пользователя в чате | inline-меню с призовыми кнопками"
+      }
+    ],
+    "new_commands": [
+      {
+        "iranduser": {
+          "ru_doc": "--> выбрать случайного пользователя в чате | inline-меню с призовыми кнопками",
+          "en_doc": null,
+          "doc": "choose a random user in chat | inline menu with prize buttons"
+        }
+      }
+    ]
+  },
+  "Den4ikSuperOstryyPer4ik/Astro-modules/summer.py": {
+    "name": "SummerMod",
+    "description": "Сколько осталось дней до лета?)",
+    "meta": {
+      "pic": null,
+      "banner": "https://raw.githubusercontent.com/Den4ikSuperOstryyPer4ik/Astro-modules/main/Banners/Summer.jpg",
+      "developer": "@AstroModules"
+    },
+    "commands": [
+      {
+        "st": "- вывести таймер"
+      }
+    ],
+    "new_commands": [
+      {
+        "st": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "- вывести таймер"
+        }
+      }
+    ]
+  },
+  "Den4ikSuperOstryyPer4ik/Astro-modules/dl_yt_previews.py": {
+    "name": "YTPreviewMod",
+    "description": "Скачивает превью с ютуба",
+    "meta": {
+      "pic": null,
+      "banner": "https://raw.githubusercontent.com/Den4ikSuperOstryyPer4ik/Astro-modules/main/Banners/YouTubePreviews.jpg",
+      "developer": "@AstroModules"
+    },
+    "commands": [
+      {
+        "ytpcmd": "<link> --> download YouTube video preview <link> --> скачивает превью"
+      }
+    ],
+    "new_commands": [
+      {
+        "ytp": {
+          "ru_doc": "<link> --> скачивает превью",
+          "en_doc": null,
+          "doc": "<link> --> download YouTube video preview"
+        }
+      }
+    ]
+  },
+  "Den4ikSuperOstryyPer4ik/Astro-modules/TwinkManager.py": {
+    "name": "TwinkManagerMod",
+    "description": "Управление твинками через основной аккаунт.",
+    "meta": {
+      "pic": null,
+      "banner": "https://raw.githubusercontent.com/Den4ikSuperOstryyPer4ik/Astro-modules/main/Banners/TwinkManager.jpg",
+      "developer": "@AstroModules"
+    },
+    "commands": [
+      {
+        "trestart": "- перезагрузить аккаунты"
+      },
+      {
+        "tping": "- проверить пинг"
+      },
+      {
+        "tdlmod": "<name/link> - загрузить модули на аккаунты"
+      },
+      {
+        "tterminal": "<command> - выполнить действие в терминале"
+      },
+      {
+        "tupdate": "- обновить хикку на аккаунтах"
+      },
+      {
+        "thelp": "<name/-f>- список модулей либо информация о модуле"
+      },
+      {
+        "tloadmod": "<reply> - загрузить файл модуля на аккаунты"
+      }
+    ],
+    "new_commands": [
+      {
+        "trestart": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "- перезагрузить аккаунты"
+        }
+      },
+      {
+        "tping": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "- проверить пинг"
+        }
+      },
+      {
+        "tdlmod": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "<name/link> - загрузить модули на аккаунты"
+        }
+      },
+      {
+        "tterminal": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "<command> - выполнить действие в терминале"
+        }
+      },
+      {
+        "tupdate": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "- обновить хикку на аккаунтах"
+        }
+      },
+      {
+        "thelp": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "<name/-f>- список модулей либо информация о модуле"
+        }
+      },
+      {
+        "tloadmod": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "<reply> - загрузить файл модуля на аккаунты"
+        }
+      }
+    ]
+  },
+  "Den4ikSuperOstryyPer4ik/Astro-modules/Steam.py": {
+    "name": "Steam",
+    "description": "Get now played game",
+    "meta": {
+      "pic": null,
+      "banner": "https://raw.githubusercontent.com/Den4ikSuperOstryyPer4ik/Astro-modules/main/Banners/AstroSteamNow.png",
+      "developer": "@AstroModules"
+    },
+    "commands": [
+      {
+        "steamnow": "- get what I'm playing at  - получить, во что я сейчас играю"
+      },
+      {
+        "sme": "- my steam account - открыть аккаунт Steam"
+      },
+      {
+        "game": "<id> - get game info <id> - получить инфо об игре"
+      },
+      {
+        "steamtoggle": "- toggle widgets updates - вкл/выкл виджеты SteamNow"
+      }
+    ],
+    "new_commands": [
+      {
+        "steamnow": {
+          "ru_doc": " - получить, во что я сейчас играю",
+          "en_doc": null,
+          "doc": "- get what I'm playing at"
+        }
+      },
+      {
+        "sme": {
+          "ru_doc": "- открыть аккаунт Steam",
+          "en_doc": null,
+          "doc": "- my steam account"
+        }
+      },
+      {
+        "game": {
+          "ru_doc": "<id> - получить инфо об игре",
+          "en_doc": null,
+          "doc": "<id> - get game info"
+        }
+      },
+      {
+        "steamtoggle": {
+          "ru_doc": "- вкл/выкл виджеты SteamNow",
+          "en_doc": null,
+          "doc": "- toggle widgets updates"
+        }
+      }
+    ]
+  },
+  "Den4ikSuperOstryyPer4ik/Astro-modules/pcmanager.py": {
+    "name": "PCManagerMod",
+    "description": "Управление вашим компьютером через юзербота",
+    "meta": {
+      "pic": null,
+      "banner": "https://raw.githubusercontent.com/Den4ikSuperOstryyPer4ik/Astro-modules/main/Banners/PCManager.jpg",
+      "developer": "@AstroModules"
+    },
+    "commands": [
+      {
+        "addbot": "- добавить бота\n\n💎 Основные команды:"
+      },
+      {
+        "tutor": "- туториал по подключению"
+      },
+      {
+        "pcoff": "- выключить компьютер"
+      },
+      {
+        "pcreboot": "- перезагрузить компьютер"
+      },
+      {
+        "pcinfo": "- просмотреть характеристики системы"
+      },
+      {
+        "pcip": "- просмотреть информацию об айпи адресе"
+      },
+      {
+        "pcscrin": "- сделать скриншот экрана"
+      },
+      {
+        "pcweb": "<ссылка> - открыть ссылку в браузере"
+      },
+      {
+        "pcwebscrin": "- сделать снимок с веб-камеры\n\n🔑 Дополнительно:"
+      },
+      {
+        "pcalert": "<сообщение> - вывести на экран сообщение"
+      },
+      {
+        "pcvol": "- управление звуком"
+      },
+      {
+        "pcmedia": "- управление музыкой"
+      }
+    ],
+    "new_commands": [
+      {
+        "addbot": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "- добавить бота\n\n💎 Основные команды:"
+        }
+      },
+      {
+        "tutor": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "- туториал по подключению"
+        }
+      },
+      {
+        "pcoff": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "- выключить компьютер"
+        }
+      },
+      {
+        "pcreboot": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "- перезагрузить компьютер"
+        }
+      },
+      {
+        "pcinfo": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "- просмотреть характеристики системы"
+        }
+      },
+      {
+        "pcip": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "- просмотреть информацию об айпи адресе"
+        }
+      },
+      {
+        "pcscrin": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "- сделать скриншот экрана"
+        }
+      },
+      {
+        "pcweb": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "<ссылка> - открыть ссылку в браузере"
+        }
+      },
+      {
+        "pcwebscrin": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "- сделать снимок с веб-камеры\n\n🔑 Дополнительно:"
+        }
+      },
+      {
+        "pcalert": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "<сообщение> - вывести на экран сообщение"
+        }
+      },
+      {
+        "pcvol": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "- управление звуком"
+        }
+      },
+      {
+        "pcmedia": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "- управление музыкой"
+        }
+      }
+    ]
+  },
+  "Den4ikSuperOstryyPer4ik/Astro-modules/video_to_voice.py": {
+    "name": "VideoToVoice",
+    "description": "Convert Video to voice",
+    "meta": {
+      "pic": null,
+      "banner": "https://raw.githubusercontent.com/Den4ikSuperOstryyPer4ik/Astro-modules/main/Banners/VideoToVoice.jpg",
+      "developer": "@AstroModules"
+    },
+    "commands": [
+      {
+        "convert_to_voice": "<reply_to_video> -> получить Войс звука видео, либо отправлять команду с прикрепленным видео(оно удалится после отправления сделанного войса), либо отправить команду ответом на видео."
+      }
+    ],
+    "new_commands": [
+      {
+        "convert_to_voice": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "<reply_to_video> -> получить Войс звука видео, либо отправлять команду с прикрепленным видео(оно удалится после отправления сделанного войса), либо отправить команду ответом на видео."
+        }
+      }
+    ]
+  },
+  "Den4ikSuperOstryyPer4ik/Astro-modules/mindtalk.py": {
+    "name": "MindTalkMod",
+    "description": "Your little psychologist Based on MindTalk by Hikamoru",
+    "meta": {
+      "pic": null,
+      "banner": "https://raw.githubusercontent.com/Den4ikSuperOstryyPer4ik/Astro-modules/main/Banners/MindTalk.jpg",
+      "developer": "@AstroModules"
+    },
+    "commands": [
+      {
+        "login": "<login> <password> - log in and save token"
+      },
+      {
+        "ask": "<message> - ask a psychologist a question"
+      },
+      {
+        "mtclear": "- clear MindTalk history"
+      }
+    ],
+    "new_commands": [
+      {
+        "login": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "<login> <password> - log in and save token"
+        }
+      },
+      {
+        "ask": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "<message> - ask a psychologist a question"
+        }
+      },
+      {
+        "mtclear": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "- clear MindTalk history"
+        }
+      }
+    ]
+  },
+  "Den4ikSuperOstryyPer4ik/Astro-modules/wordly.py": {
+    "name": "WordlyHelper",
+    "description": "Помощник для игры \"Вордли на Русском\"",
+    "meta": {
+      "pic": null,
+      "banner": "https://raw.githubusercontent.com/Den4ikSuperOstryyPer4ik/Astro-modules/main/Banners/WordlyHelper.jpg",
+      "developer": "@AstroModules"
+    },
+    "commands": [
+      {
+        "wordly": "<маркировка слова> [-not <буквы подряд, которых точно нету в слове>] [-yes <буквы подряд, которые точно есть в слове] - Найти слова по маркировке:\n* - одна любая буква\n$ - любое кол-во любых букв\nпример: *т**т -yes оч -not абвгд : отчет"
+      }
+    ],
+    "new_commands": [
+      {
+        "wordly": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "<маркировка слова> [-not <буквы подряд, которых точно нету в слове>] [-yes <буквы подряд, которые точно есть в слове] - Найти слова по маркировке:\n* - одна любая буква\n$ - любое кол-во любых букв\nпример: *т**т -yes оч -not абвгд : отчет"
+        }
+      }
+    ]
+  },
+  "Den4ikSuperOstryyPer4ik/Astro-modules/RandomPasswordGenerator.py": {
+    "name": "PasswordGeneratorMod",
+    "description": "Random password/pincode generator",
+    "meta": {
+      "pic": null,
+      "banner": "https://raw.githubusercontent.com/Den4ikSuperOstryyPer4ik/Astro-modules/main/Banners/PasswordGenerator.jpg",
+      "developer": "@AstroModules"
+    },
+    "commands": [
+      {
+        "generatorcfgcmd": "—>config for this module —>конфиг этого модуля"
+      },
+      {
+        "igeneratorcmd": "—>generate random password/pin —>сгенерировать случайный пароль/пин-код"
+      }
+    ],
+    "new_commands": [
+      {
+        "generatorcfg": {
+          "ru_doc": "—>конфиг этого модуля",
+          "en_doc": null,
+          "doc": "—>config for this module"
+        }
+      },
+      {
+        "igenerator": {
+          "ru_doc": "—>сгенерировать случайный пароль/пин-код",
+          "en_doc": null,
+          "doc": "—>generate random password/pin"
+        }
+      }
+    ]
+  },
   "MuRuLOSE/HikkaModulesRepo/filters.py": {
     "name": "TextFilters",
     "description": "- Module for filter text",
