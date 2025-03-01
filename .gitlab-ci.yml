@@ -50,6 +50,20 @@ update_repos:
     - git remote set-url origin "https://oauth2:${GITLAB_TOKEN}@${REPO_URL}"
     - git push origin ${BRANCH_NAME} --force
 
+parse:
+  stage: parse
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "schedule" || ($CI_PIPELINE_SOURCE == "merge_request_event" && $CI_MERGE_REQUEST_EVENT_TYPE == "merged")'
+      when: on_success
+    - when: never
+  script:
+    - echo "Запускаем parse после закрытия MR или по расписанию..."
+    - python3 parse.py || echo "Скрипт parse.py не найден или завершился с ошибкой"
+    - git checkout ${BRANCH_NAME}
+    - git add *
+    - git commit -m "Added modules.json"
+    - git push origin ${BRANCH_NAME} --force
+
 commit_changes:
   stage: commit
   rules:
@@ -131,14 +145,3 @@ backup:
     - echo "Files sent to Telegram successfully!"
   only:
     - main
-
-
-parse:
-  stage: parse
-  rules:
-    - if: '$CI_PIPELINE_SOURCE == "schedule" || ($CI_PIPELINE_SOURCE == "merge_request_event" && $CI_MERGE_REQUEST_EVENT_TYPE == "merged")'
-      when: on_success
-    - when: never
-  script:
-    - echo "Запускаем parse после закрытия MR или по расписанию..."
-    - python3 parse.py || echo "Скрипт parse.py не найден или завершился с ошибкой"
