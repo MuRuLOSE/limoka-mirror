@@ -3,6 +3,7 @@ import ast
 import json
 
 from clone_repos import repos
+from typing import Dict
 
 
 def get_module_info(module_path):
@@ -101,14 +102,43 @@ def get_module_info(module_path):
 
     return result
 
-def parse_developers() -> dict:
-    developers = {"developers": []}
+def parse_developers(base_dir: str) -> Dict[str, list]:
+    developers = {
+        "repo": set(),  # используем set внутри функции
+        "channel": set()
+    }
+    
     for repo_url in repos:
         repo_path = repo_url.replace("https://github.com/", "")
-        owner, repo_name = repo_path.split("/")
-        developers["developers"].append(owner)
+        try:
+            owner, repo_name = repo_path.split("/")
+            developers["repo"].add(owner)
+        except ValueError:
+            print(f"Incorrect URL of repository: {repo_url}")
+            continue
 
-    return developers
+    for root, _, files in os.walk(base_dir):
+        for file in files:
+            if file.endswith(".py"):
+                file_path = os.path.join(root, file)
+                try:
+                    module_info = get_module_info(file_path)
+                    if module_info and "meta" in module_info:
+                        developer = module_info["meta"].get('developer')
+                        if developer:  # Проверяем, что developer не None
+                            # Разделяем строки с запятыми, &, | и пробелами
+                            for dev in developer.replace(',', ' ').replace('&', ' ').replace('|', ' ').split():
+                                # Добавляем только элементы, начинающиеся с @
+                                if dev.startswith('@'):
+                                    developers["channel"].add(dev.strip())
+                except Exception as e:
+                    print(f"Ошибка при парсинге файла {file_path}: {e}")
+
+    # Преобразуем set в list перед возвратом
+    return {
+        "repo": list(developers["repo"]),
+        "channel": list(developers["channel"])
+    }
 
 
 modules_data = {}
@@ -126,7 +156,7 @@ for root, _, files in os.walk(base_dir):
             except Exception as e:
                 print(f"Ошибка при парсинге файла {file_path}: {e}")
 
-developers = parse_developers()
+developers = parse_developers(base_dir)
 
 with open("modules.json", "w", encoding="utf-8") as json_file:
    json.dump(modules_data, json_file, ensure_ascii=False, indent=2)
