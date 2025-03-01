@@ -2,78 +2,34 @@ from typing import Union, Dict
 import aiohttp
 from aiohttp.client_exceptions import ServerTimeoutError
 import logging
-import tempfile
-import ffmpeg
-
-from telethon.types import Message
+from telethon.tl.types import Message
+from telethon import types
 from .. import loader, utils
-
-
-"""
-    ███    ███ ██    ██ ██████  ██    ██ ██       ██████  ███████ ███████
-    ████  ████ ██    ██ ██   ██ ██    ██ ██      ██    ██ ██      ██  
-    ██ ████ ██ ██    ██ ██████  ██    ██ ██      ██    ██ ███████ █████
-    ██  ██  ██ ██    ██ ██   ██ ██    ██ ██      ██    ██      ██ ██  
-    ██      ██  ██████  ██   ██  ██████  ███████  ██████  ███████ ███████ 
-
-                                   
-    VKMusic
-    📜 Licensed under the GNU AGPLv3	
-"""
-
-# meta banner: https://0x0.st/HYVT.jpg
-# meta desc: desc
-# meta developer: @BruhHikkaModules
-# requires: aiohttp ffmpeg-python
+from telethon.utils import get_display_name
 
 logger = logging.getLogger(__name__)
 
-
 class VKMusicAPI:
     def __init__(self, user_id: str, token: str) -> Union[Dict, int]:
-        """VKMusicAPI - class for vk music API
-
-        Arguments:
-            user_id {str} -- User ID of user
-            token {str} -- Access token
-
-        Returns:
-            Dict, int -- Data of music or status code
-        """
         self.token = token
         self.user_id = user_id
 
-    async def get_music(
-        self,
-    ):  # errors:  10 token not set or no right 'доступ в любое время', 20 music are not playing, 30 API not asnwering, 40, status mode, 50 sucsessfull,
+    async def get_music(self):
         try:
             async with aiohttp.ClientSession() as session:
                 async with session.post(
-                    f"https://api.vk.com/method/status.get?user_id={self.user_id}&access_token={self.token}&v=5.199",
-                    # params={
-                    #     "user_id": self.user_id,
-                    #     "access_token": self.token,
-                    #     "v": "5.199",  # it's last version when module is released
-                    # },
+                    f"https://api.vk.com/method/status.get?user_id={self.user_id}&access_token={self.token}&v=5.199"
                 ) as response:
                     data: dict = await response.json()
                     if data['response'].get('audio') is not None:
-                        audio = 50, data['response']
-                        return audio
+                        return 50, data['response']
                     else:
-                        return 40, data['response']['text'] # VKontakte does not return audio in 
-                                                            # all cases (see https://dev.vk.com/ru/method/status.get).
-                                                            # But it displays it in the status, so we return the status, 
-                                                            # but if music is not playing, the user's status will be returned.
-                                                            # Also this is VK fault, not my fault
+                        return 40, data['response']['text']
         except ServerTimeoutError:
-             return 30
-
+            return 30
 
 @loader.tds
 class VKMusic(loader.Module):
-    """Module for VK Music (Remember, if your server is outside of Russia, errors can happen because VK does not want to give out track information due to restrictions)"""
-
     strings = {
         "name": "VKMusic",
         "no_music": "Music is not playing (not all music is displayed in the status).",
@@ -84,30 +40,15 @@ class VKMusic(loader.Module):
         ),
         "instructions": (
             "<b>Go to <a href='https://vkhost.github.io/'>vkhost</a>, open settings, leave anytime access and status,"
-            "and click get, copy the token and id, and then paste it in properly (in config)."
+            "and click get, copy the token and id, and then paste it in properly (in config).</b>"
         ),
         "not_russia": (
             "\n<emoji document_id=5303281542422865331>🇷🇺</emoji> VK gave not all information about" 
             "the track because your userbot server is outside the Russian Federation."
-        )
-    }
-
-    strings_ru = {
-        "_doc_cls": "Модуль для ВК Музыки",
-        "no_music": "Музыка не играет (не вся музыка отображается в статусе).",
-        "server_error": "Сервер VK не отвечает",
-        "music_form": (
-            "<emoji document_id=5222175680652917218>🎵</emoji> <b>Сейчас слушает:</b> <code>{title}</code>"
-            "\n<emoji document_id=5269537556336222550>🐱</emoji> <b>Исполнитель:</b> <code>{artist}</code>"
         ),
-        "instructions": (
-            "<b>Зайдите на <a href='https://vkhost.github.io/'>vkhost</a>, откройте настройки, оставьте доступ в любое время и статус,"
-            "и нажмите получить, скопируйте токен и айди, а дальше вставьте как положено (в конфиге).</b>"
-        ),
-        "not_russia": (
-            "\n<emoji document_id=5303281542422865331>🇷🇺</emoji> ВК передал не всю информацию" 
-            "о треке т.к ваш сервер юзербота за пределами РФ."
-        )
+        "bot_searching": "Searching via Telegram bot...",
+        "bot_not_found": "Music not found via Telegram bot.",
+        "bot_start": "Bot requires /start, initializing..."
     }
 
     def __init__(self):
@@ -124,57 +65,100 @@ class VKMusic(loader.Module):
                 lambda: "Here your userid, (about this in .vkmtoken)",
                 validator=loader.validators.Hidden(loader.validators.String()),
             ),
+            loader.ConfigValue(
+                "telegram_bot",
+                "@vkm_bot",
+                lambda: "Telegram bot username for music search (e.g., @vkm_bot)",
+                validator=loader.validators.String(),
+            ),
         )
-
         self._vkmusic = VKMusicAPI(self.config["user_id"], self.config["token"])
+
+    async def _get_music_from_bot(self, query: str):
+        bot_username = self.config["telegram_bot"]
+        messages_to_delete = []
+        
+        async with self.client.conversation(bot_username) as conv:
+            request = await conv.send_message(query)
+            messages_to_delete.append(request)
+
+            try:
+                response = await conv.get_response(timeout=10)
+                messages_to_delete.append(response)
+            except TimeoutError:
+                await conv.send_message("/start")
+                messages_to_delete.append(await conv.get_response(timeout=5))
+                await conv.send_message(query)
+                messages_to_delete.append(await conv.get_response(timeout=10))
+                response = messages_to_delete[-1]
+
+            if response.reply_markup and hasattr(response.reply_markup, "rows"):
+                music_response = await response.click(0)
+                file_response = await conv.get_response(timeout=10)
+                messages_to_delete.append(file_response)
+            else:
+                file_response = response
+
+            if file_response.media and isinstance(file_response.media, types.MessageMediaDocument):
+                document = file_response.media.document
+                for attr in document.attributes:
+                    if isinstance(attr, types.DocumentAttributeAudio):
+                        title = attr.title or "Unknown Title"
+                        artist = attr.performer or "Unknown Artist"
+                        await self.client.delete_messages(bot_username, messages_to_delete)
+                        return title, artist, document
+                await self.client.delete_messages(bot_username, messages_to_delete)
+                return None, None, document
+            await self.client.delete_messages(bot_username, messages_to_delete)
+            return None, None, None
 
     @loader.command(ru_doc=" - Текущая песня")
     async def vkmpnow(self, message: Message):
-        """ - Current song"""
-
-        self._vkmusic = VKMusicAPI(
-            str(self.config["user_id"]), str(self.config["token"])
-        )
+        self._vkmusic = VKMusicAPI(str(self.config["user_id"]), str(self.config["token"]))
 
         music = await self._vkmusic.get_music()
 
-        if music == 20:
-            return await utils.answer(message, self.strings["no_music"])
-        elif music == 30:
-            return await utils.answer(message, self.strings["server_error"])
-        elif music[0] == 50:
+        if music[0] == 50:
             title = music[1]['audio']["title"]
             artist = music[1]['audio']["artist"]
-            url = music[1]['audio']["url"] # hikka dont want to work with this url, idk
+            url = music[1]['audio']["url"]
 
-            with tempfile.TemporaryDirectory() as path:
-                (
-                    ffmpeg
-                    .input(url)
-                    .output(path + '/index.mp3', format='mp3')
-                    .run()
-                )
+            async with aiohttp.ClientSession() as session:
+                async with session.get(url) as resp:
+                    if resp.status == 200:
+                        audio_data = await resp.read()
+                        file_name = f"{artist} - {title}.mp3".replace("/", "_").replace("\\", "_")
+                        await utils.answer_file(
+                            message,
+                            file=audio_data,
+                            file_name=file_name,
+                            caption=self.strings["music_form"].format(title=title, artist=artist)
+                        )
+                    else:
+                        await utils.answer(message, self.strings["server_error"])
+        elif music[0] == 40 or music[0] == 30:
+            await utils.answer(message, self.strings["bot_searching"])
+            query = music[1] if music[0] == 40 else "current song"
+            title, artist, document = await self._get_music_from_bot(query)
 
-                # todo: add tags
+            if document:
+                file_name = f"{artist or 'Unknown'} - {title or 'Unknown'}.mp3".replace("/", "_").replace("\\", "_")
                 await utils.answer_file(
                     message,
-                    file=path + '/index.mp3',
-                    caption=self.strings["music_form"].format(title=title, artist=artist) +
-                    self.strings['not_russia'],
+                    file=document,
+                    file_name=file_name,
+                    caption=self.strings["music_form"].format(
+                        title=title or "Unknown",
+                        artist=artist or "Unknown"
+                    )
                 )
+            else:
+                await utils.answer(message, self.strings["bot_not_found"])
+        elif music == 20:
+            await utils.answer(message, self.strings["no_music"])
+        elif music == 30:
+            await utils.answer(message, self.strings["server_error"])
 
-        elif music[0] == 40:
-            data = music[1].split('—')
-            title = data[1]
-            artist = data[0]
-
-            await utils.answer(
-                message,
-                self.strings["music_form"].format(title=title, artist=artist) +
-                self.strings['not_russia'] + '\n\nMusic file is unavailable (sorry)'
-            )
-
-    @loader.command(ru_doc=" - Инструкции для токена и пользовательского индетефикатора")
+    @loader.command(ru_doc=" - Инструкции для токена и пользовательского идентификатора")
     async def vkmtoken(self, message: Message):
-        """- Instructions for token and user ID"""
         await utils.answer(message, self.strings["instructions"])
