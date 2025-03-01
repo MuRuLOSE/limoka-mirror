@@ -2,6 +2,8 @@ import os
 import ast
 import json
 
+from clone_repos import repos
+
 
 def get_module_info(module_path):
     """Парсит Python-модуль и извлекает информацию о нем."""
@@ -99,6 +101,15 @@ def get_module_info(module_path):
 
     return result
 
+def parse_developers() -> dict:
+    developers = {"developers": []}
+    for repo_url in repos:
+        repo_path = repo_url.replace("https://github.com/", "")
+        owner, repo_name = repo_path.split("/")
+        developers["developers"].append(owner)
+
+    return developers
+
 
 modules_data = {}
 base_dir = os.getcwd()
@@ -115,7 +126,14 @@ for root, _, files in os.walk(base_dir):
             except Exception as e:
                 print(f"Ошибка при парсинге файла {file_path}: {e}")
 
+developers = parse_developers()
+
 with open("modules.json", "w", encoding="utf-8") as json_file:
    json.dump(modules_data, json_file, ensure_ascii=False, indent=2)
 
 print("Файл modules.json создан!")
+
+with open("developers.json", "w", encoding="utf-8") as json_file:
+   json.dump(developers, json_file, ensure_ascii=False, indent=2)
+
+print("Файл developers.json создан!")
