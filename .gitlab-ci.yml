@@ -53,17 +53,19 @@ update_repos:
 parse:
   stage: parse
   rules:
-    - if: '$CI_PIPELINE_SOURCE == "schedule" || ($CI_PIPELINE_SOURCE == "merge_request_event" && $CI_MERGE_REQUEST_EVENT_TYPE == "merged")'
+    - if: '($CI_PIPELINE_SOURCE == "merge_request_event" && $CI_MERGE_REQUEST_EVENT_TYPE == "merged") || $CI_COMMIT_BRANCH == "main"'
       when: on_success
     - when: never
   script:
-    - echo "Запускаем parse после закрытия MR или по расписанию..."
-    - python3 parse.py || echo "Скрипт parse.py не найден или завершился с ошибкой"
-    - git checkout ${BRANCH_NAME}
-    - git add *
-    - git commit -m "Added modules.json"
+    - echo "Запускаем parse после мержа MR..."
+    - git fetch origin
+    - git checkout main
+    - git reset --hard origin/main
+    - python3 parse.py
+    - git add modules.json
+    - git commit -m "Updated modules.json after merge $(date +'%Y-%m-%d %H:%M:%S')" || echo "No changes for modules.json"
     - git remote set-url origin "https://oauth2:${GITLAB_TOKEN}@${REPO_URL}"
-    - git push origin ${BRANCH_NAME} --force
+    - git push origin main
 
 commit_changes:
   stage: commit
