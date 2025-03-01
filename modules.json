@@ -29461,19 +29461,17 @@
   },
   "MuRuLOSE/HikkaModulesRepo/VKMusic.py": {
     "name": "VKMusic",
-    "description": "Module for VK Music (Remember, if your server is outside of Russia, errors can happen because VK does not want to give out track information due to restrictions)",
+    "description": null,
     "meta": {
       "pic": null,
-      "banner": "https://0x0.st/HYVT.jpg",
-      "desc": "desc",
-      "developer": "@BruhHikkaModules"
+      "banner": null
     },
     "commands": [
       {
-        "vkmpnow": "- Current song  - Текущая песня"
+        "vkmpnow": " - Текущая песня"
       },
       {
-        "vkmtoken": "- Instructions for token and user ID  - Инструкции для токена и пользовательского индетефикатора"
+        "vkmtoken": " - Инструкции для токена и пользовательского идентификатора"
       }
     ],
     "new_commands": [
@@ -29481,14 +29479,14 @@
         "vkmpnow": {
           "ru_doc": " - Текущая песня",
           "en_doc": null,
-          "doc": "- Current song"
+          "doc": null
         }
       },
       {
         "vkmtoken": {
-          "ru_doc": " - Инструкции для токена и пользовательского индетефикатора",
+          "ru_doc": " - Инструкции для токена и пользовательского идентификатора",
           "en_doc": null,
-          "doc": "- Instructions for token and user ID"
+          "doc": null
         }
       }
     ]
