@@ -1,80 +1,78 @@
 # meta developer: @limokanews
 
-from whoosh.index import create_in
-from whoosh.fields import TEXT, ID, Schema
-from whoosh.qparser import QueryParser, OrGroup
-from whoosh.query import FuzzyTerm, Wildcard
-
 import aiohttp
-import random
-import logging
-import os
+import asyncio
 import html
 import json
+import logging
+import random
+from typing import Dict, List, Optional, Tuple
 
 from telethon.types import Message
-from .. import utils, loader
+from .. import loader, utils
 from ..types import InlineQuery
-
 
 logger = logging.getLogger("Limoka")
 
 
-class Search:
-    def __init__(self, query: str):
-        self.schema = Schema(
-            title=TEXT(stored=True), path=ID(stored=True), content=TEXT(stored=True)
-        )
-        self.query = query
-
-    def search_module(self, content, best_match: bool = True):
-        if not os.path.exists("limoka_search"):
-            os.makedirs("limoka_search")
-
-        ix = create_in("limoka_search", self.schema)
-        writer = ix.writer()
-
-        for module_content in content:
-            writer.add_document(
-                title=module_content["id"],
-                path=module_content["id"],
-                content=module_content["content"],
-            )
-        writer.commit()
-
-        with ix.searcher() as searcher:
-            parser = QueryParser("content", ix.schema, group=OrGroup)
-            query = parser.parse(self.query)
-
-            fuzzy_query = FuzzyTerm("content", self.query, maxdist=1, prefixlength=2)
-            wildcard_query = Wildcard("content", f"*{self.query}*")
-
-            results = searcher.search(query)
-
-            if not results:
-                results = searcher.search(fuzzy_query)
-            if not results:
-                results = searcher.search(wildcard_query)
-
-            if results:
-                if best_match:
-                    best_match = results[0]
-                    return best_match["path"]
-                else:
-                    return set([result["path"] for result in results])
-            else:
-                return 0
-
-
 class LimokaAPI:
-    async def get_all_modules(self, url: str) -> dict:
-        async with aiohttp.ClientSession() as session:
-            async with session.get(url) as response:
+    """API client for fetching Limoka modules."""
+
+    def __init__(self, base_url: str):
+        self.base_url = base_url
+        self.session = None
+
+    async def initialize(self):
+        """Initializes the aiohttp session."""
+        self.session = aiohttp.ClientSession()
+
+    async def close(self):
+        """Closes the aiohttp session."""
+        if self.session:
+            await self.session.close()
+
+    async def get_all_modules(self) -> Dict:
+        """Fetches all modules from the API.
+
+        Returns:
+            A dictionary containing module data, or an empty dictionary on failure.
+        """
+        url = f"{self.base_url}modules.json"
+        try:
+            async with self.session.get(url) as response:
+                response.raise_for_status()
                 text = await response.text()
                 return json.loads(text)
+        except aiohttp.ClientError as e:
+            logger.error(f"Error fetching modules from {url}: {e}")
+            return {}
+        except json.JSONDecodeError as e:
+            logger.error(
+                f"Error decoding JSON from {url}: {e}, response: {text[:200] if 'text' in locals() else 'No response'}"
+            )
+            return {}
 
 
-@loader.tds
+class Search:
+    """Search class for module searching."""
+
+    def __init__(self, query: str):
+        self.query = query.lower()
+
+    def search_module(self, contents: List[Dict]) -> List[str]:
+        """Search for a module based on the query."""
+        results = []
+        for module in contents:
+            if (
+                module
+                and "content" in module
+                and module["content"]
+                and self.query in module["content"].lower()
+            ):
+                results.append(module["id"])
+        return results
+
+
 class Limoka(loader.Module):
     """Hikka modules are now in one place with easy searching!"""
 
@@ -82,17 +80,14 @@ class Limoka(loader.Module):
         "name": "Limoka",
         "wait": (
             "Just wait"
-            "\n<emoji document_id=5404630946563515782>🔍</emoji> A search is underway among {count} modules for the query: <code>{query}</code>"
-            "\n"
+            "\n<emoji document_id=5404630946563515782>🔍</emoji> Searching {count} modules for: <code>{query}</code>"
             "\n<i>{fact}</i>"
         ),
         "found": (
-            "<emoji document_id=5413334818047940135>🔍</emoji> Found the module <b>{name}</b> by query: <b>{query}</b>"
-            "\n"
-            "\n<b><emoji document_id=5418376169055602355>ℹ️</emoji> Description:</b> {description}"
-            "\n<b><emoji document_id=5418299289141004396>🧑‍💻</emoji> Developer:</b> {username}"
-            "\n\n{commands}"
-            "\n<emoji document_id=5411143117711624172>🪄</emoji> <code>{prefix}dlm {url}{module_path}</code>"
+            "<emoji document_id=5413334818047940135>🔍</emoji> Found module <b>{name}</b> for: <b>{query}</b>"
+            "\n\n<b><emoji document_id=5418376169055602355>ℹ️</emoji> Description:</b> {description}"
+            "\n<b><emoji document_id=5418299289141004396>🧑‍💻</emoji> Developer:</b> {username}\n"
+            "\n{commands}\n\n<emoji document_id=5411143117711624172>🪄</emoji> <code>{prefix}dlm {url}{module_path}</code>"
         ),
         "command_template": "{emoji} <code>{prefix}{command}</code> {description}\n",
         "emojis": {
@@ -106,67 +101,56 @@ class Limoka(loader.Module):
             8: "<emoji document_id=5416006506749383505>8️⃣</emoji>",
             9: "<emoji document_id=5415963015910544694>9️⃣</emoji>",
         },
-        "404": "<emoji document_id=5210952531676504517>❌</emoji> <b>Not found by query: <i>{query}</i></b>",
-        "noargs": "<emoji document_id=5210952531676504517>❌</emoji> <b>No args</b>",
-        "?": "<emoji document_id=5951895176908640647>🔎</emoji> Request too short / not found",
+        "not_found": "<emoji document_id=5210952531676504517>❌</emoji> No module found for: <i>{query}</i>",
+        "no_args": "<emoji document_id=5210952531676504517>❌</emoji> Please provide a search query.",
+        "short_query": "<emoji document_id=5951895176908640647>🔎</emoji> Query too short or not found.",
         "no_info": "No information",
         "facts": [
-            "<emoji document_id=5472193350520021357>🛡</emoji> The limoka catalog is carefully moderated!",
-            "<emoji document_id=5940434198413184876>🚀</emoji> Limoka performance allows you to search for modules quickly!",
+            "<emoji document_id=5472193350520021357>🛡</emoji> The Limoka catalog is carefully moderated!",
+            "<emoji document_id=5940434198413184876>🚀</emoji> Limoka's performance allows for fast module searches!",
         ],
-        "inline404": "Not found",
-        "inline?": "Request too short / not found",
-        "inlinenoargs": "Please, enter query",
+        "inline_not_found": "No modules found.",
+        "inline_short_query": "Enter a search query.",
+        "inline_no_args": "Please enter a query.",
+        "?": "<emoji document_id=6324006154869867807>🤔</emoji> Please provide a search query.",
+        "404": "<emoji document_id=5210952531676504517>❌</emoji> No module found for: <i>{query}</i>",
+        "inlinenoargs": "<emoji document_id=5210952531676504517>❌</emoji> Please provide a search query.",
+        "inline404": "<emoji document_id=5210952531676504517>❌</emoji> No module found for this query.",
+        "inline?": "<emoji document_id=6324006154869867807>🤔</emoji> Something went wrong, please try again.",
     }
 
     strings_ru = {
         "wait": (
             "Подождите"
-            "\n<emoji document_id=5404630946563515782>🔍</emoji> Идёт поиск среди {count} модулей по запросу: <code>{query}</code>"
-            "\n"
+            "\n<emoji document_id=5404630946563515782>🔍</emoji> Ищем среди {count} модулей по запросу: <code>{query}</code>"
             "\n<i>{fact}</i>"
         ),
         "found": (
             "<emoji document_id=5413334818047940135>🔍</emoji> Найден модуль <b>{name}</b> по запросу: <b>{query}</b>"
-            "\n"
-            "\n<b><emoji document_id=5418376169055602355>ℹ️</emoji> Описание:</b> {description}"
-            "\n<b><emoji document_id=5418299289141004396>🧑‍💻</emoji> Разработчик:</b> {username}"
-            "\n"
-            "\n{commands}"
-            "\n"
-            "\n<emoji document_id=5411143117711624172>🪄</emoji> <code>{prefix}dlm {url}{module_path}</code>"
+            "\n\n<b><emoji document_id=5418376169055602355>ℹ️</emoji> Описание:</b> {description}"
+            "\n<b><emoji document_id=5418299289141004396>🧑‍💻</emoji> Разработчик:</b> {username}\n"
+            "\n{commands}\n\n<emoji document_id=5411143117711624172>🪄</emoji> <code>{prefix}dlm {url}{module_path}</code>"
         ),
         "command_template": "{emoji} <code>{prefix}{command}</code> {description}\n",
-        "404": "<emoji document_id=5210952531676504517>❌</emoji> <b>Не найдено по запросу: <i>{query}</i></b>",
-        "noargs": "<emoji document_id=5210952531676504517>❌</emoji> <b>Нет аргументов</b>",
-        "?": "<emoji document_id=5951895176908640647>🔎</emoji> Запрос слишком короткий / не найден",
+        "not_found": "<emoji document_id=5210952531676504517>❌</emoji> Модуль не найден по запросу: <i>{query}</i>",
+        "no_args": "<emoji document_id=5210952531676504517>❌</emoji> Пожалуйста, введите запрос для поиска.",
+        "short_query": "<emoji document_id=5951895176908640647>🔎</emoji> Слишком короткий запрос или ничего не найдено.",
         "no_info": "Нет информации",
         "facts": [
-            "<emoji document_id=5472193350520021357>🛡</emoji> Каталог лимоки тщательно модерируется!",
-            "<emoji document_id=5940434198413184876>🚀</emoji> Производительность лимоки позволяет вам искать модули с невероятной скоростью",
+            "<emoji document_id=5472193350520021357>🛡</emoji> Каталог Limoka тщательно модерируется!",
+            "<emoji document_id=5940434198413184876>🚀</emoji> Производительность Limoka обеспечивает быстрый поиск модулей!",
         ],
-        "inline404": "Не найдено",
-        "inline?": "Запрос слишком короткий / не найден",
-        "inlinenoargs": "Введите запрос",
+        "inline_not_found": "Модули не найдены.",
+        "inline_short_query": "Введите поисковой запрос.",
+        "inline_no_args": "Пожалуйста, введите запрос.",
+        "?": "<emoji document_id=6324006154869867807>🤔</emoji> Пожалуйста, введите запрос для поиска.",
+        "404": "<emoji document_id=5210952531676504517>❌</emoji> Модуль не найден по запросу: <i>{query}</i>",
+        "inlinenoargs": "<emoji document_id=5210952531676504517>❌</emoji> Пожалуйста, введите запрос для поиска.",
+        "inline404": "<emoji document_id=5210952531676504517>❌</emoji> Модуль не найден по этому запросу.",
+        "inline?": "<emoji document_id=6324006154869867807>🤔</emoji> Что-то пошло не так, попробуйте еще раз.",
     }
 
-    def translate_description(self, command):
-        user_lang = self._db.get("hikka.translations", "lang", "en")[0:2]
-
-        descriptions = {}
-
-        for lang, description in command.items():
-            if description:
-                descriptions.update({lang[0:2]: description})
-
-        return descriptions[user_lang]
-
-    async def client_ready(self, client, db):
-        self.client = client
-        self.db = db
-
     def __init__(self):
-        self.api = LimokaAPI()
         self.config = loader.ModuleConfig(
             loader.ConfigValue(
                 "limoka_url",
@@ -176,20 +160,46 @@ class Limoka(loader.Module):
             )
         )
         self.name = self.strings["name"]
+        self._modules_cache: Dict = {}
+        self._api: Optional[LimokaAPI] = None
 
-    def generate_commands(self, module_info):
+    async def client_ready(self, client, db):
+        self.client = client
+        self.db = db
+        self._api = LimokaAPI(self.config["limoka_url"])
+        await self._api.initialize()
+        asyncio.create_task(self._load_modules())
+
+    async def _load_modules(self):
+        """Loads modules data into the cache."""
+        self._modules_cache = await self._api.get_all_modules()
+
+    async def _get_modules(self) -> Dict:
+        """Returns cached modules data, loading it if necessary.
+
+        Returns:
+            A dictionary containing module data.
+        """
+        if not self._modules_cache:
+            await self._load_modules()
+        return self._modules_cache
+
+    def generate_commands(self, module_info: Dict) -> List[str]:
+        """Generates formatted command strings for a module.
+
+        Args:
+            module_info: A dictionary containing module information.
+
+        Returns:
+            A list of formatted command strings.
+        """
         commands = []
         command_count = 0
-        end_count_cmds = False
-
-        for func in module_info["commands"]:
-            if end_count_cmds:
-                break
+        for func in module_info.get("commands", []):
             for command, description in func.items():
-                if command_count == 9:
+                if command_count >= 9:
                     commands.append("...")
-                    end_count_cmds = True
-                    break
+                    return commands
                 command_count += 1
                 emoji = self.strings["emojis"].get(command_count, "")
                 commands.append(
@@ -197,14 +207,9 @@ class Limoka(loader.Module):
                         prefix=self.get_prefix(),
                         command=html.escape(command.replace("cmd", "")),
                         emoji=emoji,
-                        description=(
-                            html.escape(description)
-                            if description
-                            else self.strings["no_info"]
-                        ),
+                        description=html.escape(description or self.strings["no_info"]),
                     )
                 )
-
         return commands
 
     @loader.command()
@@ -218,9 +223,7 @@ class Limoka(loader.Module):
         if not args:
             return await utils.answer(message, self.strings["noargs"])
 
-        modules = await self.api.get_all_modules(
-            self.config["limoka_url"] + "modules.json"
-        )
+        modules = await self._get_modules()
 
         await utils.answer(
             message,
@@ -257,11 +260,14 @@ class Limoka(loader.Module):
 
         searcher = Search(args.lower())
         try:
-            result = searcher.search_module(contents)
+            results = searcher.search_module(contents)
         except IndexError:
             return await utils.answer(message, self.strings["?"])
 
-        module_path = result
+        if not results:
+            return await utils.answer(message, self.strings["404"].format(query=args))
+
+        module_path = results[0]
 
         if module_path is None or module_path == 0:
             return await utils.answer(message, self.strings["404"].format(query=args))
@@ -279,15 +285,21 @@ class Limoka(loader.Module):
         banner = module_info["meta"]["banner"]
 
         if description:
-            translated_desc = await self._client.translate(
-                message.peer_id,
-                message,
-                to_lang=self._db.get("hikka.translations", "lang", "en")[0:2],
-                raw_text=description,
-                entities=message.entities,
-            )
+            try:
+                translated_desc = await self._client.translate(
+                    message.peer_id,
+                    message,
+                    to_lang=self._db.get("hikka.translations", "lang", "en")[0:2],
+                    raw_text=description,
+                    entities=message.entities,
+                )
+            except Exception as e:
+                logger.warning(f"Translation failed: {e}")
+                translated_desc = description
 
         commands = self.generate_commands(module_info)
+
+        module_path_for_dlm = module_path.replace("\\", "/")
 
         try:
             await utils.answer_file(
@@ -303,10 +315,11 @@ class Limoka(loader.Module):
                     username=dev_username,
                     commands="".join(commands),
                     prefix=self.get_prefix(),
-                    module_path=module_path.replace("\\", "/"),
+                    module_path=module_path_for_dlm,
                 ),
             )
-        except Exception:
+        except Exception as e:
+            logger.exception(f"Error sending module info: {e}")
             await utils.answer(
                 message,
                 self.strings["found"].format(
@@ -319,7 +332,7 @@ class Limoka(loader.Module):
                     username=dev_username,
                     commands="".join(commands),
                     prefix=self.get_prefix(),
-                    module_path=module_path,
+                    module_path=module_path_for_dlm,
                 ),
             )
 
@@ -328,16 +341,23 @@ class Limoka(loader.Module):
         """[query] - Inline search modules"""
 
         if not query.args:
-            return {
-                "title": "No query",
-                "description": self.strings["inlinenoargs"],
-                "thumb": "https://img.icons8.com/?size=100&id=NIWYFnJlcBfr&format=png&color=000000",
-                "message": self.strings["inlinenoargs"],
-            }
+            return await query.answer(
+                [
+                    {
+                        "type": "article",
+                        "id": "no_query",
+                        "title": "No query",
+                        "description": self.strings["inlinenoargs"],
+                        "thumb_url": "https://img.icons8.com/?size=100&id=NIWYFnJlcBfr&format=png&color=000000",
+                        "input_message_content": {
+                            "message_text": self.strings["inlinenoargs"],
+                            "parse_mode": "HTML",
+                        },
+                    }
+                ]
+            )
 
-        modules = await self.api.get_all_modules(
-            self.config["limoka_url"] + "modules.json"
-        )
+        modules = await self._get_modules()
 
         contents = []
 
@@ -366,47 +386,83 @@ class Limoka(loader.Module):
         searcher = Search(query.args)
 
         try:
-            results = searcher.search_module(contents, best_match=False)
+            results = searcher.search_module(contents)
         except IndexError:
-            return {
-                "title": "Something went wrong...",
-                "description": self.strings["inline?"],
-                "thumb": "https://img.icons8.com/?size=100&id=rUSWMuGVdxJj&format=png&color=000000",
-                "message": self.strings["inline?"],
-            }
+            return await query.answer(
+                [
+                    {
+                        "type": "article",
+                        "id": "error",
+                        "title": "Something went wrong...",
+                        "description": self.strings["inline?"],
+                        "thumb_url": "https://img.icons8.com/?size=100&id=rUSWMuGVdxJj&format=png&color=000000",
+                        "input_message_content": {
+                            "message_text": self.strings["inline?"],
+                            "parse_mode": "HTML",
+                        },
+                    }
+                ]
+            )
 
         if not results:
-            return {
-                "title": "No results",
-                "description": self.strings["inline404"],
-                "thumb": "https://img.icons8.com/?size=100&id=olDsW0G3zz22&format=png&color=000000",
-                "message": self.strings["inline404"],
-            }
+            return await query.answer(
+                [
+                    {
+                        "type": "article",
+                        "id": "no_results",
+                        "title": "No results",
+                        "description": self.strings["inline404"],
+                        "thumb_url": "https://img.icons8.com/?size=100&id=olDsW0G3zz22&format=png&color=000000",
+                        "input_message_content": {
+                            "message_text": self.strings["inline404"],
+                            "parse_mode": "HTML",
+                        },
+                    }
+                ]
+            )
 
-        return [
-            {
-                "title": f"{utils.escape_html(module_info['name'])}",
-                "description": utils.escape_html(module_info["description"]),
-                "thumb": module_info["meta"].get(
-                    "pic",
-                    "https://img.icons8.com/?size=100&id=olDsW0G3zz22&format=png&color=000000",
-                ),
-                "photo": module_info["meta"].get(
-                    "banner",
-                    "https://habrastorage.org/getpro/habr/upload_files/9c7/5fa/c54/9c75fac54ebb0beaf89abd7d86b4787c.jpg",
-                ),
-                "message": self.strings["found"].format(
-                    name=module_info["name"],
+        inline_results = []
+        for path in results:
+            module_info = modules.get(path)
+            if not module_info:
+                logger.warning(f"Module info not found for path: {path}")
+                continue
+
+            name = module_info.get("name", "Unknown")
+            description = module_info.get("description", "No description")
+            commands = self.generate_commands(module_info)
+            module_path_for_dlm = path.replace("\\", "/")
+
+            formatted_message = (
+                self.strings["found"]
+                .format(
+                    name=name,
                     query=query.args,
                     url=self.config["limoka_url"],
-                    description=module_info["description"],
+                    description=description,
                     username=module_info["meta"].get("developer", "Unknown"),
-                    commands="".join(self.generate_commands(module_info)),
-                    module_path=path.replace("\\", "/"),
+                    commands="".join(commands),
+                    module_path=module_path_for_dlm,
                     prefix=self.get_prefix(),
-                ),
-            }
-            for path in results
-            if (module_info := modules.get(path))
-            and (func := module_info.get("commands"))
-        ]
+                )
+                .replace("<emoji ", "")
+            )
+
+            inline_results.append(
+                {
+                    "type": "article",
+                    "id": path,
+                    "title": f"{utils.escape_html(name)}",
+                    "description": utils.escape_html(description),
+                    "thumb_url": module_info["meta"].get(
+                        "pic",
+                        "https://img.icons8.com/?size=100&id=olDsW0G3zz22&format=png&color=000000",
+                    ),
+                    "input_message_content": {
+                        "message_text": formatted_message,
+                        "parse_mode": "HTML",
+                    },
+                }
+            )
+
+        await query.answer(inline_results)
