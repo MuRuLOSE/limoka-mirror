@@ -59,6 +59,12 @@ class LimokaAPI:
             async with session.get(url) as response:
                 text = await response.text()
                 return json.loads(text)
+            
+    async def get_trusted_developers(self, url):
+        async with aiohttp.ClientSession() as session:
+            async with session.get(url) as response:
+                text = await response.text()
+                return json.loads(text)
 
 
 @loader.tds
@@ -77,7 +83,7 @@ class Limoka(loader.Module):
             "<emoji document_id=5413334818047940135>🔍</emoji> Found the module <b>{name}</b> by query: <b>{query}</b>"
             "\n"
             "\n<b><emoji document_id=5418376169055602355>ℹ️</emoji> Description:</b> {description}"
-            "\n<b><emoji document_id=5418299289141004396>🧑‍💻</emoji> Developer:</b> {username}"
+            "\n<b><emoji document_id=5418299289141004396>🧑‍💻</emoji> Developer:</b> {username} {trusted}"
             "\n\n{commands}"
             "\n<emoji document_id=5411143117711624172>🪄</emoji> <code>{prefix}dlm {url}{module_path}</code>"
         ),
@@ -117,7 +123,7 @@ class Limoka(loader.Module):
             "<emoji document_id=5413334818047940135>🔍</emoji> Найден модуль <b>{name}</b> по запросу: <b>{query}</b>"
             "\n"
             "\n<b><emoji document_id=5418376169055602355>ℹ️</emoji> Описание:</b> {description}"
-            "\n<b><emoji document_id=5418299289141004396>🧑‍💻</emoji> Разработчик:</b> {username}"
+            "\n<b><emoji document_id=5418299289141004396>🧑‍💻</emoji> Разработчик:</b> {username} {trusted}"
             "\n"
             "\n{commands}"
             "\n"
@@ -165,6 +171,9 @@ class Limoka(loader.Module):
         )
         self.modules = await self.api.get_all_modules(
             self.config["limoka_url"] + "modules.json"
+        )
+        self.trusted = await self.api.get_all_modules(
+            self.config["limoka_url"] + "trusted.json"
         )
         await self._update_index()
 
@@ -294,6 +303,13 @@ class Limoka(loader.Module):
 
         commands = self.generate_commands(module_info)
 
+        trusted_dev = False
+
+        if module_path in self.trusted:
+            trusted_dev = True
+
+        logger.info(module_path)
+
         try:
             await utils.answer_file(
                 message,
@@ -309,6 +325,7 @@ class Limoka(loader.Module):
                     commands="".join(commands),
                     prefix=self.get_prefix(),
                     module_path=module_path.replace("\\", "/"),
+                    trusted="<b>Trusted</b>" if trusted_dev else ""
                 ),
             )
         except Exception:
@@ -325,6 +342,7 @@ class Limoka(loader.Module):
                     commands="".join(commands),
                     prefix=self.get_prefix(),
                     module_path=module_path,
+                    trusted="<b>Trusted</b>" if trusted_dev else ""
                 ),
             )
 
