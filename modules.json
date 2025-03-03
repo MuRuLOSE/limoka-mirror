@@ -4,8 +4,7 @@
     "description": "Hikka modules are now in one place with easy searching!",
     "meta": {
       "pic": null,
-      "banner": null,
-      "developer": "@limokanews"
+      "banner": null
     },
     "commands": [
       {
