@@ -1,4 +1,27 @@
 {
+  "Limoka.py": {
+    "name": "Limoka",
+    "description": "Hikka modules are now in one place with easy searching!",
+    "meta": {
+      "pic": null,
+      "banner": null,
+      "developer": "@limokanews"
+    },
+    "commands": [
+      {
+        "limokacmd": "[query] - Search module"
+      }
+    ],
+    "new_commands": [
+      {
+        "limoka": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "[query] - Search module"
+        }
+      }
+    ]
+  },
   "den4ikSuperOstryyPer4ik/astro-modules/astroafk.py": {
     "name": "AstroAfkMod",
     "description": "Полностью настраиваемый модуль для ухода в АФК режим! Обновление TxAFK!",
