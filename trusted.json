@@ -1,20 +1,20 @@
 {
   "trusted": [
-    "iamnalinor/FTG-modules",
-    "vsecoder/hikka_modules",
-    "sqlmerr/hikka_mods",
-    "N3rcy/modules",
-    "KorenbZla/HikkaModules",
-    "coddrago/modules",
-    "MoriSummerz/ftg-mods",
-    "anon97945/hikka-mods",
-    "dorotorothequickend/DorotoroModules",
-    "idiotcoders/idiotmodules",
-    "C0dwiz/H.Modules",
-    "GD-alt/mm-hikka-mods",
-    "hikariatama/ftg",
-    "fajox1/famods",
-    "TheKsenon/MyHikkaModules",
-    "Den4ikSuperOstryyPer4ik/Astro-modules"
+    "https://git.vsecoder.deviamnalinor/FTG-modules",
+    "https://git.vsecoder.devvsecoder/hikka_modules",
+    "https://git.vsecoder.devsqlmerr/hikka_mods",
+    "https://git.vsecoder.devN3rcy/modules",
+    "https://git.vsecoder.devKorenbZla/HikkaModules",
+    "https://git.vsecoder.devcoddrago/modules",
+    "https://git.vsecoder.devMoriSummerz/ftg-mods",
+    "https://git.vsecoder.devanon97945/hikka-mods",
+    "https://git.vsecoder.devdorotorothequickend/DorotoroModules",
+    "https://git.vsecoder.devidiotcoders/idiotmodules",
+    "https://git.vsecoder.devC0dwiz/H.Modules",
+    "https://git.vsecoder.devGD-alt/mm-hikka-mods",
+    "https://git.vsecoder.devhikariatama/ftg",
+    "https://git.vsecoder.devfajox1/famods",
+    "https://git.vsecoder.devTheKsenon/MyHikkaModules",
+    "https://git.vsecoder.devDen4ikSuperOstryyPer4ik/Astro-modules"
   ]
 }
