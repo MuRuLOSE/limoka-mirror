@@ -1,3 +1,5 @@
+# meta developer: @limokanews
+
 from whoosh.index import create_in, open_dir
 from whoosh.fields import TEXT, ID, Schema
 from whoosh.qparser import QueryParser, OrGroup
@@ -16,6 +18,10 @@ from ..types import InlineQuery
 
 
 logger = logging.getLogger("Limoka")
+
+__version__ = (1,0,1)
+# __modules_version__ = None
+# __api_version__ = None
 
 
 class Search:
