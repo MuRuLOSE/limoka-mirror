@@ -83,7 +83,7 @@ class Limoka(loader.Module):
             "<emoji document_id=5413334818047940135>🔍</emoji> Found the module <b>{name}</b> by query: <b>{query}</b>"
             "\n"
             "\n<b><emoji document_id=5418376169055602355>ℹ️</emoji> Description:</b> {description}"
-            "\n<b><emoji document_id=5418299289141004396>🧑‍💻</emoji> Developer:</b> {username} {trusted}"
+            "\n<b><emoji document_id=5418299289141004396>🧑‍💻</emoji> Developer:</b> {username} {tag}"
             "\n\n{commands}"
             "\n<emoji document_id=5411143117711624172>🪄</emoji> <code>{prefix}dlm {url}{module_path}</code>"
         ),
@@ -110,6 +110,8 @@ class Limoka(loader.Module):
         "inline404": "Not found",
         "inline?": "Request too short / not found",
         "inlinenoargs": "Please, enter query",
+        "tag_trust": "<emoji document_id=5411197345968701560>✅</emoji> <a href='https://t.me/limokanews/73'>(what?)</a>",
+        "tag_nontrust": "<emoji document_id=5416076321442777828>❌</emoji> <a href='https://t.me/limokanews/73'>(what?)</a>"
     }
 
     strings_ru = {
@@ -123,7 +125,7 @@ class Limoka(loader.Module):
             "<emoji document_id=5413334818047940135>🔍</emoji> Найден модуль <b>{name}</b> по запросу: <b>{query}</b>"
             "\n"
             "\n<b><emoji document_id=5418376169055602355>ℹ️</emoji> Описание:</b> {description}"
-            "\n<b><emoji document_id=5418299289141004396>🧑‍💻</emoji> Разработчик:</b> {username} {trusted}"
+            "\n<b><emoji document_id=5418299289141004396>🧑‍💻</emoji> Разработчик:</b> {username} {tag}"
             "\n"
             "\n{commands}"
             "\n"
@@ -141,6 +143,8 @@ class Limoka(loader.Module):
         "inline404": "Не найдено",
         "inline?": "Запрос слишком короткий / не найден",
         "inlinenoargs": "Введите запрос",
+        "tag_trust": "<emoji document_id=5411197345968701560>✅</emoji> <a href='https://t.me/limokanews/73'>(что это?)</a>",
+        "tag_nontrust": "<emoji document_id=5416076321442777828>❌</emoji> <a href='https://t.me/limokanews/73'>(что это?)</a>"
     }
 
     def translate_description(self, command):
@@ -303,12 +307,15 @@ class Limoka(loader.Module):
 
         commands = self.generate_commands(module_info)
 
+        logger.info(self.strings["found"])
+
         trusted_dev = False
 
-        if module_path in self.trusted:
+        if '/'.join((str(module_path).split('/'))[:2]) in self.trusted["trusted"]:
             trusted_dev = True
 
-        logger.info(module_path)
+        logger.info('/'.join((str(module_path).split('/'))[:2]))
+        logger.info(self.trusted)
 
         try:
             await utils.answer_file(
@@ -325,7 +332,7 @@ class Limoka(loader.Module):
                     commands="".join(commands),
                     prefix=self.get_prefix(),
                     module_path=module_path.replace("\\", "/"),
-                    trusted="<b>Trusted</b>" if trusted_dev else ""
+                    tag=self.strings["tag_trust"] if trusted_dev else self.strings["tag_nontrust"]
                 ),
             )
         except Exception:
@@ -342,7 +349,7 @@ class Limoka(loader.Module):
                     commands="".join(commands),
                     prefix=self.get_prefix(),
                     module_path=module_path,
-                    trusted="<b>Trusted</b>" if trusted_dev else ""
+                    tag=self.strings["tag"] if trusted_dev else ""
                 ),
             )
 
