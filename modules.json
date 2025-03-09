@@ -16011,6 +16011,29 @@
       }
     ]
   },
+  "fajox1/famods/hetsu.py": {
+    "name": "Hetsu",
+    "description": "Search and install modules easily.",
+    "meta": {
+      "pic": null,
+      "banner": "https://github.com/FajoX1/FAmods/blob/main/assets/banners/hetsu.png?raw=true",
+      "developer": "@FAmods"
+    },
+    "commands": [
+      {
+        "hetsucmd": "Search module"
+      }
+    ],
+    "new_commands": [
+      {
+        "hetsu": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "Search module"
+        }
+      }
+    ]
+  },
   "fajox1/famods/xrocket.py": {
     "name": "xRocket",
     "description": "Автоматизация базового функционала @xRocket",
@@ -25989,14 +26012,16 @@
     "description": null,
     "meta": {
       "pic": null,
-      "banner": null
+      "banner": "https://0x0.st/HYVT.jpg",
+      "desc": "desc",
+      "developer": "@BruhHikkaModules"
     },
     "commands": [
       {
-        "vkmpnow": " - Текущая песня"
+        "vkmpnow": "- Current song  - Текущая песня"
       },
       {
-        "vkmtoken": " - Инструкции для токена и пользовательского идентификатора"
+        "vkmtoken": "- Instructions for token and user ID  - Инструкции для токена и пользовательского идентификатора"
       }
     ],
     "new_commands": [
@@ -26004,14 +26029,14 @@
         "vkmpnow": {
           "ru_doc": " - Текущая песня",
           "en_doc": null,
-          "doc": null
+          "doc": "- Current song"
         }
       },
       {
         "vkmtoken": {
           "ru_doc": " - Инструкции для токена и пользовательского идентификатора",
           "en_doc": null,
-          "doc": null
+          "doc": "- Instructions for token and user ID"
         }
       }
     ]
@@ -30097,7 +30122,7 @@
   },
   "C0dwiz/H.Modules/HAFK.py": {
     "name": "HAFK",
-    "description": "Your personal assistant while you are in AFK mode",
+    "description": null,
     "meta": {
       "pic": null,
       "banner": null,
@@ -30105,45 +30130,45 @@
     },
     "commands": [
       {
-        "afk": "[reason / none] – Set AFK mode globally. [reason / none] – Установить режим AFK"
+        "afk": "[reason / none] – Установить режим AFK [reason / none] – Set AFK mode globally"
       },
       {
-        "afkhere": "[reason / none] – Set AFK mode in current chat only. [reason / none] – Установить режим AFK только в этом чате."
+        "afkhere": "[reason / none] – Установить режим AFK только в этом чате. [reason / none] – Set AFK mode in current chat only."
       },
       {
-        "unafk": "Exit AFK mode Выйти из режима AFK"
+        "unafk": "Выйти из режима AFK Exit AFK mode"
       },
       {
-        "unafkhere": "Exit AFK mode in this chat Выйти из режима AFK в этом чате"
+        "unafkhere": "Выйти из режима AFK в этом чате Exit AFK mode in this chat"
       }
     ],
     "new_commands": [
       {
         "afk": {
           "ru_doc": "[reason / none] – Установить режим AFK",
-          "en_doc": null,
-          "doc": "[reason / none] – Set AFK mode globally."
+          "en_doc": "[reason / none] – Set AFK mode globally",
+          "doc": null
         }
       },
       {
         "afkhere": {
           "ru_doc": "[reason / none] – Установить режим AFK только в этом чате.",
-          "en_doc": null,
-          "doc": "[reason / none] – Set AFK mode in current chat only."
+          "en_doc": "[reason / none] – Set AFK mode in current chat only.",
+          "doc": null
         }
       },
       {
         "unafk": {
           "ru_doc": "Выйти из режима AFK",
-          "en_doc": null,
-          "doc": "Exit AFK mode"
+          "en_doc": "Exit AFK mode",
+          "doc": null
         }
       },
       {
         "unafkhere": {
           "ru_doc": "Выйти из режима AFK в этом чате",
-          "en_doc": null,
-          "doc": "Exit AFK mode in this chat"
+          "en_doc": "Exit AFK mode in this chat",
+          "doc": null
         }
       }
     ]
@@ -30788,7 +30813,7 @@
         "rmcaliascmd": "<name> 👉 Remove alias <имя> 👉 Удалить алиас"
       },
       {
-        "caliascmd": "<name> <command>\n[args] 👉 Add new alias (may contain {args} keyword) <имя> <команда>\n[аргументы] 👉 Добавить новый алиас (может содержать ключевое слово {args})"
+        "caliascmd": "<name> <command> [args] 👉 Add new alias (may contain {args} keyword) <имя> <команда> [аргументы] 👉 Добавить новый алиас (может содержать ключевое слово {args})"
       }
     ],
     "new_commands": [
@@ -30808,9 +30833,9 @@
       },
       {
         "calias": {
-          "ru_doc": "<имя> <команда>\n[аргументы] 👉 Добавить новый алиас (может содержать ключевое слово {args})",
+          "ru_doc": "<имя> <команда> [аргументы] 👉 Добавить новый алиас (может содержать ключевое слово {args})",
           "en_doc": null,
-          "doc": "<name> <command>\n[args] 👉 Add new alias (may contain {args} keyword)"
+          "doc": "<name> <command> [args] 👉 Add new alias (may contain {args} keyword)"
         }
       }
     ]
@@ -30825,65 +30850,65 @@
     },
     "commands": [
       {
-        "ybiocmd": "- Enable/disable autobio - Включить/выключить автобио"
+        "ybiocmd": "👉 Enable/disable autobio 👉 Включить/выключить автобио"
       },
       {
-        "yguidecmd": "- Guide for obtaining a Yandex.Music token - Гайд по получению токена Яндекс.Музыки"
+        "yguidecmd": "👉 Guide for obtaining a Yandex.Music token 👉 Гайд по получению токена Яндекс.Музыки"
       },
       {
-        "ynowcmd": "- Get now playing track - Получить трек, который играет сейчас"
+        "ynowcmd": "👉 Get now playing track 👉 Получить трек, который играет сейчас"
       },
       {
-        "ysearchcmd": "<query> - Search track in Yandex.Music <запрос> - Поиск трека в Яндекс.Музыке"
+        "ysearchcmd": "<query> 👉 Search track in Yandex.Music <запрос> 👉 Поиск трека в Яндекс.Музыке"
       },
       {
-        "yautomsgcmd": "- Enable all widgets - Включить все виджеты"
+        "yautomsgcmd": "👉 Enable all widgets 👉 Включить все виджеты"
       },
       {
-        "ywidgetcmd": "<link to message/post> - Make a message/post a widget <ссылка на сообщение/пост> - Сделать сообщение/пост виджетом"
+        "ywidgetcmd": "<link to message/post> 👉 Make a message/post a widget <ссылка на сообщение/пост> 👉 Сделать сообщение/пост виджетом"
       }
     ],
     "new_commands": [
       {
         "ybio": {
-          "ru_doc": "- Включить/выключить автобио",
+          "ru_doc": "👉 Включить/выключить автобио",
           "en_doc": null,
-          "doc": "- Enable/disable autobio"
+          "doc": "👉 Enable/disable autobio"
         }
       },
       {
         "yguide": {
-          "ru_doc": "- Гайд по получению токена Яндекс.Музыки",
+          "ru_doc": "👉 Гайд по получению токена Яндекс.Музыки",
           "en_doc": null,
-          "doc": "- Guide for obtaining a Yandex.Music token"
+          "doc": "👉 Guide for obtaining a Yandex.Music token"
         }
       },
       {
         "ynow": {
-          "ru_doc": "- Получить трек, который играет сейчас",
+          "ru_doc": "👉 Получить трек, который играет сейчас",
           "en_doc": null,
-          "doc": "- Get now playing track"
+          "doc": "👉 Get now playing track"
         }
       },
       {
         "ysearch": {
-          "ru_doc": "<запрос> - Поиск трека в Яндекс.Музыке",
+          "ru_doc": "<запрос> 👉 Поиск трека в Яндекс.Музыке",
           "en_doc": null,
-          "doc": "<query> - Search track in Yandex.Music"
+          "doc": "<query> 👉 Search track in Yandex.Music"
         }
       },
       {
         "yautomsg": {
-          "ru_doc": "- Включить все виджеты",
+          "ru_doc": "👉 Включить все виджеты",
           "en_doc": null,
-          "doc": "- Enable all widgets"
+          "doc": "👉 Enable all widgets"
         }
       },
       {
         "ywidget": {
-          "ru_doc": "<ссылка на сообщение/пост> - Сделать сообщение/пост виджетом",
+          "ru_doc": "<ссылка на сообщение/пост> 👉 Сделать сообщение/пост виджетом",
           "en_doc": null,
-          "doc": "<link to message/post> - Make a message/post a widget"
+          "doc": "<link to message/post> 👉 Make a message/post a widget"
         }
       }
     ]
@@ -30898,35 +30923,35 @@
     },
     "commands": [
       {
-        "tlogincmd": "Open OAuth window to login into TIDAL Авторизация в TIDAL"
+        "tlogincmd": "👉 Open OAuth window to login into TIDAL 👉 Авторизация в TIDAL"
       },
       {
-        "tidalcmd": "<query> - Search track in TIDAL <запрос> - Поиск трека в TIDAL"
+        "tidalcmd": "<query> 👉 Search track in TIDAL <запрос> 👉 Поиск трека в TIDAL"
       },
       {
-        "turlcmd": "<ID/url> - Search track in TIDAL by ID or url <ID/ссылка> - Поиск трека в TIDAL по ID или ссылке"
+        "turlcmd": "<ID/url> 👉 Search track in TIDAL by ID or url <ID/ссылка> 👉 Поиск трека в TIDAL по ID или ссылке"
       }
     ],
     "new_commands": [
       {
         "tlogin": {
-          "ru_doc": "Авторизация в TIDAL",
+          "ru_doc": "👉 Авторизация в TIDAL",
           "en_doc": null,
-          "doc": "Open OAuth window to login into TIDAL"
+          "doc": "👉 Open OAuth window to login into TIDAL"
         }
       },
       {
         "tidal": {
-          "ru_doc": "<запрос> - Поиск трека в TIDAL",
+          "ru_doc": "<запрос> 👉 Поиск трека в TIDAL",
           "en_doc": null,
-          "doc": "<query> - Search track in TIDAL"
+          "doc": "<query> 👉 Search track in TIDAL"
         }
       },
       {
         "turl": {
-          "ru_doc": "<ID/ссылка> - Поиск трека в TIDAL по ID или ссылке",
+          "ru_doc": "<ID/ссылка> 👉 Поиск трека в TIDAL по ID или ссылке",
           "en_doc": null,
-          "doc": "<ID/url> - Search track in TIDAL by ID or url"
+          "doc": "<ID/url> 👉 Search track in TIDAL by ID or url"
         }
       }
     ]
@@ -30941,15 +30966,15 @@
     },
     "commands": [
       {
-        "delmsgcmd": "[count] — Delete messages (you can use your trigger from config: «{value}{count}» and write them only together!) [число] — Удалить сообщения (можно использовать значение из конфига: «{значение}{число}», без пробела!)"
+        "delmsgcmd": "[count] 👉 Delete messages (you can use your trigger from config: «{value}{count}» and write them only together!) [число] 👉 Удалить сообщения (можно использовать значение из конфига: «{значение}{число}», без пробела!)"
       }
     ],
     "new_commands": [
       {
         "delmsg": {
-          "ru_doc": "[число] — Удалить сообщения (можно использовать значение из конфига: «{значение}{число}», без пробела!)",
+          "ru_doc": "[число] 👉 Удалить сообщения (можно использовать значение из конфига: «{значение}{число}», без пробела!)",
           "en_doc": null,
-          "doc": "[count] — Delete messages (you can use your trigger from config: «{value}{count}» and write them only together!)"
+          "doc": "[count] 👉 Delete messages (you can use your trigger from config: «{value}{count}» and write them only together!)"
         }
       }
     ]
@@ -30964,35 +30989,35 @@
     },
     "commands": [
       {
-        "afightcmd": "- Enable/disable autofight - Включить/отключить автобой"
+        "afightcmd": "👉 Enable/disable autofight 👉 Включить/отключить автобой"
       },
       {
-        "agrowcmd": "- Enable/disable autogrow - Включить/отключить автокормёжку"
+        "agrowcmd": "👉 Enable/disable autogrow 👉 Включить/отключить автокормёжку"
       },
       {
-        "setnamecmd": "<name> - Changes your pig's name <имя> - Меняет имя вашего хряка"
+        "setnamecmd": "<name> 👉 Changes your pig's name <имя> 👉 Меняет имя вашего хряка"
       }
     ],
     "new_commands": [
       {
         "afight": {
-          "ru_doc": "- Включить/отключить автобой",
+          "ru_doc": "👉 Включить/отключить автобой",
           "en_doc": null,
-          "doc": "- Enable/disable autofight"
+          "doc": "👉 Enable/disable autofight"
         }
       },
       {
         "agrow": {
-          "ru_doc": "- Включить/отключить автокормёжку",
+          "ru_doc": "👉 Включить/отключить автокормёжку",
           "en_doc": null,
-          "doc": "- Enable/disable autogrow"
+          "doc": "👉 Enable/disable autogrow"
         }
       },
       {
         "setname": {
-          "ru_doc": "<имя> - Меняет имя вашего хряка",
+          "ru_doc": "<имя> 👉 Меняет имя вашего хряка",
           "en_doc": null,
-          "doc": "<name> - Changes your pig's name"
+          "doc": "<name> 👉 Changes your pig's name"
         }
       }
     ]
@@ -31007,35 +31032,35 @@
     },
     "commands": [
       {
-        "yguidecmd": "- Guide for obtaining a Yandex.Music token - Гайд по получению токена Яндекс.Музыки"
+        "yguidecmd": "👉 Guide for obtaining a Yandex.Music token 👉 Гайд по получению токена Яндекс.Музыки"
       },
       {
-        "ynowcmd": "- Get now playing track - Получить трек, который играет сейчас"
+        "ynowcmd": "👉 Get now playing track 👉 Получить трек, который играет сейчас"
       },
       {
-        "ysearchcmd": "<query> - Search track in Yandex.Music <запрос> - Поиск трека в Яндекс.Музыке"
+        "ysearchcmd": "<query> 👉 Search track in Yandex.Music <запрос> 👉 Поиск трека в Яндекс.Музыке"
       }
     ],
     "new_commands": [
       {
         "yguide": {
-          "ru_doc": "- Гайд по получению токена Яндекс.Музыки",
+          "ru_doc": "👉 Гайд по получению токена Яндекс.Музыки",
           "en_doc": null,
-          "doc": "- Guide for obtaining a Yandex.Music token"
+          "doc": "👉 Guide for obtaining a Yandex.Music token"
         }
       },
       {
         "ynow": {
-          "ru_doc": "- Получить трек, который играет сейчас",
+          "ru_doc": "👉 Получить трек, который играет сейчас",
           "en_doc": null,
-          "doc": "- Get now playing track"
+          "doc": "👉 Get now playing track"
         }
       },
       {
         "ysearch": {
-          "ru_doc": "<запрос> - Поиск трека в Яндекс.Музыке",
+          "ru_doc": "<запрос> 👉 Поиск трека в Яндекс.Музыке",
           "en_doc": null,
-          "doc": "<query> - Search track in Yandex.Music"
+          "doc": "<query> 👉 Search track in Yandex.Music"
         }
       }
     ]
