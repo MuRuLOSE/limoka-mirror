@@ -164,7 +164,7 @@ class TidalMod(loader.Module):
 
         self._obtain_faved.start()
         self.musicdl = await self.import_lib(
-            "https://libs.hikariatama.ru/musicdl.py",
+            "git.vsecoder.dev/-/raw/main/libs/musicdl.py",
             suspend_on_error=True,
         )
 

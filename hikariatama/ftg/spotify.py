@@ -641,7 +641,7 @@ class SpotifyMod(loader.Module):
             await utils.dnd(client, "@DirectLinkGenerator_Bot", archive=True)
 
         self.musicdl = await self.import_lib(
-            "https://libs.hikariatama.ru/musicdl.py",
+            "git.vsecoder.dev/-/raw/main/libs/musicdl.py",
             suspend_on_error=True,
         )
 

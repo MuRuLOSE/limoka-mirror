@@ -36,7 +36,7 @@ class MusicDLMod(loader.Module):
 
     async def client_ready(self, *_):
         self.musicdl = await self.import_lib(
-            "https://libs.hikariatama.ru/musicdl.py",
+            "git.vsecoder.dev/-/raw/main/libs/musicdl.py",
             suspend_on_error=True,
         )
 

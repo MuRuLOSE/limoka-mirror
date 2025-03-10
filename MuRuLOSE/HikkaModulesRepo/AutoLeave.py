@@ -19,7 +19,7 @@ class AutoLeave(loader.Module):
     }
 
     async def client_ready(self, client, db):
-        self._common_lib = await self.import_lib("https://raw.githubusercontent.com/MuRuLOSE/HikkaModulesRepo/main/libaries/common.py")
+        self._common_lib = await self.import_lib("git.vsecoder.dev/-/raw/main/libs/common.py")
 
     def __init__(self):
         self.config = loader.ModuleConfig(
