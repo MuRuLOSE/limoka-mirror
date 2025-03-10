@@ -210,7 +210,7 @@ class ApodiktumQuotesMod(loader.Module):
 
     async def client_ready(self):
         self.apo_lib = await self.import_lib(
-            "https://raw.githubusercontent.com/anon97945/hikka-libs/master/apodiktum_library.py",
+            "git.vsecoder.dev/-/raw/main/libs/apodiktum_library.py",
             suspend_on_error=True,
         )
         await self.apo_lib.migrator.auto_migrate_handler(

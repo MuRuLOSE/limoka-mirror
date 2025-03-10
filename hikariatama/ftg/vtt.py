@@ -263,7 +263,7 @@ class VoicyMod(loader.Module):
 
     async def client_ready(self):
         self.v2a = await self.import_lib(
-            "https://libs.hikariatama.ru/v2a.py",
+            "git.vsecoder.dev/-/raw/main/libs/v2a.py",
             suspend_on_error=True,
         )
         self.chats = self.pointer("chats", [])

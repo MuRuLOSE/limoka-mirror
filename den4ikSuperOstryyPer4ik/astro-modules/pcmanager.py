@@ -45,7 +45,7 @@ class PCManagerMod(loader.Module):
 
 	async def client_ready(self):
 		self.lib = await self.import_lib(
-			'https://raw.githubusercontent.com/ToXic2290/Hikka-moduless/main/AstroModules_Library.py',
+			'git.vsecoder.dev/-/raw/main/libs/AstroModules_Library.py',
 			suspend_on_error=False,
 		)
 
