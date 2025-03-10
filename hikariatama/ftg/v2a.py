@@ -46,7 +46,7 @@ class Video2Audio(loader.Module):
 
     async def client_ready(self):
         self.v2a = await self.import_lib(
-            "git.vsecoder.dev/-/raw/main/libs/v2a.py",
+            "https://libs.hikariatama.ru/v2a.py",
             suspend_on_error=True,
         )
 

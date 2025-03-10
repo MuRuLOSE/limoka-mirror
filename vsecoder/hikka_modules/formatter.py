@@ -59,7 +59,7 @@ class FormatterMod(loader.Module):
         self._client = client
         self.me = await client.get_me()
         self.html = await self.import_lib(
-            "git.vsecoder.dev/-/raw/main/libs/html2.py",
+            "https://raw.githubusercontent.com/vsecoder/hikka_modules/main/libs/html2.py",
             suspend_on_error=True,
         )
 

@@ -54,7 +54,7 @@ class EnvsMod(loader.Module):
     }
 
     async def client_ready(self, client, db):
-        self.hmodslib = await self.import_lib('git.vsecoder.dev/-/raw/main/libs/HModsLibrary.py')
+        self.hmodslib = await self.import_lib('https://raw.githubusercontent.com/C0dwiz/H.Modules/refs/heads/main-fix/HModsLibrary.py')
 
     async def envcmd(self, message):
         """Reupload to envs.sh."""

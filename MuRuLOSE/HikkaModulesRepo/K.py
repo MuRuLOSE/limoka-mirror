@@ -12,7 +12,7 @@ class K(loader.Module):
     
     async def client_ready(self, client, db):
         self._log_lib = await self.import_lib(
-            "git.vsecoder.dev/-/raw/main/libs/logs.py",
+            "https://raw.githubusercontent.com/MuRuLOSE/HikkaModulesRepo/main/libaries/logs.py",
             suspend_on_error=True
         )
         self._log_handler = self._log_lib._log_handler

@@ -126,7 +126,7 @@ class LastFMMod(loader.Module):
             self.autobio.start()
 
         self.musicdl = await self.import_lib(
-            "git.vsecoder.dev/-/raw/main/libs/musicdl.py",
+            "https://libs.hikariatama.ru/musicdl.py",
             suspend_on_error=True,
         )
 

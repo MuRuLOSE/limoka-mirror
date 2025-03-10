@@ -259,7 +259,7 @@ class VoiceChatMod(loader.Module):
         await self._app.start()
         self._app._on_event_update.add_handler("STREAM_END_HANDLER", self.stream_ended)
         self.musicdl = await self.import_lib(
-            "git.vsecoder.dev/-/raw/main/libs/musicdl.py",
+            "https://libs.hikariatama.ru/musicdl.py",
             suspend_on_error=True,
         )
 
