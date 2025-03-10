@@ -821,6 +821,30 @@
       }
     ]
   },
+  "den4ikSuperOstryyPer4ik/astro-modules/gamecheat.py": {
+    "name": "GameeCheatMod",
+    "description": "Читы для игр в @gamee",
+    "meta": {
+      "pic": null,
+      "banner": "https://raw.githubusercontent.com/Den4ikSuperOstryyPer4ik/Astro-modules/main/Banners/GameeCheat.jpg",
+      "developer": "@astromodules",
+      "designer": "@XizurK"
+    },
+    "commands": [
+      {
+        "chg": "<ссылка> <рекорд> - запустить чит"
+      }
+    ],
+    "new_commands": [
+      {
+        "chg": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "<ссылка> <рекорд> - запустить чит"
+        }
+      }
+    ]
+  },
   "den4ikSuperOstryyPer4ik/astro-modules/RandomUser.py": {
     "name": "RandomUserMod",
     "description": "choose a random user in chat\nAutors: @AstroModules & @smeowcodes",
@@ -24568,6 +24592,30 @@
           "ru_doc": null,
           "en_doc": null,
           "doc": "- найти трек по названию"
+        }
+      }
+    ]
+  },
+  "Den4ikSuperOstryyPer4ik/Astro-modules/gamecheat.py": {
+    "name": "GameeCheatMod",
+    "description": "Читы для игр в @gamee",
+    "meta": {
+      "pic": null,
+      "banner": "https://raw.githubusercontent.com/Den4ikSuperOstryyPer4ik/Astro-modules/main/Banners/GameeCheat.jpg",
+      "developer": "@astromodules",
+      "designer": "@XizurK"
+    },
+    "commands": [
+      {
+        "chg": "<ссылка> <рекорд> - запустить чит"
+      }
+    ],
+    "new_commands": [
+      {
+        "chg": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "<ссылка> <рекорд> - запустить чит"
         }
       }
     ]
