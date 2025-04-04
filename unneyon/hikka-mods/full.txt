@@ -1,5 +1,6 @@
 caliases
 deleter
+privacy
 tidal
 warpigs
 yamusic
