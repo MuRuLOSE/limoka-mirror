@@ -7088,6 +7088,50 @@
       }
     ]
   },
+  "sqlmerr/hikka_mods/translation_manager.py": {
+    "name": "TranslationManager",
+    "description": "Module for managing external modules translations",
+    "meta": {
+      "pic": null,
+      "banner": "https://github.com/sqlmerr/hikka_mods/blob/main/assets/banners/translation_manager.png?raw=true",
+      "icon": "https://github.com/sqlmerr/hikka_mods/blob/main/assets/icons/translation_manager.png?raw=true",
+      "developer": "@sqlmerr_m"
+    },
+    "commands": [
+      {
+        "trget": "[mod] [lang] [key] - Get current translation [модуль] [язык] [ключ] - Получить перевод"
+      },
+      {
+        "trset": "[mod] [lang] [key] [val] - Set translation [модуль] [язык] [ключ] [значение] - Изменить перевод"
+      },
+      {
+        "trdel": "[mod] [lang] [key] - Delete custom translation [модуль] [язык] [ключ] - Удалить кастомный перевод"
+      }
+    ],
+    "new_commands": [
+      {
+        "trget": {
+          "ru_doc": "[модуль] [язык] [ключ] - Получить перевод",
+          "en_doc": null,
+          "doc": "[mod] [lang] [key] - Get current translation"
+        }
+      },
+      {
+        "trset": {
+          "ru_doc": "[модуль] [язык] [ключ] [значение] - Изменить перевод",
+          "en_doc": null,
+          "doc": "[mod] [lang] [key] [val] - Set translation"
+        }
+      },
+      {
+        "trdel": {
+          "ru_doc": "[модуль] [язык] [ключ] - Удалить кастомный перевод",
+          "en_doc": null,
+          "doc": "[mod] [lang] [key] - Delete custom translation"
+        }
+      }
+    ]
+  },
   "sqlmerr/hikka_mods/quicktools.py": {
     "name": "QuickTools",
     "description": "Module with various quick and useful tools",
@@ -7243,7 +7287,7 @@
         "triggerchat": "Add chat, where triggers will work Добавить чат, где будут работать триггеры"
       },
       {
-        "tconfig": "Config for the module. Конфиг модуля"
+        "tconfig": "[optional: trigger id] - Triggers config. [необязятельно: айди триггера] - Конфиг модуля"
       },
       {
         "triggerdel": "[trigger's id] - Delete trigger [айди триггера] - Удалить триггер"
@@ -7292,9 +7336,9 @@
       },
       {
         "tconfig": {
-          "ru_doc": "Конфиг модуля",
+          "ru_doc": "[необязятельно: айди триггера] - Конфиг модуля",
           "en_doc": null,
-          "doc": "Config for the module."
+          "doc": "[optional: trigger id] - Triggers config."
         }
       },
       {
@@ -7660,39 +7704,6 @@
       }
     ]
   },
-  "coddrago/modules/clickon.py": {
-    "name": "AutoClickerMod",
-    "description": "Модуль для автоматического нажатия на инлайн кнопки.",
-    "meta": {
-      "pic": "https://0x0.st/s/7EWHGzqAj49M6PDMeawuzw/8KPu.webp",
-      "banner": "https://mods.codrago.top/banners/clicon.png",
-      "developer": "@codrago_m, @ytkanelox"
-    },
-    "commands": [
-      {
-        "clickoncmd": "Используйте .clickon <интервал в секундах> для начала кликов."
-      },
-      {
-        "clickoffcmd": "Используйте .clickoff для остановки кликера."
-      }
-    ],
-    "new_commands": [
-      {
-        "clickon": {
-          "ru_doc": null,
-          "en_doc": null,
-          "doc": "Используйте .clickon <интервал в секундах> для начала кликов."
-        }
-      },
-      {
-        "clickoff": {
-          "ru_doc": null,
-          "en_doc": null,
-          "doc": "Используйте .clickoff для остановки кликера."
-        }
-      }
-    ]
-  },
   "coddrago/modules/pmban.py": {
     "name": "PMBan",
     "description": "Ban in pm for time",
@@ -8046,6 +8057,39 @@
           "ru_doc": null,
           "en_doc": null,
           "doc": "Speedtest of your server internet"
+        }
+      }
+    ]
+  },
+  "coddrago/modules/autoclicker.py": {
+    "name": "AutoClickerMod",
+    "description": "Autoclicker for inline buttons.",
+    "meta": {
+      "pic": "https://0x0.st/s/7EWHGzqAj49M6PDMeawuzw/8KPu.webp",
+      "banner": "https://mods.codrago.top/banners/clicon.png",
+      "developer": "@codrago_m, @unneyon_hmods"
+    },
+    "commands": [
+      {
+        "clickoncmd": "[interval button_line button] | Enable Autoclicker"
+      },
+      {
+        "clickoffcmd": "| disable autoclicker."
+      }
+    ],
+    "new_commands": [
+      {
+        "clickon": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "[interval button_line button] | Enable Autoclicker"
+        }
+      },
+      {
+        "clickoff": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "| disable autoclicker."
         }
       }
     ]
@@ -15866,6 +15910,9 @@
         "spbio": "Включить/выключить стрим текущего трека в био"
       },
       {
+        "spbiochannel": "Включить/выключить стрим текущего трека в канале в био"
+      },
+      {
         "splike": "Лайкнуть текущий трек"
       },
       {
@@ -15933,6 +15980,13 @@
           "ru_doc": null,
           "en_doc": null,
           "doc": "Включить/выключить стрим текущего трека в био"
+        }
+      },
+      {
+        "spbiochannel": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "Включить/выключить стрим текущего трека в канале в био"
         }
       },
       {
@@ -25980,7 +26034,7 @@
         "delayspam": "[количество спама] [Задержка в секундах] [текст / реплай]  - Начать спам"
       },
       {
-        "spam_stop": "- Закончить весь спам"
+        "spam_stop": "- [id] Закончить спам"
       }
     ],
     "new_commands": [
@@ -26002,7 +26056,7 @@
         "spam_stop": {
           "ru_doc": null,
           "en_doc": null,
-          "doc": "- Закончить весь спам"
+          "doc": "- [id] Закончить спам"
         }
       }
     ]
@@ -29247,7 +29301,7 @@
     ]
   },
   "C0dwiz/H.Modules/Video2GIF.py": {
-    "name": "Video2GIFModule",
+    "name": "Video2GIF",
     "description": "Converts video to GIF",
     "meta": {
       "pic": null,
@@ -29929,6 +29983,29 @@
       }
     ]
   },
+  "C0dwiz/H.Modules/H.py": {
+    "name": "H",
+    "description": "H",
+    "meta": {
+      "pic": null,
+      "banner": null,
+      "developer": "@hikka_mods"
+    },
+    "commands": [
+      {
+        "h": "H H"
+      }
+    ],
+    "new_commands": [
+      {
+        "h": {
+          "ru_doc": "H",
+          "en_doc": null,
+          "doc": "H"
+        }
+      }
+    ]
+  },
   "C0dwiz/H.Modules/AnimeQuotes.py": {
     "name": "AnimeQuotesMod",
     "description": "A module for sending random quotes from anime",
@@ -29980,6 +30057,79 @@
         "tgcs": {
           "ru_doc": "Получите все коды статуса telegram",
           "en_doc": "Get all telegram status codes",
+          "doc": null
+        }
+      }
+    ]
+  },
+  "C0dwiz/H.Modules/TaskManager.py": {
+    "name": "TaskManagerModule",
+    "description": "Manages tasks with Telegram commands and inline keyboards.",
+    "meta": {
+      "pic": null,
+      "banner": null,
+      "developer": "@hikka_mods"
+    },
+    "commands": [
+      {
+        "taskadd": "Добавить задачу:\n.taskadd <описание> | <дата (необязательно)> Add task:\n.taskadd <description> | <date (opt)>"
+      },
+      {
+        "taskremove": "[index] - удалить задачу [index] - remove task"
+      },
+      {
+        "taskcomplete": "[index] - Завершите задачу [index] - Complete task"
+      },
+      {
+        "tasklist": "Список задач List tasks"
+      },
+      {
+        "taskinfo": "[index] - Посмотреть информацию о задаче [index] - Show task info"
+      },
+      {
+        "taskclear": "Удалить все задачи Clear all tasks"
+      }
+    ],
+    "new_commands": [
+      {
+        "taskadd": {
+          "ru_doc": "Добавить задачу:\n.taskadd <описание> | <дата (необязательно)>",
+          "en_doc": "Add task:\n.taskadd <description> | <date (opt)>",
+          "doc": null
+        }
+      },
+      {
+        "taskremove": {
+          "ru_doc": "[index] - удалить задачу",
+          "en_doc": "[index] - remove task",
+          "doc": null
+        }
+      },
+      {
+        "taskcomplete": {
+          "ru_doc": "[index] - Завершите задачу",
+          "en_doc": "[index] - Complete task",
+          "doc": null
+        }
+      },
+      {
+        "tasklist": {
+          "ru_doc": "Список задач",
+          "en_doc": "List tasks",
+          "doc": null
+        }
+      },
+      {
+        "taskinfo": {
+          "ru_doc": "[index] - Посмотреть информацию о задаче",
+          "en_doc": "[index] - Show task info",
+          "doc": null
+        }
+      },
+      {
+        "taskclear": {
+          "ru_doc": "Удалить все задачи",
+          "en_doc": "Clear all tasks",
           "doc": null
         }
       }
@@ -30952,6 +31102,49 @@
           "ru_doc": "<ID/ссылка> 👉 Поиск трека в TIDAL по ID или ссылке",
           "en_doc": null,
           "doc": "<ID/url> 👉 Search track in TIDAL by ID or url"
+        }
+      }
+    ]
+  },
+  "unneyon/hikka-mods/privacy.py": {
+    "name": "PrivacyMod",
+    "description": "Module for fastly changing privacy settings",
+    "meta": {
+      "pic": "https://static.unneyon.ru/mods/privacy_icon.png",
+      "banner": "https://mods.unneyon.ru/banners/privacy.png",
+      "developer": "@unneyon_hmods"
+    },
+    "commands": [
+      {
+        "privacytypescmd": "👉 List of setting types to pass it in commands 👉 Список типов настроек для указания их в командах"
+      },
+      {
+        "allowusercmd": "<user> [setting (optional)] 👉 Add user to includes for some setting <пользователь> [настройка (необязательно)] 👉 Добавить пользователя в разрешённых для какой-либо настройки"
+      },
+      {
+        "disallowusercmd": "<user> [setting (optional)] 👉 Add user to excludes for some setting <пользователь> [настройка (необязательно)] 👉 Добавить пользователя в запрещённых для какой-либо настройки"
+      }
+    ],
+    "new_commands": [
+      {
+        "privacytypes": {
+          "ru_doc": "👉 Список типов настроек для указания их в командах",
+          "en_doc": null,
+          "doc": "👉 List of setting types to pass it in commands"
+        }
+      },
+      {
+        "allowuser": {
+          "ru_doc": "<пользователь> [настройка (необязательно)] 👉 Добавить пользователя в разрешённых для какой-либо настройки",
+          "en_doc": null,
+          "doc": "<user> [setting (optional)] 👉 Add user to includes for some setting"
+        }
+      },
+      {
+        "disallowuser": {
+          "ru_doc": "<пользователь> [настройка (необязательно)] 👉 Добавить пользователя в запрещённых для какой-либо настройки",
+          "en_doc": null,
+          "doc": "<user> [setting (optional)] 👉 Add user to excludes for some setting"
         }
       }
     ]
