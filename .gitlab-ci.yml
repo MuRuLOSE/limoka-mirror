@@ -31,6 +31,8 @@ before_run:
     - git reset --hard origin/main
     - echo "Удаляем ветку ${BRANCH_NAME} из удалённого репозитория..."
     - git push origin --delete ${BRANCH_NAME} || echo "Ветка ${BRANCH_NAME} не существовала или не удалось удалить"
+    - echo "Удаляем локальную ветку ${BRANCH_NAME}, если она существует..."
+    - git branch -D ${BRANCH_NAME} || echo "Локальная ветка ${BRANCH_NAME} не существовала"
     - git checkout -b ${BRANCH_NAME}
     - echo "Создаём новую ветку ${BRANCH_NAME}..."
     - git push origin ${BRANCH_NAME} --force || echo "Ошибка при создании ветки"
