@@ -29960,6 +29960,29 @@
       }
     ]
   },
+  "C0dwiz/H.Modules/WindowsKeys.py": {
+    "name": "WindowsKeys",
+    "description": "Provides you Windows activation keys",
+    "meta": {
+      "pic": null,
+      "banner": null,
+      "developer": "@hikka_mods"
+    },
+    "commands": [
+      {
+        "winkey": "Открывает выбор ключа для активации Windows Opens the Windows activation key selection"
+      }
+    ],
+    "new_commands": [
+      {
+        "winkey": {
+          "ru_doc": "Открывает выбор ключа для активации Windows",
+          "en_doc": "Opens the Windows activation key selection",
+          "doc": null
+        }
+      }
+    ]
+  },
   "C0dwiz/H.Modules/TempChat.py": {
     "name": "TempChatMod",
     "description": "Creates a temporary private chat with a message forwarding restriction and adds the specified user to it.",
