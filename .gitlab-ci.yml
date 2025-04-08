@@ -2,13 +2,15 @@ stages:
   - before
   - update
   - parse
+  - categories
   - commit
   - create_mr
   - backup
+  - diff_after_merge
 
 variables:
   BRANCH_NAME: "update-submodules_${CI_COMMIT_SHA}"
-  REPO_URL: "git.vsecoder.dev/root/limoka.git"
+  REPO_URL: "git.vsecoder.dev/murulose/limoka.git"
   GITLAB_TOKEN: $GITLAB_TOKEN
   GIT_DEPTH: 0 
 
@@ -64,6 +66,11 @@ parse:
     - git checkout main
     - git reset --hard origin/main
     - python3 parse.py
+    - python3 -m venv venv
+    - source venv/bin/activate
+    - pip install --upgrade pip
+    - pip install scikit-learn tqdm
+    - python3 categories.py
     - git add modules.json
     - git commit -m "Updated modules.json after merge $(date +'%Y-%m-%d %H:%M:%S')" || echo "No changes for modules.json"
     - git remote set-url origin "https://oauth2:${GITLAB_TOKEN}@${REPO_URL}"
@@ -100,12 +107,12 @@ create_merge_request:
            --data "source_branch=${BRANCH_NAME}" \
            --data "target_branch=main" \
            --data "title=Update of repositories $(date +'%Y-%m-%d %H:%M:%S')" \
-           "https://git.vsecoder.dev/api/v4/projects/root%2Flimoka/merge_requests" \
+           "https://git.vsecoder.dev/api/v4/projects/murulose%2Flimoka/merge_requests" \
            || echo "MR creating failure"
-
 
 backup:
   stage: backup
+  needs: ["parse"]
   script:
     - echo "$TELEGRAM_BOT_TOKEN"
     - echo "Creating .zip file of the repository with maximum compression..."
@@ -122,7 +129,7 @@ backup:
         COMMIT_MESSAGE="$(git log -1 --pretty=%B)"
         COMMIT_DATE="$(date --date="$(git log -1 --pretty=%ci)" +'%Y-%m-%d %H:%M:%S')"
         COMMIT_HASH="$(git rev-parse --short=6 HEAD)"
-        COMMIT_URL="https://git.vsecoder.dev/root/limoka/commit/$(git rev-parse HEAD)"
+        COMMIT_URL="https://git.vsecoder.dev/murulose/limoka/commit/$(git rev-parse HEAD)"
         MESSAGE="Commit Date: $COMMIT_DATE, Commit Message: $COMMIT_MESSAGE, Commit Hash: [\`$COMMIT_HASH\`]($COMMIT_URL)"
         
         echo "Sending .zip file parts to Telegram..."
@@ -150,3 +157,4 @@ backup:
     - echo "Files sent to Telegram successfully!"
   only:
     - main
+
