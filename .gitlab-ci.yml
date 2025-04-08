@@ -10,7 +10,7 @@ stages:
 
 variables:
   BRANCH_NAME: "update-submodules_${CI_COMMIT_SHA}"
-  REPO_URL: "git.vsecoder.dev/murulose/limoka.git"
+  REPO_URL: "git.vsecoder.dev/root/limoka.git"
   GITLAB_TOKEN: $GITLAB_TOKEN
   GIT_DEPTH: 0 
 
@@ -107,7 +107,7 @@ create_merge_request:
            --data "source_branch=${BRANCH_NAME}" \
            --data "target_branch=main" \
            --data "title=Update of repositories $(date +'%Y-%m-%d %H:%M:%S')" \
-           "https://git.vsecoder.dev/api/v4/projects/murulose%2Flimoka/merge_requests" \
+           "https://git.vsecoder.dev/api/v4/projects/root%2Flimoka/merge_requests" \
            || echo "MR creating failure"
 
 backup:
@@ -129,7 +129,7 @@ backup:
         COMMIT_MESSAGE="$(git log -1 --pretty=%B)"
         COMMIT_DATE="$(date --date="$(git log -1 --pretty=%ci)" +'%Y-%m-%d %H:%M:%S')"
         COMMIT_HASH="$(git rev-parse --short=6 HEAD)"
-        COMMIT_URL="https://git.vsecoder.dev/murulose/limoka/commit/$(git rev-parse HEAD)"
+        COMMIT_URL="https://git.vsecoder.dev/root/limoka/commit/$(git rev-parse HEAD)"
         MESSAGE="Commit Date: $COMMIT_DATE, Commit Message: $COMMIT_MESSAGE, Commit Hash: [\`$COMMIT_HASH\`]($COMMIT_URL)"
         
         echo "Sending .zip file parts to Telegram..."
