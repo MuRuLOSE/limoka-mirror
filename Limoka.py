@@ -114,6 +114,7 @@ class Limoka(loader.Module):
         "apply_filters": "✅ Apply Filters",
         "clear_filters": "🗑 Clear Filters",
         "back_to_results": "🔙 Back to Results",
+        "empty_history": "<emoji document_id=5879939498149679716>🔎</emoji> <b>Your search history is empty!</b>",
     }
 
     strings_ru = {
@@ -163,6 +164,7 @@ class Limoka(loader.Module):
         "apply_filters": "✅ Применить фильтры",
         "clear_filters": "🗑 Очистить фильтры",
         "back_to_results": "🔙 Вернуться к результатам",
+        "empty_history": "<emoji document_id=5879939498149679716>🔎</emoji> <b>Ваша история поиска пуста!</b>",
     }
 
     def __init__(self):
@@ -407,7 +409,11 @@ class Limoka(loader.Module):
     @loader.command()
     async def lshistorycmd(self, message: Message):
         """ - Showing the last 10 requests"""
-        formatted_history = [f"{self._history.index(history)}. <code>{history}</code>" for history in self._history]
+        if not self._history:
+            await utils.answer(message, self.strings["empty_history"])
+            return
+
+        formatted_history = [f"{i+1}. <code>{history}</code>" for i, history in enumerate(self._history)]
         await utils.answer(
             message, 
             self.strings["history"].format(
