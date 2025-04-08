@@ -15599,6 +15599,720 @@
       }
     ]
   },
+  "Ruslan-Isaev/modules/gitrepo.py": {
+    "name": "GitRepoMod",
+    "description": "Клонирует git репозиторий и отправляет его в виде zip-архива",
+    "meta": {
+      "pic": null,
+      "banner": null,
+      "developer": "@qShad0_bio"
+    },
+    "commands": [
+      {
+        "git": "Клонирует git репозиторий и отправляет его в виде zip-архива"
+      },
+      {
+        "wget": "Сохраняет файл из интернета"
+      }
+    ],
+    "new_commands": [
+      {
+        "git": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "Клонирует git репозиторий и отправляет его в виде zip-архива"
+        }
+      },
+      {
+        "wget": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "Сохраняет файл из интернета"
+        }
+      }
+    ]
+  },
+  "Ruslan-Isaev/modules/spellchecker.py": {
+    "name": "SpellerMod",
+    "description": null,
+    "meta": {
+      "pic": null,
+      "banner": null,
+      "developer": "@RUIS_VlP"
+    },
+    "commands": [
+      {
+        "spellcheckcmd": "Проверить орфографию текста.\n\nИспользование:\n.spellcheck [текст] - проверка указанного текста.\n.spellcheck -r - проверка текста из реплая."
+      }
+    ],
+    "new_commands": [
+      {
+        "spellcheck": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "Проверить орфографию текста.\n\nИспользование:\n.spellcheck [текст] - проверка указанного текста.\n.spellcheck -r - проверка текста из реплая."
+        }
+      }
+    ]
+  },
+  "Ruslan-Isaev/modules/Amnesty.py": {
+    "name": "AmnestyMod",
+    "description": "Модуль для разбана всех пользователей в чате или в лс (амнистия)",
+    "meta": {
+      "pic": null,
+      "banner": null,
+      "developer": "@RUIS_VlP"
+    },
+    "commands": [
+      {
+        "amnestycmd": "- разблокирует всех в чате"
+      },
+      {
+        "amnistiacmd": "- разблокирует всех в лс"
+      }
+    ],
+    "new_commands": [
+      {
+        "amnesty": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "- разблокирует всех в чате"
+        }
+      },
+      {
+        "amnistia": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "- разблокирует всех в лс"
+        }
+      }
+    ]
+  },
+  "Ruslan-Isaev/modules/checkmodule.py": {
+    "name": "CheckModulesMod",
+    "description": "Модуль для проверки модулей",
+    "meta": {
+      "pic": null,
+      "banner": null,
+      "developer": "@matubuntu"
+    },
+    "commands": [
+      {
+        "checkmodcmd": "<url/reply file> - проверяет модули"
+      }
+    ],
+    "new_commands": [
+      {
+        "checkmod": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "<url/reply file> - проверяет модули"
+        }
+      }
+    ]
+  },
+  "Ruslan-Isaev/modules/grok.py": {
+    "name": "GrokAIMod",
+    "description": "Модуль для нейросети Grok через бота @GrokAI",
+    "meta": {
+      "pic": null,
+      "banner": null,
+      "developer": "@RUIS_VlP"
+    },
+    "commands": [
+      {
+        "grokdelcmd": "- очищает историю переписки с нейросетью (контекст)"
+      },
+      {
+        "grokcmd": "<текст> - запрос к нейросети Grok"
+      }
+    ],
+    "new_commands": [
+      {
+        "grokdel": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "- очищает историю переписки с нейросетью (контекст)"
+        }
+      },
+      {
+        "grok": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "<текст> - запрос к нейросети Grok"
+        }
+      }
+    ]
+  },
+  "Ruslan-Isaev/modules/search.py": {
+    "name": "SearchMod",
+    "description": "🌐 Internet search module",
+    "meta": {
+      "pic": null,
+      "banner": null,
+      "developer": "@RUIS_VlP"
+    },
+    "commands": [
+      {
+        "picsearchcmd": "<reply to image> - 🔍 Reverse image search"
+      },
+      {
+        "searchcmd": "<text> / <reply> - 🌐 Search Internet"
+      }
+    ],
+    "new_commands": [
+      {
+        "picsearch": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "<reply to image> - 🔍 Reverse image search"
+        }
+      },
+      {
+        "search": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "<text> / <reply> - 🌐 Search Internet"
+        }
+      }
+    ]
+  },
+  "Ruslan-Isaev/modules/Figlet.py": {
+    "name": "FigletMod",
+    "description": "Длинные слова лучше переносить на другую строчку. Пример:\n`.figlet Hello\nWorld!`\nЕсли написать в одну строчку, то слово не уместится в одно сообщение ",
+    "meta": {
+      "pic": null,
+      "banner": null,
+      "developer": "@RUIS_VlP"
+    },
+    "commands": [
+      {
+        "figlet": "<text> - делает текст большим"
+      }
+    ],
+    "new_commands": [
+      {
+        "figlet": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "<text> - делает текст большим"
+        }
+      }
+    ]
+  },
+  "Ruslan-Isaev/modules/IrisAutoFarm.py": {
+    "name": "IrisAutoFarm",
+    "description": "Автофарм в ирисе",
+    "meta": {
+      "pic": null,
+      "banner": null,
+      "developer": "@RUIS_VlP"
+    },
+    "commands": [
+      {
+        "блэкстарт": "Завести таймеры в Iris Black Diamond"
+      }
+    ],
+    "new_commands": [
+      {
+        "блэкстарт": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "Завести таймеры в Iris Black Diamond"
+        }
+      }
+    ]
+  },
+  "Ruslan-Isaev/modules/S3.py": {
+    "name": "S3Mod",
+    "description": "Модуль для работы с S3 хранилищами",
+    "meta": {
+      "pic": null,
+      "banner": null,
+      "developer": "@RUIS_VlP"
+    },
+    "commands": [
+      {
+        "S3upload": "<path> <reply> - сохраняет файл в S3 хранилище"
+      },
+      {
+        "S3LS": "<path> - список файлов в S3 хранилище"
+      },
+      {
+        "S3delete": "<path> - удаляет файл из S3 хрпнилища"
+      },
+      {
+        "S3rename": "<folder> <old_filename> <new_filename> - переименовывает файл. Пробелы в адресе заменяйте на %20"
+      },
+      {
+        "S3cut": "<file> <old_folder> <new_folder> - вырезает файл. Пробелы в адресе заменяйте на %20"
+      },
+      {
+        "S3copy": "<file> <old_folder> <new_folder> - копирует файл. Пробелы в адресе заменяйте на %20"
+      },
+      {
+        "S3download": "<path> - скачивает файл из S3 хрпнилища и отправляет в Telegram"
+      },
+      {
+        "s3config": "- открыть конфигурацию модуля"
+      },
+      {
+        "S3usage": "- сколько занято памяти на S3"
+      },
+      {
+        "S3clear": "- удаление незавершенных загрузок"
+      },
+      {
+        "S3purge": "- ПОЛНАЯ ОЧИСТКА ХРАНИЛИЩА S3. Будьте осторожны с этой командой"
+      }
+    ],
+    "new_commands": [
+      {
+        "S3upload": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "<path> <reply> - сохраняет файл в S3 хранилище"
+        }
+      },
+      {
+        "S3LS": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "<path> - список файлов в S3 хранилище"
+        }
+      },
+      {
+        "S3delete": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "<path> - удаляет файл из S3 хрпнилища"
+        }
+      },
+      {
+        "S3rename": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "<folder> <old_filename> <new_filename> - переименовывает файл. Пробелы в адресе заменяйте на %20"
+        }
+      },
+      {
+        "S3cut": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "<file> <old_folder> <new_folder> - вырезает файл. Пробелы в адресе заменяйте на %20"
+        }
+      },
+      {
+        "S3copy": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "<file> <old_folder> <new_folder> - копирует файл. Пробелы в адресе заменяйте на %20"
+        }
+      },
+      {
+        "S3download": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "<path> - скачивает файл из S3 хрпнилища и отправляет в Telegram"
+        }
+      },
+      {
+        "s3config": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "- открыть конфигурацию модуля"
+        }
+      },
+      {
+        "S3usage": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "- сколько занято памяти на S3"
+        }
+      },
+      {
+        "S3clear": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "- удаление незавершенных загрузок"
+        }
+      },
+      {
+        "S3purge": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "- ПОЛНАЯ ОЧИСТКА ХРАНИЛИЩА S3. Будьте осторожны с этой командой"
+        }
+      }
+    ]
+  },
+  "Ruslan-Isaev/modules/ThreadLink.py": {
+    "name": "ThreadMod",
+    "description": "Модуль для получения ветки",
+    "meta": {
+      "pic": null,
+      "banner": null,
+      "developer": "@RUIS_VlP, @matubuntu"
+    },
+    "commands": [
+      {
+        "threadlink": "Получает ссылку на ветку сообщений.\n        "
+      }
+    ],
+    "new_commands": [
+      {
+        "threadlink": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "Получает ссылку на ветку сообщений.\n        "
+        }
+      }
+    ]
+  },
+  "Ruslan-Isaev/modules/barcode.py": {
+    "name": "BarcodeGeneratorMod",
+    "description": "Генерирует штрих код (code128) ",
+    "meta": {
+      "pic": null,
+      "banner": null,
+      "developer": "@RUIS_VlP"
+    },
+    "commands": [
+      {
+        "barcodecmd": "<код> - генерирует штрих-код"
+      }
+    ],
+    "new_commands": [
+      {
+        "barcode": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "<код> - генерирует штрих-код"
+        }
+      }
+    ]
+  },
+  "Ruslan-Isaev/modules/Quotly.py": {
+    "name": "QuotlyMod",
+    "description": "Модуль для создания стикеров по сообщению через @QuotLyBot",
+    "meta": {
+      "pic": null,
+      "banner": null,
+      "developer": "@RUIS_VlP"
+    },
+    "commands": [
+      {
+        "quotly": "<reply> - создать стикер по сообщению"
+      }
+    ],
+    "new_commands": [
+      {
+        "quotly": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "<reply> - создать стикер по сообщению"
+        }
+      }
+    ]
+  },
+  "Ruslan-Isaev/modules/SFTPUploader.py": {
+    "name": "SFTPUploaderMod",
+    "description": "Загрузка файлов на SFTP",
+    "meta": {
+      "pic": null,
+      "banner": null,
+      "developer": "@RUIS_VlP"
+    },
+    "commands": [
+      {
+        "sftp": "<reply> - загружает файл на SFPT"
+      }
+    ],
+    "new_commands": [
+      {
+        "sftp": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "<reply> - загружает файл на SFPT"
+        }
+      }
+    ]
+  },
+  "Ruslan-Isaev/modules/ttf.py": {
+    "name": "TTFMod",
+    "description": "Создает текстовый файл, отправляет его в Telegram, а затем удаляет.",
+    "meta": {
+      "pic": null,
+      "banner": null,
+      "developer": "@RUIS_VlP, @matubuntu"
+    },
+    "commands": [
+      {
+        "ttf": "Создает текстовый файл с заданным именем и расширением, \nзаписывает в него текст, отправляет его в Telegram и удаляет с диска.\n\nПример:\n.ttf название.txt\nТекст для файла/<reply>"
+      },
+      {
+        "ttf_noreply": "Создает текстовый файл с заданным именем и расширением, \nзаписывает в него текст, отправляет его в Telegram и удаляет с диска.\n\nПример:\n.ttf название.txt\nТекст для файла"
+      }
+    ],
+    "new_commands": [
+      {
+        "ttf": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "Создает текстовый файл с заданным именем и расширением, \nзаписывает в него текст, отправляет его в Telegram и удаляет с диска.\n\nПример:\n.ttf название.txt\nТекст для файла/<reply>"
+        }
+      },
+      {
+        "ttf_noreply": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "Создает текстовый файл с заданным именем и расширением, \nзаписывает в него текст, отправляет его в Telegram и удаляет с диска.\n\nПример:\n.ttf название.txt\nТекст для файла"
+        }
+      }
+    ]
+  },
+  "Ruslan-Isaev/modules/Надстрочка.py": {
+    "name": "НадстрочкаMod",
+    "description": "Делает надстрочный текст",
+    "meta": {
+      "pic": null,
+      "banner": null
+    },
+    "commands": [
+      {
+        "upcmd": "<text> - сделать верхний шрифт"
+      }
+    ],
+    "new_commands": [
+      {
+        "up": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "<text> - сделать верхний шрифт"
+        }
+      }
+    ]
+  },
+  "Ruslan-Isaev/modules/ssh.py": {
+    "name": "SSHMod",
+    "description": "SSH module for uploading files and executing commands",
+    "meta": {
+      "pic": null,
+      "banner": null,
+      "developer": "@RUIS_VlP"
+    },
+    "commands": [
+      {
+        "save": "<reply> - saves the file to the ~/sshmod directory"
+      },
+      {
+        "sterminal": "<command> - executes a command on the SSH server"
+      }
+    ],
+    "new_commands": [
+      {
+        "save": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "<reply> - saves the file to the ~/sshmod directory"
+        }
+      },
+      {
+        "sterminal": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "<command> - executes a command on the SSH server"
+        }
+      }
+    ]
+  },
+  "Ruslan-Isaev/modules/NewMlMod.py": {
+    "name": "NewMlMod",
+    "description": "A module for uploading modules as a file. Let's just say it's a heavily stripped-down UnitHeta.",
+    "meta": {
+      "pic": null,
+      "banner": null
+    },
+    "commands": [
+      {
+        "nmlcmd": "send module via file"
+      }
+    ],
+    "new_commands": [
+      {
+        "nml": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "send module via file"
+        }
+      }
+    ]
+  },
+  "Ruslan-Isaev/modules/youtube-loader.py": {
+    "name": "YouTube_DLDMod",
+    "description": "Помогает скачивать видео с YouTube",
+    "meta": {
+      "pic": null,
+      "banner": null,
+      "developer": "@RUIS_VlP"
+    },
+    "commands": [
+      {
+        "dlvideo": "<link> - скачивает видео с ютуба"
+      }
+    ],
+    "new_commands": [
+      {
+        "dlvideo": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "<link> - скачивает видео с ютуба"
+        }
+      }
+    ]
+  },
+  "Ruslan-Isaev/modules/DogPic.py": {
+    "name": "DogPicMod",
+    "description": "Модуль для фотографий с милыми собачками",
+    "meta": {
+      "pic": null,
+      "banner": null,
+      "developer": "@RUIS_VlP"
+    },
+    "commands": [
+      {
+        "dogpic": "картинка с собачкой"
+      }
+    ],
+    "new_commands": [
+      {
+        "dogpic": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "картинка с собачкой"
+        }
+      }
+    ]
+  },
+  "Ruslan-Isaev/modules/tornodes.py": {
+    "name": "TorNodes",
+    "description": "Получает список мостов для сети Tor",
+    "meta": {
+      "pic": null,
+      "banner": null,
+      "developer": "@matubuntu"
+    },
+    "commands": [
+      {
+        "bridge": "obfs4 / webtunnel - получить мосты для сети Tor"
+      },
+      {
+        "tncfg": "- открыть конфигурацию модуля"
+      }
+    ],
+    "new_commands": [
+      {
+        "bridge": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "obfs4 / webtunnel - получить мосты для сети Tor"
+        }
+      },
+      {
+        "tncfg": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "- открыть конфигурацию модуля"
+        }
+      }
+    ]
+  },
+  "Ruslan-Isaev/modules/clck.py": {
+    "name": "ClckMod",
+    "description": "Помогает сократить ссылку в clck.ru или расшифровать укороченную ссылку.",
+    "meta": {
+      "pic": null,
+      "banner": null,
+      "developer": "@RUIS_VlP"
+    },
+    "commands": [
+      {
+        "schortcmd": "<url> - сократит ссылку."
+      },
+      {
+        "deschortcmd": "<url> - расшифрует ссылку."
+      }
+    ],
+    "new_commands": [
+      {
+        "schort": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "<url> - сократит ссылку."
+        }
+      },
+      {
+        "deschort": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "<url> - расшифрует ссылку."
+        }
+      }
+    ]
+  },
+  "Ruslan-Isaev/modules/gigagpt.py": {
+    "name": "RUISChatGPTMod",
+    "description": "ChatGPT 3, Gigachat без API ключа и с контекстом. Бот, который используется для запросов: @Gigachat_bot и @GPTChatRBot. Модуль распространяется по лицензии MIT.",
+    "meta": {
+      "pic": null,
+      "banner": null,
+      "developer": "@RUIS_VlP, @matubuntu"
+    },
+    "commands": [
+      {
+        "gptdelcmd": "- очищает историю переписки с нейросетью(контекст)"
+      },
+      {
+        "giga": "<текст> - запрос к нейросети GigaChat"
+      },
+      {
+        "gigadelcmd": "- очищает историю переписки с нейросетью(контекст)"
+      },
+      {
+        "gptcmd": "<текст> - запрос к нейросети ChatGPT"
+      }
+    ],
+    "new_commands": [
+      {
+        "gptdel": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "- очищает историю переписки с нейросетью(контекст)"
+        }
+      },
+      {
+        "giga": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "<текст> - запрос к нейросети GigaChat"
+        }
+      },
+      {
+        "gigadel": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "- очищает историю переписки с нейросетью(контекст)"
+        }
+      },
+      {
+        "gpt": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "<текст> - запрос к нейросети ChatGPT"
+        }
+      }
+    ]
+  },
   "fajox1/famods/removebg.py": {
     "name": "RemoveBG",
     "description": "Убрать фон из изображения",
