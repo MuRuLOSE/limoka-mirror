@@ -2180,6 +2180,33 @@
       "Chat"
     ]
   },
+  "TheKsenon/MyHikkaModules/gpmtool.py": {
+    "name": "GPMToolMod",
+    "description": "Модуль позволяет пересылать сообщение из канала, где это запрещено.",
+    "meta": {
+      "pic": null,
+      "banner": null,
+      "developer": "@kmodules"
+    },
+    "commands": [
+      {
+        "gpm": "<ссылка: https://t.me/канал/номер_поста> Переслать сообщения из канала, где запрещено."
+      }
+    ],
+    "new_commands": [
+      {
+        "gpm": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "<ссылка: https://t.me/канал/номер_поста> Переслать сообщения из канала, где запрещено."
+        }
+      }
+    ],
+    "category": [
+      "Chat",
+      "Tools"
+    ]
+  },
   "TheKsenon/MyHikkaModules/counttime.py": {
     "name": "CountTimeModule",
     "description": "Модуль для отслеживания времени до разных событий, ВРЕМЯ может быть неправильное, потому что у вас на сервере такое время. На Termux время правильное...",
@@ -9015,6 +9042,43 @@
     "category": [
       "Tools",
       "Fun"
+    ]
+  },
+  "coddrago/modules/passwordgen.py": {
+    "name": "PassGen",
+    "description": "Generate password",
+    "meta": {
+      "pic": "https://envs.sh/Lmn.webp",
+      "banner": "https://mods.codrago.top/banners/passwordgen.png",
+      "developer": "@codrago_m"
+    },
+    "commands": [
+      {
+        "passcmd": "| Generate password from utils"
+      },
+      {
+        "passgcmd": "| Generate password from string"
+      }
+    ],
+    "new_commands": [
+      {
+        "pass": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "| Generate password from utils"
+        }
+      },
+      {
+        "passg": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "| Generate password from string"
+        }
+      }
+    ],
+    "category": [
+      "Security",
+      "Tools"
     ]
   },
   "coddrago/modules/autoclicker.py": {
@@ -34317,6 +34381,33 @@
       "Automation"
     ]
   },
+  "C0dwiz/H.Modules/UserbotAvast.py": {
+    "name": "UserbotAvast",
+    "description": "A module for checking modules for security.",
+    "meta": {
+      "pic": null,
+      "banner": null,
+      "developer": "@hikka_mods"
+    },
+    "commands": [
+      {
+        "checkmodcmd": "[module_link] или [reply file] или [send file] - выполняет проверку модуля на безопасность."
+      }
+    ],
+    "new_commands": [
+      {
+        "checkmod": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "[module_link] или [reply file] или [send file] - выполняет проверку модуля на безопасность."
+        }
+      }
+    ],
+    "category": [
+      "Tools",
+      "Chat"
+    ]
+  },
   "C0dwiz/H.Modules/face.py": {
     "name": "face",
     "description": "random face",
@@ -34554,6 +34645,63 @@
     "category": [
       "Media",
       "Tools"
+    ]
+  },
+  "C0dwiz/H.Modules/MooFarmRC1.py": {
+    "name": "AutoFarmbotMod",
+    "description": "Модуль для автофарма в \"Коровке\"!\nВ конфиге настройте: сhat_id и bot_id ->\nСинхронизируйте скин в меню ->\nЗарегистрируйтесь на Redis.io и ссылку добавьте в конфиг",
+    "meta": {
+      "pic": null,
+      "banner": null,
+      "developer": "@hikka_mods and @Frost_Shard"
+    },
+    "commands": [
+      {
+        "fmoo": "Инлайн-меню управления автофармом"
+      },
+      {
+        "auto_eating": "Автоматически кормит персонажа, если уровень еды ниже 70%"
+      },
+      {
+        "auto_craft_txt": "Команда для автоматической работы авто-крафта"
+      },
+      {
+        "auto_forest_txt": "Команда для автоматической работы авто-леса"
+      }
+    ],
+    "new_commands": [
+      {
+        "fmoo": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "Инлайн-меню управления автофармом"
+        }
+      },
+      {
+        "auto_eating": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "Автоматически кормит персонажа, если уровень еды ниже 70%"
+        }
+      },
+      {
+        "auto_craft_txt": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "Команда для автоматической работы авто-крафта"
+        }
+      },
+      {
+        "auto_forest_txt": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "Команда для автоматической работы авто-леса"
+        }
+      }
+    ],
+    "category": [
+      "Tools",
+      "Automation"
     ]
   },
   "C0dwiz/H.Modules/GigaChat.py": {
