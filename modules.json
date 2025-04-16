@@ -17603,6 +17603,42 @@
       "Tools"
     ]
   },
+  "Ruslan-Isaev/modules/financemod.py": {
+    "name": "FinanceMod",
+    "description": null,
+    "meta": {
+      "pic": null,
+      "banner": null
+    },
+    "commands": [
+      {
+        "valutecmd": "[count]  [usd, eur, ...]"
+      },
+      {
+        "cryptocmd": "[count] [ton, btc, ...]"
+      }
+    ],
+    "new_commands": [
+      {
+        "valute": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "[count]  [usd, eur, ...]"
+        }
+      },
+      {
+        "crypto": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "[count] [ton, btc, ...]"
+        }
+      }
+    ],
+    "category": [
+      "Fun",
+      "Tools"
+    ]
+  },
   "Ruslan-Isaev/modules/S3.py": {
     "name": "S3Mod",
     "description": "Модуль для работы с S3 хранилищами",
