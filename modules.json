@@ -17549,6 +17549,33 @@
       "Games"
     ]
   },
+  "Ruslan-Isaev/modules/whois.py": {
+    "name": "WhoisMod",
+    "description": "Модуль для получения информации о домене или ip адресе",
+    "meta": {
+      "pic": null,
+      "banner": null,
+      "developer": "@RUIS_VlP"
+    },
+    "commands": [
+      {
+        "whois": "<домен> - получить информацию о домене или IP"
+      }
+    ],
+    "new_commands": [
+      {
+        "whois": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "<домен> - получить информацию о домене или IP"
+        }
+      }
+    ],
+    "category": [
+      "Tools",
+      "Social"
+    ]
+  },
   "Ruslan-Isaev/modules/Figlet.py": {
     "name": "FigletMod",
     "description": "Длинные слова лучше переносить на другую строчку. Пример:\n`.figlet Hello\nWorld!`\nЕсли написать в одну строчку, то слово не уместится в одно сообщение ",
