@@ -463,6 +463,42 @@ class Limoka(loader.Module):
         commands = self.generate_commands(module_info)
         page = index + 1
 
+        clean_module_path = module_path.replace('\\', '/')
+
+        formatted_message = self.strings["found"].format(
+            query=query,
+            name=name,
+            description=description,
+            url=self.config["limoka_url"],
+            username=dev_username,
+            commands="".join(commands),
+            prefix=self.get_prefix(),
+            module_path=clean_module_path,
+        )
+
+        categories = filters.get("category", [])
+        filters_text = f"Categories: {', '.join(categories) if categories else 'None'}"
+
+        full_message = formatted_message + f"\n{filters_text}"
+        if len(full_message) > 1024:
+            download_command = f"<emoji document_id=5411143117711624172>🪄</emoji> <code>{self.get_prefix()}dlm {self.config['limoka_url']}{clean_module_path}</code>"
+            max_content_length = 1024 - len(f"\n{download_command}\n{filters_text}") - 50
+            if max_content_length < 100:
+                max_content_length = 100
+            
+            description = (description[:max_content_length//2] + "...") if len(description) > max_content_length//2 else description
+            commands = commands[:3] if len(commands) > 3 else commands
+            formatted_message = (
+                f"<emoji document_id=5413334818047940135>🔍</emoji> Found the module <b>{name}</b> "
+                f"by query: <b>{query}</b>\n\n"
+                f"<b><emoji document_id=5418376169055602355>ℹ️</emoji> Description:</b> {description}\n"
+                f"<b><emoji document_id=5418299289141004396>🧑‍💻</emoji> Developer:</b> {dev_username}\n\n"
+                f"{''.join(commands)}\n"
+            ).strip()
+            full_message = f"{formatted_message[:max_content_length]}{'...' if len(formatted_message) > max_content_length else ''}\n\n{download_command}\n{filters_text}"
+        else:
+            full_message = formatted_message + f"\n{filters_text}"
+
         markup = [
             [
                 {
@@ -482,30 +518,25 @@ class Limoka(loader.Module):
             ]
         ]
 
-        formatted_message = self.strings["found"].format(
-            query=query,
-            name=name,
-            description=description,
-            url=self.config["limoka_url"],
-            username=dev_username,
-            commands="".join(commands),
-            prefix=self.get_prefix(),
-            module_path=module_path.replace("\\", "/"),
-        )
-
-        categories = filters.get("category", [])
-        filters_text = f"Categories: {', '.join(categories) if categories else 'None'}"
 
         if isinstance(message_or_call, Message):
             await self.inline.form(
-                formatted_message, message_or_call, reply_markup=markup, photo=banner or None
+                full_message, message_or_call, reply_markup=markup, photo=banner or None
             )
         else:
-            await message_or_call.edit(
-                formatted_message + f"\n{filters_text}",
-                reply_markup=markup,
-                photo=banner or None
-            )
+            if banner:
+                await message_or_call.edit(
+                    full_message,
+                    reply_markup=markup,
+                    photo=banner
+                )
+            else:
+                logger.info('NO BANNER')
+                await message_or_call.edit(
+                    full_message,
+                    reply_markup=markup,
+                    photo=None
+                )
 
     async def _next_page(self, call: InlineCall, result: list, index: int, query: str, filters: dict):
         if index + 1 >= len(result):
