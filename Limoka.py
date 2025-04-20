@@ -531,7 +531,6 @@ class Limoka(loader.Module):
                     photo=banner
                 )
             else:
-                logger.info('NO BANNER')
                 await message_or_call.edit(
                     full_message,
                     reply_markup=markup,
