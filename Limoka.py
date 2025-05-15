@@ -253,7 +253,7 @@ class Limoka(loader.Module):
         commands = []
         for i, func in enumerate(module_info["commands"], 1):
             if i > 9:
-                commands.append("...")
+                commands.append("…")
                 break
             for command, description in func.items():
                 emoji = self.strings["emojis"].get(i, "")
@@ -486,7 +486,7 @@ class Limoka(loader.Module):
             if max_content_length < 100:
                 max_content_length = 100
             
-            description = (description[:max_content_length//2] + "...") if len(description) > max_content_length//2 else description
+            description = (description[:max_content_length//2] + html.escape("...")) if len(description) > max_content_length//2 else description
             commands = commands[:3] if len(commands) > 3 else commands
             formatted_message = (
                 f"<emoji document_id=5413334818047940135>🔍</emoji> Found the module <b>{name}</b> "
