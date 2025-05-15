@@ -8278,27 +8278,67 @@
     "description": "Just eval with customizable text and stdout",
     "meta": {
       "pic": null,
-      "banner": "https://github.com/sqlmerr/sqlmerr/blob/main/assets/hikka_mods/sqlmerrmodules_upgradedeval.png?raw=true",
+      "banner": "https://github.com/sqlmerr/hikka_mods/blob/main/assets/banners/upgradedeval.png?raw=true",
       "icon": "https://github.com/sqlmerr/hikka_mods/blob/main/assets/icons/upgradedeval.png?raw=true",
       "developer": "@sqlmerr_m"
     },
     "commands": [
       {
+        "ehistory": "Get history (since userbot restart) Получить историю (с рестарта юзербота)"
+      },
+      {
         "ie": "Upgraded eval Улучшенный eval"
+      },
+      {
+        "erust": "Evaluate Rust code Запустить код на Rust"
+      },
+      {
+        "ego": "Evaluate Go code Запустить код на Go"
+      },
+      {
+        "ekt": "Evaluate Kotlin code Запустить код на Kotlin"
       }
     ],
     "new_commands": [
+      {
+        "ehistory": {
+          "ru_doc": "Получить историю (с рестарта юзербота)",
+          "en_doc": null,
+          "doc": "Get history (since userbot restart)"
+        }
+      },
       {
         "ie": {
           "ru_doc": "Улучшенный eval",
           "en_doc": null,
           "doc": "Upgraded eval"
         }
+      },
+      {
+        "erust": {
+          "ru_doc": "Запустить код на Rust",
+          "en_doc": null,
+          "doc": "Evaluate Rust code"
+        }
+      },
+      {
+        "ego": {
+          "ru_doc": "Запустить код на Go",
+          "en_doc": null,
+          "doc": "Evaluate Go code"
+        }
+      },
+      {
+        "ekt": {
+          "ru_doc": "Запустить код на Kotlin",
+          "en_doc": null,
+          "doc": "Evaluate Kotlin code"
+        }
       }
     ],
     "category": [
-      "Fun",
-      "Tools"
+      "Tools",
+      "Fun"
     ]
   },
   "sqlmerr/hikka_mods/animatedprofile.py": {
@@ -18079,6 +18119,43 @@
     "category": [
       "Fun",
       "Tools"
+    ]
+  },
+  "Ruslan-Isaev/modules/GenNick.py": {
+    "name": "GenNickMod",
+    "description": "Простой генератор ников",
+    "meta": {
+      "pic": null,
+      "banner": null,
+      "developer": "@RUIS_VlP"
+    },
+    "commands": [
+      {
+        "GenNick": "Генерирует стандартный ник"
+      },
+      {
+        "GenIntNick": "Генерирует ник с цифрами"
+      }
+    ],
+    "new_commands": [
+      {
+        "GenNick": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "Генерирует стандартный ник"
+        }
+      },
+      {
+        "GenIntNick": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "Генерирует ник с цифрами"
+        }
+      }
+    ],
+    "category": [
+      "Fun",
+      "Social"
     ]
   },
   "Ruslan-Isaev/modules/tornodes.py": {
@@ -28452,13 +28529,10 @@
         "pcip": "- просмотреть информацию об айпи адресе"
       },
       {
-        "pcscrin": "- сделать скриншот экрана"
+        "pcscreen": "- сделать скриншот экрана"
       },
       {
-        "pcweb": "<ссылка> - открыть ссылку в браузере"
-      },
-      {
-        "pcwebscrin": "- сделать снимок с веб-камеры\n\n🔑 Дополнительно:"
+        "pcweb": "<ссылка> - открыть ссылку в браузере\n  \n🔑 Дополнительно:"
       },
       {
         "pcalert": "<сообщение> - вывести на экран сообщение"
@@ -28514,7 +28588,7 @@
         }
       },
       {
-        "pcscrin": {
+        "pcscreen": {
           "ru_doc": null,
           "en_doc": null,
           "doc": "- сделать скриншот экрана"
@@ -28524,14 +28598,7 @@
         "pcweb": {
           "ru_doc": null,
           "en_doc": null,
-          "doc": "<ссылка> - открыть ссылку в браузере"
-        }
-      },
-      {
-        "pcwebscrin": {
-          "ru_doc": null,
-          "en_doc": null,
-          "doc": "- сделать снимок с веб-камеры\n\n🔑 Дополнительно:"
+          "doc": "<ссылка> - открыть ссылку в браузере\n  \n🔑 Дополнительно:"
         }
       },
       {
@@ -29181,6 +29248,64 @@
     "category": [
       "Productivity",
       "Chat"
+    ]
+  },
+  "MuRuLOSE/HikkaModulesRepo/Wynncraft.py": {
+    "name": "WynnCraft",
+    "description": "Wynncraft API Module",
+    "meta": {
+      "pic": null,
+      "banner": "link",
+      "desc": "Wynncraft API Module",
+      "developer": "@BruhHikkaModules"
+    },
+    "commands": [
+      {
+        "wstatscmd": "[Username / uuid] - Player stats"
+      },
+      {
+        "wguildcmd": "[GuildName / Prefix] - Guild stats"
+      },
+      {
+        "wleaderboardcmd": "Show Wynncraft leaderboards"
+      },
+      {
+        "wsearchcmd": "[Query] - Search for players or guilds"
+      }
+    ],
+    "new_commands": [
+      {
+        "wstats": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "[Username / uuid] - Player stats"
+        }
+      },
+      {
+        "wguild": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "[GuildName / Prefix] - Guild stats"
+        }
+      },
+      {
+        "wleaderboard": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "Show Wynncraft leaderboards"
+        }
+      },
+      {
+        "wsearch": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "[Query] - Search for players or guilds"
+        }
+      }
+    ],
+    "category": [
+      "Tools",
+      "Utilities"
     ]
   },
   "MuRuLOSE/HikkaModulesRepo/MindGameCheat.py": {
