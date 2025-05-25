@@ -8637,7 +8637,7 @@
     "description": "Maybe... doxing tool?",
     "meta": {
       "pic": "https://0x0.st/s/QeZGoQSDvJ2RILRMUOjzfg/8KPc.webp",
-      "banner": "https://mods.codrago.top/banners/DoxTool.png",
+      "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/master/banner.png",
       "developer": "@codrago_m"
     },
     "commands": [
@@ -8684,7 +8684,7 @@
     "description": "Ban in pm for time",
     "meta": {
       "pic": "https://0x0.st/s/J_m06i5v4gJFtziGmqnjuw/8KPl.webp",
-      "banner": "https://mods.codrago.top/banners/pmban.png",
+      "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/master/banner.png",
       "developer": "@codrago_m, @exttasy1"
     },
     "commands": [
@@ -8716,72 +8716,17 @@
       "Chat"
     ]
   },
-  "coddrago/modules/SwitchToHeroku.py": {
-    "name": "SwitchToHeroku",
-    "description": "Auto switching from Hikka to Heroku",
-    "meta": {
-      "pic": "https://kappa.lol/2Z_Q-",
-      "banner": "https://mods.codrago.top/banners/banner.png",
-      "developer": "@codrago_m",
-      "# meta_desc": "Switch your hikka to heroku"
-    },
-    "commands": [
-      {
-        "switchtoheroku": "- Automatically switch to heroku"
-      }
-    ],
-    "new_commands": [
-      {
-        "switchtoheroku": {
-          "ru_doc": null,
-          "en_doc": null,
-          "doc": "- Automatically switch to heroku"
-        }
-      }
-    ],
-    "category": [
-      "Chat",
-      "Automation"
-    ]
-  },
-  "coddrago/modules/whoyou.py": {
-    "name": "WhoYouMod",
-    "description": "Who you? Who i'm? Who all in this world?",
-    "meta": {
-      "pic": "https://0x0.st/s/1Ygc1jQQyLJJ2f0Z1vyJ6w/8KPF.webp",
-      "banner": "https://mods.codrago.top/banners/whoyou.png",
-      "developer": "@codrago_m"
-    },
-    "commands": [
-      {
-        "questioncmd": "Answer the question asked in the config!"
-      }
-    ],
-    "new_commands": [
-      {
-        "question": {
-          "ru_doc": null,
-          "en_doc": null,
-          "doc": "Answer the question asked in the config!"
-        }
-      }
-    ],
-    "category": [
-      "Tools",
-      "Games"
-    ]
-  },
   "coddrago/modules/id.py": {
     "name": "ID",
     "description": "ID of all!",
     "meta": {
       "pic": "https://kappa.lol/p3wVI",
-      "banner": "https://mods.codrago.top/banners/id.png",
+      "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/master/banner.png",
       "developer": "@codrago_m"
     },
     "commands": [
       {
-        "useridcmd": "[reply] | Get User ID"
+        "useridcmd": "[reply or username] | Get User ID"
       },
       {
         "idcmd": "| Get your ID"
@@ -8795,7 +8740,7 @@
         "userid": {
           "ru_doc": null,
           "en_doc": null,
-          "doc": "[reply] | Get User ID"
+          "doc": "[reply or username] | Get User ID"
         }
       },
       {
@@ -8823,7 +8768,7 @@
     "description": "Your the best friend in loli hentai",
     "meta": {
       "pic": "https://0x0.st/s/uGDXu48zQjT7vFTRcl2nAA/8KP3.png",
-      "banner": "https://mods.codrago.top/banners/loli.png",
+      "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/master/banner.png",
       "developer": "@codrago_m"
     },
     "commands": [
@@ -8860,7 +8805,7 @@
     "description": "Random - it's life!",
     "meta": {
       "pic": "https://0x0.st/s/de32M5VljJzzSJxSUjrqtA/8KPR.webp",
-      "banner": "https://mods.codrago.top/banners/randomizer.png",
+      "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/master/banner.png",
       "developer": "@codrago_m"
     },
     "commands": [
@@ -8917,7 +8862,7 @@
     "description": "Compliments for your partner",
     "meta": {
       "pic": "https://0x0.st/s/i1wijQ_XEUpGaHPXHUdjHQ/8KPS.webp",
-      "banner": "https://mods.codrago.top/banners/compliments.png",
+      "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/master/banner.png",
       "developer": "@codrago_m"
     },
     "commands": [
@@ -8944,7 +8889,7 @@
     "description": "Развлекательный модуль",
     "meta": {
       "pic": "https://0x0.st/s/4xg5IubxTkikjI6JG2AU8w/8KP_.webp",
-      "banner": "https://mods.codrago.top/banners/dice.png",
+      "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/master/banner.png",
       "developer": "@codrago_m"
     },
     "commands": [
@@ -8971,7 +8916,7 @@
     "description": "Tool for work with figlet",
     "meta": {
       "pic": "https://0x0.st/s/P0iSUm3VUe-mY3Soc7qRAQ/8KPV.webp",
-      "banner": "https://mods.codrago.top/banners/loli.png",
+      "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/master/banner.png",
       "developer": "@codrago_m"
     },
     "commands": [
@@ -9008,7 +8953,7 @@
     "description": "Download emoji from reply",
     "meta": {
       "pic": "https://0x0.st/s/xMv47XPyGMimCREVC6vfXA/8KPp.webp",
-      "banner": "https://mods.codrago.top/banners/loli.png",
+      "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/master/banner.png",
       "developer": "@codrago_m"
     },
     "commands": [
@@ -9035,7 +8980,7 @@
     "description": "Random Ascii Face from utils",
     "meta": {
       "pic": "https://0x0.st/s/TGT42nesnQ5TwvixG8nFEQ/8KPa.webp",
-      "banner": "https://mods.codrago.top/banners/ascii_face.png",
+      "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/master/banner.png",
       "developer": "@codrago_m"
     },
     "commands": [
@@ -9062,7 +9007,7 @@
     "description": "Module to run speedtest using speedtest library",
     "meta": {
       "pic": "https://0x0.st/s/de32M5VljJzzSJxSUjrqtA/8KPR.webp",
-      "banner": "https://mods.codrago.top/banners/speedtest.png",
+      "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/master/banner.png",
       "developer": "@codrago_m"
     },
     "commands": [
@@ -9089,7 +9034,7 @@
     "description": "Generate password",
     "meta": {
       "pic": "https://envs.sh/Lmn.webp",
-      "banner": "https://mods.codrago.top/banners/passwordgen.png",
+      "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/master/banner.png",
       "developer": "@codrago_m"
     },
     "commands": [
@@ -9126,7 +9071,7 @@
     "description": "Autoclicker for inline buttons.",
     "meta": {
       "pic": "https://0x0.st/s/7EWHGzqAj49M6PDMeawuzw/8KPu.webp",
-      "banner": "https://mods.codrago.top/banners/clicon.png",
+      "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/master/banner.png",
       "developer": "@codrago_m, @unneyon_hmods"
     },
     "commands": [
@@ -9158,12 +9103,49 @@
       "Tools"
     ]
   },
+  "coddrago/modules/send.py": {
+    "name": "Send",
+    "description": "| module to send messages",
+    "meta": {
+      "pic": "https://kappa.lol/p3wVI",
+      "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/master/banner.png",
+      "developer": "@codrago_m"
+    },
+    "commands": [
+      {
+        "send": "[user] [text] | Send message to user"
+      },
+      {
+        "sendsm": "[reply or text] | send message to saved messages"
+      }
+    ],
+    "new_commands": [
+      {
+        "send": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "[user] [text] | Send message to user"
+        }
+      },
+      {
+        "sendsm": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "[reply or text] | send message to saved messages"
+        }
+      }
+    ],
+    "category": [
+      "Tools",
+      "Chat"
+    ]
+  },
   "coddrago/modules/pinterest.py": {
     "name": "PinterestDownloader",
     "description": "Gives a link to download a file from Pinterest",
     "meta": {
       "pic": "https://0x0.st/s/PRHLZJFYjFlRZEOaVcaopw/8KP6.webp",
-      "banner": "https://mods.codrago.top/banners/pinterest.png",
+      "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/master/banner.png",
       "developer": "@codrago_m"
     },
     "commands": [
@@ -9190,7 +9172,7 @@
     "description": "Automatically claim https://t.me/StableWaifuBot promo from any chat",
     "meta": {
       "pic": "https://0x0.st/s/rb3ABc1QP3OIMXnQEBiIcA/8KPn.webp",
-      "banner": "https://mods.codrago.top/banners/promoclaimer.png",
+      "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/master/banner.png",
       "developer": "@codrago_m"
     },
     "commands": [
@@ -9217,7 +9199,7 @@
     "description": "Модуль для быстрого доступа к каналам с модулями",
     "meta": {
       "pic": "https://0x0.st/s/ZgHZlSLgzAG9WPUQy__BVQ/8KPJ.webp",
-      "banner": "https://mods.codrago.top/banners/loli.png",
+      "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/master/banner.png",
       "developer": "@codrago_m"
     },
     "commands": [
