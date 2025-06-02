@@ -8632,6 +8632,42 @@
       "Fun"
     ]
   },
+  "coddrago/modules/lastfm.py": {
+    "name": "lastfmmod",
+    "description": "Module for music from different services",
+    "meta": {
+      "pic": null,
+      "banner": null
+    },
+    "commands": [
+      {
+        "nowplay": "| send playing track"
+      },
+      {
+        "tutorl": "| tutorial"
+      }
+    ],
+    "new_commands": [
+      {
+        "nowplay": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "| send playing track"
+        }
+      },
+      {
+        "tutorl": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "| tutorial"
+        }
+      }
+    ],
+    "category": [
+      "Tools",
+      "Chat"
+    ]
+  },
   "coddrago/modules/DoxTool.py": {
     "name": "dox",
     "description": "Maybe... doxing tool?",
