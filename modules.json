@@ -7433,6 +7433,498 @@
       "Tools"
     ]
   },
+  "shadowhikka/sh.modules/StickerDownload.py": {
+    "name": "StickerDownloadMod",
+    "description": "Sticker Downloader",
+    "meta": {
+      "pic": null,
+      "banner": "https://i.imgur.com/1UnAXNf.jpeg",
+      "developer": "@shadow_modules"
+    },
+    "commands": [
+      {
+        "stickdowncmd": "stickdown <reply for sticker>"
+      }
+    ],
+    "new_commands": [
+      {
+        "stickdown": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "stickdown <reply for sticker>"
+        }
+      }
+    ],
+    "category": [
+      "Tools",
+      "Games"
+    ]
+  },
+  "shadowhikka/sh.modules/RandomMemes.py": {
+    "name": "RandomMemesMod",
+    "description": "RandomMemes",
+    "meta": {
+      "pic": null,
+      "banner": "https://i.imgur.com/nw5hP8P.jpeg",
+      "developer": "@shadow_modules"
+    },
+    "commands": [
+      {
+        "randmemescmd": "See random memes"
+      }
+    ],
+    "new_commands": [
+      {
+        "randmemes": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "See random memes"
+        }
+      }
+    ],
+    "category": [
+      "Fun",
+      "Info"
+    ]
+  },
+  "shadowhikka/sh.modules/NewsLetter.py": {
+    "name": "NewsLetterMod",
+    "description": "newsletter for chats",
+    "meta": {
+      "pic": null,
+      "banner": "https://i.imgur.com/Hy9ABNY.jpeg",
+      "developer": "@shadow_modules"
+    },
+    "commands": [
+      {
+        "sendnewscmd": "<message> or reply"
+      },
+      {
+        "newsdelaycmd": "Delayed mailing and photos"
+      }
+    ],
+    "new_commands": [
+      {
+        "sendnews": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "<message> or reply"
+        }
+      },
+      {
+        "newsdelay": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "Delayed mailing and photos"
+        }
+      }
+    ],
+    "category": [
+      "Tools",
+      "Chat"
+    ]
+  },
+  "shadowhikka/sh.modules/GForYou.py": {
+    "name": "GYForYouMod",
+    "description": "Погуглю за тебя",
+    "meta": {
+      "pic": null,
+      "banner": "https://i.imgur.com/pmh9eAE.jpeg",
+      "developer": "@shadow_modules"
+    },
+    "commands": [
+      {
+        "googlecmd": "<args>"
+      }
+    ],
+    "new_commands": [
+      {
+        "google": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "<args>"
+        }
+      }
+    ],
+    "category": [
+      "Info",
+      "Tools"
+    ]
+  },
+  "shadowhikka/sh.modules/FoxAndDogsGallery.py": {
+    "name": "FoxGalerryMod",
+    "description": "🦊 Foxes, Dogs 🐶",
+    "meta": {
+      "pic": null,
+      "banner": "https://i.imgur.com/nZalKg2.jpeg",
+      "developer": "@shadow_modules"
+    },
+    "commands": [
+      {
+        "foxescmd": "🦊 Sending photos with foxes"
+      },
+      {
+        "dogscmd": "🐶 Sending photos with dogs"
+      },
+      {
+        "randomcdfcmd": "Photos of dogs 🐶 and foxes 🦊"
+      }
+    ],
+    "new_commands": [
+      {
+        "foxes": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "🦊 Sending photos with foxes"
+        }
+      },
+      {
+        "dogs": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "🐶 Sending photos with dogs"
+        }
+      },
+      {
+        "randomcdf": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "Photos of dogs 🐶 and foxes 🦊"
+        }
+      }
+    ],
+    "category": [
+      "Fun",
+      "Tools"
+    ]
+  },
+  "shadowhikka/sh.modules/CheckerUsernames.py": {
+    "name": "CheckerUsernamesMod",
+    "description": "Check of avaliable usernames",
+    "meta": {
+      "pic": null,
+      "banner": "https://i.imgur.com/aGGx93G.jpeg",
+      "developer": "@shadow_modules"
+    },
+    "commands": [
+      {
+        "cusercmd": "Off/On checker username"
+      },
+      {
+        "timezonescmd": "All timezones for config"
+      }
+    ],
+    "new_commands": [
+      {
+        "cuser": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "Off/On checker username"
+        }
+      },
+      {
+        "timezones": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "All timezones for config"
+        }
+      }
+    ],
+    "category": [
+      "Tools",
+      "Chat"
+    ]
+  },
+  "shadowhikka/sh.modules/GPT2.py": {
+    "name": "GPT2Mod",
+    "description": "ChatGPT в модуле",
+    "meta": {
+      "pic": null,
+      "banner": "https://i.imgur.com/fdEskim.jpeg",
+      "developer": "@shadow_modules"
+    },
+    "commands": [
+      {
+        "gptcmd": ".gpt <args>"
+      }
+    ],
+    "new_commands": [
+      {
+        "gpt": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": ".gpt <args>"
+        }
+      }
+    ],
+    "category": [
+      "Info",
+      "Fun"
+    ]
+  },
+  "shadowhikka/sh.modules/100Percent.py": {
+    "name": "PercentMod",
+    "description": "Create your text with inline percentages",
+    "meta": {
+      "pic": null,
+      "banner": "https://i.imgur.com/g7yk55s.jpeg",
+      "developer": "@shadow_modules"
+    },
+    "commands": [
+      {
+        "percentcmd": "<Text with percentages> <Text at the end> [interval] -> For creating <Текст с процентами> <Текст в конце> [интервал] -> Для создания"
+      }
+    ],
+    "new_commands": [
+      {
+        "percent": {
+          "ru_doc": "<Текст с процентами> <Текст в конце> [интервал] -> Для создания",
+          "en_doc": null,
+          "doc": "<Text with percentages> <Text at the end> [interval] -> For creating"
+        }
+      }
+    ],
+    "category": [
+      "Tools",
+      "Chat"
+    ]
+  },
+  "shadowhikka/sh.modules/MyVizitka.py": {
+    "name": "MyVizitkaMod",
+    "description": null,
+    "meta": {
+      "pic": null,
+      "banner": "https://i.imgur.com/4aQGHmR.jpeg",
+      "developer": "@shadow_modules"
+    },
+    "commands": [
+      {
+        "myvizitcmd": "Command for displaying a business card"
+      }
+    ],
+    "new_commands": [
+      {
+        "myvizit": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "Command for displaying a business card"
+        }
+      }
+    ],
+    "category": [
+      "Tools",
+      "Fun"
+    ]
+  },
+  "shadowhikka/sh.modules/TableInfo.py": {
+    "name": "TableMod",
+    "description": "Information in parents",
+    "meta": {
+      "pic": null,
+      "banner": "https://i.imgur.com/GLgp9u1.jpeg",
+      "developer": "@shadow_modules"
+    },
+    "commands": [
+      {
+        "tableaddcmd": ""
+      }
+    ],
+    "new_commands": [
+      {
+        "tableadd": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": null
+        }
+      }
+    ],
+    "category": [
+      "Tools",
+      "Fun"
+    ]
+  },
+  "shadowhikka/sh.modules/ConvertTime.py": {
+    "name": "ConvertTimeMod",
+    "description": "Convert time in days, hours, minutes and seconds",
+    "meta": {
+      "pic": null,
+      "banner": "https://i.imgur.com/KiCMAfX.jpg",
+      "developer": "@shadow_modules"
+    },
+    "commands": [
+      {
+        "ctimecmd": "ctime <int: time for convert>"
+      }
+    ],
+    "new_commands": [
+      {
+        "ctime": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "ctime <int: time for convert>"
+        }
+      }
+    ],
+    "category": [
+      "Tools",
+      "Fun"
+    ]
+  },
+  "shadowhikka/sh.modules/HentaiManga.py": {
+    "name": "HentaiMangaMod",
+    "description": null,
+    "meta": {
+      "pic": null,
+      "banner": "https://i.imgur.com/8UYznku.jpeg",
+      "developer": "@shadow_modules, @toxicuse, @vsecoder"
+    },
+    "commands": [
+      {
+        "rnd_hentai_mangacmd": "{hentai_api_name: optional} - рандомная хентай-манга"
+      },
+      {
+        "get_hentai_mangacmd": "{hentai_api_name} {id} - получить хентай-мангу"
+      }
+    ],
+    "new_commands": [
+      {
+        "rnd_hentai_manga": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "{hentai_api_name: optional} - рандомная хентай-манга"
+        }
+      },
+      {
+        "get_hentai_manga": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "{hentai_api_name} {id} - получить хентай-мангу"
+        }
+      }
+    ],
+    "category": [
+      "Tools",
+      "Fun"
+    ]
+  },
+  "shadowhikka/sh.modules/InlineVizitka.py": {
+    "name": "InlineVizitkaMod",
+    "description": "You information in inline vizitka",
+    "meta": {
+      "pic": null,
+      "banner": "https://i.imgur.com/SbLqMlM.jpeg",
+      "developer": "@shadow_modules, @dan_endy, @hikarimods"
+    },
+    "commands": [
+      {
+        "vizitkacmd": "Command for displaying a business card"
+      },
+      {
+        "vizinfocmd": ""
+      }
+    ],
+    "new_commands": [
+      {
+        "vizitka": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "Command for displaying a business card"
+        }
+      },
+      {
+        "vizinfo": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": null
+        }
+      }
+    ],
+    "category": [
+      "Tools",
+      "Chat"
+    ]
+  },
+  "shadowhikka/sh.modules/trysamp.py": {
+    "name": "TrySampMod",
+    "description": "Try such as in samp",
+    "meta": {
+      "pic": null,
+      "banner": "https://i.imgur.com/aGGx93G.jpeg",
+      "developer": "@shadow_modules"
+    },
+    "commands": [
+      {
+        "trycmd": "try you luck"
+      }
+    ],
+    "new_commands": [
+      {
+        "try": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "try you luck"
+        }
+      }
+    ],
+    "category": [
+      "Games",
+      "Tools"
+    ]
+  },
+  "shadowhikka/sh.modules/VulgarStories.py": {
+    "name": "VulgarStories",
+    "description": "VulgarStories",
+    "meta": {
+      "pic": null,
+      "banner": "https://i.imgur.com/GqPSdtT.jpeg",
+      "developer": "@shadow_modules"
+    },
+    "commands": [
+      {
+        "vstorcmd": "Vulgar Stories for geys."
+      }
+    ],
+    "new_commands": [
+      {
+        "vstor": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "Vulgar Stories for geys."
+        }
+      }
+    ],
+    "category": [
+      "Tools",
+      "Fun"
+    ]
+  },
+  "shadowhikka/sh.modules/VKInline.py": {
+    "name": "VKInlineMod",
+    "description": "Your vk in inline",
+    "meta": {
+      "pic": null,
+      "banner": "https://i.imgur.com/8prGakZ.jpeg",
+      "developer": "@shadow_modules, @dan_endy"
+    },
+    "commands": [
+      {
+        "myvkcmd": "The command to display your VK"
+      }
+    ],
+    "new_commands": [
+      {
+        "myvk": {
+          "ru_doc": null,
+          "en_doc": null,
+          "doc": "The command to display your VK"
+        }
+      }
+    ],
+    "category": [
+      "Tools",
+      "Chat"
+    ]
+  },
   "kamolgks/Hikkamods/Facts.py": {
     "name": "Facts",
     "description": "interesting facts by @shitmodules",
@@ -8569,7 +9061,7 @@
     "name": "Hentai",
     "description": "Send to you random hentai media!",
     "meta": {
-      "pic": "https://0x0.st/s/MqdHp2_yaHlLXdmaXTJ9lQ/8KPW.webp",
+      "pic": "https://envs.sh/HJ-.webp",
       "banner": "https://mods.codrago.top/banners/loli.png",
       "developer": "@codrago_m"
     },
@@ -8636,8 +9128,9 @@
     "name": "lastfmmod",
     "description": "Module for music from different services",
     "meta": {
-      "pic": null,
-      "banner": null
+      "pic": "https://envs.sh/Hob.webp",
+      "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/master/banner.png",
+      "developer": "@codrago_m"
     },
     "commands": [
       {
@@ -8672,7 +9165,7 @@
     "name": "dox",
     "description": "Maybe... doxing tool?",
     "meta": {
-      "pic": "https://0x0.st/s/QeZGoQSDvJ2RILRMUOjzfg/8KPc.webp",
+      "pic": "https://envs.sh/HJM.webp",
       "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/master/banner.png",
       "developer": "@codrago_m"
     },
@@ -8719,7 +9212,7 @@
     "name": "PMBan",
     "description": "Ban in pm for time",
     "meta": {
-      "pic": "https://0x0.st/s/J_m06i5v4gJFtziGmqnjuw/8KPl.webp",
+      "pic": "https://envs.sh/Hoh.webp",
       "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/master/banner.png",
       "developer": "@codrago_m, @exttasy1"
     },
@@ -8756,7 +9249,7 @@
     "name": "ID",
     "description": "ID of all!",
     "meta": {
-      "pic": "https://kappa.lol/p3wVI",
+      "pic": "https://envs.sh/HJX.webp",
       "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/master/banner.png",
       "developer": "@codrago_m"
     },
@@ -8803,7 +9296,7 @@
     "name": "lolihentai",
     "description": "Your the best friend in loli hentai",
     "meta": {
-      "pic": "https://0x0.st/s/uGDXu48zQjT7vFTRcl2nAA/8KP3.png",
+      "pic": "https://envs.sh/HJm.webp",
       "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/master/banner.png",
       "developer": "@codrago_m"
     },
@@ -8840,7 +9333,7 @@
     "name": "Randomizer",
     "description": "Random - it's life!",
     "meta": {
-      "pic": "https://0x0.st/s/de32M5VljJzzSJxSUjrqtA/8KPR.webp",
+      "pic": "https://envs.sh/HJy.webp",
       "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/master/banner.png",
       "developer": "@codrago_m"
     },
@@ -8897,7 +9390,7 @@
     "name": "Compliments",
     "description": "Compliments for your partner",
     "meta": {
-      "pic": "https://0x0.st/s/i1wijQ_XEUpGaHPXHUdjHQ/8KPS.webp",
+      "pic": "https://envs.sh/HJ6.webp",
       "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/master/banner.png",
       "developer": "@codrago_m"
     },
@@ -8920,38 +9413,11 @@
       "Fun"
     ]
   },
-  "coddrago/modules/dice.py": {
-    "name": "RandomNumbersMod",
-    "description": "Развлекательный модуль",
-    "meta": {
-      "pic": "https://0x0.st/s/4xg5IubxTkikjI6JG2AU8w/8KP_.webp",
-      "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/master/banner.png",
-      "developer": "@codrago_m"
-    },
-    "commands": [
-      {
-        "rnumcmd": "Угадывайте рандомные числа!"
-      }
-    ],
-    "new_commands": [
-      {
-        "rnum": {
-          "ru_doc": null,
-          "en_doc": null,
-          "doc": "Угадывайте рандомные числа!"
-        }
-      }
-    ],
-    "category": [
-      "Fun",
-      "Tools"
-    ]
-  },
   "coddrago/modules/figlet.py": {
     "name": "Figlet",
     "description": "Tool for work with figlet",
     "meta": {
-      "pic": "https://0x0.st/s/P0iSUm3VUe-mY3Soc7qRAQ/8KPV.webp",
+      "pic": "https://envs.sh/Hou.webp",
       "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/master/banner.png",
       "developer": "@codrago_m"
     },
@@ -8988,7 +9454,7 @@
     "name": "EmojiDownloadMod",
     "description": "Download emoji from reply",
     "meta": {
-      "pic": "https://0x0.st/s/xMv47XPyGMimCREVC6vfXA/8KPp.webp",
+      "pic": "https://envs.sh/Hod.webp",
       "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/master/banner.png",
       "developer": "@codrago_m"
     },
@@ -9015,7 +9481,7 @@
     "name": "Ascii_face",
     "description": "Random Ascii Face from utils",
     "meta": {
-      "pic": "https://0x0.st/s/TGT42nesnQ5TwvixG8nFEQ/8KPa.webp",
+      "pic": "https://envs.sh/HoE.webp",
       "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/master/banner.png",
       "developer": "@codrago_m"
     },
@@ -9042,7 +9508,7 @@
     "name": "SpeedTestMod",
     "description": "Module to run speedtest using speedtest library",
     "meta": {
-      "pic": "https://0x0.st/s/de32M5VljJzzSJxSUjrqtA/8KPR.webp",
+      "pic": "https://envs.sh/HoD.webp",
       "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/master/banner.png",
       "developer": "@codrago_m"
     },
@@ -9069,7 +9535,7 @@
     "name": "PassGen",
     "description": "Generate password",
     "meta": {
-      "pic": "https://envs.sh/Lmn.webp",
+      "pic": "https://envs.sh/Hoe.webp",
       "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/master/banner.png",
       "developer": "@codrago_m"
     },
@@ -9106,7 +9572,7 @@
     "name": "AutoClickerMod",
     "description": "Autoclicker for inline buttons.",
     "meta": {
-      "pic": "https://0x0.st/s/7EWHGzqAj49M6PDMeawuzw/8KPu.webp",
+      "pic": "https://envs.sh/HJv.webp",
       "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/master/banner.png",
       "developer": "@codrago_m, @unneyon_hmods"
     },
@@ -9180,7 +9646,7 @@
     "name": "PinterestDownloader",
     "description": "Gives a link to download a file from Pinterest",
     "meta": {
-      "pic": "https://0x0.st/s/PRHLZJFYjFlRZEOaVcaopw/8KP6.webp",
+      "pic": "https://envs.sh/HJV.webp",
       "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/master/banner.png",
       "developer": "@codrago_m"
     },
@@ -9207,7 +9673,7 @@
     "name": "PromoClaimerMod",
     "description": "Automatically claim https://t.me/StableWaifuBot promo from any chat",
     "meta": {
-      "pic": "https://0x0.st/s/rb3ABc1QP3OIMXnQEBiIcA/8KPn.webp",
+      "pic": "https://envs.sh/HoF.webp",
       "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/master/banner.png",
       "developer": "@codrago_m"
     },
@@ -9234,7 +9700,7 @@
     "name": "ModulesList",
     "description": "Модуль для быстрого доступа к каналам с модулями",
     "meta": {
-      "pic": "https://0x0.st/s/ZgHZlSLgzAG9WPUQy__BVQ/8KPJ.webp",
+      "pic": "https://envs.sh/HJH.webp",
       "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/master/banner.png",
       "developer": "@codrago_m"
     },
