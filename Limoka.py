@@ -13,8 +13,11 @@ import os
 import html
 import json
 from datetime import datetime
+import asyncio
 
 from telethon.types import Message
+from telethon.errors.rpcerrorlist import WebpageMediaEmptyError
+from aiogram.utils.exceptions import BadRequest
 from .. import utils, loader
 from ..types import InlineQuery, InlineCall
 
@@ -138,7 +141,7 @@ class Limoka(loader.Module):
             "<emoji document_id=5436049557150655576>🌟</emoji> <b>Модуль дня</b>\n\n"
             "<emoji document_id=5413334818047940135>🔍</emoji> <b>{name}</b>\n"
             "<b><emoji document_id=5418376169055602355>ℹ️</emoji> Описание:</b> {description}\n"
-            "<b><emoji document_id=5418299289141004396>🧑‍💻</emoji> Разработчик:</b> {username}\n\n"
+            "<b><emoji document_id=5418299289141004396>🧑‍💻</emoji> Developer:</b> {username}\n\n"
             "{commands}\n"
             "<emoji document_id=5411143117711624172>🪄</emoji> <code>{prefix}dlm {url}{module_path}</code>\n\n"
             "<i>Обновляется ежедневно в полночь!</i>"
@@ -228,6 +231,21 @@ class Limoka(loader.Module):
                         content=description
                     )
         writer.commit()
+
+    async def _validate_url(self, url: str) -> str:
+        if not url:
+            return None
+        try:
+            async with aiohttp.ClientSession() as session:
+                async with session.head(url, timeout=5) as response:
+                    if response.status != 200:
+                        return None
+                    content_type = response.headers.get("Content-Type", "")
+                    if not content_type.startswith("image/"):
+                        return None
+                    return url
+        except (aiohttp.ClientError, asyncio.TimeoutError):
+            return None
 
     async def _check_daily_module(self):
         """Проверяет и обновляет модуль дня если требуется"""
@@ -437,7 +455,7 @@ class Limoka(loader.Module):
         name = module_info["name"] or self.strings["no_info"]
         description = html.escape(module_info["description"] or self.strings["no_info"])
         commands = self.generate_commands(module_info)
-        banner = module_info["meta"].get("banner")
+        banner = await self._validate_url(module_info["meta"].get("banner"))
 
         formatted_message = self.strings["dotd"].format(
             name=name,
@@ -449,17 +467,24 @@ class Limoka(loader.Module):
             module_path=module_path.replace("\\", "/"),
         )
 
-        await self.inline.form(
-            formatted_message,
-            message,
-            photo=banner or None
-        )
+        try:
+            await self.inline.form(
+                formatted_message,
+                message,
+                photo=banner or None
+            )
+        except (BadRequest, WebpageMediaEmptyError) as e:
+            await self.inline.form(
+                formatted_message,
+                message,
+                photo=None
+            )
 
     async def _display_module(self, message_or_call, module_info, module_path, query, result, index, filters):
         dev_username = module_info["meta"].get("developer", "Unknown")
         name = module_info["name"] or self.strings["no_info"]
         description = html.escape(module_info["description"] or self.strings["no_info"])
-        banner = module_info["meta"].get("banner")
+        banner = await self._validate_url(module_info["meta"].get("banner"))
         commands = self.generate_commands(module_info)
         page = index + 1
 
@@ -518,17 +543,27 @@ class Limoka(loader.Module):
             ]
         ]
 
-
-        if isinstance(message_or_call, Message):
-            await self.inline.form(
-                full_message, message_or_call, reply_markup=markup, photo=banner or None
-            )
-        else:
-            if banner:
+        try:
+            if isinstance(message_or_call, Message):
+                await self.inline.form(
+                    full_message,
+                    message_or_call,
+                    reply_markup=markup,
+                    photo=banner or None
+                )
+            else:
                 await message_or_call.edit(
                     full_message,
                     reply_markup=markup,
-                    photo=banner
+                    photo=banner or None
+                )
+        except (BadRequest, WebpageMediaEmptyError) as e:
+            if isinstance(message_or_call, Message):
+                await self.inline.form(
+                    full_message,
+                    message_or_call,
+                    reply_markup=markup,
+                    photo=None
                 )
             else:
                 await message_or_call.edit(
@@ -594,18 +629,16 @@ class Limoka(loader.Module):
         for path in results:
             module_info = self.modules.get(path)
             if module_info and module_info.get("commands"):
+                banner = await self._validate_url(module_info["meta"].get("banner"))
+                thumb = await self._validate_url(
+                    module_info["meta"].get("pic", "https://img.icons8.com/?size=100&id=olDsW0G3zz22&format=png&color=000000")
+                )
                 inline_results.append(
                     {
                         "title": utils.escape_html(module_info["name"]),
                         "description": utils.escape_html(module_info["description"]),
-                        "thumb": module_info["meta"].get(
-                            "pic",
-                            "https://img.icons8.com/?size=100&id=olDsW0G3zz22&format=png&color=000000",
-                        ),
-                        "photo": module_info["meta"].get(
-                            "banner",
-                            "https://habrastorage.org/getpro/habr/upload_files/9c7/5fa/c54/9c75fac54ebb0beaf89abd7d86b4787c.jpg",
-                        ),
+                        "thumb": thumb or "https://img.icons8.com/?size=100&id=olDsW0G3zz22&format=png&color=000000",
+                        "photo": banner or "https://habrastorage.org/getpro/habr/upload_files/9c7/5fa/c54/9c75fac54ebb0beaf89abd7d86b4787c.jpg",
                         "message": self.strings["found"].format(
                             name=module_info["name"],
                             query=query.args,
