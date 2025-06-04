@@ -9129,7 +9129,7 @@
     "description": "Module for music from different services",
     "meta": {
       "pic": "https://envs.sh/Hob.webp",
-      "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/master/banner.png",
+      "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/main/banner.png",
       "developer": "@codrago_m"
     },
     "commands": [
@@ -9166,7 +9166,7 @@
     "description": "Maybe... doxing tool?",
     "meta": {
       "pic": "https://envs.sh/HJM.webp",
-      "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/master/banner.png",
+      "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/main/banner.png",
       "developer": "@codrago_m"
     },
     "commands": [
@@ -9213,7 +9213,7 @@
     "description": "Ban in pm for time",
     "meta": {
       "pic": "https://envs.sh/Hoh.webp",
-      "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/master/banner.png",
+      "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/main/banner.png",
       "developer": "@codrago_m, @exttasy1"
     },
     "commands": [
@@ -9250,7 +9250,7 @@
     "description": "ID of all!",
     "meta": {
       "pic": "https://envs.sh/HJX.webp",
-      "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/master/banner.png",
+      "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/main/banner.png",
       "developer": "@codrago_m"
     },
     "commands": [
@@ -9297,7 +9297,7 @@
     "description": "Your the best friend in loli hentai",
     "meta": {
       "pic": "https://envs.sh/HJm.webp",
-      "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/master/banner.png",
+      "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/main/banner.png",
       "developer": "@codrago_m"
     },
     "commands": [
@@ -9334,7 +9334,7 @@
     "description": "Random - it's life!",
     "meta": {
       "pic": "https://envs.sh/HJy.webp",
-      "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/master/banner.png",
+      "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/main/banner.png",
       "developer": "@codrago_m"
     },
     "commands": [
@@ -9391,7 +9391,7 @@
     "description": "Compliments for your partner",
     "meta": {
       "pic": "https://envs.sh/HJ6.webp",
-      "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/master/banner.png",
+      "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/main/banner.png",
       "developer": "@codrago_m"
     },
     "commands": [
@@ -9418,7 +9418,7 @@
     "description": "Tool for work with figlet",
     "meta": {
       "pic": "https://envs.sh/Hou.webp",
-      "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/master/banner.png",
+      "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/main/banner.png",
       "developer": "@codrago_m"
     },
     "commands": [
@@ -9455,7 +9455,7 @@
     "description": "Download emoji from reply",
     "meta": {
       "pic": "https://envs.sh/Hod.webp",
-      "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/master/banner.png",
+      "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/main/banner.png",
       "developer": "@codrago_m"
     },
     "commands": [
@@ -9482,7 +9482,7 @@
     "description": "Random Ascii Face from utils",
     "meta": {
       "pic": "https://envs.sh/HoE.webp",
-      "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/master/banner.png",
+      "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/main/banner.png",
       "developer": "@codrago_m"
     },
     "commands": [
@@ -9509,7 +9509,7 @@
     "description": "Module to run speedtest using speedtest library",
     "meta": {
       "pic": "https://envs.sh/HoD.webp",
-      "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/master/banner.png",
+      "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/main/banner.png",
       "developer": "@codrago_m"
     },
     "commands": [
@@ -9536,7 +9536,7 @@
     "description": "Generate password",
     "meta": {
       "pic": "https://envs.sh/Hoe.webp",
-      "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/master/banner.png",
+      "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/main/banner.png",
       "developer": "@codrago_m"
     },
     "commands": [
@@ -9573,7 +9573,7 @@
     "description": "Autoclicker for inline buttons.",
     "meta": {
       "pic": "https://envs.sh/HJv.webp",
-      "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/master/banner.png",
+      "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/main/banner.png",
       "developer": "@codrago_m, @unneyon_hmods"
     },
     "commands": [
@@ -9610,7 +9610,7 @@
     "description": "| module to send messages",
     "meta": {
       "pic": "https://kappa.lol/p3wVI",
-      "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/master/banner.png",
+      "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/main/banner.png",
       "developer": "@codrago_m"
     },
     "commands": [
@@ -9647,7 +9647,7 @@
     "description": "Gives a link to download a file from Pinterest",
     "meta": {
       "pic": "https://envs.sh/HJV.webp",
-      "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/master/banner.png",
+      "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/main/banner.png",
       "developer": "@codrago_m"
     },
     "commands": [
@@ -9674,7 +9674,7 @@
     "description": "Automatically claim https://t.me/StableWaifuBot promo from any chat",
     "meta": {
       "pic": "https://envs.sh/HoF.webp",
-      "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/master/banner.png",
+      "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/main/banner.png",
       "developer": "@codrago_m"
     },
     "commands": [
@@ -9701,7 +9701,7 @@
     "description": "Модуль для быстрого доступа к каналам с модулями",
     "meta": {
       "pic": "https://envs.sh/HJH.webp",
-      "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/master/banner.png",
+      "banner": "https://raw.githubusercontent.com/coddrago/modules/refs/heads/main/banner.png",
       "developer": "@codrago_m"
     },
     "commands": [
