@@ -17,7 +17,11 @@ import asyncio
 
 from telethon.types import Message
 from telethon.errors.rpcerrorlist import WebpageMediaEmptyError
-from aiogram.utils.exceptions import BadRequest
+try:
+    from aiogram.utils.exceptions import BadRequest
+except ImportError:
+    from aiogram.exceptions import TelegramBadRequest as BadRequest # essential crutch for aiogram 3 in heroku 1.7.0 
+    
 from .. import utils, loader
 from ..types import InlineQuery, InlineCall
 
