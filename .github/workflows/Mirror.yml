@@ -1,0 +1,23 @@
+name: Mirror limoka Repository
+
+on:
+  schedule:
+    - cron: '0 * * * *' 
+  push:
+    branches:
+      - main
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout limoka repository from git.vsecoder.dev
+      run: |
+        git clone --bare https://git.vsecoder.dev/root/limoka.git
+        
+    - name: Push to GitHub mirror repository
+      run: |
+        cd limoka.git
+        git remote add mirror https://github.com/murulose/limoka-mirror.git
+        git push --mirror mirror
