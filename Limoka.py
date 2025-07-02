@@ -464,7 +464,7 @@ class Limoka(loader.Module):
         formatted_message = self.strings["dotd"].format(
             name=name,
             description=description,
-            url=self.config["limoka_url"],
+            url=self.config["url_limoka"],
             username=dev_username,
             commands="".join(commands),
             prefix=self.get_prefix(),
@@ -498,7 +498,7 @@ class Limoka(loader.Module):
             query=query,
             name=name,
             description=description,
-            url=self.config["limoka_url"],
+            url=self.config["url_limoka"],
             username=dev_username,
             commands="".join(commands),
             prefix=self.get_prefix(),
@@ -510,7 +510,7 @@ class Limoka(loader.Module):
 
         full_message = formatted_message + f"\n{filters_text}"
         if len(full_message) > 1024:
-            download_command = f"<emoji document_id=5411143117711624172>🪄</emoji> <code>{self.get_prefix()}dlm {self.config['limoka_url']}{clean_module_path}</code>"
+            download_command = f"<emoji document_id=5411143117711624172>🪄</emoji> <code>{self.get_prefix()}dlm {self.config['url_limoka']}{clean_module_path}</code>"
             max_content_length = 1024 - len(f"\n{download_command}\n{filters_text}") - 50
             if max_content_length < 100:
                 max_content_length = 100
@@ -646,7 +646,7 @@ class Limoka(loader.Module):
                         "message": self.strings["found"].format(
                             name=module_info["name"],
                             query=query.args,
-                            url=self.config["limoka_url"],
+                            url=self.config["url_limoka"],
                             description=module_info["description"],
                             username=module_info["meta"].get("developer", "Unknown"),
                             commands="".join(self.generate_commands(module_info)),
