@@ -178,7 +178,7 @@ class Limoka(loader.Module):
         self.api = LimokaAPI()
         self.config = loader.ModuleConfig(
             loader.ConfigValue(
-                "limoka_url",
+                "url_limoka",
                 "https://raw.githubusercontent.com/MuRuLOSE/limoka-mirror/refs/heads/main/",
                 lambda: "Mirror: https://raw.githubusercontent.com/MuRuLOSE/limoka-mirror/refs/heads/main/ (This is a mirror, so mirror link by default)",
                 validator=loader.validators.String(),
@@ -208,7 +208,7 @@ class Limoka(loader.Module):
         self._history = self.pointer("history", [])
         self._daily_module_storage = self.pointer("daily_module", {"date": None, "path": None})
         self.modules = await self.api.get_all_modules(
-            f"{self.config['limoka_url']}modules.json"
+            f"{self.config['url_limoka']}modules.json"
         )
         await self._update_index()
         await self._check_daily_module()
